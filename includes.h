@@ -14,3 +14,6 @@
 
 #include "includes/item/food.h"
 #include "src/item/food.cpp"
+
+#include "includes/item/weapon/hunting_weapon.h"
+#include "src/item/weapon/hunting_weapon.cpp"
