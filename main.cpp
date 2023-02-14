@@ -1,7 +1,5 @@
 #include <iostream>
-
-#include "includes/item.h"
-#include "src/item.cpp"
+#include "includes.h"
 
 int main() {
 
