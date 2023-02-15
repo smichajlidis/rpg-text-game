@@ -19,7 +19,7 @@ class Equipment {
 
 public:
 
-    Equipment();
+    Equipment(Armor shield);
     ~Equipment();
 
 };

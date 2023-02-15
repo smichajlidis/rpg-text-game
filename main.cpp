@@ -12,7 +12,7 @@ int main() {
     Clothes pants;
     Food strawberry {"strawberry", 2, 4};
 
-    Equipment equipment;
+    Equipment equipment(shield);
 
     std::cout << strawberry.get_name() << std::endl;
     std::cout << pants.get_price() << std::endl;
