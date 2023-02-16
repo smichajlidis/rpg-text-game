@@ -2,9 +2,13 @@
 #define _WEAPON_H_
 #include <iostream>
 
+class Equipment;
+
 class Weapon: public Item {
 
     int hitForce;
+
+    friend class Equipment;
 
 public:
 

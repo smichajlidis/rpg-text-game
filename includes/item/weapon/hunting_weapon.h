@@ -2,9 +2,13 @@
 #define _HUNTINGWEAPON_H_
 #include <iostream>
 
+class Equipment;
+
 class HuntingWeapon: public Weapon {
 
     bool hunting;
+
+    friend class Equipment;
 
 public:
 

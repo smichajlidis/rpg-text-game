@@ -2,9 +2,13 @@
 #define _FOOD_H_
 #include <iostream>
 
+class Equipment;
+
 class Food: public Item {
 
     int hpRestoration;
+
+    friend class Equipment;
 
 public:
 

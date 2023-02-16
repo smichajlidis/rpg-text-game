@@ -2,9 +2,13 @@
 #define _CLOTHES_H_
 #include <iostream>
 
+class Equipment;
+
 class Clothes: public Item {
 
     int charismaIncrease;
+
+    friend class Equipment;
 
 public:
 

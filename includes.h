@@ -1,5 +1,8 @@
 #include <iostream>
 
+#include "includes/equipment.h"
+#include "src/equipment.cpp"
+
 #include "includes/item.h"
 #include "src/item.cpp"
 
