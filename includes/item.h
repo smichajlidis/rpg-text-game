@@ -2,11 +2,15 @@
 #define _ITEM_H_
 #include <iostream>
 
+class Equipment;
+
 class Item {
 
     std::string name;
     int price;
     int amount;
+
+    friend class Equipment;
 
 public:
 

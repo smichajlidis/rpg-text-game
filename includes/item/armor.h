@@ -2,9 +2,13 @@
 #define _ARMOR_H_
 #include <iostream>
 
+class Equipment;
+
 class Armor: public Item {
 
     int armorStrength;
+
+    friend class Equipment;
 
 public:
 
