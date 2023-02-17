@@ -24,7 +24,7 @@ int main() {
     equipment.remove_food(strawberry);
     equipment.remove_food(strawberry);
     
-    Creature creature;
+    Creature creature {"monster", 12, 1500};
 
 
     std::cout << "Hello World!" << std::endl;
