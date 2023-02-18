@@ -28,6 +28,9 @@ int main() {
 
     Player player {"player", 40, 150, 4};
 
+    Location first;
+    Location yard {"yard", "this is the yard"};
+
     std::cout << "Hello World!" << std::endl;
 
     return 0;
