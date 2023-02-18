@@ -38,8 +38,14 @@
 #include "includes/location.h"
 #include "src/location.cpp"
 
-#include "includes/location/three-choices.h"
-#include "src/location/three-choices.cpp"
+#include "includes/location/square.h"
+#include "src/location/square.cpp"
 
-#include "includes/location/four-choices.h"
-#include "src/location/four-choices.cpp"
+#include "includes/location/tavern.h"
+#include "src/location/tavern.cpp"
+
+#include "includes/location/forest.h"
+#include "src/location/forest.cpp"
+
+#include "includes/location/closed_chapel.h"
+#include "src/location/closed_chapel.cpp"
