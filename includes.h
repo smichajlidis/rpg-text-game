@@ -40,3 +40,6 @@
 
 #include "includes/location/three-choices.h"
 #include "src/location/three-choices.cpp"
+
+#include "includes/location/four-choices.h"
+#include "src/location/four-choices.cpp"

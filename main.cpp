@@ -33,6 +33,8 @@ int main() {
 
     ThreeChoices real_yard {"yard", "good description", "go here", "go there", "go somewhere"};
 
+    FourChoices second_place {"somewhere", "what a good description!", "maybe here", "or there?", "here is perfect", "why not here?"};
+
     std::cout << "Hello World!" << std::endl;
 
     return 0;
