@@ -28,13 +28,17 @@ int main() {
 
     Player player {"player", 40, 150, 4};
 
-    Location first;
-    Location yard {"yard", "this is the yard"};
+   // Location first;
+  //  Location yard {"yard", "this is the yard"};
 
     Tavern tavern;
     Forest forest;
     Square square;
     ClosedChapel closed_chapel;
+
+    Location *pointer;
+    pointer = &forest;
+    pointer -> display_location();
 
     std::cout << "Hello World!" << std::endl;
 

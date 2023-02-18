@@ -9,6 +9,8 @@ class Location {
 
 public:
 
+    virtual void display_location()=0;
+
     Location(std::string name_val = "nowhere", std::string description_val = "description");
     ~Location();
     
