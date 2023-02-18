@@ -37,3 +37,6 @@
 
 #include "includes/location.h"
 #include "src/location.cpp"
+
+#include "includes/location/three-choices.h"
+#include "src/location/three-choices.cpp"

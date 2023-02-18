@@ -31,6 +31,8 @@ int main() {
     Location first;
     Location yard {"yard", "this is the yard"};
 
+    ThreeChoices real_yard {"yard", "good description", "go here", "go there", "go somewhere"};
+
     std::cout << "Hello World!" << std::endl;
 
     return 0;
