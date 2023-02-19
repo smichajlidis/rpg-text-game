@@ -1,7 +1,7 @@
 #include <iostream>
 #include "../includes/location.h"
 
-void Location::display_location() {
+void Location::print_location() {
     std::cout<<description<<"\n\n";
     if (answer_1!="none")
         std::cout<<"1. "<<answer_1<<"\n";

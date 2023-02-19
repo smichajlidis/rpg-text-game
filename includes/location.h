@@ -14,7 +14,7 @@ class Location {
 
 public:
 
-    void display_location();
+    void print_location();
 
     Location(std::string name_val = "nowhere", std::string description_val = "description", std::string answer_1_val = "none", std::string answer_2_val = "none", std::string answer_3_val = "none", std::string answer_4_val = "none", std::string answer_5_val = "none");
     ~Location();
