@@ -36,9 +36,10 @@ int main() {
     Square square;
     ClosedChapel closed_chapel;
 
-    Location *pointer;
-    pointer = &forest;
-    pointer -> display_location();
+    square.print_location();
+    forest.print_location();
+    closed_chapel.print_location();
+    tavern.print_location();
 
     std::cout << "Hello World!" << std::endl;
 
