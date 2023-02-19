@@ -36,10 +36,16 @@ int main() {
     Square square;
     ClosedChapel closed_chapel;
 
-    square.print_location();
-    forest.print_location();
-    closed_chapel.print_location();
-    tavern.print_location();
+    Location *p1;
+    p1=&square;
+    (*p1).print_location();
+    p1->making_a_choice();
+
+
+   // square.print_location();
+   // forest.print_location();
+   // closed_chapel.print_location();
+   // tavern.print_location();
 
     std::cout << "Hello World!" << std::endl;
 
