@@ -13,7 +13,11 @@ class GameState {
     Square square;
     Tavern tavern;
 
+    Location *current_location;
+
 public:
+
+    void display_location();
 
     GameState();
     ~GameState();
