@@ -54,3 +54,6 @@
 
 #include "includes/game_state.h"
 #include "src/game_state.cpp"
+
+#include "includes/navigation.h"
+#include "src/navigation.cpp"

@@ -42,6 +42,7 @@ int main() {
   //  p1->making_a_choice();
 
     GameState game_state;
+    Navigation navigation(game_state);
 
    // square.print_location();
    // forest.print_location();

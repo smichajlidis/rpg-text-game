@@ -18,6 +18,8 @@ public:
     GameState();
     ~GameState();
 
+    friend class Navigation;
+
 };
 
 #endif
