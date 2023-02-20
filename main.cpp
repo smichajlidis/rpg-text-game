@@ -36,11 +36,12 @@ int main() {
     Square square;
     ClosedChapel closed_chapel;
 
-    Location *p1;
-    p1=&square;
-    (*p1).print_location();
-    p1->making_a_choice();
+  //  Location *p1;
+  //  p1=&square;
+  //  (*p1).print_location();
+  //  p1->making_a_choice();
 
+    GameState game_state;
 
    // square.print_location();
    // forest.print_location();

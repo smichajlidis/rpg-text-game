@@ -49,3 +49,8 @@
 
 #include "includes/location/closed_chapel.h"
 #include "src/location/closed_chapel.cpp"
+
+//////////////////////////////////
+
+#include "includes/game_state.h"
+#include "src/game_state.cpp"
