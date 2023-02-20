@@ -1,11 +1,10 @@
 #ifndef _GAME_STATE_H_
 #define _GAME_STATE_H_
 #include <iostream>
-
-class ClosedChapel;
-class Forest;
-class Square;
-class Tavern;
+#include "location/closed_chapel.h"
+#include "location/forest.h"
+#include "location/square.h"
+#include "location/tavern.h"
 
 class GameState {
 
