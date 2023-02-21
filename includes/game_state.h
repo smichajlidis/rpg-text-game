@@ -5,6 +5,7 @@
 #include "location/forest.h"
 #include "location/square.h"
 #include "location/tavern.h"
+#include "location/innkeeper.h"
 
 class GameState {
 
@@ -12,6 +13,7 @@ class GameState {
     Forest forest;
     Square square;
     Tavern tavern;
+    Innkeeper innkeeper;
 
     Location *current_location;
 
@@ -21,8 +23,6 @@ public:
 
     GameState();
     ~GameState();
-
-    friend class Navigation;
 
 };
 

@@ -29,6 +29,7 @@ public:
     friend class ClosedChapel;
     friend class Forest;
     friend class Tavern;
+    friend class Innkeeper;
 
 };
 

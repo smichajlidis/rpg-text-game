@@ -50,6 +50,9 @@
 #include "includes/location/closed_chapel.h"
 #include "src/location/closed_chapel.cpp"
 
+#include "includes/location/innkeeper.h"
+#include "src/location/innkeeper.cpp"
+
 //////////////////////////////////
 
 #include "includes/game_state.h"
