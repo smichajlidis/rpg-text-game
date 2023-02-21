@@ -11,19 +11,24 @@
 #include "location/priest.h"
 #include "location/thugs.h"
 #include "location/altars.h"
+#include "location/order_beer.h"
 
 class GameState {
 
     Chapel chapel;
     Forest forest;
     Square square;
+
     Tavern tavern;
+        OrderBeer order_beer;
+
     Innkeeper innkeeper;
     Gamblers gamblers;
     Ladies ladies;
     Priest priest;
     Thugs thugs;
     Altars altars;
+
 
     Location *current_location;
 

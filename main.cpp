@@ -8,6 +8,8 @@ int main() {
 
 GameState game_state;
 
+OrderBeer order_beer;
+
 int i {1};
 
 do {

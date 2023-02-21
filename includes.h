@@ -68,6 +68,9 @@
 #include "includes/location/altars.h"
 #include "src/location/altars.cpp"
 
+#include "includes/location/order_beer.h"
+#include "src/location/order_beer.cpp"
+
 //////////////////////////////////
 
 #include "includes/game_state.h"
