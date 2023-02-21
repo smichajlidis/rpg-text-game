@@ -26,7 +26,7 @@ public:
     
     friend class GameState;
     friend class Square;
-    friend class ClosedChapel;
+    friend class Chapel;
     friend class Forest;
     friend class Tavern;
     friend class Innkeeper;

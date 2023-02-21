@@ -12,7 +12,7 @@ GameState::GameState() {
     square.related_locations.push_back(&square);
     square.related_locations.push_back(&tavern);
     square.related_locations.push_back(&forest);
-    square.related_locations.push_back(&closed_chapel);
+    square.related_locations.push_back(&chapel);
 
     tavern.related_locations.push_back(&square);
     tavern.related_locations.push_back(&innkeeper);
@@ -21,10 +21,10 @@ GameState::GameState() {
     tavern.related_locations.push_back(&ladies);
 
     forest.related_locations.push_back(&square);
-   forest.related_locations.push_back(&thugs); // will be forest_exploration;
+    forest.related_locations.push_back(&thugs); // will be forest_exploration;
     forest.related_locations.push_back(&thugs);
 
-    closed_chapel.related_locations.push_back(&square);
+    chapel.related_locations.push_back(&square);
 
     innkeeper.related_locations.push_back(&tavern);
    // innkeeper.related_locations.push_back(&beer);
