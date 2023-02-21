@@ -13,7 +13,8 @@ void Location::print_location() {
         std::cout<< "4. "<<choice_4<<"\n";
     if (choice_5!="none")
         std::cout<< "5. "<<choice_5<<"\n";
-    std::cout<<"0. Return"<<"\n\n";
+    if (name != "square")
+        std::cout<<"0. Return"<<"\n\n";
     std::cout<<"What do you do? ";
 }
 

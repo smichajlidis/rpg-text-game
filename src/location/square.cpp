@@ -8,7 +8,7 @@ Location* Square::making_a_choice() {
         case 1: return related_locations.at(0); break;
         case 2: return related_locations.at(1); break;
         case 3: return related_locations.at(2); break;
-        case 0: return related_locations.at(0); break;
+     //   case 0: return related_locations.at(0); break;
         default: return related_locations.at(0); break;
     }
 }
