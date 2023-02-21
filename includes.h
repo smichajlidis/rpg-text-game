@@ -62,6 +62,9 @@
 #include "includes/location/priest.h"
 #include "src/location/priest.cpp"
 
+#include "includes/location/thugs.h"
+#include "src/location/thugs.cpp"
+
 //////////////////////////////////
 
 #include "includes/game_state.h"

@@ -9,6 +9,7 @@
 #include "location/gamblers.h"
 #include "location/ladies.h"
 #include "location/priest.h"
+#include "location/thugs.h"
 
 class GameState {
 
@@ -20,6 +21,7 @@ class GameState {
     Gamblers gamblers;
     Ladies ladies;
     Priest priest;
+    Thugs thugs;
 
     Location *current_location;
 

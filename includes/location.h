@@ -33,6 +33,7 @@ public:
     friend class Gamblers;
     friend class Priest;
     friend class Ladies;
+    friend class Thugs;
 
 };
 

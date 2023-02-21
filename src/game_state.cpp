@@ -21,8 +21,8 @@ GameState::GameState() {
     tavern.related_locations.push_back(&ladies);
 
     forest.related_locations.push_back(&square);
-  //  forest.related_locations.push_back(&forest_exploration);
-  //  forest.related_locations.push_back(&thugs);
+   forest.related_locations.push_back(&thugs); // will be forest_exploration;
+    forest.related_locations.push_back(&thugs);
 
     closed_chapel.related_locations.push_back(&square);
 
@@ -36,6 +36,8 @@ GameState::GameState() {
     ladies.related_locations.push_back(&tavern);
 
     priest.related_locations.push_back(&tavern);
+
+    thugs.related_locations.push_back(&forest);
 
 }
 
