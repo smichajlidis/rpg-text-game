@@ -2,7 +2,8 @@
 #include "../includes/game_state.h"
 
 void GameState::display_location() {
-    (*current_location).print_location();
+    if ((*current_location).description != "none")
+        (*current_location).print_location();
     current_location = current_location->making_a_choice();
 }
 
@@ -28,7 +29,7 @@ GameState::GameState() {
     chapel.related_locations.push_back(&altars);
 
     innkeeper.related_locations.push_back(&tavern);
-   // innkeeper.related_locations.push_back(&beer);
+    innkeeper.related_locations.push_back(&order_beer);
    // innkeeper.related_locations.push_back(&trade;
    // innkeeper.related_locations.push_back(&gossip);
 
@@ -43,6 +44,7 @@ GameState::GameState() {
     altars.related_locations.push_back(&chapel);
 
     order_beer.point_player(&player);
+    order_beer.related_locations.push_back(&innkeeper);
 
 }
 
