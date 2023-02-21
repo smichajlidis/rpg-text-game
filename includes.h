@@ -47,5 +47,28 @@
 #include "includes/location/forest.h"
 #include "src/location/forest.cpp"
 
-#include "includes/location/closed_chapel.h"
-#include "src/location/closed_chapel.cpp"
+#include "includes/location/chapel.h"
+#include "src/location/chapel.cpp"
+
+#include "includes/location/innkeeper.h"
+#include "src/location/innkeeper.cpp"
+
+#include "includes/location/gamblers.h"
+#include "src/location/gamblers.cpp"
+
+#include "includes/location/ladies.h"
+#include "src/location/ladies.cpp"
+
+#include "includes/location/priest.h"
+#include "src/location/priest.cpp"
+
+#include "includes/location/thugs.h"
+#include "src/location/thugs.cpp"
+
+#include "includes/location/altars.h"
+#include "src/location/altars.cpp"
+
+//////////////////////////////////
+
+#include "includes/game_state.h"
+#include "src/game_state.cpp"

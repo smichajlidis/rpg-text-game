@@ -1,7 +1,7 @@
 #include <iostream>
-#include "../../includes/location/tavern.h"
+#include "../../includes/location/innkeeper.h"
 
-Location* Tavern::making_a_choice() {
+Location* Innkeeper::making_a_choice() {
     int choice {};
     std::cin>>choice;
     switch (choice) {
@@ -14,10 +14,10 @@ Location* Tavern::making_a_choice() {
     }
 }
 
-Tavern::Tavern(std::string name_val, std::string description_val, std::string choice_1_val, std::string choice_2_val, std::string choice_3_val, std::string choice_4_val)
+Innkeeper::Innkeeper(std::string name_val, std::string description_val, std::string choice_1_val, std::string choice_2_val, std::string choice_3_val, std::string choice_4_val)
     : Location(name_val, description_val, choice_1_val, choice_2_val, choice_3_val, choice_4_val) {
     }
 
-Tavern::~Tavern() {
+Innkeeper::~Innkeeper() {
 }
 
