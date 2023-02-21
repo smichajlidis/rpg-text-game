@@ -65,6 +65,9 @@
 #include "includes/location/thugs.h"
 #include "src/location/thugs.cpp"
 
+#include "includes/location/altars.h"
+#include "src/location/altars.cpp"
+
 //////////////////////////////////
 
 #include "includes/game_state.h"

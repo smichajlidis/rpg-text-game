@@ -25,6 +25,7 @@ GameState::GameState() {
     forest.related_locations.push_back(&thugs);
 
     chapel.related_locations.push_back(&square);
+    chapel.related_locations.push_back(&altars);
 
     innkeeper.related_locations.push_back(&tavern);
    // innkeeper.related_locations.push_back(&beer);
@@ -38,6 +39,8 @@ GameState::GameState() {
     priest.related_locations.push_back(&tavern);
 
     thugs.related_locations.push_back(&forest);
+
+    altars.related_locations.push_back(&chapel);
 
 }
 
