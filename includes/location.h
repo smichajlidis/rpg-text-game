@@ -31,6 +31,8 @@ public:
     friend class Tavern;
     friend class Innkeeper;
     friend class Gamblers;
+    friend class Priest;
+    friend class Ladies;
 
 };
 

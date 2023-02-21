@@ -56,6 +56,12 @@
 #include "includes/location/gamblers.h"
 #include "src/location/gamblers.cpp"
 
+#include "includes/location/ladies.h"
+#include "src/location/ladies.cpp"
+
+#include "includes/location/priest.h"
+#include "src/location/priest.cpp"
+
 //////////////////////////////////
 
 #include "includes/game_state.h"

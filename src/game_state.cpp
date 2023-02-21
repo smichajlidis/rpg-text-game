@@ -17,8 +17,8 @@ GameState::GameState() {
     tavern.related_locations.push_back(&square);
     tavern.related_locations.push_back(&innkeeper);
     tavern.related_locations.push_back(&gamblers);
-   // tavern.related_locations.push_back(&priest);
-   // tavern.related_locations.push_back(&ladies);
+    tavern.related_locations.push_back(&priest);
+    tavern.related_locations.push_back(&ladies);
 
     forest.related_locations.push_back(&square);
   //  forest.related_locations.push_back(&forest_exploration);
@@ -30,9 +30,13 @@ GameState::GameState() {
    // innkeeper.related_locations.push_back(&beer);
    // innkeeper.related_locations.push_back(&trade;
    // innkeeper.related_locations.push_back(&gossip);
-   // innkeeper.related_locations.push_back(&ladies);
 
-   gamblers.related_locations.push_back(&tavern);
+    gamblers.related_locations.push_back(&tavern);
+
+    ladies.related_locations.push_back(&tavern);
+
+    priest.related_locations.push_back(&tavern);
+
 }
 
 GameState::~GameState() {
