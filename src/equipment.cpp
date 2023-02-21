@@ -8,6 +8,10 @@
 #include "../includes/item/weapon.h"
 #include "../includes/item/weapon/hunting_weapon.h"
 
+int Equipment::return_gold() {
+    return gold;
+}
+
 void Equipment::add_gold(int val) {
     gold+=val;
 }
@@ -80,6 +84,7 @@ void Equipment::add_food(Food obj) {
 
 void Equipment::remove_gold(int val) {
     gold-=val;
+    std::cout<<"gold -5";
 }
 void Equipment::remove_armor(Armor obj) {
     auto it = armors.begin();

@@ -42,6 +42,8 @@ GameState::GameState() {
 
     altars.related_locations.push_back(&chapel);
 
+    order_beer.point_player(&player);
+
 }
 
 GameState::~GameState() {

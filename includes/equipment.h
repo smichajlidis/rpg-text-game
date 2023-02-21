@@ -23,6 +23,8 @@ class Equipment {
 
 public:
 
+    int return_gold();
+
     void add_gold(int);
     void add_armor(Armor);
     void add_clothes(Clothes);
@@ -41,6 +43,8 @@ public:
 
     Equipment();
     ~Equipment();
+
+    friend class OrderBeer;
 
 };
 

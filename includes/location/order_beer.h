@@ -2,11 +2,18 @@
 #define _ORDER_BEER_H_
 #include <iostream>
 
+class Player;
+
 class OrderBeer: public Location {
 
-public:
+    Player* player;
 
+public:
+    
     virtual Location* making_a_choice();
+
+    void point_player(Player*);
+    void display_event();
 
     OrderBeer(std::string name_val = "order_beer");
     ~OrderBeer();

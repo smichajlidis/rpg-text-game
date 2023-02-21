@@ -1,6 +1,7 @@
 #ifndef _GAME_STATE_H_
 #define _GAME_STATE_H_
 #include <iostream>
+#include "creature/player.h"
 #include "location/chapel.h"
 #include "location/forest.h"
 #include "location/square.h"
@@ -15,6 +16,8 @@
 
 class GameState {
 
+    Player player;
+    
     Chapel chapel;
     Forest forest;
     Square square;

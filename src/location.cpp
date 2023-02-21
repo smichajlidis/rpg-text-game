@@ -2,7 +2,7 @@
 #include "../includes/location.h"
 
 void Location::print_location() {
-    std::cout<<description<<"\n\n";
+        std::cout<<description<<"\n\n";
     if (choice_1!="none")
         std::cout<<"1. "<<choice_1<<"\n";
     if (choice_2!="none")
