@@ -13,6 +13,11 @@ GameState::GameState() {
     square.related_locations.push_back(&tavern);
     square.related_locations.push_back(&forest);
     square.related_locations.push_back(&closed_chapel);
+
+    tavern.related_locations.push_back(&square);
+    forest.related_locations.push_back(&square);
+    closed_chapel.related_locations.push_back(&square);
+
    // tavern.relate_locations.push_back(&innkeeper);
   //  tavern.relate_locations.push_back(&gamblers);
 }
