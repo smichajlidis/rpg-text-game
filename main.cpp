@@ -45,6 +45,8 @@ int main() {
 
     game_state.display_location();
 
+    game_state.display_location();
+
    // square.print_location();
    // forest.print_location();
    // closed_chapel.print_location();

@@ -1,16 +1,16 @@
 #include <iostream>
 #include "../../includes/location/tavern.h"
 
-void Tavern::making_a_choice() {
+Location* Tavern::making_a_choice() {
     int choice {};
     std::cin>>choice;
     switch (choice) {
-        case 1: std::cout<<"Innkeeper"; break;
-        case 2: std::cout<<"Gamblers"; break;
-        case 3: std::cout<<"Priest"; break;
-        case 4: std::cout<<"Ladies"; break;
-        case 0: std::cout<<"Come back to the square"; break;
-        default: std::cout<<"Choose allowed digit"; break;
+        case 1: return related_locations.at(1); break;
+        case 2: return related_locations.at(1); break;
+        case 3: return related_locations.at(1); break;
+        case 4: return related_locations.at(1); break;
+        case 0: return related_locations.at(1); break;
+        default: return related_locations.at(1); break;
     }
 }
 

@@ -1,14 +1,14 @@
 #include <iostream>
 #include "../../includes/location/forest.h"
 
-void Forest::making_a_choice() {
+Location* Forest::making_a_choice() {
     int choice {};
     std::cin>>choice;
     switch (choice) {
-        case 1: std::cout<<"Let's explore!"; break;
-        case 2: std::cout<<"Where are these guys?"; break;
-        case 0: std::cout<<"Come back to the square"; break;
-        default: std::cout<<"Choose allowed digit"; break;
+        case 1: return related_locations.at(1); break;
+        case 2: return related_locations.at(1); break;
+        case 0: return related_locations.at(1); break;
+        default: return related_locations.at(1); break;
     }
 }
 

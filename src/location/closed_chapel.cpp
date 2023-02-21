@@ -1,12 +1,12 @@
 #include "../../includes/location/closed_chapel.h"
 #include <iostream>
 
-void ClosedChapel::making_a_choice() {
+Location* ClosedChapel::making_a_choice() {
     int choice {};
     std::cin>>choice;
     switch (choice) {
-        case 0: std::cout<<"Come back to the square"; break;
-        default: std::cout<<"Choose allowed digit"; break;
+        case 0: return related_locations.at(0); break;
+        default: return related_locations.at(1); break;
     }
 }
 

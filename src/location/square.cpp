@@ -1,15 +1,15 @@
 #include <iostream>
 #include "../../includes/location/square.h"
 
-void Square::making_a_choice() {
+Location* Square::making_a_choice() {
     int choice {};
     std::cin>>choice;
     switch (choice) {
-        case 1: std::cout<<"Let's go for a drink"; break;
-        case 2: std::cout<<"Hello trees!"; break;
-        case 3: std::cout<<"Have to pray.."; break;
-        case 0: std::cout<<"Come back to the square"; break;
-        default: std::cout<<"Choose allowed digit"; break;
+        case 1: return related_locations.at(0); break;
+        case 2: return related_locations.at(1); break;
+        case 3: return related_locations.at(2); break;
+        case 0: return related_locations.at(0); break;
+        default: return related_locations.at(0); break;
     }
 }
 
