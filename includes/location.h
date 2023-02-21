@@ -30,6 +30,7 @@ public:
     friend class Forest;
     friend class Tavern;
     friend class Innkeeper;
+    friend class Gamblers;
 
 };
 

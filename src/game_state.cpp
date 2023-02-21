@@ -16,6 +16,7 @@ GameState::GameState() {
 
     tavern.related_locations.push_back(&square);
     tavern.related_locations.push_back(&innkeeper);
+    tavern.related_locations.push_back(&gamblers);
    // tavern.related_locations.push_back(&priest);
    // tavern.related_locations.push_back(&ladies);
 
@@ -30,6 +31,8 @@ GameState::GameState() {
    // innkeeper.related_locations.push_back(&trade;
    // innkeeper.related_locations.push_back(&gossip);
    // innkeeper.related_locations.push_back(&ladies);
+
+   gamblers.related_locations.push_back(&tavern);
 }
 
 GameState::~GameState() {

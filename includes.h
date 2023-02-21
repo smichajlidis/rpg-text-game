@@ -53,6 +53,9 @@
 #include "includes/location/innkeeper.h"
 #include "src/location/innkeeper.cpp"
 
+#include "includes/location/gamblers.h"
+#include "src/location/gamblers.cpp"
+
 //////////////////////////////////
 
 #include "includes/game_state.h"

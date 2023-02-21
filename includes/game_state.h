@@ -6,6 +6,7 @@
 #include "location/square.h"
 #include "location/tavern.h"
 #include "location/innkeeper.h"
+#include "location/gamblers.h"
 
 class GameState {
 
@@ -14,6 +15,7 @@ class GameState {
     Square square;
     Tavern tavern;
     Innkeeper innkeeper;
+    Gamblers gamblers;
 
     Location *current_location;
 
