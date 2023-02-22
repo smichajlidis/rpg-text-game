@@ -2,6 +2,8 @@
 #include "../includes/game_state.h"
 
 void GameState::display_location() {
+    if (player.drunk > 0)
+        player.drunk--;
     if ((*current_location).description != "none")
         (*current_location).print_location();
     current_location = current_location->making_a_choice();

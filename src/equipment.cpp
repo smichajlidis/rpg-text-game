@@ -84,7 +84,7 @@ void Equipment::add_food(Food obj) {
 
 void Equipment::remove_gold(int val) {
     gold-=val;
-    std::cout<<"gold -5";
+    std::cout<<"gold -5\n";
 }
 void Equipment::remove_armor(Armor obj) {
     auto it = armors.begin();
