@@ -77,6 +77,9 @@
 #include "includes/location/order_beer.h"
 #include "src/location/order_beer.cpp"
 
+#include "includes/location/trade.h"
+#include "src/location/trade.cpp"
+
 //////////////////////////////////
 
 #include "includes/game_state.h"

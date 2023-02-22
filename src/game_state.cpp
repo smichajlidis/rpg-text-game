@@ -33,7 +33,7 @@ GameState::GameState() {
 
     innkeeper.related_locations.push_back(&tavern);
     innkeeper.related_locations.push_back(&order_beer);
-   // innkeeper.related_locations.push_back(&trade;
+    innkeeper.related_locations.push_back(&trade);
    // innkeeper.related_locations.push_back(&gossip);
 
     gamblers.related_locations.push_back(&tavern);

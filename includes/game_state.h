@@ -13,6 +13,7 @@
 #include "location/thugs.h"
 #include "location/altars.h"
 #include "location/order_beer.h"
+#include "location/trade.h"
 #include "equipment.h"
 #include "item/weapon/hunting_weapon/bow.h"
 #include "item/weapon/sword.h"
@@ -20,8 +21,6 @@
 class GameState {
 
     Player player;
-
-    Equipment tavern_trade;
 
     Bow bow;
     Sword sword;
@@ -32,6 +31,7 @@ class GameState {
 
     Tavern tavern;
         OrderBeer order_beer;
+        Trade trade;
 
     Innkeeper innkeeper;
     Gamblers gamblers;
