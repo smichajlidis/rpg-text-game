@@ -46,6 +46,9 @@ public:
 
     friend class OrderBeer;
     friend class GameState;
+    friend class Selling;
+    friend class Buying;
+    friend class Creature;
 };
 
 #endif

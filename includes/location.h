@@ -31,6 +31,8 @@ public:
     friend class Tavern;
         friend class OrderBeer;
         friend class Trade;
+            friend class Buying;
+            friend class Selling;
     friend class Innkeeper;
     friend class Gamblers;
     friend class Priest;

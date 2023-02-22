@@ -17,6 +17,7 @@ public:
 
     friend class Player;
     friend class OrderBeer;
+    friend class GameState;
 
 };
 

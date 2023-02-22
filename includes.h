@@ -80,6 +80,12 @@
 #include "includes/location/trade.h"
 #include "src/location/trade.cpp"
 
+#include "includes/location/buying.h"
+#include "src/location/buying.cpp"
+
+#include "includes/location/selling.h"
+#include "src/location/selling.cpp"
+
 //////////////////////////////////
 
 #include "includes/game_state.h"

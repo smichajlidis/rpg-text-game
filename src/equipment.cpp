@@ -160,6 +160,7 @@ void Equipment::remove_food(Food obj) {
 }
 
 Equipment::Equipment() {
+    gold = 0;
 }
 
 Equipment::~Equipment() {

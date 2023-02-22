@@ -50,11 +50,21 @@ GameState::GameState() {
     order_beer.related_locations.push_back(&innkeeper);
 
     trade.related_locations.push_back(&innkeeper);
+    trade.related_locations.push_back(&buying);
+    trade.related_locations.push_back(&selling);
+
+    selling.point_equipment(&player.equipment);
+    selling.point_trade_goods(&trade_goods);
+    selling.related_locations.push_back(&trade);
+
+    buying.point_equipment(&player.equipment);
+    buying.point_trade_goods(&trade_goods);
+    buying.related_locations.push_back(&trade);
 
     // ADDING ITEMS FOR TRADING
 
-    trade.trade_goods.weapons.push_back(sword);
-    trade.trade_goods.hunting_weapons.push_back(bow);
+    trade_goods.weapons.push_back(sword);
+    trade_goods.hunting_weapons.push_back(bow);
 
 }
 
