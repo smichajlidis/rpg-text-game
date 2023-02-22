@@ -49,6 +49,10 @@ GameState::GameState() {
     order_beer.point_player(&player);
     order_beer.related_locations.push_back(&innkeeper);
 
+    // ADDING ITEMS FOR TRADING
+
+    
+
 }
 
 GameState::~GameState() {
