@@ -11,6 +11,8 @@ class Item {
     int amount;
 
     friend class Equipment;
+    friend class GameState;
+    friend class Bow;
 
 public:
 

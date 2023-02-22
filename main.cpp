@@ -8,7 +8,7 @@ int main() {
 
 GameState game_state;
 
-OrderBeer order_beer;
+//OrderBeer order_beer;
 
 int i {1};
 

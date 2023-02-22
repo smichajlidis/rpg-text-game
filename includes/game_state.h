@@ -13,11 +13,17 @@
 #include "location/thugs.h"
 #include "location/altars.h"
 #include "location/order_beer.h"
+#include "equipment.h"
+#include "item/weapon/hunting_weapon/bow.h"
 
 class GameState {
 
     Player player;
-    
+
+    Equipment tavern_trade;
+
+    Bow bow;
+
     Chapel chapel;
     Forest forest;
     Square square;
