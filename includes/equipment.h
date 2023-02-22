@@ -45,7 +45,7 @@ public:
     ~Equipment();
 
     friend class OrderBeer;
-
+    friend class GameState;
 };
 
 #endif

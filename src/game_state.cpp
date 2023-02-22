@@ -51,7 +51,8 @@ GameState::GameState() {
 
     // ADDING ITEMS FOR TRADING
 
-    
+    trade.trade_goods.weapons.push_back(sword);
+    trade.trade_goods.hunting_weapons.push_back(bow);
 
 }
 

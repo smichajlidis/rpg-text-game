@@ -30,6 +30,7 @@ public:
     friend class Forest;
     friend class Tavern;
         friend class OrderBeer;
+        friend class Trade;
     friend class Innkeeper;
     friend class Gamblers;
     friend class Priest;

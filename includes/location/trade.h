@@ -14,6 +14,8 @@ public:
     Trade(std::string name_val = "trade");
     ~Trade();
 
+    friend class GameState;
+
 };
 
 #endif
