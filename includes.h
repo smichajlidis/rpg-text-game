@@ -36,6 +36,9 @@
 #include "includes/item/weapon/hunting_weapon/bow.h"
 #include "src/item/weapon/hunting_weapon/bow.cpp"
 
+#include "includes/item/weapon/sword.h"
+#include "src/item/weapon/sword.cpp"
+
 // LOCATION AND DERIVED CLASSES
 
 #include "includes/location.h"

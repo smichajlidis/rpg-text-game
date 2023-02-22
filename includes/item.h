@@ -13,6 +13,7 @@ class Item {
     friend class Equipment;
     friend class GameState;
     friend class Bow;
+    friend class Sword;
 
 public:
 

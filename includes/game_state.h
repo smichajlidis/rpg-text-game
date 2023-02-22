@@ -15,6 +15,7 @@
 #include "location/order_beer.h"
 #include "equipment.h"
 #include "item/weapon/hunting_weapon/bow.h"
+#include "item/weapon/sword.h"
 
 class GameState {
 
@@ -23,6 +24,7 @@ class GameState {
     Equipment tavern_trade;
 
     Bow bow;
+    Sword sword;
 
     Chapel chapel;
     Forest forest;

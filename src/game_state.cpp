@@ -12,7 +12,7 @@ void GameState::display_location() {
 
 GameState::GameState() {
     current_location = &square;
-    
+    // LOCATION INITIALIZATION
     square.related_locations.push_back(&square);
     square.related_locations.push_back(&tavern);
     square.related_locations.push_back(&forest);
