@@ -8,6 +8,37 @@
 #include "../includes/item/weapon.h"
 #include "../includes/item/weapon/hunting_weapon.h"
 
+void Equipment::display_equipment() {
+    int i {1};
+    for (auto obj: armors) {
+        std::cout<<i<<". "<<obj.return_name()<<" amount: "<<obj.return_amount()<<" worth: "<<obj.return_price()<<"\n";
+        ++i;
+    }
+    for (auto obj: clothes) {
+        std::cout<<i<<". "<<obj.return_name()<<" amount: "<<obj.return_amount()<<" worth: "<<obj.return_price()<<"\n";
+        ++i;
+    }
+    for (auto obj: weapons) {
+        std::cout<<i<<". "<<obj.return_name()<<" amount: "<<obj.return_amount()<<" worth: "<<obj.return_price()<<"\n";
+        ++i;
+    }
+    for (auto obj: hunting_weapons) {
+        std::cout<<i<<". "<<obj.return_name()<<" amount: "<<obj.return_amount()<<" worth: "<<obj.return_price()<<"\n";
+        ++i;
+    }
+    for (auto obj: items) {
+        std::cout<<i<<". "<<obj.return_name()<<" amount: "<<obj.return_amount()<<" worth: "<<obj.return_price()<<"\n";
+        ++i;
+    }
+    for (auto obj: food) {
+        std::cout<<i<<". "<<obj.return_name()<<" amount: "<<obj.return_amount()<<" worth: "<<obj.return_price()<<"\n";
+        ++i;
+    }
+    if (i == 1 )
+        std::cout << "Ups. Nothing to display.";
+    std::cin>>i;
+}
+
 int Equipment::return_gold() {
     return gold;
 }

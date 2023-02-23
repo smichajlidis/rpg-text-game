@@ -23,6 +23,8 @@ class Equipment {
 
 public:
 
+    void display_equipment();
+
     int return_gold();
 
     void add_gold(int);

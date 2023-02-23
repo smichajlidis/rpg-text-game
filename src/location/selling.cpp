@@ -10,8 +10,9 @@ void Selling::point_trade_goods(Equipment *obj) {
 }
 
 Location* Selling::making_a_choice() {
-   
-
+    int i {};
+    (*equipment).display_equipment();
+    std::cin>>i;
     return related_locations.at(0);
 }
 

@@ -1,15 +1,15 @@
 #include <iostream>
 #include "../includes/item.h"
 
-std::string Item::get_name() {
+std::string Item::return_name() {
     return name;
 }
 
-int Item::get_price() {
+int Item::return_price() {
     return price;
 }
 
-int Item::get_amount() {
+int Item::return_amount() {
     return amount;
 }
 
