@@ -24,6 +24,8 @@ class Equipment {
 public:
 
     void display_equipment();
+    Item* equipment_choice();
+    Item* looking_for_item(int choice);
 
     int return_gold();
 

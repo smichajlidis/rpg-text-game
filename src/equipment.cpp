@@ -12,31 +12,78 @@ void Equipment::display_equipment() {
     int i {1};
     for (auto obj: armors) {
         std::cout<<i<<". "<<obj.return_name()<<" amount: "<<obj.return_amount()<<" worth: "<<obj.return_price()<<"\n";
+    //    eq.push_back(obj.return_name());
         ++i;
     }
     for (auto obj: clothes) {
         std::cout<<i<<". "<<obj.return_name()<<" amount: "<<obj.return_amount()<<" worth: "<<obj.return_price()<<"\n";
+    //    eq.push_back(obj.return_name());
         ++i;
     }
     for (auto obj: weapons) {
         std::cout<<i<<". "<<obj.return_name()<<" amount: "<<obj.return_amount()<<" worth: "<<obj.return_price()<<"\n";
+    //    eq.push_back(obj.return_name());
         ++i;
     }
     for (auto obj: hunting_weapons) {
         std::cout<<i<<". "<<obj.return_name()<<" amount: "<<obj.return_amount()<<" worth: "<<obj.return_price()<<"\n";
+    //    eq.push_back(obj.return_name());
         ++i;
     }
     for (auto obj: items) {
         std::cout<<i<<". "<<obj.return_name()<<" amount: "<<obj.return_amount()<<" worth: "<<obj.return_price()<<"\n";
+    //    eq.push_back(obj.return_name());
         ++i;
     }
     for (auto obj: food) {
         std::cout<<i<<". "<<obj.return_name()<<" amount: "<<obj.return_amount()<<" worth: "<<obj.return_price()<<"\n";
+    //    eq.push_back(obj.return_name());
         ++i;
     }
     if (i == 1 )
         std::cout << "Ups. Nothing to display.";
-    std::cin>>i;
+}
+
+Item* Equipment::equipment_choice() {
+    int choice {};
+    std::cout<<"\nPass the number of an item: ";
+    std::cin>>choice;
+    return looking_for_item(choice);
+}
+
+Item* Equipment::looking_for_item(int choice) {
+    int count {1};
+    for (auto &obj: armors) {
+        if (count == choice)
+            return &obj;
+        ++count;
+    }
+    for (auto &obj: clothes) {
+        if (count == choice)
+            return &obj;
+        ++count;
+    }
+    for (auto &obj: weapons) {
+        if (count == choice)
+            return &obj;
+        ++count;
+    }
+    for (auto &obj: hunting_weapons) {
+        if (count == choice)
+            return &obj;
+        ++count;
+    }
+    for (auto &obj: items) {
+        if (count == choice)
+            return &obj;
+        ++count;
+    }
+    for (auto &obj: food) {
+        if (count == choice)
+            return &obj;
+        ++count;
+    }
+    return nullptr;
 }
 
 int Equipment::return_gold() {
