@@ -12,7 +12,7 @@ void Buying::point_trade_goods(Equipment *obj) {
 Location* Buying::making_a_choice() {
     int choice {};
     (*trade_goods).display_equipment();
-    Item *ptr = (*equipment).equipment_choice();
+    Item *ptr = (*trade_goods).equipment_choice();
     std::cout<<(*ptr).return_name()<<" options:\n\n";
     std::cout<<"1. Buy\n";
     std::cout<<"2. See more\n";
