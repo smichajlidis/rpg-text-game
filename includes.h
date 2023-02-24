@@ -90,3 +90,6 @@
 
 #include "includes/game_state.h"
 #include "src/game_state.cpp"
+
+#include "includes/screen_stuff.h"
+#include "src/screen_stuff.cpp"

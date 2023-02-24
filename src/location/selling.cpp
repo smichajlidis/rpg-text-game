@@ -19,6 +19,20 @@ Location* Selling::making_a_choice() {
     std::cout<<"0. Return\n\n";
     std::cout<<"What do you do? ";
     std::cin>>choice;
+
+   // switch (choice) {
+   //     case 1: {
+   //         std::cout<<"\n\nYou sold "<<(*ptr).return_name()<<"\n";
+   //         (*equipment).add_gold((*ptr).return_price);
+   //         cout<<"-"<<(*ptr).return_name()<<"\n";
+   //         (*equipment).remove_item(*ptr);
+   //         std::cout<<"Press any digit to continue: ";
+   //         std::cin>>choice;
+   //         break;
+   //     }
+   //     case 2: (*ptr).display_properties(); break;
+   //     default: break;
+
     return related_locations.at(0);
 }
 

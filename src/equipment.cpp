@@ -92,6 +92,7 @@ int Equipment::return_gold() {
 
 void Equipment::add_gold(int val) {
     gold+=val;
+    std::cout<<"gold +"<<val<<"\n";
 }
 void Equipment::add_armor(Armor obj) {
     bool done {false};
@@ -162,7 +163,7 @@ void Equipment::add_food(Food obj) {
 
 void Equipment::remove_gold(int val) {
     gold-=val;
-    std::cout<<"gold -5\n";
+    std::cout<<"gold -"<<val<<"\n";
 }
 void Equipment::remove_armor(Armor obj) {
     auto it = armors.begin();
