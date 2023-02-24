@@ -1,6 +1,14 @@
 #include <iostream>
 #include "../includes/item.h"
 
+void Item::decrease_amount(int val) {
+    amount-=val;
+}
+
+void Item::increase_amount(int val) {
+    amount+=val;
+}
+
 std::string Item::return_name() {
     return name;
 }

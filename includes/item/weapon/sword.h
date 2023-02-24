@@ -4,6 +4,10 @@
 
 class Sword: public Weapon {
 
+    public:
+
+    virtual void show_details();
+
     Sword(std::string name_val = "sword", int price_val = 70, int hitForce_val = 35, int amount_val = 1);
     ~Sword();
 
