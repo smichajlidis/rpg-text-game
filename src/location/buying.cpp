@@ -12,9 +12,10 @@ void Buying::point_trade_goods(Equipment *obj) {
 
 Location* Buying::making_a_choice() {
     int choice {};
-    do {
         (*trade_goods).display_equipment();
         Item *ptr = (*trade_goods).equipment_choice();
+        std::cout<<"\n";
+    do {
         if (ptr) {
             std::cout<<(*ptr).return_name()<<" options:\n\n";
             std::cout<<"1. Buy\n";
@@ -24,12 +25,14 @@ Location* Buying::making_a_choice() {
             std::cin>>choice;
             switch (choice) {
                 case 1: {
-                    std::cout<<"\n\nYou bought "<<(*ptr).return_name()<<"\n";
+                    ScreenStuff screen_stuff;
+                    screen_stuff.clear();
+                    std::cout<<"\nYou bought "<<(*ptr).return_name()<<"\n\n";
                     (*equipment).remove_gold((*ptr).return_price());
                     std::cout<<"+"<<(*ptr).return_name()<<"\n";
                     (*equipment).add_item(ptr);
                     (*trade_goods).remove_item(ptr);
-                    std::cout<<"Press any digit to continue: ";
+                    std::cout<<"\nPress any digit to continue: ";
                     std::cin>>choice;
                     break;
                 }

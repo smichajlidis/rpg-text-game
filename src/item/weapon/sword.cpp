@@ -2,8 +2,8 @@
 #include "../../../includes/item/weapon/sword.h"
 
 void Sword::show_details() {
-    std::cout<<"name: "<<name;
-    std::cout<<"\namount: "<<amount;
+    std::cout<<"\nname: "<<name;
+    std::cout<<"\n\namount: "<<amount;
     std::cout<<"\nworth: "<<price;
     std::cout<<"\nhit force: "<<hitForce;
     std::cout<<"\n\n& & & & & &\n\n";

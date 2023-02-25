@@ -15,6 +15,7 @@ Location* Selling::making_a_choice() {
     do {
         (*equipment).display_equipment();
         Item *ptr = (*equipment).equipment_choice();
+        std::cout<<"\n";
         if (ptr) {
             std::cout<<(*ptr).return_name()<<" options:\n\n";
             std::cout<<"1. Sell\n";
@@ -24,12 +25,14 @@ Location* Selling::making_a_choice() {
             std::cin>>choice;
             switch (choice) {
                 case 1: {
-                    std::cout<<"\n\nYou sold "<<(*ptr).return_name()<<"\n";
+                    ScreenStuff screen_stuff;
+                    screen_stuff.clear();
+                    std::cout<<"\nYou sold "<<(*ptr).return_name()<<"\n\n";
                     (*equipment).add_gold((*ptr).return_price());
                     std::cout<<"-"<<(*ptr).return_name()<<"\n";
                     (*equipment).remove_item(ptr);
                     (*trade_goods).add_item(ptr);
-                    std::cout<<"Press any digit to continue: ";
+                    std::cout<<"\nPress any digit to continue: ";
                     std::cin>>choice;
                     break;
                 }
