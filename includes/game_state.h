@@ -13,17 +13,28 @@
 #include "location/thugs.h"
 #include "location/altars.h"
 #include "location/order_beer.h"
+#include "location/trade.h"
+#include "location/buying.h"
+#include "location/selling.h"
+#include "equipment.h"
+
+class Sword;
+class Bow;
 
 class GameState {
 
     Player player;
-    
+    Equipment trade_goods;
+
     Chapel chapel;
     Forest forest;
     Square square;
 
     Tavern tavern;
         OrderBeer order_beer;
+        Trade trade;
+            Buying buying;
+            Selling selling;
 
     Innkeeper innkeeper;
     Gamblers gamblers;

@@ -33,6 +33,12 @@
 #include "includes/item/weapon/hunting_weapon.h"
 #include "src/item/weapon/hunting_weapon.cpp"
 
+#include "includes/item/weapon/hunting_weapon/bow.h"
+#include "src/item/weapon/hunting_weapon/bow.cpp"
+
+#include "includes/item/weapon/sword.h"
+#include "src/item/weapon/sword.cpp"
+
 // LOCATION AND DERIVED CLASSES
 
 #include "includes/location.h"
@@ -71,7 +77,19 @@
 #include "includes/location/order_beer.h"
 #include "src/location/order_beer.cpp"
 
+#include "includes/location/trade.h"
+#include "src/location/trade.cpp"
+
+#include "includes/location/buying.h"
+#include "src/location/buying.cpp"
+
+#include "includes/location/selling.h"
+#include "src/location/selling.cpp"
+
 //////////////////////////////////
 
 #include "includes/game_state.h"
 #include "src/game_state.cpp"
+
+#include "includes/screen_stuff.h"
+#include "src/screen_stuff.cpp"

@@ -12,7 +12,7 @@ void GameState::display_location() {
 
 GameState::GameState() {
     current_location = &square;
-    
+    // LOCATION INITIALIZATION
     square.related_locations.push_back(&square);
     square.related_locations.push_back(&tavern);
     square.related_locations.push_back(&forest);
@@ -33,7 +33,7 @@ GameState::GameState() {
 
     innkeeper.related_locations.push_back(&tavern);
     innkeeper.related_locations.push_back(&order_beer);
-   // innkeeper.related_locations.push_back(&trade;
+    innkeeper.related_locations.push_back(&trade);
    // innkeeper.related_locations.push_back(&gossip);
 
     gamblers.related_locations.push_back(&tavern);
@@ -48,6 +48,30 @@ GameState::GameState() {
 
     order_beer.point_player(&player);
     order_beer.related_locations.push_back(&innkeeper);
+
+    trade.related_locations.push_back(&innkeeper);
+    trade.related_locations.push_back(&buying);
+    trade.related_locations.push_back(&selling);
+
+    selling.point_equipment(&player.equipment);
+    selling.point_trade_goods(&trade_goods);
+    selling.related_locations.push_back(&trade);
+
+    buying.point_equipment(&player.equipment);
+    buying.point_trade_goods(&trade_goods);
+    buying.related_locations.push_back(&trade);
+
+    // ADDING ITEMS FOR TRADING
+
+    Item* sword {nullptr};
+    sword = new Sword;
+    trade_goods.items.push_back(sword);
+
+    (*(trade_goods.items).at(0)).increase_amount(2);
+
+    Item* bow {nullptr};
+    bow = new Bow;
+    trade_goods.items.push_back(bow);
 
 }
 
