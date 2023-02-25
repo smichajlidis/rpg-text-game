@@ -10,6 +10,12 @@ void Bow::show_details() {
     std::cout<<"\n\n";
 }
 
+Item* Bow::clone() {
+    Item* bow {nullptr};
+    bow = new Bow;
+    return bow;
+}
+
 Bow::Bow(std::string name_val, int price_val, int hitForce_val, int amount_val)
     : HuntingWeapon(name_val, price_val, hitForce_val, amount_val) {
 }

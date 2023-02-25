@@ -17,16 +17,14 @@
 #include "location/buying.h"
 #include "location/selling.h"
 #include "equipment.h"
-#include "item/weapon/hunting_weapon/bow.h"
-#include "item/weapon/sword.h"
+
+class Sword;
+class Bow;
 
 class GameState {
 
     Player player;
     Equipment trade_goods;
-
-    Bow bow;
-    Sword sword;
 
     Chapel chapel;
     Forest forest;

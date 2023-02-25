@@ -31,6 +31,7 @@ Location* Buying::making_a_choice() {
                     (*equipment).remove_gold((*ptr).return_price());
                     std::cout<<"+"<<(*ptr).return_name()<<"\n";
                     (*equipment).add_item(ptr);
+                    std::cout<<"added";
                     (*trade_goods).remove_item(ptr);
                     std::cout<<"\nPress any digit to continue: ";
                     std::cin>>choice;

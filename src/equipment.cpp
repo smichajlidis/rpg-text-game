@@ -17,8 +17,9 @@ void Equipment::add_item(Item *item) {
             done = true;
         }
     }
-    if (done == false)
-    items.push_back(item);
+    if (done == false) {
+        items.push_back(item->clone());
+    }
 }
 
 void Equipment::remove_item(Item *item) {
@@ -28,8 +29,13 @@ void Equipment::remove_item(Item *item) {
             if ((*i).return_amount() > 1) {
                 (*i).decrease_amount((*item).return_amount());
             }
-            else items.erase(it);
-        } 
+    //        else delete items.erase(it);
+                else {
+                    delete i;
+                    items.erase(it);
+                    break;
+                }
+        }
     it++;
     }
 }

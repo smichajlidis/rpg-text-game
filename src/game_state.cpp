@@ -63,8 +63,15 @@ GameState::GameState() {
 
     // ADDING ITEMS FOR TRADING
 
-    trade_goods.items.push_back(&sword);
-    trade_goods.items.push_back(&bow);
+    Item* sword {nullptr};
+    sword = new Sword;
+    trade_goods.items.push_back(sword);
+
+    (*(trade_goods.items).at(0)).increase_amount(2);
+
+    Item* bow {nullptr};
+    bow = new Bow;
+    trade_goods.items.push_back(bow);
 
 }
 

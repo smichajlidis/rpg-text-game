@@ -7,9 +7,10 @@ class Sword: public Weapon {
     public:
 
     virtual void show_details();
+    virtual Item* clone();
 
     Sword(std::string name_val = "sword", int price_val = 70, int hitForce_val = 35, int amount_val = 1);
-    ~Sword();
+    virtual ~Sword();
 
     friend class GameState;
 
