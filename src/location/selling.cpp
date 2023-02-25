@@ -32,7 +32,7 @@ Location* Selling::making_a_choice() {
                     std::cout<<"-"<<(*ptr).return_name()<<"\n";
                     (*equipment).remove_item(ptr);
                     (*trade_goods).add_item(ptr);
-                    std::cout<<"\nPress any digit to continue: ";
+                    std::cout<<"\nPress 0 to continue: ";
                     std::cin>>choice;
                     break;
                 }

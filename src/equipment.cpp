@@ -13,7 +13,7 @@ void Equipment::add_item(Item *item) {
     bool done {false};
     for(auto &i: items) {
         if ((*item).return_name() == (*i).return_name()) {
-            (*i).increase_amount((*item).return_amount());
+            (*i).increase_amount(1);
             done = true;
         }
     }
@@ -27,7 +27,7 @@ void Equipment::remove_item(Item *item) {
     for(auto &i: items) {
         if ((*i).return_name() == (*item).return_name()) {
             if ((*i).return_amount() > 1) {
-                (*i).decrease_amount((*item).return_amount());
+                (*i).decrease_amount(1);
             }
     //        else delete items.erase(it);
                 else {
