@@ -6,7 +6,7 @@ void Sword::show_details() {
     std::cout<<"\n\namount: "<<amount;
     std::cout<<"\nworth: "<<price;
     std::cout<<"\nhit force: "<<hitForce;
-    std::cout<<"\n\n& & & & & &\n\n";
+    std::cout<<"\n\n";
 }
 
 Sword::Sword(std::string name_val, int price_val, int hitForce_val, int amount_val)

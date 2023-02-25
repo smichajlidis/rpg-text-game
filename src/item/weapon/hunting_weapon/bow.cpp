@@ -7,7 +7,7 @@ void Bow::show_details() {
     std::cout<<"\nworth: "<<price;
     std::cout<<"\nhit force: "<<hitForce;
     std::cout<<"\nfurthermore: enables hunting";
-    std::cout<<"\n\n& & & & & &\n\n";
+    std::cout<<"\n\n";
 }
 
 Bow::Bow(std::string name_val, int price_val, int hitForce_val, int amount_val)
