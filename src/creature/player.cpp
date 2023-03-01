@@ -3,7 +3,7 @@
 
 void Player::drinking(int drunk_val) {
     drunk+=20;
-    std::cout<<"You are.. a bit drunk.\n";
+    std::cout<<"\nYou are.. a bit drunk.\n";
 }
 
 void Player::display_top_bar() {

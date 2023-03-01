@@ -7,6 +7,7 @@ void Creature::increase_hp(int hp_val) {
         hp+=hp_val;
     else 
         hp=100;
+    std::cout<<"hp +"<<hp_val<<"\n";
 }
 
 Creature::Creature(std::string name_val, int strength_val, int hp_val)

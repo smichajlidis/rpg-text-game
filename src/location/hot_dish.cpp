@@ -12,13 +12,11 @@ Location* HotDish::making_a_choice() {
         std::cout<<"You eat a hot dish\n\n";
         (*player).equipment.remove_gold(25);
         (*player).increase_hp(20);
-        std::cout<<"gold -25\n";
-        std::cout<<"hp +20";
     }
     else
         std::cout<<"- This is not a charity concert - innkeeper said - hot dish costs costs 25 gold.\n";
 
-    std::cout<<"\n\nPass any digit to return: ";
+    std::cout<<"\nPass any digit to return: ";
     std::cin>>i;
 
     return related_locations.at(0);
