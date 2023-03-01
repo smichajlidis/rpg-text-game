@@ -86,6 +86,9 @@
 #include "includes/location/selling.h"
 #include "src/location/selling.cpp"
 
+#include "includes/location/gossip.h"
+#include "src/location/gossip.cpp"
+
 //////////////////////////////////
 
 #include "includes/game_state.h"

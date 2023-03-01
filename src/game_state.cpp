@@ -34,7 +34,7 @@ GameState::GameState() {
     innkeeper.related_locations.push_back(&tavern);
     innkeeper.related_locations.push_back(&order_beer);
     innkeeper.related_locations.push_back(&trade);
-   // innkeeper.related_locations.push_back(&gossip);
+    innkeeper.related_locations.push_back(&gossip);
 
     gamblers.related_locations.push_back(&tavern);
 
@@ -60,6 +60,8 @@ GameState::GameState() {
     buying.point_equipment(&player.equipment);
     buying.point_trade_goods(&trade_goods);
     buying.related_locations.push_back(&trade);
+
+    gossip.related_locations.push_back(&innkeeper);
 
     // ADDING ITEMS FOR TRADING
 
