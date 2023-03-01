@@ -17,6 +17,7 @@
 #include "location/buying.h"
 #include "location/selling.h"
 #include "location/gossip.h"
+#include "location/hot_dish.h"
 #include "equipment.h"
 
 class Sword;
@@ -37,6 +38,7 @@ class GameState {
             Buying buying;
             Selling selling;
         Gossip gossip;
+        HotDish hot_dish;
     Innkeeper innkeeper;
     Gamblers gamblers;
     Ladies ladies;

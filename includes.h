@@ -89,6 +89,9 @@
 #include "includes/location/gossip.h"
 #include "src/location/gossip.cpp"
 
+#include "includes/location/hot_dish.h"
+#include "src/location/hot_dish.cpp"
+
 //////////////////////////////////
 
 #include "includes/game_state.h"

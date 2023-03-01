@@ -34,6 +34,7 @@ public:
             friend class Buying;
             friend class Selling;
         friend class Gossip;
+        friend class HotDish;
     friend class Innkeeper;
     friend class Gamblers;
     friend class Priest;
