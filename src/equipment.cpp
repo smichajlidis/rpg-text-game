@@ -73,12 +73,10 @@ int Equipment::return_gold() {
 
 void Equipment::add_gold(int val) {
     gold+=val;
-    std::cout<<"gold +"<<val<<"\n";
 }
 
 void Equipment::remove_gold(int val) {
     gold-=val;
-    std::cout<<"gold -"<<val<<"\n";
 }
 
 Equipment::Equipment() {

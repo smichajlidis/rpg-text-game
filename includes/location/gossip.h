@@ -4,9 +4,14 @@
 
 class Gossip: public Location {
 
-    virtual Location* making_a_choice();
+    Player* player;
 
     public:
+
+    void point_player(Player*);
+    void display_event();
+
+    virtual Location* making_a_choice();
 
     Gossip(std::string name_val = "gossip");
     ~Gossip();

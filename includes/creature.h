@@ -12,11 +12,14 @@ class Creature {
 
 public:
 
+    void increase_hp(int hp_val);
+
     Creature(std::string name_val = "none", int strength_val = 1, int hp_val = 100);
     ~Creature();
 
     friend class Player;
     friend class OrderBeer;
+    friend class HotDish;
     friend class GameState;
 
 };
