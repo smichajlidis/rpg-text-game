@@ -18,6 +18,7 @@ public:
     ~Creature();
 
     friend class Player;
+    friend class NPC;
     friend class OrderBeer;
     friend class HotDish;
     friend class Gamblers;

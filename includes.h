@@ -13,6 +13,9 @@
 #include "includes/creature/player.h"
 #include "src/creature/player.cpp"
 
+#include "includes/creature/npc.h"
+#include "src/creature/npc.cpp"
+
 // EQUIPMENT AND DERIVED CLASSES
 
 #include "includes/equipment.h"
