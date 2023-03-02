@@ -7,7 +7,7 @@ Location* Gamblers::making_a_choice() {
     int choice {};
     std::cin>>choice;
     int value {};
-    switch (value) {
+    switch (choice) {
         case 1: value=5; break;
         case 2: value=10; break;
         case 3: value=25; break;
@@ -18,7 +18,7 @@ Location* Gamblers::making_a_choice() {
     std::vector <int> results {};
 
     srand(time(NULL));
-    std::cout<<"You bet "<<value<<" gold and roll the dice. Your result is:\n\n";
+    std::cout<<"\nYou bet "<<value<<" gold and roll the dice. Your result is:\n\n";
 
     for(int i {1}; i <= 6; i++) {
         results.push_back((std::rand() %6)+1);
@@ -33,14 +33,14 @@ Location* Gamblers::making_a_choice() {
 
     std::cout<<"\nYour score is "<<results.at(0)<<" + "<<results.at(1)<<" + "<<results.at(2)<<" + "<<results.at(3)<<" + "<<results.at(4)<<" + "<<results.at(5)<<" = "<<results.at(0)+results.at(1)+results.at(2)+results.at(3)+results.at(4)+results.at(5)<<std::endl;
     if(results.at(0)+results.at(1)+results.at(2)+results.at(3)+results.at(4)+results.at(5) > 22) {
-        std::cout<<"\nYou win!\n";
+        std::cout<<"\nYou win!\n\n";
         (*player_ptr).equipment.add_gold(value);
     }
     else {
-        std::cout<<"\nYou lose\n";
+        std::cout<<"\nYou lose\n\n";
         (*player_ptr).equipment.remove_gold(value);
     }
-    std::cout<<"\n\nEnter 0 to continue: ";
+    std::cout<<"\nEnter 0 to continue: ";
     std::cin>>choice;
 
     return related_locations.at(0); 
@@ -48,7 +48,7 @@ Location* Gamblers::making_a_choice() {
 }
 
 Gamblers::Gamblers(std::string name_val, std::string description_val, std::string choice_1_val, std::string choice_2_val, std::string choice_3_val, std::string choice_4_val, std::string choice_5_val)
-    : Location(name_val, description_val, choice_1_val, choice_2_val, choice_3_val, choice_4_val), PointPlayer() {
+    : Location(name_val, description_val, choice_1_val, choice_2_val, choice_3_val, choice_4_val, choice_5_val), PointPlayer() {
     }
 
 Gamblers::~Gamblers() {
