@@ -19,11 +19,11 @@
 #include "location/gossip.h"
 #include "location/hot_dish.h"
 #include "equipment.h"
-#include "point_player.h"
-#include "point_equipment.h"
+//#include "point_player.h"
 
 class Sword;
 class Bow;
+class PointPlayer;
 
 class GameState {
 
@@ -31,7 +31,7 @@ class GameState {
     Equipment trade_goods;
     Equipment equipment;
     PointPlayer point_player;
-    PointEquipment point_equipment;
+  //  PointEquipment point_equipment;
 
     Chapel chapel;
     Forest forest;

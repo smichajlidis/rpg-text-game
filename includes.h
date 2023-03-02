@@ -5,9 +5,6 @@
 #include "includes/point_player.h"
 #include "src/point_player.cpp"
 
-#include "includes/point_equipment.h"
-#include "src/point_equipment.cpp"
-
 // CREATURE AND DERIVED CLASSES
 
 #include "includes/creature.h"

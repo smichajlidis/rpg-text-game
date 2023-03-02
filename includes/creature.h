@@ -20,6 +20,7 @@ public:
     friend class Player;
     friend class OrderBeer;
     friend class HotDish;
+    friend class Gamblers;
     friend class GameState;
 
 };

@@ -17,6 +17,7 @@ public:
     ~PointPlayer();
 
     friend class HotDish;
+    friend class Gamblers;
 
 };
 

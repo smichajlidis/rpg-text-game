@@ -34,11 +34,11 @@ Location* Gamblers::making_a_choice() {
     std::cout<<"\nYour score is "<<results.at(0)<<" + "<<results.at(1)<<" + "<<results.at(2)<<" + "<<results.at(3)<<" + "<<results.at(4)<<" + "<<results.at(5)<<" = "<<results.at(0)+results.at(1)+results.at(2)+results.at(3)+results.at(4)+results.at(5)<<std::endl;
     if(results.at(0)+results.at(1)+results.at(2)+results.at(3)+results.at(4)+results.at(5) > 22) {
         std::cout<<"\nYou win!\n";
-        (*equipment_ptr).add_gold(value);
+        (*player_ptr).equipment.add_gold(value);
     }
     else {
         std::cout<<"\nYou lose\n";
-        (*equipment_ptr).remove_gold(value);
+        (*player_ptr).equipment.remove_gold(value);
     }
     std::cout<<"\n\nEnter 0 to continue: ";
     std::cin>>choice;
@@ -48,7 +48,7 @@ Location* Gamblers::making_a_choice() {
 }
 
 Gamblers::Gamblers(std::string name_val, std::string description_val, std::string choice_1_val, std::string choice_2_val, std::string choice_3_val, std::string choice_4_val, std::string choice_5_val)
-    : Location(name_val, description_val, choice_1_val, choice_2_val, choice_3_val, choice_4_val), PointEquipment() {
+    : Location(name_val, description_val, choice_1_val, choice_2_val, choice_3_val, choice_4_val), PointPlayer() {
     }
 
 Gamblers::~Gamblers() {

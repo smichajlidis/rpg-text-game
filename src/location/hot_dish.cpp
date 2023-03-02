@@ -4,9 +4,9 @@
 Location* HotDish::making_a_choice() {
     int i {};
 
-    if ((*equipment_ptr).return_gold() >= 25) {
+    if ((*player_ptr).equipment.return_gold() >= 25) {
         std::cout<<"You eat a hot dish\n\n";
-        (*equipment_ptr).remove_gold(25);
+        (*player_ptr).equipment.remove_gold(25);
         (*player_ptr).increase_hp(20);
     }
     else
@@ -19,7 +19,7 @@ Location* HotDish::making_a_choice() {
 }
 
 HotDish::HotDish(std::string name_val)
-    : Location(name_val), PointPlayer(), PointEquipment()  {
+    : Location(name_val), PointPlayer()  {
     }
 
 HotDish::~HotDish() {
