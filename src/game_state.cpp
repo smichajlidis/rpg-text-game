@@ -38,6 +38,7 @@ GameState::GameState() {
     innkeeper.related_locations.push_back(&hot_dish);
 
     gamblers.related_locations.push_back(&tavern);
+    gamblers.point_player(&player);
 
     ladies.related_locations.push_back(&tavern);
 
@@ -66,6 +67,12 @@ GameState::GameState() {
 
     hot_dish.related_locations.push_back(&innkeeper);
     hot_dish.point_player(&player);
+  //  hot_dish.point_equipment(&equipment);
+
+    // OTHER
+
+  //  point_player.point_player(&player);
+   // point_equipment.point_equipment(&equipment);
 
     // ADDING ITEMS FOR TRADING
 
