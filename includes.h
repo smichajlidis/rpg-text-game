@@ -99,3 +99,9 @@
 
 #include "includes/screen_stuff.h"
 #include "src/screen_stuff.cpp"
+
+#include "includes/point_player.h"
+#include "src/point_player.cpp"
+
+#include "includes/point_equipment.h"
+#include "src/point_equipment.cpp"

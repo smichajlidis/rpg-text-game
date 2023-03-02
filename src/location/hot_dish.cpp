@@ -1,10 +1,6 @@
 #include "../../includes/location/hot_dish.h"
 #include <iostream>
 
-void HotDish::point_player(Player *obj) {
-    player = obj;
-}
-
 Location* HotDish::making_a_choice() {
     int i {};
 

@@ -65,7 +65,11 @@ GameState::GameState() {
     gossip.related_locations.push_back(&innkeeper);
 
     hot_dish.related_locations.push_back(&innkeeper);
-    hot_dish.point_player(&player);
+
+    // OTHER
+
+    point_player.point_player(&player);
+    point_equipment.point_equipment(&equipment);
 
     // ADDING ITEMS FOR TRADING
 

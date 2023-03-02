@@ -34,11 +34,11 @@ Location* Gamblers::making_a_choice() {
     std::cout<<"\nYour score is "<<results.at(0)<<" + "<<results.at(1)<<" + "<<results.at(2)<<" + "<<results.at(3)<<" + "<<results.at(4)<<" + "<<results.at(5)<<" = "<<results.at(0)+results.at(1)+results.at(2)+results.at(3)+results.at(4)+results.at(5)<<std::endl;
     if(results.at(0)+results.at(1)+results.at(2)+results.at(3)+results.at(4)+results.at(5) > 22) {
         std::cout<<"\nYou win!\n";
-        increase_gold(value);
+        (*equipment_ptr).add_gold(value);
     }
     else {
         std::cout<<"\nYou lose\n";
-        decrease_gold(value);
+        (*equipment_ptr).remove_gold(value);
     }
     std::cout<<"\n\nEnter 0 to continue: ";
     std::cin>>choice;

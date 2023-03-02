@@ -2,7 +2,11 @@
 #define _GAMBLERS_H_
 #include <iostream>
 
-class Gamblers: public Location {
+class PointEquipment;
+class PointPlayer;
+
+class Gamblers: 
+    public Location, public PointEquipment, public PointPlayer {
 
 public:
 

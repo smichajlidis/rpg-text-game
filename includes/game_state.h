@@ -19,6 +19,8 @@
 #include "location/gossip.h"
 #include "location/hot_dish.h"
 #include "equipment.h"
+#include "point_player.h"
+#include "point_equipment.h"
 
 class Sword;
 class Bow;
@@ -27,6 +29,8 @@ class GameState {
 
     Player player;
     Equipment trade_goods;
+    PointPlayer point_player;
+    PointEquipment point_equipment;
 
     Chapel chapel;
     Forest forest;
