@@ -42,10 +42,13 @@ Location* Gamblers::making_a_choice() {
     }
     std::cout<<"\n\nEnter 0 to continue: ";
     std::cin>>choice;
+
+    return related_locations.at(0); 
+    
 }
 
 Gamblers::Gamblers(std::string name_val, std::string description_val, std::string choice_1_val, std::string choice_2_val, std::string choice_3_val, std::string choice_4_val, std::string choice_5_val)
-    : Location(name_val, description_val, choice_1_val, choice_2_val, choice_3_val, choice_4_val) {
+    : Location(name_val, description_val, choice_1_val, choice_2_val, choice_3_val, choice_4_val), PointEquipment() {
     }
 
 Gamblers::~Gamblers() {

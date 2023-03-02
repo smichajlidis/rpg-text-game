@@ -1,7 +1,7 @@
 #ifndef _HOT_DISH_H_
 #define _HOT_DISH_H_
 
-class HotDish: public Location {
+class HotDish: public Location, public PointPlayer, public PointEquipment {
 
     public:
 

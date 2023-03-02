@@ -15,6 +15,8 @@ void Location::print_location() {
         std::cout<< "5. "<<choice_5<<"\n";
     if (name != "square")
         std::cout<<"0. Return"<<"\n\n";
+    else
+        std::cout<<"\n";
     std::cout<<"What do you do? ";
 }
 

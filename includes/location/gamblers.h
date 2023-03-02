@@ -3,10 +3,9 @@
 #include <iostream>
 
 class PointEquipment;
-class PointPlayer;
 
 class Gamblers: 
-    public Location, public PointEquipment, public PointPlayer {
+    public Location, public PointEquipment {
 
 public:
 

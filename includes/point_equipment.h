@@ -2,6 +2,9 @@
 #define _POINT_EQUIPMENT_H_
 #include <iostream>
 
+class Equipment;
+class Gamblers;
+
 class PointEquipment {
 
     Equipment* equipment_ptr;
@@ -13,6 +16,8 @@ public:
     PointEquipment();
     ~PointEquipment();
 
+    friend class Gamblers;
+    friend class HotDish;
 
 };
 

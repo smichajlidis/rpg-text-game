@@ -2,9 +2,12 @@
 #define _POINT_PLAYER_H_
 #include <iostream>
 
+class Player;
+class HotDish;
+
 class PointPlayer {
 
-    PointPlayer* player_ptr;
+    Player* player_ptr;
 
 public:
 
@@ -12,6 +15,8 @@ public:
 
     PointPlayer();
     ~PointPlayer();
+
+    friend class HotDish;
 
 };
 

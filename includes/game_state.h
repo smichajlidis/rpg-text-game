@@ -29,6 +29,7 @@ class GameState {
 
     Player player;
     Equipment trade_goods;
+    Equipment equipment;
     PointPlayer point_player;
     PointEquipment point_equipment;
 
