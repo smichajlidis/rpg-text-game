@@ -8,6 +8,7 @@ class Priest:
 public:
 
     virtual Location* making_a_choice();
+    virtual void greeting();
 
     Priest(std::string name_val = "priest");
     ~Priest();
