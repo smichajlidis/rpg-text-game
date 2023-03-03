@@ -24,6 +24,7 @@
 class Sword;
 class Bow;
 class PointPlayer;
+class Priest;
 
 class GameState {
 
@@ -31,25 +32,29 @@ class GameState {
     Equipment trade_goods;
     Equipment equipment;
     PointPlayer point_player;
-  //  PointEquipment point_equipment;
 
-    Chapel chapel;
-    Forest forest;
-    Square square;
+    // NPC's
 
-    Tavern tavern;
-        OrderBeer order_beer;
-        Trade trade;
-            Buying buying;
-            Selling selling;
-        Gossip gossip;
-        HotDish hot_dish;
-    Innkeeper innkeeper;
-    Gamblers gamblers;
-    Ladies ladies;
     Priest priest;
-    Thugs thugs;
-    Altars altars;
+
+    // Locations
+
+    Square square;
+        Tavern tavern;
+            Innkeeper innkeeper;
+                OrderBeer order_beer;
+                Trade trade;
+                    Buying buying;
+                    Selling selling;
+                Gossip gossip;
+                HotDish hot_dish;
+            Gamblers gamblers;
+        // Priest priest;
+            Ladies ladies;
+        Forest forest;
+            Thugs thugs;
+        Chapel chapel;
+            Altars altars;
 
 
     Location *current_location;
