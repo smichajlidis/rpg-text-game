@@ -8,7 +8,7 @@ void NPC::increase_favor() {
 
 void NPC::decrease_favor() {
     favor-=15;
-    std::cout<<"Oh, you have crossed the line - "<<name<<" likes you a little less.\n";
+    std::cout<<"failure! - "<<name<<" likes you a little less.\n";
 }
 
 void NPC::display_npc_details() {

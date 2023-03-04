@@ -48,13 +48,27 @@ Location* Priest::making_a_choice() {
             return related_locations.at(1); break;
         }
         case 2: {
-            decrease_favor();
-            std::cout<<"\nPress 0 to continue: ";
-            std::cin>>choice;
-            return related_locations.at(1); break;
+            if (favor >= 80) {
+                std::cout<<"\nDidn't know that you are so pious! Ok, I have a gift for you.\n";
+                std::cout<<"<he gives you a key>\n\n"; 
+                std::cout<<"[+ chapel key]\n\n";
+                std::cout<<"<when you walk away from him he screams after you:>\n";
+                std::cout<<"And pray for your friend too!\n";
+                std::cout<<"\nPress 0 to continue: ";
+                std::cin>>choice;
+                related_locations.at(0); break;
+            }
+            else {
+                std::cout<<"\n- Not your bussiness stranger.\n\n";
+                decrease_favor();
+                std::cout<<"\nPress 0 to continue: ";
+                std::cin>>choice;
+                return related_locations.at(1); break;
+            }
         }
         default: return related_locations.at(0); break;
     }
+    return related_locations.at(1);
 }
 
 Priest::Priest(std::string name_val)
