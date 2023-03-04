@@ -53,7 +53,12 @@ Location* Priest::making_a_choice() {
                 std::cout<<"<he gives you a key>\n\n"; 
                 std::cout<<"[+ chapel key]\n\n";
                 std::cout<<"<when you walk away from him he screams after you:>\n";
-                
+             
+                Item *ptr = equipment.items.at(0);
+                (*player_ptr).equipment.add_item(ptr);
+                equipment.remove_item(ptr);
+              //  (*player_ptr).equipment.items.add_item(chapel_key);
+             
                 std::cout<<"And pray for your friend too!\n";
                 std::cout<<"\nPress 0 to continue: ";
                 std::cin>>choice;
