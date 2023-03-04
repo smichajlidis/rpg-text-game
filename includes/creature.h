@@ -13,6 +13,7 @@ class Creature {
 public:
 
     void increase_hp(int hp_val);
+    void restore_hp();
 
     Creature(std::string name_val = "none", int strength_val = 1, int hp_val = 100);
     ~Creature();
@@ -22,6 +23,7 @@ public:
     friend class OrderBeer;
     friend class HotDish;
     friend class Priest;
+    friend class Ladies;
     friend class Gamblers;
     friend class GameState;
 

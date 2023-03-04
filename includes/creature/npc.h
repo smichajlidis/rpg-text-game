@@ -17,6 +17,7 @@ public:
     ~NPC();
 
     friend class Priest;
+    friend class Ladies;
 };
 
 #endif

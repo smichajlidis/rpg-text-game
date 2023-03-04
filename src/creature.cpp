@@ -10,6 +10,11 @@ void Creature::increase_hp(int hp_val) {
     std::cout<<"hp +"<<hp_val<<"\n";
 }
 
+void Creature::restore_hp() {
+    hp=100;
+    std::cout<<"[complete restoration of hp]\n";
+}
+
 Creature::Creature(std::string name_val, int strength_val, int hp_val)
     : name {name_val}, strength {strength_val}, hp {hp_val} {
     }

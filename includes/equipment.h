@@ -38,6 +38,7 @@ public:
     friend class Buying;
     friend class Creature;
     friend class Priest;
+    friend class Ladies;
 };
 
 #endif

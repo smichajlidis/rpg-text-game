@@ -19,6 +19,7 @@ public:
     friend class HotDish;
     friend class Gamblers;
     friend class Priest;
+    friend class Ladies;
 
 };
 

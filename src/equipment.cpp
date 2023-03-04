@@ -78,7 +78,7 @@ void Equipment::add_gold(int val) {
 
 void Equipment::remove_gold(int val) {
     gold-=val;
-    std::cout<<"gold -"<<val<<"\n";
+    std::cout<<"[gold -"<<val<<"]\n";
 }
 
 Equipment::Equipment() {
