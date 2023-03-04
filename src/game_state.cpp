@@ -44,6 +44,10 @@ GameState::GameState() {
     priest.related_locations.push_back(&tavern);
     priest.related_locations.push_back(&priest);
     priest.point_player(&player);
+    Item* chapel_key {nullptr};
+    chapel_key = new ChapelKey;
+    priest.equipment.items.push_back(chapel_key);
+
 
     thugs.related_locations.push_back(&forest);
 

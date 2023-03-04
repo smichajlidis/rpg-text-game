@@ -53,6 +53,7 @@ Location* Priest::making_a_choice() {
                 std::cout<<"<he gives you a key>\n\n"; 
                 std::cout<<"[+ chapel key]\n\n";
                 std::cout<<"<when you walk away from him he screams after you:>\n";
+                
                 std::cout<<"And pray for your friend too!\n";
                 std::cout<<"\nPress 0 to continue: ";
                 std::cin>>choice;
