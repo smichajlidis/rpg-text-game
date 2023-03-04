@@ -36,10 +36,14 @@ Location* Ladies::making_a_choice() {
     std::cin>>choice;
     switch (choice) {
         case 1: {
-            std::cout<<"\n<you are going upstairs with them and.. having a good time>\n\n";
-            (*player_ptr).restore_hp();
-            (*player_ptr).equipment.remove_gold(100);
-            (*player_ptr).increase_luck(1);
+            if ((*player_ptr).equipment.return_gold() >= 100) {
+                std::cout<<"\n<you are going upstairs with them and.. having a good time>\n\n";
+                (*player_ptr).restore_hp();
+                (*player_ptr).equipment.remove_gold(100);
+                (*player_ptr).increase_luck(1);
+            }
+            else
+                std::cout<<"\n- Oh honey... You can't affort us. Please, come back with 100 gold.\n";
             std::cout<<"\nPress 0 to continue: ";
             std::cin>>choice;
             return related_locations.at(1); break;
