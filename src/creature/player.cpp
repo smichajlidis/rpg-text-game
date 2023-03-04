@@ -1,5 +1,20 @@
 #include <iostream>
+#include <ctime>
 #include "../../includes/creature/player.h"
+
+void Player::increase_charisma(int val) {
+    charisma+=val;
+    std::cout<<"[charisma +"<<val<<"]\n";
+}
+
+bool Player::using_charisma(int favor) {
+    srand(time(NULL));
+    // add also charisma points from expensive clothes in future
+    if (((std::rand() % 80) + charisma + luck + favor - 50) >= 50)
+        return true;
+    else
+        return false;
+}
 
 void Player::increase_luck(int val) {
 luck+=val;

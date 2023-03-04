@@ -49,7 +49,15 @@ Location* Ladies::making_a_choice() {
             return related_locations.at(1); break;
         }
         case 2: {
-            std::cout<<"Flirting\n";
+            if ((*player_ptr).using_charisma(favor)) {
+                std::cout<<"\nSuccess, you got this!\n";
+                (*player_ptr).increase_charisma(1);
+                increase_favor();
+            }
+            else {
+                std::cout<<"\nNo... that was wrong.\n";
+                decrease_favor();
+            }
             std::cout<<"\nPress 0 to continue: ";
             std::cin>>choice; 
             return related_locations.at(1); break;
