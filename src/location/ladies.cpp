@@ -4,9 +4,21 @@
 
 void Ladies::greeting() {
     std::vector <std::string> greetings {
-        "- Hello",
-        "- Hi",
-    };
+        "- Guess what We are not wearing right now?",
+        "- Olive juice. Say it fast.",
+        "- When can we see you again? Pick a day that ends in <y>",
+        "- Hey, stranger! Wait, why are we still strangers? Let's fix that..",
+        "- We have a secret to tell you, but we want to tell you in person.",
+        "- We hate everyone. But not you.",
+        "- We are addicted to you, and we need another hit.",
+        "- Want to make a beautiful memory together?",
+        "- You were in our dreams last night. Wanna hear?",
+        "- You're already thinking about us - we can feel it.",
+        "- We can't focus today. We are too distracted thinking about you.",
+        "- Our love language is physical touch. Want a present?",
+        "- You are our dream man, baby.",
+        "- We need you right now."
+    };  
     srand(time(NULL));
     std::cout<<greetings.at(std::rand() % greetings.size());
 }
