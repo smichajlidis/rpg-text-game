@@ -9,6 +9,7 @@ class NPC: public Creature {
 public:
 
     virtual void greeting()=0;
+    void display_npc_details();
 
     NPC(std::string name_val="none", int strength_val=1, int hp_val=100, int favor_val=50);
     ~NPC();
