@@ -12,6 +12,7 @@ public:
 
     void drinking();
     void display_top_bar();
+    void increase_luck(int val);
 
     Player(std::string name_val = "none", int strength_val = 1, int charisma_val = 1, int luck_val = 1, int hp_val = 100, int drunk_val = 0);
     ~Player();

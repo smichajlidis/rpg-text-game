@@ -1,6 +1,11 @@
 #include <iostream>
 #include "../../includes/creature/player.h"
 
+void Player::increase_luck(int val) {
+luck+=val;
+    std::cout<<"[luck +"<<val<<"]\n";
+}
+
 void Player::drinking() {
     drunk+=20;
     std::cout<<"you get.. a bit drunk.\n";
