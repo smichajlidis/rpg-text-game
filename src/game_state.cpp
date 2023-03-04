@@ -40,6 +40,8 @@ GameState::GameState() {
     gamblers.point_player(&player);
 
     ladies.related_locations.push_back(&tavern);
+    ladies.related_locations.push_back(&ladies);
+    ladies.point_player(&player);
 
     priest.related_locations.push_back(&tavern);
     priest.related_locations.push_back(&priest);
