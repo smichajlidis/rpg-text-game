@@ -21,6 +21,7 @@ public:
     friend class NPC;
     friend class OrderBeer;
     friend class HotDish;
+    friend class Priest;
     friend class Gamblers;
     friend class GameState;
 

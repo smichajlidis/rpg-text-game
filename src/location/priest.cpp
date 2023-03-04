@@ -39,7 +39,11 @@ Location* Priest::making_a_choice() {
     std::cin>>choice;
     switch (choice) {
         case 1: {
-            
+            std::cout<<"\n";
+            (*player_ptr).equipment.remove_gold(10);
+            (*player_ptr).drinking();
+            std::cout<<"\nPress 0 to continue: ";
+            std::cin>>choice;
             return related_locations.at(1); break;
         }
         case 2: {
