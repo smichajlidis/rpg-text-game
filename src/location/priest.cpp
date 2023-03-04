@@ -38,8 +38,13 @@ Location* Priest::making_a_choice() {
     int choice {};
     std::cin>>choice;
     switch (choice) {
-        case 1: return related_locations.at(1); break;
-        case 2: return related_locations.at(1); break;
+        case 1: {
+            
+            return related_locations.at(1); break;
+        }
+        case 2: {
+            return related_locations.at(1); break;
+        }
         default: return related_locations.at(0); break;
     }
 }

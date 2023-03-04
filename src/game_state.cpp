@@ -43,6 +43,7 @@ GameState::GameState() {
 
     priest.related_locations.push_back(&tavern);
     priest.related_locations.push_back(&priest);
+    priest.point_player(&player);
 
     thugs.related_locations.push_back(&forest);
 

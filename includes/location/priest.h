@@ -3,7 +3,7 @@
 #include <iostream>
 
 class Priest:
-    public Location, public NPC {
+    public Location, public NPC, public PointPlayer {
 
 public:
 
