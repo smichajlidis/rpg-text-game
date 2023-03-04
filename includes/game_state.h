@@ -23,6 +23,7 @@
 
 class Sword;
 class Bow;
+class ChapelKey;
 class PointPlayer;
 class Priest;
 
@@ -56,6 +57,9 @@ class GameState {
         Chapel chapel;
             Altars altars;
 
+    // Items
+
+    ChapelKey chapel_key;
 
     Location *current_location;
 

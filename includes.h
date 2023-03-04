@@ -47,6 +47,9 @@
 #include "includes/item/weapon/sword.h"
 #include "src/item/weapon/sword.cpp"
 
+#include "includes/item/chapel_key.h"
+#include "src/item/chapel_key.cpp"
+
 // LOCATION AND DERIVED CLASSES
 
 #include "includes/location.h"
