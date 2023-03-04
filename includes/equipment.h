@@ -37,6 +37,7 @@ public:
     friend class Selling;
     friend class Buying;
     friend class Creature;
+    friend class Priest;
 };
 
 #endif

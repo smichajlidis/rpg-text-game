@@ -11,7 +11,7 @@ Location* OrderBeer::making_a_choice() {
     if ((*player).equipment.return_gold() >= 5) {
         std::cout<<"You drink a beer\n\n";
         (*player).equipment.remove_gold(5);
-        (*player).drinking(20);
+        (*player).drinking();
     }
     else
         std::cout<<"- This is not a charity concert - innkeeper said - beer costs 5 gold.\n";

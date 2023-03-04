@@ -1,9 +1,9 @@
 #include <iostream>
 #include "../../includes/creature/player.h"
 
-void Player::drinking(int drunk_val) {
+void Player::drinking() {
     drunk+=20;
-    std::cout<<"\nYou are.. a bit drunk.\n";
+    std::cout<<"you get.. a bit drunk.\n";
 }
 
 void Player::display_top_bar() {

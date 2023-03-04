@@ -13,6 +13,9 @@
 #include "includes/creature/player.h"
 #include "src/creature/player.cpp"
 
+#include "includes/creature/npc.h"
+#include "src/creature/npc.cpp"
+
 // EQUIPMENT AND DERIVED CLASSES
 
 #include "includes/equipment.h"
@@ -43,6 +46,9 @@
 
 #include "includes/item/weapon/sword.h"
 #include "src/item/weapon/sword.cpp"
+
+#include "includes/item/chapel_key.h"
+#include "src/item/chapel_key.cpp"
 
 // LOCATION AND DERIVED CLASSES
 

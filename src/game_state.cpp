@@ -5,8 +5,7 @@ void GameState::display_location() {
     if (player.drunk > 0)
         player.drunk--;
     player.display_top_bar();
-    if ((*current_location).description != "none")
-        (*current_location).print_location();
+    (*current_location).print_location();
     current_location = current_location->making_a_choice();
 }
 
@@ -43,6 +42,12 @@ GameState::GameState() {
     ladies.related_locations.push_back(&tavern);
 
     priest.related_locations.push_back(&tavern);
+    priest.related_locations.push_back(&priest);
+    priest.point_player(&player);
+    Item* chapel_key {nullptr};
+    chapel_key = new ChapelKey;
+    priest.equipment.items.push_back(chapel_key);
+
 
     thugs.related_locations.push_back(&forest);
 
