@@ -18,8 +18,13 @@ class Location {
 public:
 
     void print_location();
+    void clear();
     virtual Location* making_a_choice()=0;
     
+    void equipment_menu();
+    void save_menu();
+    void load_menu();
+    void exit_menu();
 
     Location(std::string name_val = "nowhere", std::string description_val = "none", std::string choice_1_val = "none", std::string choice_2_val = "none", std::string choice_3_val = "none", std::string choice_4_val = "none", std::string choice_5_val = "none");
     ~Location();
