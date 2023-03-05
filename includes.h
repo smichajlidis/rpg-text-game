@@ -5,6 +5,11 @@
 #include "includes/point_player.h"
 #include "src/point_player.cpp"
 
+// EQUIPMENT AND DERIVED CLASSES
+
+#include "includes/equipment.h"
+#include "src/equipment.cpp"
+
 // CREATURE AND DERIVED CLASSES
 
 #include "includes/creature.h"
@@ -15,11 +20,6 @@
 
 #include "includes/creature/npc.h"
 #include "src/creature/npc.cpp"
-
-// EQUIPMENT AND DERIVED CLASSES
-
-#include "includes/equipment.h"
-#include "src/equipment.cpp"
 
 // ITEM AND DERIVED CLASSES
 

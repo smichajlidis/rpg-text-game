@@ -15,8 +15,8 @@ void Creature::restore_hp() {
     std::cout<<"[complete restoration of hp]\n";
 }
 
-Creature::Creature(std::string name_val, int strength_val, int hp_val)
-    : name {name_val}, strength {strength_val}, hp {hp_val} {
+Creature::Creature(std::string name_val, int strength_val, Item* active_weapon_val, int hp_val)
+    : name {name_val}, strength {strength_val}, active_weapon {active_weapon_val}, hp {hp_val} {
     }
 
 Creature::~Creature() {
