@@ -35,19 +35,19 @@ Location* Priest::making_a_choice() {
     std::cout<<"2. Ask for a chapel\n";
     std::cout<<"0. Return\n\n";
     std::cout<<"What do you do? ";
-    int choice {};
+    char choice {};
     std::cin>>choice;
     switch (choice) {
-        case 1: {
+        case '1': {
             std::cout<<"\n";
             (*player_ptr).equipment.remove_gold(10);
             (*player_ptr).drinking();
             increase_favor();
-            std::cout<<"\nPress 0 to continue: ";
+            std::cout<<"\nPress any key to continue: ";
             std::cin>>choice;
             return related_locations.at(1); break;
         }
-        case 2: {
+        case '2': {
             if (favor >= 80) {
                 std::cout<<"\nDidn't know that you are so pious! Ok, I have a gift for you.\n";
                 std::cout<<"<he gives you a key>\n\n"; 
@@ -57,17 +57,16 @@ Location* Priest::making_a_choice() {
                 Item *ptr = equipment.items.at(0);
                 (*player_ptr).equipment.add_item(ptr);
                 equipment.remove_item(ptr);
-              //  (*player_ptr).equipment.items.add_item(chapel_key);
              
                 std::cout<<"And pray for your friend too!\n";
-                std::cout<<"\nPress 0 to continue: ";
+                std::cout<<"\nPress any key to continue: ";
                 std::cin>>choice;
                 related_locations.at(0); break;
             }
             else {
                 std::cout<<"\n- Not your bussiness stranger.\n\n";
                 decrease_favor();
-                std::cout<<"\nPress 0 to continue: ";
+                std::cout<<"\nPress any key to continue: ";
                 std::cin>>choice;
                 return related_locations.at(1); break;
             }

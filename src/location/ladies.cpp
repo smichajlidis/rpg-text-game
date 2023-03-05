@@ -32,10 +32,10 @@ Location* Ladies::making_a_choice() {
     std::cout<<"2. Just flirt with them\n";
     std::cout<<"0. Return\n\n";
     std::cout<<"What do you do? ";
-    int choice {};
+    char choice {};
     std::cin>>choice;
     switch (choice) {
-        case 1: {
+        case '1': {
             if ((*player_ptr).equipment.return_gold() >= 100) {
                 std::cout<<"\n<you are going upstairs with them and.. having a good time>\n\n";
                 (*player_ptr).restore_hp();
@@ -44,11 +44,11 @@ Location* Ladies::making_a_choice() {
             }
             else
                 std::cout<<"\n- Oh honey... You can't affort us. Please, come back with 100 gold.\n";
-            std::cout<<"\nPress 0 to continue: ";
+            std::cout<<"\nPress any key to continue: ";
             std::cin>>choice;
             return related_locations.at(1); break;
         }
-        case 2: {
+        case '2': {
             if ((*player_ptr).using_charisma(favor)) {
                 std::cout<<"\nSuccess, you got this!\n";
                 (*player_ptr).increase_charisma(1);
@@ -58,7 +58,7 @@ Location* Ladies::making_a_choice() {
                 std::cout<<"\nNo... that was wrong.\n";
                 decrease_favor();
             }
-            std::cout<<"\nPress 0 to continue: ";
+            std::cout<<"\nPress any key to continue: ";
             std::cin>>choice; 
             return related_locations.at(1); break;
         }

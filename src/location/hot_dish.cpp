@@ -2,7 +2,7 @@
 #include <iostream>
 
 Location* HotDish::making_a_choice() {
-    int i {};
+    char i {};
 
     if ((*player_ptr).equipment.return_gold() >= 25) {
         std::cout<<"You eat a hot dish\n\n";
@@ -12,7 +12,7 @@ Location* HotDish::making_a_choice() {
     else
         std::cout<<"- This is not a charity concert - innkeeper said - hot dish costs costs 25 gold.\n";
 
-    std::cout<<"\nPass any digit to return: ";
+    std::cout<<"\nPress any key to continue: ";
     std::cin>>i;
 
     return related_locations.at(0);
