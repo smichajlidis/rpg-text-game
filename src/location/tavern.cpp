@@ -9,8 +9,12 @@ Location* Tavern::making_a_choice() {
         case '2': return related_locations.at(2); break;
         case '3': return related_locations.at(3); break;
         case '4': return related_locations.at(4); break;
+        case '6': clear(); equipment_menu(); return related_locations.at(5); break;
+        case '7': clear(); load_menu(); return related_locations.at(5); break;
+        case '8': clear(); save_menu(); return related_locations.at(5); break;
+        case '9': clear(); exit_menu(); return related_locations.at(5); break;
         case '0': return related_locations.at(0); break;
-        default: return related_locations.at(0); break;
+        default: return related_locations.at(5); break;
     }
 }
 

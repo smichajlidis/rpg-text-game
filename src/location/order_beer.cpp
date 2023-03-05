@@ -18,7 +18,13 @@ Location* OrderBeer::making_a_choice() {
 
     std::cout<<"\nPress any key to continue: ";
     std::cin>>i;
-
+    switch (i) {
+        case '6': clear(); equipment_menu(); break;
+        case '7': clear(); load_menu(); break;
+        case '8': clear(); save_menu(); break;
+        case '9': clear(); exit_menu(); break;
+        default: break;
+    }
     return related_locations.at(0);
 }
 

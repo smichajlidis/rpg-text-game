@@ -35,6 +35,7 @@ Location* Ladies::making_a_choice() {
     char choice {};
     std::cin>>choice;
     switch (choice) {
+        case '0': return related_locations.at(0); break;
         case '1': {
             if ((*player_ptr).equipment.return_gold() >= 100) {
                 std::cout<<"\n<you are going upstairs with them and.. having a good time>\n\n";
@@ -62,7 +63,11 @@ Location* Ladies::making_a_choice() {
             std::cin>>choice; 
             return related_locations.at(1); break;
         }
-        default: return related_locations.at(0); break;
+        case '6': clear(); equipment_menu(); return related_locations.at(1); break;
+        case '7': clear(); load_menu(); return related_locations.at(1); break;
+        case '8': clear(); save_menu(); return related_locations.at(1); break;
+        case '9': clear(); exit_menu(); return related_locations.at(1); break;
+        default: return related_locations.at(1); break;
     }
     return related_locations.at(1);
 }

@@ -41,6 +41,10 @@ Location* Selling::making_a_choice() {
                     screen_stuff.clear();
                     (ptr)->show_details(); break;
                 }
+                case '6': clear(); equipment_menu(); return related_locations.at(1); break;
+                case '7': clear(); load_menu(); return related_locations.at(1); break;
+                case '8': clear(); save_menu(); return related_locations.at(1); break;
+                case '9': clear(); exit_menu(); return related_locations.at(1); break;
                 default: break;
             }
         }
