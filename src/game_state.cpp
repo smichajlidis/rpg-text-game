@@ -22,21 +22,26 @@ GameState::GameState() {
     tavern.related_locations.push_back(&gamblers);
     tavern.related_locations.push_back(&priest);
     tavern.related_locations.push_back(&ladies);
+    tavern.related_locations.push_back(&tavern);
 
     forest.related_locations.push_back(&square);
     forest.related_locations.push_back(&thugs); // will be forest_exploration;
     forest.related_locations.push_back(&thugs);
+    forest.related_locations.push_back(&forest);
 
     chapel.related_locations.push_back(&square);
     chapel.related_locations.push_back(&altars);
+    chapel.related_locations.push_back(&chapel);
 
     innkeeper.related_locations.push_back(&tavern);
     innkeeper.related_locations.push_back(&order_beer);
     innkeeper.related_locations.push_back(&trade);
     innkeeper.related_locations.push_back(&gossip);
     innkeeper.related_locations.push_back(&hot_dish);
+    innkeeper.related_locations.push_back(&innkeeper);
 
     gamblers.related_locations.push_back(&tavern);
+    gamblers.related_locations.push_back(&gamblers);
     gamblers.point_player(&player);
 
     ladies.related_locations.push_back(&tavern);
@@ -50,10 +55,11 @@ GameState::GameState() {
     chapel_key = new ChapelKey;
     priest.equipment.items.push_back(chapel_key);
 
-
     thugs.related_locations.push_back(&forest);
+    thugs.related_locations.push_back(&thugs);
 
     altars.related_locations.push_back(&chapel);
+    altars.related_locations.push_back(&altars);
 
     order_beer.point_player(&player);
     order_beer.related_locations.push_back(&innkeeper);
@@ -61,16 +67,20 @@ GameState::GameState() {
     trade.related_locations.push_back(&innkeeper);
     trade.related_locations.push_back(&buying);
     trade.related_locations.push_back(&selling);
+    trade.related_locations.push_back(&trade);
 
     selling.point_equipment(&player.equipment);
     selling.point_trade_goods(&trade_goods);
     selling.related_locations.push_back(&trade);
+    selling.related_locations.push_back(&selling);
 
     buying.point_equipment(&player.equipment);
     buying.point_trade_goods(&trade_goods);
     buying.related_locations.push_back(&trade);
+    buying.related_locations.push_back(&buying);
 
     gossip.related_locations.push_back(&innkeeper);
+    gossip.related_locations.push_back(&gossip);
 
     hot_dish.related_locations.push_back(&innkeeper);
     hot_dish.point_player(&player);

@@ -4,15 +4,21 @@
 #include "../../includes/location/gamblers.h"
 
 Location* Gamblers::making_a_choice() {
-    int choice {};
+    char choice {};
     std::cin>>choice;
     int value {};
     switch (choice) {
-        case 1: value=5; break;
-        case 2: value=10; break;
-        case 3: value=25; break;
-        case 4: value=50; break;
-        case 5: value=100; break;
+        case '0': return related_locations.at(0); break;
+        case '1': value=5; break;
+        case '2': value=10; break;
+        case '3': value=25; break;
+        case '4': value=50; break;
+        case '5': value=100; break;
+        case '6': clear(); equipment_menu(); return related_locations.at(1); break;
+        case '7': clear(); load_menu(); return related_locations.at(1); break;
+        case '8': clear(); save_menu(); return related_locations.at(1); break;
+        case '9': clear(); exit_menu(); return related_locations.at(1); break;
+        default: return related_locations.at(1); break;
     }
 
     std::vector <int> results {};
@@ -40,7 +46,7 @@ Location* Gamblers::making_a_choice() {
         std::cout<<"\nYou lose\n\n";
         (*player_ptr).equipment.remove_gold(value);
     }
-    std::cout<<"\nEnter 0 to continue: ";
+    std::cout<<"\nPress any key to continue: ";
     std::cin>>choice;
 
     return related_locations.at(0); 

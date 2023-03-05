@@ -11,7 +11,7 @@ void Buying::point_trade_goods(Equipment *obj) {
 }
 
 Location* Buying::making_a_choice() {
-    int choice {};
+    char choice {};
         (*trade_goods).display_equipment();
         Item *ptr = (*trade_goods).equipment_choice();
         std::cout<<"\n";
@@ -24,7 +24,7 @@ Location* Buying::making_a_choice() {
             std::cout<<"What do you do? ";
             std::cin>>choice;
             switch (choice) {
-                case 1: {
+                case '1': {
                     ScreenStuff screen_stuff;
                     screen_stuff.clear();
                     std::cout<<"\nYou bought "<<(*ptr).return_name()<<"\n\n";
@@ -32,19 +32,23 @@ Location* Buying::making_a_choice() {
                     std::cout<<"+"<<(*ptr).return_name()<<"\n";
                     (*equipment).add_item(ptr);
                     (*trade_goods).remove_item(ptr);
-                    std::cout<<"\nPress 0 to continue: ";
+                    std::cout<<"\nPress any key to continue: ";
                     std::cin>>choice;
                     break;
                 }
-                case 2: {
+                case '2': {
                     ScreenStuff screen_stuff;
                     screen_stuff.clear();
                     (ptr)->show_details(); break;
                 }
+                case '6': clear(); equipment_menu(); break; //return related_locations.at(1); break;
+                case '7': clear(); load_menu(); break; //return related_locations.at(1); break;
+                case '8': clear(); save_menu(); break;//return related_locations.at(1); break;
+                case '9': clear(); exit_menu(); break;//return related_locations.at(1); break;
                 default: break;
             }
         }
-    } while (choice == 2);
+    } while (choice == '2');
     return related_locations.at(0);
 }
 

@@ -1,5 +1,33 @@
 #include <iostream>
 #include "../includes/location.h"
+  
+void Location::equipment_menu() {
+    char choice {};
+    std::cout<<"[Place for showing equipment]\n";
+    std::cout<<"\nPress any key to continue: ";
+    std::cin>>choice;
+}
+
+void Location::save_menu() {
+    char choice {};
+    std::cout<<"[Here you will save your game]\n";
+    std::cout<<"\nPress any key to continue: ";
+    std::cin>>choice;
+}
+
+void Location::load_menu() {
+    char choice {};
+    std::cout<<"[Here you will load your game]\n";
+    std::cout<<"\nPress any key to continue: ";
+    std::cin>>choice;
+}
+    
+void Location::exit_menu() {
+    char choice {};
+    std::cout<<"[Here you will exit game]\n";
+    std::cout<<"\nPress any key to continue: ";
+    std::cin>>choice;
+}
 
 void Location::print_location() {
     if (description != "none") {
@@ -20,6 +48,18 @@ void Location::print_location() {
             std::cout<<"\n";
         std::cout<<"What do you do? ";
     }
+}
+
+void Location::clear() {
+    #if defined _WIN32
+        system("cls");
+        //clrscr(); // including header file : conio.h
+    #elif defined (__LINUX__) || defined(__gnu_linux__) || defined(__linux__)
+        system("clear");
+        //std::cout<< u8"\033[2J\033[1;1H"; //Using ANSI Escape Sequences 
+    #elif defined (__APPLE__)
+        system("clear");
+    #endif
 }
 
 Location::Location(std::string name_val, std::string description_val, std::string choice_1_val, std::string choice_2_val, std::string choice_3_val, std::string choice_4_val, std::string choice_5_val)
