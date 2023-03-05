@@ -62,6 +62,10 @@ void Location::clear() {
     #endif
 }
 
+void Location::player_pointer(Player* ptr) {
+    player = ptr;
+}
+
 Location::Location(std::string name_val, std::string description_val, std::string choice_1_val, std::string choice_2_val, std::string choice_3_val, std::string choice_4_val, std::string choice_5_val)
     : name {name_val}, description {description_val}, choice_1 {choice_1_val}, choice_2 {choice_2_val}, choice_3 {choice_3_val}, choice_4 {choice_4_val}, choice_5 {choice_5_val} {
     }

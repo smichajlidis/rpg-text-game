@@ -16,6 +16,7 @@ GameState::GameState() {
     square.related_locations.push_back(&tavern);
     square.related_locations.push_back(&forest);
     square.related_locations.push_back(&chapel);
+    square.player_pointer(&player);
 
     tavern.related_locations.push_back(&square);
     tavern.related_locations.push_back(&innkeeper);
@@ -23,15 +24,18 @@ GameState::GameState() {
     tavern.related_locations.push_back(&priest);
     tavern.related_locations.push_back(&ladies);
     tavern.related_locations.push_back(&tavern);
+    tavern.player_pointer(&player);
 
     forest.related_locations.push_back(&square);
     forest.related_locations.push_back(&thugs); // will be forest_exploration;
     forest.related_locations.push_back(&thugs);
     forest.related_locations.push_back(&forest);
+    forest.player_pointer(&player);
 
     chapel.related_locations.push_back(&square);
     chapel.related_locations.push_back(&altars);
     chapel.related_locations.push_back(&chapel);
+    chapel.player_pointer(&player);
 
     innkeeper.related_locations.push_back(&tavern);
     innkeeper.related_locations.push_back(&order_beer);
@@ -39,14 +43,17 @@ GameState::GameState() {
     innkeeper.related_locations.push_back(&gossip);
     innkeeper.related_locations.push_back(&hot_dish);
     innkeeper.related_locations.push_back(&innkeeper);
+    innkeeper.player_pointer(&player);
 
     gamblers.related_locations.push_back(&tavern);
     gamblers.related_locations.push_back(&gamblers);
     gamblers.point_player(&player);
+    gamblers.player_pointer(&player);
 
     ladies.related_locations.push_back(&tavern);
     ladies.related_locations.push_back(&ladies);
     ladies.point_player(&player);
+    ladies.player_pointer(&player);
 
     priest.related_locations.push_back(&tavern);
     priest.related_locations.push_back(&priest);
@@ -54,36 +61,45 @@ GameState::GameState() {
     Item* chapel_key {nullptr};
     chapel_key = new ChapelKey;
     priest.equipment.items.push_back(chapel_key);
+    priest.player_pointer(&player);
 
     thugs.related_locations.push_back(&forest);
     thugs.related_locations.push_back(&thugs);
+    thugs.player_pointer(&player);
 
     altars.related_locations.push_back(&chapel);
     altars.related_locations.push_back(&altars);
+    altars.player_pointer(&player);
 
     order_beer.point_player(&player);
     order_beer.related_locations.push_back(&innkeeper);
+    order_beer.player_pointer(&player);
 
     trade.related_locations.push_back(&innkeeper);
     trade.related_locations.push_back(&buying);
     trade.related_locations.push_back(&selling);
     trade.related_locations.push_back(&trade);
+    trade.player_pointer(&player);
 
     selling.point_equipment(&player.equipment);
     selling.point_trade_goods(&trade_goods);
     selling.related_locations.push_back(&trade);
     selling.related_locations.push_back(&selling);
+    selling.player_pointer(&player);
 
     buying.point_equipment(&player.equipment);
     buying.point_trade_goods(&trade_goods);
     buying.related_locations.push_back(&trade);
     buying.related_locations.push_back(&buying);
+    buying.player_pointer(&player);
 
     gossip.related_locations.push_back(&innkeeper);
     gossip.related_locations.push_back(&gossip);
+    gossip.player_pointer(&player);
 
     hot_dish.related_locations.push_back(&innkeeper);
     hot_dish.point_player(&player);
+    hot_dish.player_pointer(&player);
   //  hot_dish.point_equipment(&equipment);
 
     // OTHER
