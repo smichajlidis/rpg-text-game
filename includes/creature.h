@@ -30,6 +30,7 @@ public:
     friend class Ladies;
     friend class Gamblers;
     friend class GameState;
+    friend class Location;
 
 };
 

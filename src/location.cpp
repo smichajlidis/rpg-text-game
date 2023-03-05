@@ -2,10 +2,15 @@
 #include "../includes/location.h"
   
 void Location::equipment_menu() {
-    char choice {};
-    std::cout<<"[Place for showing equipment]\n";
-    std::cout<<"\nPress any key to continue: ";
+    (*player).equipment.display_equipment();
+    if (!(*player).equipment.is_empty())
+        (*player).equipment.equipment_choice();
+    else {
+        char choice {};
+   // std::cout<<"[Place for showing equipment]\n";
+    std::cout<<"\n\nPress any key to return: ";
     std::cin>>choice;
+    }
 }
 
 void Location::save_menu() {

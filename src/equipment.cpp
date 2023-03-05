@@ -40,6 +40,10 @@ void Equipment::remove_item(Item *item) {
     }
 }
 
+bool Equipment::is_empty() {
+    return items.empty();
+}
+
 void Equipment::display_equipment() {
     int i {1};
     for (auto &item: items) {
