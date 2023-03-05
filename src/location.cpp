@@ -8,7 +8,7 @@ void Location::equipment_menu() {
     else {
         char choice {};
    // std::cout<<"[Place for showing equipment]\n";
-    std::cout<<"\n\nPress any key to return: ";
+    std::cout<<"\nPress any key to return: ";
     std::cin>>choice;
     }
 }
