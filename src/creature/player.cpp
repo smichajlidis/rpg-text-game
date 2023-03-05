@@ -36,6 +36,11 @@ void Player::display_top_bar() {
     std::cout<<" | Strength: "<<strength; if(drunk>0) std::cout<<" +"<<drunk;
     std::cout<<" | Charisma: "<<charisma; if(drunk>0) std::cout<<" +"<<drunk;
     std::cout<<" | Luck: "<<luck; if(drunk>0) std::cout<<" +"<<drunk/2;
+    std::cout<<"\n Active weapon: ";
+    if (active_weapon)
+        (*active_weapon).return_name();
+    else
+        std::cout<<"none";
     std::cout<<"\n\n\n";
 
 }

@@ -10,7 +10,7 @@ void Item::increase_amount(int val) {
 }
 
 std::string Item::return_name() {
-    return name;
+        return name;
 }
 
 int Item::return_price() {
