@@ -108,6 +108,10 @@ GameState::GameState() {
    // point_equipment.point_equipment(&equipment);
 
     // ADDING ITEMS FOR TRADING
+    Item* sword2 {nullptr};
+    sword2 = new Sword;
+    player.equipment.items.push_back(sword2);
+
 
     Item* sword {nullptr};
     sword = new Sword;
