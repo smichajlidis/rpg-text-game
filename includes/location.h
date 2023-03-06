@@ -3,6 +3,8 @@
 #include <iostream>
 #include <vector>
 
+class Player;
+
 class Location {
 
     std::string name;
@@ -12,11 +14,13 @@ class Location {
     std::string choice_3;
     std::string choice_4;
     std::string choice_5;
+    Player* player;
 
     std::vector <Location*> related_locations;
 
 public:
 
+    void player_pointer(Player* ptr);
     void print_location();
     void clear();
     virtual Location* making_a_choice()=0;

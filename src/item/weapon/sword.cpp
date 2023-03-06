@@ -15,6 +15,14 @@ Item* Sword::clone() {
     return sword;
 }
 
+std::string Sword::return_class_name() {
+    return "weapon";
+}
+
+int Sword::return_value() {
+    return hitForce;
+}
+
 Sword::Sword(std::string name_val, int price_val, int hitForce_val, int amount_val)
     : Weapon(name_val, price_val, hitForce_val, amount_val) {
 }

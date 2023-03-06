@@ -20,6 +20,7 @@ public:
     void display_equipment();
     Item* equipment_choice();
     Item* looking_for_item(int choice);
+    bool is_empty();
 
     int return_gold();
 
@@ -39,6 +40,7 @@ public:
     friend class Creature;
     friend class Priest;
     friend class Ladies;
+    friend class Location;
 };
 
 #endif

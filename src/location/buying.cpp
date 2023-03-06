@@ -32,6 +32,7 @@ Location* Buying::making_a_choice() {
                     std::cout<<"+"<<(*ptr).return_name()<<"\n";
                     (*equipment).add_item(ptr);
                     (*trade_goods).remove_item(ptr);
+                    ptr = nullptr;
                     std::cout<<"\nPress any key to continue: ";
                     std::cin>>choice;
                     break;
@@ -48,7 +49,7 @@ Location* Buying::making_a_choice() {
                 default: break;
             }
         }
-    } while (choice == '2');
+    } while (choice == '2' && ptr!=nullptr);
     return related_locations.at(0);
 }
 

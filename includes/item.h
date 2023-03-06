@@ -24,13 +24,15 @@ public:
     
     virtual Item* clone()=0;
     virtual void show_details()=0;
-
+    virtual std::string return_class_name()=0;
+    virtual int return_value()=0;
 
     void increase_amount(int);
     void decrease_amount(int);
 
     Item(std::string name_val = "none", int price_val = 0, int amount_val = 1);
     virtual ~Item();
+
 
 };
 

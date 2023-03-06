@@ -13,8 +13,8 @@ public:
     void increase_favor();
     void decrease_favor();
 
-    NPC(std::string name_val="none", int strength_val=1, int hp_val=100, int favor_val=50);
-    ~NPC();
+    NPC(std::string name_val="none", int strength_val=1, Item* active_weapon_val=nullptr, int hp_val=100, int favor_val=50);
+~NPC();
 
     friend class Priest;
     friend class Ladies;

@@ -33,15 +33,20 @@ void Player::display_top_bar() {
   //  std::cout<<"------------------------------------------------------------------------\n\n";
     std::cout<<" Hp: "<<hp; if(drunk>0) std::cout<<" -"<<drunk*2;
     std::cout<<" | Gold: "<<equipment.return_gold();
-    std::cout<<" | Strength: "<<strength; if(drunk>0) std::cout<<" +"<<drunk;
+    std::cout<<" | Strength: "<<strength; if(drunk>0) std::cout<<" +"<<drunk; if (active_weapon) std::cout<<" +"<<(*active_weapon).return_value();
     std::cout<<" | Charisma: "<<charisma; if(drunk>0) std::cout<<" +"<<drunk;
     std::cout<<" | Luck: "<<luck; if(drunk>0) std::cout<<" +"<<drunk/2;
+    std::cout<<"\n Active weapon: ";
+    if (active_weapon)
+        std::cout<<(*active_weapon).return_name();
+    else
+        std::cout<<"none";
     std::cout<<"\n\n\n";
 
 }
 
-Player::Player(std::string name_val, int strength_val, int charisma_val, int luck_val, int hp_val, int drunk_val)
-    : Creature(name_val, strength_val, hp_val), charisma {charisma_val}, luck {luck_val}, drunk {drunk_val} {
+Player::Player(std::string name_val, int strength_val, int charisma_val, int luck_val, int drunk_val)
+    : Creature(name_val, strength_val), charisma {charisma_val}, luck {luck_val}, drunk {drunk_val} {
         equipment.add_gold(150);
     }
 
