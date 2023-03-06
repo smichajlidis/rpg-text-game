@@ -27,14 +27,14 @@ GameState::GameState() {
     tavern.player_pointer(&player);
 
     forest.related_locations.push_back(&square);
-    forest.related_locations.push_back(&thugs); // will be forest_exploration;
+    forest.related_locations.push_back(&forest_exploration);
     forest.related_locations.push_back(&thugs);
     forest.related_locations.push_back(&forest);
     forest.player_pointer(&player);
 
     chapel.related_locations.push_back(&square);
     chapel.related_locations.push_back(&altars);
-    chapel.related_locations.push_back(&chapel);
+    chapel.related_locations.push_back(&dungeons);
     chapel.player_pointer(&player);
 
     innkeeper.related_locations.push_back(&tavern);
@@ -100,6 +100,10 @@ GameState::GameState() {
     hot_dish.related_locations.push_back(&innkeeper);
     hot_dish.point_player(&player);
     hot_dish.player_pointer(&player);
+
+    forest_exploration.related_locations.push_back(&forest);
+
+    dungeons.related_locations.push_back(&chapel);
   //  hot_dish.point_equipment(&equipment);
 
     // OTHER

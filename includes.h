@@ -106,6 +106,12 @@
 #include "includes/location/exploration.h"
 #include "src/location/exploration.cpp"
 
+#include "includes/location/exploration/forest_exploration.h"
+#include "src/location/exploration/forest_exploration.cpp"
+
+#include "includes/location/exploration/dungeons.h"
+#include "src/location/exploration/dungeons.cpp"
+
 //////////////////////////////////
 
 #include "includes/game_state.h"

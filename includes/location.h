@@ -52,6 +52,8 @@ public:
     friend class Altars;
     friend class Trade;
     friend class Exploration;
+    friend class ForestExploration;
+    friend class Dungeons;
 };
 
 #endif

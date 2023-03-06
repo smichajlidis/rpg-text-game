@@ -52,10 +52,12 @@ class GameState {
             Gamblers gamblers;
         // Priest priest;
             Ladies ladies;
-        Forest forest;
-            Thugs thugs;
-        Chapel chapel;
-            Altars altars;
+    Forest forest;
+        ForestExploration forest_exploration;
+        Thugs thugs;
+    Chapel chapel;
+        Altars altars;
+        Dungeons dungeons;
 
     // Items
 
