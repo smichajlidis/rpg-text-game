@@ -2,14 +2,32 @@
 #include "../includes/location.h"
   
 void Location::equipment_menu() {
+    std::string choice {};
     (*player).equipment.display_equipment();
-    if (!(*player).equipment.is_empty())
-        (*player).equipment.equipment_choice();
+    if (!(*player).equipment.is_empty()) {
+        std::cout<<"\nPass the number of an item: ";
+        std::cin>>choice;
+        bool is_number {true};
+        for (char const &ch : choice) {
+        if (std::isdigit(ch) == 0) 
+            is_number = false;
+        }
+        if (is_number == false)
+            std::cout<<"\nYou have to pass a corrent value (wrong char!)";
+        else {
+            int position {stoi(choice)-1};
+            int size {static_cast<int>((*player).equipment.items.size())};
+            if (position < 0 || position >= size)
+                std::cout<<"\nYou have to pass a correct value";
+            else
+                std::cout<<"Your choice is "<<(*(*player).equipment.items.at(position)).return_name();
+        }
+        std::cout<<"\nPress any key to return: ";
+        std::cin>>choice;
+    }
     else {
-        char choice {};
-   // std::cout<<"[Place for showing equipment]\n";
-    std::cout<<"\nPress any key to return: ";
-    std::cin>>choice;
+        std::cout<<"\nPress any key to return: ";
+        std::cin>>choice;
     }
 }
 

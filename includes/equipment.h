@@ -40,6 +40,7 @@ public:
     friend class Creature;
     friend class Priest;
     friend class Ladies;
+    friend class Location;
 };
 
 #endif
