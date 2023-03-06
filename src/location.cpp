@@ -44,6 +44,9 @@ void Location::equipment_menu() {
                             case '2': {
                                 if ((*(*player).equipment.items.at(position)).return_class_name() == "weapon")
                                     (*player).active_weapon = (*player).equipment.items.at(position);
+                                std::cout<<"\n"<<(*player).active_weapon->return_name()<<" is now your active weapon\n";
+                                    std::cout<<"\nPress any key to continue: ";
+                                    std::cin>>choice;
                                 break;
                             }
                                      break;

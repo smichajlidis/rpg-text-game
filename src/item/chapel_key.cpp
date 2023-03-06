@@ -19,6 +19,10 @@ std::string ChapelKey::return_class_name() {
     return "item";
 }
 
+int ChapelKey::return_value() {
+    return 0;
+}
+
 ChapelKey::ChapelKey(std::string name_val)
     : Item(name_val) {
 }

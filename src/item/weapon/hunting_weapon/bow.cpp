@@ -20,6 +20,10 @@ std::string Bow::return_class_name() {
     return "hunting_weapon";
 }
 
+int Bow::return_value() {
+    return hitForce;
+}
+
 Bow::Bow(std::string name_val, int price_val, int hitForce_val, int amount_val)
     : HuntingWeapon(name_val, price_val, hitForce_val, amount_val) {
 }

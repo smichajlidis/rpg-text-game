@@ -25,6 +25,7 @@ public:
     virtual Item* clone()=0;
     virtual void show_details()=0;
     virtual std::string return_class_name()=0;
+    virtual int return_value()=0;
 
     void increase_amount(int);
     void decrease_amount(int);
