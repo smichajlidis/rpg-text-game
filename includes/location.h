@@ -51,6 +51,7 @@ public:
     friend class Thugs;
     friend class Altars;
     friend class Trade;
+    friend class Exploration;
 };
 
 #endif

@@ -103,6 +103,9 @@
 #include "includes/location/hot_dish.h"
 #include "src/location/hot_dish.cpp"
 
+#include "includes/location/exploration.h"
+#include "src/location/exploration.cpp"
+
 //////////////////////////////////
 
 #include "includes/game_state.h"
