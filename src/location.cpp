@@ -41,7 +41,12 @@ void Location::equipment_menu() {
                                 std::cin>>i;
                                 break;
                             }
-                            case '2': break;
+                            case '2': {
+                                if ((*(*player).equipment.items.at(position)).return_class_name() == "weapon")
+                                    (*player).active_weapon = (*player).equipment.items.at(position);
+                                break;
+                            }
+                                     break;
                             default: break;
                     }                
                 }

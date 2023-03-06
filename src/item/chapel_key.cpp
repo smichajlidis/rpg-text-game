@@ -15,6 +15,10 @@ Item* ChapelKey::clone() {
     return chapel_key;
 }
 
+std::string ChapelKey::return_class_name() {
+    return "item";
+}
+
 ChapelKey::ChapelKey(std::string name_val)
     : Item(name_val) {
 }

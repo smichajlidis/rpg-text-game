@@ -33,12 +33,12 @@ void Player::display_top_bar() {
   //  std::cout<<"------------------------------------------------------------------------\n\n";
     std::cout<<" Hp: "<<hp; if(drunk>0) std::cout<<" -"<<drunk*2;
     std::cout<<" | Gold: "<<equipment.return_gold();
-    std::cout<<" | Strength: "<<strength; if(drunk>0) std::cout<<" +"<<drunk;
+    std::cout<<" | Strength: "<<strength; if(drunk>0) std::cout<<" +"<<drunk; if (active_weapon) std::cout<<" +"<<(*active_weapon).return_hitforce();
     std::cout<<" | Charisma: "<<charisma; if(drunk>0) std::cout<<" +"<<drunk;
     std::cout<<" | Luck: "<<luck; if(drunk>0) std::cout<<" +"<<drunk/2;
     std::cout<<"\n Active weapon: ";
     if (active_weapon)
-        (*active_weapon).return_name();
+        std::cout<<(*active_weapon).return_name();
     else
         std::cout<<"none";
     std::cout<<"\n\n\n";
