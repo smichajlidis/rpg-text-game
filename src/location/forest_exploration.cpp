@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../../includes/location/exploration/forest_exploration.h"
+#include "../../includes/location/forest_exploration.h"
 
 Location* ForestExploration::making_a_choice() {
     char choice;
@@ -10,7 +10,7 @@ Location* ForestExploration::making_a_choice() {
 }
 
 ForestExploration::ForestExploration(std::string name_val)
-    : Exploration(name_val) {
+    : Location(name_val) {
 }
 
 ForestExploration::~ForestExploration() {

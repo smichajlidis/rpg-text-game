@@ -103,14 +103,14 @@
 #include "includes/location/hot_dish.h"
 #include "src/location/hot_dish.cpp"
 
-#include "includes/location/exploration.h"
-#include "src/location/exploration.cpp"
+#include "includes/exploration.h"
+#include "src/exploration.cpp"
 
-#include "includes/location/exploration/forest_exploration.h"
-#include "src/location/exploration/forest_exploration.cpp"
+#include "includes/location/forest_exploration.h"
+#include "src/location/forest_exploration.cpp"
 
-#include "includes/location/exploration/dungeons.h"
-#include "src/location/exploration/dungeons.cpp"
+#include "includes/location/dungeons.h"
+#include "src/location/dungeons.cpp"
 
 //////////////////////////////////
 

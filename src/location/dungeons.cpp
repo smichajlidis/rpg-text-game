@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../../includes/location/exploration/dungeons.h"
+#include "../../includes/location/dungeons.h"
 
 Location* Dungeons::making_a_choice() {
     char choice;
@@ -10,7 +10,7 @@ Location* Dungeons::making_a_choice() {
 }
 
 Dungeons::Dungeons(std::string name_val)
-    : Exploration(name_val) {
+    : Location(name_val) {
 }
 
 Dungeons::~Dungeons() {
