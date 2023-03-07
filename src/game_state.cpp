@@ -103,9 +103,11 @@ GameState::GameState() {
 
     forest_exploration.related_locations.push_back(&forest);
     forest_exploration.player_pointer(&player);
+    forest_exploration.point_player(&player);
 
     dungeons.related_locations.push_back(&chapel);
     dungeons.player_pointer(&player);
+    dungeons.point_player(&player);
 
     // ADDING ITEMS FOR TRADING
     Item* sword2 {nullptr};

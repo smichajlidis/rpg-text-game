@@ -2,6 +2,10 @@
 #include <ctime>
 #include "../includes/exploration.h"
 
+void Exploration::point_player(Player* ptr) {
+    player_ptr = ptr;
+}
+
 void Exploration::event_draw() {
     srand(time(NULL));
     switch(std::rand() % 4 + 1) {
@@ -36,8 +40,10 @@ void Exploration::enemy_attack() {
 void Exploration::found_something() {
     char choice {};
     srand(time(NULL));
-    std::cout<<related_items.at(std::rand() % related_items.size())->return_name();
-    std::cout<<"\n[found_something()]\n\n";
+    Item* ptr = related_items.at(std::rand() % related_items.size());
+    (*player_ptr).equipment.add_item(ptr);
+    std::cout<<"You found "<<ptr->return_name()<<"!\n";
+    std::cout<<"\n[+ "<<ptr->return_name()<<"]\n\n";
     std::cout<<"Press any key to continue: ";
     std::cin>>choice;
 }

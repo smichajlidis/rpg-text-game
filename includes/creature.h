@@ -31,6 +31,7 @@ public:
     friend class Gamblers;
     friend class GameState;
     friend class Location;
+    friend class Exploration;
 
 };
 
