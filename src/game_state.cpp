@@ -102,14 +102,10 @@ GameState::GameState() {
     hot_dish.player_pointer(&player);
 
     forest_exploration.related_locations.push_back(&forest);
+    forest_exploration.player_pointer(&player);
 
     dungeons.related_locations.push_back(&chapel);
-  //  hot_dish.point_equipment(&equipment);
-
-    // OTHER
-
-  //  point_player.point_player(&player);
-   // point_equipment.point_equipment(&equipment);
+    dungeons.player_pointer(&player);
 
     // ADDING ITEMS FOR TRADING
     Item* sword2 {nullptr};
