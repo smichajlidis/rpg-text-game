@@ -21,6 +21,9 @@
 #include "includes/creature/npc.h"
 #include "src/creature/npc.cpp"
 
+#include "includes/creature/wolf.h"
+#include "src/creature/wolf.cpp"
+
 // ITEM AND DERIVED CLASSES
 
 #include "includes/item.h"

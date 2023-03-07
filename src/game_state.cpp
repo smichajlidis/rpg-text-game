@@ -129,6 +129,10 @@ GameState::GameState() {
     forest_fruits = new ForestFruits;
     forest_exploration.related_items.push_back(forest_fruits);
 
+    Creature* wolf {nullptr};
+    wolf = new Wolf;
+    forest_exploration.related_creatures.push_back(wolf);
+
     Item* bow2 {nullptr};
     bow2 = new Bow;
     dungeons.related_items.push_back(bow2);

@@ -25,7 +25,7 @@ void Exploration::creature_meeting() {
 
 void Exploration::nothing_found() {
     char choice {};
-    std::cout<<"[nothing found]\n\n";
+    std::cout<<"You found nothing this time.";
     std::cout<<"Press any key to continue: ";
     std::cin>>choice;
 }
