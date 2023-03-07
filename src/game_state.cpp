@@ -123,6 +123,14 @@ GameState::GameState() {
     bow = new Bow;
     trade_goods.items.push_back(bow);
 
+    Item* forest_fruits {nullptr};
+    forest_fruits = new ForestFruits;
+    forest_exploration.related_items.push_back(forest_fruits);
+
+    Item* bow2 {nullptr};
+    bow2 = new Bow;
+    dungeons.related_items.push_back(bow2);
+
 }
 
 GameState::~GameState() {

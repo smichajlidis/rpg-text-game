@@ -50,6 +50,9 @@
 #include "includes/item/chapel_key.h"
 #include "src/item/chapel_key.cpp"
 
+#include "includes/item/food/forest_fruits.h"
+#include "src/item/food/forest_fruits.cpp"
+
 // LOCATION AND DERIVED CLASSES
 
 #include "includes/location.h"

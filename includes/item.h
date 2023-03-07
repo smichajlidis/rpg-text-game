@@ -15,6 +15,7 @@ class Item {
     friend class Bow;
     friend class Sword;
     friend class ChapelKey;
+    friend class ForestFruits;
 
 public:
 

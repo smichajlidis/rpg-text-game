@@ -8,6 +8,8 @@ class Exploration {
     std::vector <Creature*> related_creatures;
     std::vector <Item*> related_items;
 
+    friend class GameState;
+
 public:
 
     void event_draw();
