@@ -35,7 +35,9 @@ void Exploration::enemy_attack() {
 
 void Exploration::found_something() {
     char choice {};
-    std::cout<<"[found_something()]\n\n";
+    srand(time(NULL));
+    std::cout<<related_items.at(std::rand() % related_items.size())->return_name();
+    std::cout<<"\n[found_something()]\n\n";
     std::cout<<"Press any key to continue: ";
     std::cin>>choice;
 }
