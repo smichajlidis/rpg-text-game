@@ -4,6 +4,7 @@
 Location* ForestAttack::making_a_choice() {
     char choice {};
     int hit {};
+    bool run {false};
     srand(time(NULL)); 
     Creature* enemy = (related_creatures.at(std::rand() % related_creatures.size()))->clone();
     std::cout<<"You have been attacked by "<<enemy->return_name()<<"\n\n";
@@ -18,6 +19,13 @@ Location* ForestAttack::making_a_choice() {
         std::cout<<"What you do? ";
         std::cin>>choice;
         switch (choice) {
+            case '0': {
+                switch(std::rand() % 2) {
+                    case 1: clear(); (*player).display_top_bar(); (*enemy).display_enemy(); std::cout<<"Success! You run away\n"; run = true; break;
+                    default: clear(); (*player).display_top_bar(); (*enemy).display_enemy(); std::cout<<"Unfortunately you failed to escape\n"; break;
+                }
+            break;
+            }
             case '1': {
                 clear();
                 (*player).display_top_bar();
@@ -30,14 +38,14 @@ Location* ForestAttack::making_a_choice() {
             } 
             default: break;
         }
-        if ((*enemy).return_hp() > 0) {
+        if ((*enemy).return_hp() > 0 && run == false) {
             hit = (*enemy).return_hitForce();
             std::cout<<"Enemy hit with "<<hit<<" force\n";
             (*player).decrease_hp(hit);
             std::cout<<"\nPress any key to continue: ";
             std::cin>>choice;
         }
-    } while (choice == '1' && (*enemy).return_hp() > 0);
+    } while (run == false && (*player).return_hp() > 0 && (*enemy).return_hp() > 0);
     std::cout<<"\nPress any key to continue: ";
     std::cin>>choice;
     return related_locations.at(0);

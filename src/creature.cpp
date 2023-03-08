@@ -16,7 +16,7 @@ void Creature::display_enemy() {
     if (active_weapon != nullptr)
         std::cout<<(*active_weapon).return_name()<<" |\n\n";
     else
-        std::cout<<"none|\n\n";
+        std::cout<<"none |\n\n";
 }
 
 int Creature::return_hitForce() {
