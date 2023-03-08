@@ -9,7 +9,7 @@ public:
 
     virtual Creature* clone();
 
-    Wolf(std::string name_val="wolf", int strength_val=5);
+    Wolf(std::string name_val="wolf", int strength_val=7);
     ~Wolf();
 
 };

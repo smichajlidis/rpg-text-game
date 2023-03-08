@@ -42,8 +42,11 @@ Location* ForestAttack::making_a_choice() {
             hit = (*enemy).return_hitForce();
             std::cout<<"Enemy hit with "<<hit<<" force\n";
             (*player).decrease_hp(hit);
+            if ((*player).return_hp() < 0) std::cout<<"You are dead.\n";
+            else {
             std::cout<<"\nPress any key to continue: ";
             std::cin>>choice;
+            }
         }
     } while (run == false && (*player).return_hp() > 0 && (*enemy).return_hp() > 0);
     std::cout<<"\nPress any key to continue: ";
