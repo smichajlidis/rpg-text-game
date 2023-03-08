@@ -3,8 +3,9 @@
 
 Location* ForestAttack::making_a_choice() {
     char choice {};
-    srand(time(NULL));
-    Creature* enemy = related_creatures.at(std::rand() % related_creatures.size());
+    int hit {};
+    srand(time(NULL)); 
+    Creature* enemy = (related_creatures.at(std::rand() % related_creatures.size()))->clone();
     std::cout<<"You have been attacked by "<<enemy->return_name()<<"\n\n";
     std::cout<<"Press any key to continue: ";
     std::cin>>choice;
@@ -21,15 +22,23 @@ Location* ForestAttack::making_a_choice() {
                 clear();
                 (*player).display_top_bar();
                 (*enemy).display_enemy();
-                std::cout<<"You hit with "<<(*player).return_hitForce()<<" force\n"; break;
+                hit = (*player).return_hitForce();
+                std::cout<<"You hit with "<<hit<<" force\n";
+                (*enemy).decrease_hp(hit);
+                if ((*enemy).return_hp() < 0) std::cout<<(*enemy).return_name()<<" defeated!\n";
+                break;
             } 
             default: break;
         }
-        std::cout<<"Enemy hit with "<<(*enemy).return_hitForce()<<" force\n";
-        std::cout<<"\nPress any key to continue: ";
-        std::cin>>choice;
-    } while (choice == '1');
-    std::cout<<"\n\nPress any key to continue: ";
+        if ((*enemy).return_hp() > 0) {
+            hit = (*enemy).return_hitForce();
+            std::cout<<"Enemy hit with "<<hit<<" force\n";
+            (*player).decrease_hp(hit);
+            std::cout<<"\nPress any key to continue: ";
+            std::cin>>choice;
+        }
+    } while (choice == '1' && (*enemy).return_hp() > 0);
+    std::cout<<"\nPress any key to continue: ";
     std::cin>>choice;
     return related_locations.at(0);
 }

@@ -16,7 +16,9 @@ public:
     void increase_luck(int val);
     void increase_charisma(int val);
 
-    Player(std::string name_val = "none", int strength_val = 1, int charisma_val = 1, int luck_val = 1, int drunk_val = 0);
+    virtual Creature* clone();
+
+    Player(std::string name_val = "none", int strength_val = 20, int charisma_val = 15, int luck_val = 10, int drunk_val = 0);
 
     ~Player();
 

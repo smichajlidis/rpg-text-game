@@ -2,6 +2,12 @@
 #include <ctime>
 #include "../../includes/location/ladies.h"
 
+Creature* Ladies::clone() {
+    Creature* ladies {nullptr};
+    ladies = new Ladies;
+    return ladies;
+}
+
 void Ladies::greeting() {
     std::vector <std::string> greetings {
         "- Guess what We are not wearing right now?",

@@ -21,6 +21,10 @@ public:
     std::string return_name();
     int return_hitForce();
     void display_enemy();
+    void decrease_hp(int hit);
+    int return_hp();
+
+    virtual Creature* clone()=0;
 
     Creature(std::string name_val = "none", int strength_val = 1, Item* active_weapon_val=nullptr, int hp_val = 100);
     ~Creature();

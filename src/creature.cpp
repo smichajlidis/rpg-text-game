@@ -3,10 +3,18 @@
 #include "../includes/creature.h"
 #include "../includes/equipment.h"
 
+int Creature::return_hp() {
+    return hp;
+}
+
+void Creature::decrease_hp(int hit) {
+    hp-=hit;
+}
+
 void Creature::display_enemy() {
-    std::cout<<"|Enemy: "<<name<<" | Hp: "<<hp<<" | Weapon: ";
+    std::cout<<"| Enemy: "<<name<<" | Hp: "<<hp<<" | Weapon: ";
     if (active_weapon != nullptr)
-        std::cout<<(*active_weapon).return_name()<<"|\n\n";
+        std::cout<<(*active_weapon).return_name()<<" |\n\n";
     else
         std::cout<<"none|\n\n";
 }

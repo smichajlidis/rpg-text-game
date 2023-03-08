@@ -9,6 +9,7 @@ public:
 
     virtual Location* making_a_choice();
     virtual void greeting();
+    virtual Creature* clone();
 
     Priest(std::string name_val = "priest");
     ~Priest();
