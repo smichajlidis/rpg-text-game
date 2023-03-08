@@ -31,7 +31,11 @@ public:
     friend class Gamblers;
     friend class GameState;
     friend class Location;
-    friend class Exploration;
+    friend class ForestAttack;
+    friend class Hunting;
+    friend class DungeonsAttack;
+    friend class FoundFood;
+    friend class FoundTreasures;
 
 };
 

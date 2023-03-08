@@ -102,18 +102,54 @@ GameState::GameState() {
     hot_dish.player_pointer(&player);
 
     forest_exploration.related_locations.push_back(&forest);
+    forest_exploration.related_locations.push_back(&forest_attack);
+    forest_exploration.related_locations.push_back(&found_food);
+    forest_exploration.related_locations.push_back(&found_nothing);
+    forest_exploration.related_locations.push_back(&hunting);
     forest_exploration.player_pointer(&player);
-    forest_exploration.point_player(&player);
 
     dungeons.related_locations.push_back(&chapel);
+    dungeons.related_locations.push_back(&dungeons_attack);
+    dungeons.related_locations.push_back(&found_treasures);
+    dungeons.related_locations.push_back(&dungeons_nothing);
+    dungeons.related_locations.push_back(&chapel);
     dungeons.player_pointer(&player);
-    dungeons.point_player(&player);
+
+    forest_attack.related_locations.push_back(&forest_exploration);
+    Creature* wolf {nullptr};
+    wolf = new Wolf;
+    forest_attack.related_creatures.push_back(wolf);
+    forest_attack.player_pointer(&player);
+
+    found_food.related_locations.push_back(&forest_exploration);
+    Item* forest_fruits {nullptr};
+    forest_fruits = new ForestFruits;
+    found_food.related_items.push_back(forest_fruits);
+    found_food.player_pointer(&player);
+    
+    found_nothing.related_locations.push_back(&forest_exploration);
+    found_nothing.player_pointer(&player);
+
+    hunting.related_locations.push_back(&forest_exploration);
+    hunting.player_pointer(&player);
+
+    dungeons_attack.related_locations.push_back(&dungeons);
+    dungeons_attack.player_pointer(&player);
+
+    found_treasures.related_locations.push_back(&dungeons);
+    Item* bow2 {nullptr};
+    bow2 = new Bow;
+    found_treasures.related_items.push_back(bow2);
+    found_treasures.player_pointer(&player);
+
+    dungeons_nothing.related_locations.push_back(&dungeons);
+    dungeons_nothing.player_pointer(&player);
 
     // ADDING ITEMS FOR TRADING
+  
     Item* sword2 {nullptr};
     sword2 = new Sword;
     player.equipment.items.push_back(sword2);
-
 
     Item* sword {nullptr};
     sword = new Sword;
@@ -125,17 +161,8 @@ GameState::GameState() {
     bow = new Bow;
     trade_goods.items.push_back(bow);
 
-    Item* forest_fruits {nullptr};
-    forest_fruits = new ForestFruits;
-    forest_exploration.related_items.push_back(forest_fruits);
 
-    Creature* wolf {nullptr};
-    wolf = new Wolf;
-    forest_exploration.related_creatures.push_back(wolf);
 
-    Item* bow2 {nullptr};
-    bow2 = new Bow;
-    dungeons.related_items.push_back(bow2);
 
 }
 

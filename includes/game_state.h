@@ -19,7 +19,6 @@
 #include "location/gossip.h"
 #include "location/hot_dish.h"
 #include "equipment.h"
-//#include "point_player.h"
 
 class Sword;
 class Bow;
@@ -54,10 +53,17 @@ class GameState {
             Ladies ladies;
     Forest forest;
         ForestExploration forest_exploration;
+            ForestAttack forest_attack;
+            FoundFood found_food;
+            FoundNothing found_nothing;
+            Hunting hunting;
         Thugs thugs;
     Chapel chapel;
         Altars altars;
         Dungeons dungeons;
+            DungeonsAttack dungeons_attack;
+            FoundTreasures found_treasures;
+            DungeonsNothing dungeons_nothing;
 
     // Items
 

@@ -2,8 +2,7 @@
 #define _FORESTEXPLORATION_H_
 #include <iostream>
 
-class ForestExploration:
-    public Location, public Exploration {
+class ForestExploration: public Location {
 
 public:
 

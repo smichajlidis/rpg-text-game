@@ -53,7 +53,14 @@ public:
     friend class Trade;
     friend class Exploration;
     friend class ForestExploration;
+        friend class ForestAttack;
+        friend class FoundFood;
+        friend class FoundNothing;
+        friend class Hunting;
     friend class Dungeons;
+        friend class FoundTreasures;
+        friend class DungeonsNothing;
+        friend class DungeonsAttack;
 };
 
 #endif

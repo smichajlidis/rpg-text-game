@@ -109,14 +109,32 @@
 #include "includes/location/hot_dish.h"
 #include "src/location/hot_dish.cpp"
 
-#include "includes/exploration.h"
-#include "src/exploration.cpp"
-
 #include "includes/location/forest_exploration.h"
 #include "src/location/forest_exploration.cpp"
 
 #include "includes/location/dungeons.h"
 #include "src/location/dungeons.cpp"
+
+#include "includes/location/forest_attack.h"
+#include "src/location/forest_attack.cpp"
+
+#include "includes/location/found_food.h"
+#include "src/location/found_food.cpp"
+
+#include "includes/location/found_nothing.h"
+#include "src/location/found_nothing.cpp"
+
+#include "includes/location/hunting.h"
+#include "src/location/hunting.cpp"
+
+#include "includes/location/dungeons_attack.h"
+#include "src/location/dungeons_attack.cpp"
+
+#include "includes/location/found_treasures.h"
+#include "src/location/found_treasures.cpp"
+
+#include "includes/location/dungeons_nothing.h"
+#include "src/location/dungeons_nothing.cpp"
 
 //////////////////////////////////
 

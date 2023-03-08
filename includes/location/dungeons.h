@@ -2,8 +2,7 @@
 #define _DUNGEONS_H_
 #include <iostream>
 
-class Dungeons:
-    public Location, public Exploration {
+class Dungeons: public Location {
 
 public:
 
