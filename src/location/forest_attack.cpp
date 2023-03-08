@@ -1,17 +1,19 @@
 #include <iostream>
-#include "../../includes/location/found_nothing.h"
+#include "../../includes/location/forest_attack.h"
 
-Location* FoundNothing::making_a_choice() {
+Location* ForestAttack::making_a_choice() {
     char choice {};
-    std::cout<<"You found nothing this time.";
+    srand(time(NULL));
+    Creature* ptr = related_creatures.at(std::rand() % related_creatures.size());
+    std::cout<<"You have been attacked by "<<ptr->return_name()<<"\n\n";
     std::cout<<"Press any key to continue: ";
     std::cin>>choice;
     return related_locations.at(0);
 }
 
-FoundNothing::FoundNothing(std::string name_val)
+ForestAttack::ForestAttack(std::string name_val)
     : Location(name_val) {
 }
 
-FoundNothing::~FoundNothing() {
+ForestAttack::~ForestAttack() {
 }
