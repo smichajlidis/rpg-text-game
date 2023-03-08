@@ -18,6 +18,10 @@ Location* Dungeons::making_a_choice() {
                 }
             break;
             } 
+            case '6': clear(); equipment_menu(); return related_locations.at(4); break;
+            case '7': clear(); load_menu(); return related_locations.at(4); break;
+            case '8': clear(); save_menu(); return related_locations.at(4); break;
+            case '9': clear(); exit_menu(); return related_locations.at(4); break;
             default: return related_locations.at(0); break;
         }
     return related_locations.at(0);

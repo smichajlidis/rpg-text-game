@@ -106,6 +106,7 @@ GameState::GameState() {
     forest_exploration.related_locations.push_back(&found_food);
     forest_exploration.related_locations.push_back(&found_nothing);
     forest_exploration.related_locations.push_back(&hunting);
+    forest_exploration.related_locations.push_back(&forest_exploration);
     forest_exploration.player_pointer(&player);
 
     dungeons.related_locations.push_back(&chapel);
@@ -113,6 +114,7 @@ GameState::GameState() {
     dungeons.related_locations.push_back(&found_treasures);
     dungeons.related_locations.push_back(&dungeons_nothing);
     dungeons.related_locations.push_back(&chapel);
+    dungeons.related_locations.push_back(&dungeons);
     dungeons.player_pointer(&player);
 
     forest_attack.related_locations.push_back(&forest_exploration);

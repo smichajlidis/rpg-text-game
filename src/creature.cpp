@@ -1,6 +1,23 @@
 #include <iostream>
+#include <ctime>
 #include "../includes/creature.h"
 #include "../includes/equipment.h"
+
+void Creature::display_enemy() {
+    std::cout<<"|Enemy: "<<name<<" | Hp: "<<hp<<" | Weapon: ";
+    if (active_weapon != nullptr)
+        std::cout<<(*active_weapon).return_name()<<"|\n\n";
+    else
+        std::cout<<"none|\n\n";
+}
+
+int Creature::return_hitForce() {
+    srand(time(NULL));
+    if ((active_weapon) != nullptr)
+        return (std::rand() % (strength+(*active_weapon).return_value()) + (strength+(*active_weapon).return_value()/2));
+    else
+        return (std::rand() % strength + strength/2);
+}
 
 void Creature::increase_hp(int hp_val) {
     if (hp+hp_val<=100)
