@@ -42,7 +42,10 @@ Location* ForestAttack::making_a_choice() {
             hit = (*enemy).return_hitForce();
             std::cout<<"Enemy hit with "<<hit<<" force\n";
             (*player).decrease_hp(hit);
-            if ((*player).return_hp() < 0) std::cout<<"You are dead.\n";
+            if ((*player).return_hp() < 0) {
+                std::cout<<"You are dead.\n";
+                change_i();
+            }
             else {
             std::cout<<"\nPress any key to continue: ";
             std::cin>>choice;
@@ -52,6 +55,14 @@ Location* ForestAttack::making_a_choice() {
     std::cout<<"\nPress any key to continue: ";
     std::cin>>choice;
     return related_locations.at(0);
+}
+
+void ForestAttack::change_i() {
+    *i_ptr = 2; //just not zero and not one
+}
+
+void ForestAttack::get_i_ptr(int* i) {
+    i_ptr = i;
 }
 
 ForestAttack::ForestAttack(std::string name_val)

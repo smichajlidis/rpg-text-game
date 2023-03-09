@@ -43,6 +43,8 @@ public:
     friend class DungeonsAttack;
     friend class FoundFood;
     friend class FoundTreasures;
+    friend class Selling;
+    friend class Buying;
 
 };
 

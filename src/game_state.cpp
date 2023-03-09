@@ -1,6 +1,10 @@
 #include <iostream>
 #include "../includes/game_state.h"
 
+void GameState::get_i_ptr(int* i) {
+    i_ptr = i;
+}
+
 void GameState::display_location() {
     if (player.drunk > 0)
         player.drunk--;
@@ -9,7 +13,8 @@ void GameState::display_location() {
     current_location = current_location->making_a_choice();
 }
 
-GameState::GameState() {
+GameState::GameState(int* i)
+    : i_ptr {i} {
     current_location = &square;
     // LOCATION INITIALIZATION
     square.related_locations.push_back(&square);
@@ -122,6 +127,7 @@ GameState::GameState() {
     wolf = new Wolf;
     forest_attack.related_creatures.push_back(wolf);
     forest_attack.player_pointer(&player);
+    forest_attack.get_i_ptr(i_ptr);
 
     found_food.related_locations.push_back(&forest_exploration);
     Item* forest_fruits {nullptr};

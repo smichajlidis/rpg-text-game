@@ -8,7 +8,7 @@ void MainMenu::display_logo() {
 }
 
 void MainMenu::display_menu() {
-    char choice {};
+ //   char choice {};
     do {
     clear();
     display_logo();
@@ -16,14 +16,14 @@ void MainMenu::display_menu() {
     std::cout<<"        2. Load\n";
     std::cout<<"      0. Quit Game\n\n";
     std::cout<<"What do you want to do? ";
-    std::cin>>choice;
-    switch(choice) {
-        case '1': break;
-        case '2': clear(); display_logo(); load.display_load(); break;
-        case '0': change_i(); break;
+    std::cin>>*i_ptr;
+    switch(*i_ptr) {
+        case 1: break;
+        case 2: clear(); display_logo(); load.display_load(); break;
+        case 0: change_i(); break;
         default: break;
     }
-    } while (choice == '2');
+    } while (*i_ptr == 2);
 }
 
 void MainMenu::change_i() {

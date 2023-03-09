@@ -34,6 +34,7 @@ Location* Selling::making_a_choice() {
                             (*equipment).add_gold((*ptr).return_price());
                             std::cout<<"-"<<(*ptr).return_name()<<"\n";
                             (*trade_goods).add_item(ptr);
+                            if ((*player).active_weapon == ptr) (*player).active_weapon = nullptr;
                             (*equipment).remove_item(ptr);
                             std::cout<<"\nPress any key to continue: ";
                             std::cin>>choice;

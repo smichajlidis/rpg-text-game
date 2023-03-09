@@ -28,6 +28,8 @@ class Priest;
 
 class GameState {
 
+    int* i_ptr;
+
     Player player;
     Equipment trade_goods;
     Equipment equipment;
@@ -74,8 +76,9 @@ class GameState {
 public:
 
     void display_location();
+    void get_i_ptr(int* i);
 
-    GameState();
+    GameState(int* i);
     ~GameState();
 
 };

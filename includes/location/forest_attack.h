@@ -7,11 +7,14 @@ class Creature;
 
 class ForestAttack: public Location {
 
+    int* i_ptr;
     std::vector <Creature*> related_creatures;
 
     public:
 
     virtual Location* making_a_choice();
+    void change_i();
+    void get_i_ptr(int* i);
 
     ForestAttack(std::string name_val="forest_attack");
     ~ForestAttack();
