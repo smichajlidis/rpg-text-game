@@ -12,6 +12,7 @@ public:
 
     void display_logo();
     void display_menu();
+    void clear();
 
     MainMenu();
     ~MainMenu();

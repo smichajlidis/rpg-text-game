@@ -10,7 +10,6 @@ int i {1};
 do {
   GameState game_state;
   ScreenStuff screen_stuff;
-  screen_stuff.clear();
   main_menu.display_menu();
   while(i == 1) {
       screen_stuff.clear();
