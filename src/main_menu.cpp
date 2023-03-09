@@ -20,9 +20,18 @@ void MainMenu::display_menu() {
     switch(choice) {
         case '1': break;
         case '2': clear(); display_logo(); load.display_load(); break;
+        case '0': change_i(); break;
         default: break;
     }
     } while (choice == '2');
+}
+
+void MainMenu::change_i() {
+    *i_ptr = 0;
+}
+
+void MainMenu::get_i_ptr(int* i) {
+    i_ptr = i;
 }
 
 void MainMenu::clear() {
