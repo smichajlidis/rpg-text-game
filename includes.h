@@ -1,5 +1,8 @@
 #include <iostream>
 
+#include "includes/load.h"
+#include "src/load.cpp"
+
 #include "includes/main_menu.h"
 #include "src/main_menu.cpp"
 

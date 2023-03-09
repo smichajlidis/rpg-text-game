@@ -4,9 +4,6 @@
 
 int main() {
 
-//GameState game_state;
-//ScreenStuff screen_stuff;
-
 MainMenu main_menu;
 
 int i {1};

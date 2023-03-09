@@ -3,6 +3,7 @@
 
 void MainMenu::display_menu() {
     char choice {};
+    do {
     std::cout<<"_________________________\n";
     std::cout<<"|..::SUPER LEGS 2000::..|\n";
     std::cout<<" '^'''^'''^'''^'''^'''^'\n\n";
@@ -11,6 +12,12 @@ void MainMenu::display_menu() {
     std::cout<<"      0. Quit Game\n\n";
     std::cout<<"What do you want to do? ";
     std::cin>>choice;
+    switch(choice) {
+        case '1': break;
+        case '2': load.display_load(); break;
+        default: break;
+    }
+    } while (choice == '2');
 }
 
 MainMenu::MainMenu() {
