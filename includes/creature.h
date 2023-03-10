@@ -23,6 +23,7 @@ public:
     void display_enemy();
     void decrease_hp(int hit);
     int return_hp();
+    bool have_a_bow();
 
     virtual Creature* clone()=0;
 

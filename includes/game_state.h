@@ -70,6 +70,8 @@ class GameState {
     // Items
 
     ChapelKey chapel_key;
+    Leather leather;
+    Meat meat;
 
     Location *current_location;
 

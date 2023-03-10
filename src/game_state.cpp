@@ -140,6 +140,8 @@ GameState::GameState(int* i)
 
     hunting.related_locations.push_back(&forest_exploration);
     hunting.player_pointer(&player);
+    hunting.related_items.push_back(&leather);
+    hunting.related_items.push_back(&meat);
 
     dungeons_attack.related_locations.push_back(&dungeons);
     dungeons_attack.player_pointer(&player);

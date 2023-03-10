@@ -42,6 +42,7 @@ public:
     friend class Ladies;
     friend class Location;
     friend class FoundFood;
+    friend class Hunting;
 };
 
 #endif

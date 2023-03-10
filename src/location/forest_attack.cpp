@@ -16,7 +16,7 @@ Location* ForestAttack::making_a_choice() {
         (*enemy).display_enemy();
         std::cout<<"1. Attack\n";
         std::cout<<"0. Run\n\n";
-        std::cout<<"What you do? ";
+        std::cout<<"What do you do? ";
         std::cin>>choice;
         switch (choice) {
             case '0': {
