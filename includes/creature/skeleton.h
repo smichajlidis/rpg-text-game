@@ -2,7 +2,11 @@
 #define _SKELETON_H_
 #include <iostream>
 
+class Sword;
+
 class Skeleton: public Creature {
+
+    Sword sword;
 
 public:
 

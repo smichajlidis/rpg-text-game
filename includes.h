@@ -14,23 +14,6 @@
 #include "includes/equipment.h"
 #include "src/equipment.cpp"
 
-// CREATURE AND DERIVED CLASSES
-
-#include "includes/creature.h"
-#include "src/creature.cpp"
-
-#include "includes/creature/player.h"
-#include "src/creature/player.cpp"
-
-#include "includes/creature/npc.h"
-#include "src/creature/npc.cpp"
-
-#include "includes/creature/wolf.h"
-#include "src/creature/wolf.cpp"
-
-#include "includes/creature/skeleton.h"
-#include "src/creature/skeleton.cpp"
-
 // ITEM AND DERIVED CLASSES
 
 #include "includes/item.h"
@@ -68,6 +51,23 @@
 
 #include "includes/item/meat.h"
 #include "src/item/meat.cpp"
+
+// CREATURE AND DERIVED CLASSES
+
+#include "includes/creature.h"
+#include "src/creature.cpp"
+
+#include "includes/creature/player.h"
+#include "src/creature/player.cpp"
+
+#include "includes/creature/npc.h"
+#include "src/creature/npc.cpp"
+
+#include "includes/creature/wolf.h"
+#include "src/creature/wolf.cpp"
+
+#include "includes/creature/skeleton.h"
+#include "src/creature/skeleton.cpp"
 
 // LOCATION AND DERIVED CLASSES
 

@@ -147,10 +147,8 @@ GameState::GameState(int* i)
     dungeons_attack.player_pointer(&player);
     Creature* skeleton {nullptr};
     skeleton = new Skeleton;
-    Item* sword3 {nullptr};
-    sword3 = new Sword;
-    skeleton->give_a_weapon(sword3);
     dungeons_attack.related_creatures.push_back(skeleton);
+    dungeons_attack.get_i_ptr(i_ptr);
 
     found_treasures.related_locations.push_back(&dungeons);
     Item* bow2 {nullptr};
