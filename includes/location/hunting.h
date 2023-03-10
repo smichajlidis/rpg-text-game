@@ -7,7 +7,7 @@ class Creature;
 
 class Hunting: public Location {
 
-    std::vector <Creature*> related_creatures;
+    std::vector <Item*> related_items;
 
     public:
 
@@ -15,6 +15,8 @@ class Hunting: public Location {
 
     Hunting(std::string name_val="hunting");
     ~Hunting();
+
+    friend class GameState;
 };
 
 #endif

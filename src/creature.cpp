@@ -3,6 +3,15 @@
 #include "../includes/creature.h"
 #include "../includes/equipment.h"
 
+bool Creature::have_a_bow() {
+    bool result {false};
+    for (auto i: equipment.items) {
+        if (i->return_name() == "bow")
+            result = true;
+    }
+    return result;
+}
+
 int Creature::return_hp() {
     return hp;
 }
