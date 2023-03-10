@@ -28,6 +28,9 @@
 #include "includes/creature/wolf.h"
 #include "src/creature/wolf.cpp"
 
+#include "includes/creature/skeleton.h"
+#include "src/creature/skeleton.cpp"
+
 // ITEM AND DERIVED CLASSES
 
 #include "includes/item.h"

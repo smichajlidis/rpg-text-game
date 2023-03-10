@@ -24,6 +24,7 @@ public:
     void decrease_hp(int hit);
     int return_hp();
     bool have_a_bow();
+    void give_a_weapon(Item* weapon);
 
     virtual Creature* clone()=0;
 

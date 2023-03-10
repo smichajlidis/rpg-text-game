@@ -3,6 +3,11 @@
 #include "../includes/creature.h"
 #include "../includes/equipment.h"
 
+void Creature::give_a_weapon(Item* weapon) {
+    active_weapon = weapon;
+    equipment.add_item(weapon);
+}
+
 bool Creature::have_a_bow() {
     bool result {false};
     for (auto i: equipment.items) {

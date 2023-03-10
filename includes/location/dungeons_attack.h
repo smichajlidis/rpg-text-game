@@ -15,6 +15,8 @@ class DungeonsAttack: public Location {
 
     DungeonsAttack(std::string name_val="dungeons_attack");
     ~DungeonsAttack();
+
+    friend class GameState;
 };
 
 #endif
