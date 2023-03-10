@@ -2,6 +2,12 @@
 #include <ctime>
 #include "../../includes/creature/player.h"
 
+Creature* Player::clone() {
+    Creature* player {nullptr};
+    player = new Player;
+    return player;
+}
+
 void Player::increase_charisma(int val) {
     charisma+=val;
     std::cout<<"[charisma +"<<val<<"]\n";

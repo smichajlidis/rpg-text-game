@@ -51,7 +51,7 @@ void Equipment::display_equipment() {
         ++i;
     }
     if (i == 1)
-        std::cout << "Ups. Nothing to display.";
+        std::cout << "Ups. Nothing to display.\n";
 }
 
 Item* Equipment::equipment_choice() {

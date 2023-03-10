@@ -1,6 +1,10 @@
 #include <iostream>
 #include "../includes/game_state.h"
 
+void GameState::get_i_ptr(int* i) {
+    i_ptr = i;
+}
+
 void GameState::display_location() {
     if (player.drunk > 0)
         player.drunk--;
@@ -9,7 +13,8 @@ void GameState::display_location() {
     current_location = current_location->making_a_choice();
 }
 
-GameState::GameState() {
+GameState::GameState(int* i)
+    : i_ptr {i} {
     current_location = &square;
     // LOCATION INITIALIZATION
     square.related_locations.push_back(&square);
@@ -27,14 +32,14 @@ GameState::GameState() {
     tavern.player_pointer(&player);
 
     forest.related_locations.push_back(&square);
-    forest.related_locations.push_back(&thugs); // will be forest_exploration;
+    forest.related_locations.push_back(&forest_exploration);
     forest.related_locations.push_back(&thugs);
     forest.related_locations.push_back(&forest);
     forest.player_pointer(&player);
 
     chapel.related_locations.push_back(&square);
     chapel.related_locations.push_back(&altars);
-    chapel.related_locations.push_back(&chapel);
+    chapel.related_locations.push_back(&dungeons);
     chapel.player_pointer(&player);
 
     innkeeper.related_locations.push_back(&tavern);
@@ -100,18 +105,65 @@ GameState::GameState() {
     hot_dish.related_locations.push_back(&innkeeper);
     hot_dish.point_player(&player);
     hot_dish.player_pointer(&player);
-  //  hot_dish.point_equipment(&equipment);
 
-    // OTHER
+    forest_exploration.related_locations.push_back(&forest);
+    forest_exploration.related_locations.push_back(&forest_attack);
+    forest_exploration.related_locations.push_back(&found_food);
+    forest_exploration.related_locations.push_back(&found_nothing);
+    forest_exploration.related_locations.push_back(&hunting);
+    forest_exploration.related_locations.push_back(&forest_exploration);
+    forest_exploration.player_pointer(&player);
 
-  //  point_player.point_player(&player);
-   // point_equipment.point_equipment(&equipment);
+    dungeons.related_locations.push_back(&chapel);
+    dungeons.related_locations.push_back(&dungeons_attack);
+    dungeons.related_locations.push_back(&found_treasures);
+    dungeons.related_locations.push_back(&dungeons_nothing);
+    dungeons.related_locations.push_back(&chapel);
+    dungeons.related_locations.push_back(&dungeons);
+    dungeons.player_pointer(&player);
+
+    forest_attack.related_locations.push_back(&forest_exploration);
+    Creature* wolf {nullptr};
+    wolf = new Wolf;
+    forest_attack.related_creatures.push_back(wolf);
+    forest_attack.player_pointer(&player);
+    forest_attack.get_i_ptr(i_ptr);
+
+    found_food.related_locations.push_back(&forest_exploration);
+    Item* forest_fruits {nullptr};
+    forest_fruits = new ForestFruits;
+    found_food.related_items.push_back(forest_fruits);
+    found_food.player_pointer(&player);
+    
+    found_nothing.related_locations.push_back(&forest_exploration);
+    found_nothing.player_pointer(&player);
+
+    hunting.related_locations.push_back(&forest_exploration);
+    hunting.player_pointer(&player);
+    hunting.related_items.push_back(&leather);
+    hunting.related_items.push_back(&meat);
+
+    dungeons_attack.related_locations.push_back(&dungeons);
+    dungeons_attack.player_pointer(&player);
+    Creature* skeleton {nullptr};
+    skeleton = new Skeleton;
+    dungeons_attack.related_creatures.push_back(skeleton);
+    dungeons_attack.get_i_ptr(i_ptr);
+
+    found_treasures.related_locations.push_back(&dungeons);
+    Item* bow2 {nullptr};
+    bow2 = new Bow;
+    found_treasures.related_items.push_back(bow2);
+    found_treasures.player_pointer(&player);
+
+    dungeons_nothing.related_locations.push_back(&dungeons);
+    dungeons_nothing.player_pointer(&player);
 
     // ADDING ITEMS FOR TRADING
+  
     Item* sword2 {nullptr};
     sword2 = new Sword;
     player.equipment.items.push_back(sword2);
-
 
     Item* sword {nullptr};
     sword = new Sword;
@@ -122,6 +174,9 @@ GameState::GameState() {
     Item* bow {nullptr};
     bow = new Bow;
     trade_goods.items.push_back(bow);
+
+
+
 
 }
 

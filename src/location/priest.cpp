@@ -2,6 +2,12 @@
 #include <ctime>
 #include "../../includes/location/priest.h"
 
+Creature* Priest::clone() {
+    Creature* priest {nullptr};
+    priest = new Priest;
+    return priest;
+}
+
 void Priest::greeting() {
     std::vector <std::string> greetings {
         "- He is a wise man who invented beer.",

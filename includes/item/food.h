@@ -9,6 +9,7 @@ class Food: public Item {
     int hpRestoration;
 
     friend class Equipment;
+    friend class ForestFruits;
 
 public:
 

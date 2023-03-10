@@ -19,7 +19,6 @@
 #include "location/gossip.h"
 #include "location/hot_dish.h"
 #include "equipment.h"
-//#include "point_player.h"
 
 class Sword;
 class Bow;
@@ -28,6 +27,8 @@ class PointPlayer;
 class Priest;
 
 class GameState {
+
+    int* i_ptr;
 
     Player player;
     Equipment trade_goods;
@@ -52,22 +53,34 @@ class GameState {
             Gamblers gamblers;
         // Priest priest;
             Ladies ladies;
-        Forest forest;
-            Thugs thugs;
-        Chapel chapel;
-            Altars altars;
+    Forest forest;
+        ForestExploration forest_exploration;
+            ForestAttack forest_attack;
+            FoundFood found_food;
+            FoundNothing found_nothing;
+            Hunting hunting;
+        Thugs thugs;
+    Chapel chapel;
+        Altars altars;
+        Dungeons dungeons;
+            DungeonsAttack dungeons_attack;
+            FoundTreasures found_treasures;
+            DungeonsNothing dungeons_nothing;
 
     // Items
 
     ChapelKey chapel_key;
+    Leather leather;
+    Meat meat;
 
     Location *current_location;
 
 public:
 
     void display_location();
+    void get_i_ptr(int* i);
 
-    GameState();
+    GameState(int* i);
     ~GameState();
 
 };

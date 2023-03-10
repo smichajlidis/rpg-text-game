@@ -1,6 +1,10 @@
 #include <iostream>
 
+#include "includes/load.h"
+#include "src/load.cpp"
 
+#include "includes/main_menu.h"
+#include "src/main_menu.cpp"
 
 #include "includes/point_player.h"
 #include "src/point_player.cpp"
@@ -9,17 +13,6 @@
 
 #include "includes/equipment.h"
 #include "src/equipment.cpp"
-
-// CREATURE AND DERIVED CLASSES
-
-#include "includes/creature.h"
-#include "src/creature.cpp"
-
-#include "includes/creature/player.h"
-#include "src/creature/player.cpp"
-
-#include "includes/creature/npc.h"
-#include "src/creature/npc.cpp"
 
 // ITEM AND DERIVED CLASSES
 
@@ -49,6 +42,32 @@
 
 #include "includes/item/chapel_key.h"
 #include "src/item/chapel_key.cpp"
+
+#include "includes/item/food/forest_fruits.h"
+#include "src/item/food/forest_fruits.cpp"
+
+#include "includes/item/leather.h"
+#include "src/item/leather.cpp"
+
+#include "includes/item/meat.h"
+#include "src/item/meat.cpp"
+
+// CREATURE AND DERIVED CLASSES
+
+#include "includes/creature.h"
+#include "src/creature.cpp"
+
+#include "includes/creature/player.h"
+#include "src/creature/player.cpp"
+
+#include "includes/creature/npc.h"
+#include "src/creature/npc.cpp"
+
+#include "includes/creature/wolf.h"
+#include "src/creature/wolf.cpp"
+
+#include "includes/creature/skeleton.h"
+#include "src/creature/skeleton.cpp"
 
 // LOCATION AND DERIVED CLASSES
 
@@ -102,6 +121,33 @@
 
 #include "includes/location/hot_dish.h"
 #include "src/location/hot_dish.cpp"
+
+#include "includes/location/forest_exploration.h"
+#include "src/location/forest_exploration.cpp"
+
+#include "includes/location/dungeons.h"
+#include "src/location/dungeons.cpp"
+
+#include "includes/location/forest_attack.h"
+#include "src/location/forest_attack.cpp"
+
+#include "includes/location/found_food.h"
+#include "src/location/found_food.cpp"
+
+#include "includes/location/found_nothing.h"
+#include "src/location/found_nothing.cpp"
+
+#include "includes/location/hunting.h"
+#include "src/location/hunting.cpp"
+
+#include "includes/location/dungeons_attack.h"
+#include "src/location/dungeons_attack.cpp"
+
+#include "includes/location/found_treasures.h"
+#include "src/location/found_treasures.cpp"
+
+#include "includes/location/dungeons_nothing.h"
+#include "src/location/dungeons_nothing.cpp"
 
 //////////////////////////////////
 
