@@ -149,6 +149,15 @@
 #include "includes/location/dungeons_nothing.h"
 #include "src/location/dungeons_nothing.cpp"
 
+#include "includes/location/pay_for_entrance.h"
+#include "src/location/pay_for_entrance.cpp"
+
+#include "includes/location/charisma_trial.h"
+#include "src/location/charisma_trial.cpp"
+
+#include "includes/location/attack_thugs.h"
+#include "src/location/attack_thugs.cpp"
+
 //////////////////////////////////
 
 #include "includes/game_state.h"

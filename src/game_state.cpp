@@ -69,8 +69,17 @@ GameState::GameState(int* i)
     priest.player_pointer(&player);
 
     thugs.related_locations.push_back(&forest);
+    thugs.related_locations.push_back(&pay_for_entrance);
+    thugs.related_locations.push_back(&charisma_trial);
+    thugs.related_locations.push_back(&attack_thugs);
     thugs.related_locations.push_back(&thugs);
     thugs.player_pointer(&player);
+
+        pay_for_entrance.related_locations.push_back(&thugs);
+        
+        charisma_trial.related_locations.push_back(&thugs);
+
+        attack_thugs.related_locations.push_back(&thugs);
 
     altars.related_locations.push_back(&chapel);
     altars.related_locations.push_back(&altars);

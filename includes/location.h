@@ -48,7 +48,6 @@ public:
     friend class Gamblers;
     friend class Priest;
     friend class Ladies;
-    friend class Thugs;
     friend class Altars;
     friend class Trade;
     friend class Exploration;
@@ -57,6 +56,10 @@ public:
         friend class FoundFood;
         friend class FoundNothing;
         friend class Hunting;
+    friend class Thugs;
+        friend class PayForEntrance;
+        friend class AttackThugs;
+        friend class CharismaTrial;
     friend class Dungeons;
         friend class FoundTreasures;
         friend class DungeonsNothing;
