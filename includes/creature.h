@@ -47,6 +47,7 @@ public:
     friend class FoundTreasures;
     friend class Selling;
     friend class Buying;
+    friend class PayForEntrance;
 
 };
 
