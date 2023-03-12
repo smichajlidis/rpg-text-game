@@ -2,7 +2,7 @@
 #include "../../includes/creature/npc.h"
 
 void NPC::increase_favor() {
-    if (favor < 90)
+    if (favor > 90)
         favor = 100;
     else
         favor+=10;

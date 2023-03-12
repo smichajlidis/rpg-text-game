@@ -81,6 +81,7 @@ GameState::GameState(int* i)
         
         charisma_trial.related_locations.push_back(&thugs);
         charisma_trial.player_pointer(&player);
+        charisma_trial.get_i_ptr(i_ptr);
 
         attack_thugs.related_locations.push_back(&thugs);
         attack_thugs.player_pointer(&player);
