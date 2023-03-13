@@ -60,6 +60,9 @@ class GameState {
             FoundNothing found_nothing;
             Hunting hunting;
         Thugs thugs;
+            PayForEntrance pay_for_entrance;
+            AttackThugs attack_thugs;
+            CharismaTrial charisma_trial;
     Chapel chapel;
         Altars altars;
         Dungeons dungeons;

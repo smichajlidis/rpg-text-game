@@ -2,12 +2,18 @@
 #include "../../includes/creature/npc.h"
 
 void NPC::increase_favor() {
-    favor+=10;
+    if (favor > 90)
+        favor = 100;
+    else
+        favor+=10;
     std::cout<<name<<" liked you a bit more!\n";
 }
 
 void NPC::decrease_favor() {
-    favor-=15;
+    if (favor < 15)
+        favor = 0;
+    else
+        favor-=15;
     std::cout<<"failure! - "<<name<<" likes you a little less.\n";
 }
 

@@ -18,7 +18,7 @@ public:
 
     virtual Creature* clone();
 
-    Player(std::string name_val = "none", int strength_val = 20, int charisma_val = 15, int luck_val = 10, int drunk_val = 0);
+    Player(std::string name_val = "none", int strength_val = 20, int charisma_val = 75, int luck_val = 10, int drunk_val = 0);
 
     ~Player();
 

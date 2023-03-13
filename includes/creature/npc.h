@@ -18,6 +18,7 @@ public:
 
     friend class Priest;
     friend class Ladies;
+    friend class CharismaTrial;
 };
 
 #endif
