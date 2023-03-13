@@ -85,6 +85,10 @@ GameState::GameState(int* i)
 
         attack_thugs.related_locations.push_back(&thugs);
         attack_thugs.player_pointer(&player);
+        Creature* thug {nullptr};
+        thug = new Thug;
+        attack_thugs.related_creatures.push_back(thug);
+        attack_thugs.get_i_ptr(i_ptr);
 
     altars.related_locations.push_back(&chapel);
     altars.related_locations.push_back(&altars);

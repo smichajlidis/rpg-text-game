@@ -69,6 +69,9 @@
 #include "includes/creature/skeleton.h"
 #include "src/creature/skeleton.cpp"
 
+#include "includes/creature/thug.h"
+#include "src/creature/thug.cpp"
+
 // LOCATION AND DERIVED CLASSES
 
 #include "includes/location.h"
