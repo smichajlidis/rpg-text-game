@@ -161,6 +161,9 @@
 #include "includes/location/attack_thugs.h"
 #include "src/location/attack_thugs.cpp"
 
+#include "includes/location/chapels_door.h"
+#include "src/location/chapels_door.cpp"
+
 //////////////////////////////////
 
 #include "includes/game_state.h"

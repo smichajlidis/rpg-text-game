@@ -63,12 +63,13 @@ class GameState {
             PayForEntrance pay_for_entrance;
             AttackThugs attack_thugs;
             CharismaTrial charisma_trial;
-    Chapel chapel;
-        Altars altars;
-        Dungeons dungeons;
-            DungeonsAttack dungeons_attack;
-            FoundTreasures found_treasures;
-            DungeonsNothing dungeons_nothing;
+    ChapelsDoor chapels_door;
+        Chapel chapel;
+            Altars altars;
+            Dungeons dungeons;
+                DungeonsAttack dungeons_attack;
+                FoundTreasures found_treasures;
+                DungeonsNothing dungeons_nothing;
 
     // Items
 

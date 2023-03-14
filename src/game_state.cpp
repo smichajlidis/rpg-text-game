@@ -20,7 +20,7 @@ GameState::GameState(int* i)
     square.related_locations.push_back(&square);
     square.related_locations.push_back(&tavern);
     square.related_locations.push_back(&forest);
-    square.related_locations.push_back(&chapel);
+    square.related_locations.push_back(&chapels_door);
     square.player_pointer(&player);
 
     tavern.related_locations.push_back(&square);
@@ -36,6 +36,10 @@ GameState::GameState(int* i)
     forest.related_locations.push_back(&thugs);
     forest.related_locations.push_back(&forest);
     forest.player_pointer(&player);
+
+    chapels_door.related_locations.push_back(&square);
+    chapels_door.related_locations.push_back(&chapel);
+    chapels_door.player_pointer(&player);
 
     chapel.related_locations.push_back(&square);
     chapel.related_locations.push_back(&altars);

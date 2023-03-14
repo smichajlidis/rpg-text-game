@@ -71,6 +71,14 @@ Item* Equipment::looking_for_item(int choice) {
     return nullptr;
 }
 
+bool Equipment::is_chapel_key() {
+    for (auto &item: items) {
+        if (item->return_name() == "CHAPEL KEY")
+            return true;
+    }
+    return false;
+}
+
 int Equipment::return_gold() {
     return gold;
 }

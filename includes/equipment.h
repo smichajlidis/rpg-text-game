@@ -21,6 +21,7 @@ public:
     Item* equipment_choice();
     Item* looking_for_item(int choice);
     bool is_empty();
+    bool is_chapel_key();
 
     int return_gold();
 

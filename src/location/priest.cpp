@@ -55,7 +55,13 @@ Location* Priest::making_a_choice() {
                 return related_locations.at(1); break;
             }
             case '2': {
-                if (favor >= 80) {
+                if ((equipment.is_chapel_key() == false)) {
+                    std::cout<<"I already gave you the key. Don't say you lost it! Gods, I don't have another...\n\n";
+                    std::cout<<"Press any key to continue: ";
+                    std::cin>>choice;
+                    return related_locations.at(1); break;
+                }
+                else if (favor >= 80) {
                     std::cout<<"\nDidn't know that you are so pious! Ok, I have a gift for you.\n";
                     std::cout<<"<he gives you a key>\n\n"; 
                     std::cout<<"[+ chapel key]\n\n";
@@ -68,7 +74,7 @@ Location* Priest::making_a_choice() {
                     std::cout<<"And pray for your friend too!\n";
                     std::cout<<"\nPress any key to continue: ";
                     std::cin>>choice;
-                    related_locations.at(0); break;
+                    return related_locations.at(0); break;
                 }
                 else {
                     std::cout<<"\n- Not your bussiness stranger.\n\n";
@@ -82,9 +88,9 @@ Location* Priest::making_a_choice() {
             case '7': clear(); load_menu(); return related_locations.at(1); break;
             case '8': clear(); save_menu(); return related_locations.at(1); break;
             case '9': clear(); exit_menu(); return related_locations.at(1); break;
-            default: return related_locations.at(1); break;
+            default: return related_locations.at(0); break;
         }
-        return related_locations.at(1);
+        return related_locations.at(0);
     }
     else {
         std::cout<<"I don't trust sober people, leave me alone!\n\n";
