@@ -16,6 +16,7 @@ public:
     void increase_luck(int val);
     void increase_charisma(int val);
     int return_drunk();
+    bool is_chapel_key();
 
     virtual Creature* clone();
 

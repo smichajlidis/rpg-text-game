@@ -55,6 +55,13 @@ int Player::return_drunk() {
     return drunk;
 }
 
+bool Player::is_chapel_key() {
+    while(equipment.is_chapel_key()) {
+        return true;
+    }
+    return false;
+}
+
 Player::Player(std::string name_val, int strength_val, int charisma_val, int luck_val, int drunk_val)
     : Creature(name_val, strength_val), charisma {charisma_val}, luck {luck_val}, drunk {drunk_val} {
         equipment.add_gold(1500);

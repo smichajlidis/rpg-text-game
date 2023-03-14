@@ -48,6 +48,7 @@ public:
     friend class Selling;
     friend class Buying;
     friend class PayForEntrance;
+    friend class ChapelsDoor;
 
 };
 
