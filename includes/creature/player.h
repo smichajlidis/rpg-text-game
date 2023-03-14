@@ -15,6 +15,7 @@ public:
     void display_top_bar();
     void increase_luck(int val);
     void increase_charisma(int val);
+    int return_drunk();
 
     virtual Creature* clone();
 
