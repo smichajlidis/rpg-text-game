@@ -25,6 +25,12 @@ public:
     int return_hp();
     bool have_a_bow();
     void give_a_weapon(Item* weapon);
+    int return_gold();
+    void remove_gold(int val);
+    void increase_strength(int val);
+    void decrease_strength(int val);
+    int return_strength();
+    void increase_gold(int val);
 
     virtual Creature* clone()=0;
 
@@ -49,6 +55,11 @@ public:
     friend class Buying;
     friend class PayForEntrance;
     friend class ChapelsDoor;
+  //  friend class StrengthAltar;
+  //  friend class CharismaAltar;
+  //  friend class LuckAltar;
+  //  friend class GoldAltar;
+  //  friend class WeaponAltar;
 
 };
 

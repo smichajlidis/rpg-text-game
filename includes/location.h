@@ -50,6 +50,11 @@ public:
     friend class Priest;
     friend class Ladies;
     friend class Altars;
+        friend class StrengthAltar;
+        friend class CharismaAltar;
+        friend class LuckAltar;
+        friend class GoldAltar;
+        friend class WeaponAltar;
     friend class Trade;
     friend class Exploration;
     friend class ForestExploration;

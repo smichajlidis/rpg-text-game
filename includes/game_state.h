@@ -66,6 +66,11 @@ class GameState {
     ChapelsDoor chapels_door;
         Chapel chapel;
             Altars altars;
+                StrengthAltar strength_altar;
+                CharismaAltar charisma_altar;
+                LuckAltar luck_altar;
+                GoldAltar gold_altar;
+                WeaponAltar weapon_altar;    
             Dungeons dungeons;
                 DungeonsAttack dungeons_attack;
                 FoundTreasures found_treasures;

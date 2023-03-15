@@ -164,6 +164,21 @@
 #include "includes/location/chapels_door.h"
 #include "src/location/chapels_door.cpp"
 
+#include "includes/location/strength_altar.h"
+#include "src/location/strength_altar.cpp"
+
+#include "includes/location/charisma_altar.h"
+#include "src/location/charisma_altar.cpp"
+
+#include "includes/location/luck_altar.h"
+#include "src/location/luck_altar.cpp"
+
+#include "includes/location/gold_altar.h"
+#include "src/location/gold_altar.cpp"
+
+#include "includes/location/weapon_altar.h"
+#include "src/location/weapon_altar.cpp"
+
 //////////////////////////////////
 
 #include "includes/game_state.h"
