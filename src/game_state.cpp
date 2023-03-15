@@ -95,8 +95,27 @@ GameState::GameState(int* i)
         attack_thugs.get_i_ptr(i_ptr);
 
     altars.related_locations.push_back(&chapel);
-    altars.related_locations.push_back(&altars);
+    altars.related_locations.push_back(&strength_altar);
+    altars.related_locations.push_back(&charisma_altar);
+    altars.related_locations.push_back(&luck_altar);
+    altars.related_locations.push_back(&gold_altar);
+    altars.related_locations.push_back(&weapon_altar);
     altars.player_pointer(&player);
+
+        strength_altar.related_locations.push_back(&altars);
+        strength_altar.player_pointer(&player);
+
+        charisma_altar.related_locations.push_back(&altars);
+        charisma_altar.player_pointer(&player);
+
+        luck_altar.related_locations.push_back(&altars);
+        luck_altar.player_pointer(&player);
+
+        gold_altar.related_locations.push_back(&altars);
+        gold_altar.player_pointer(&player);
+
+        weapon_altar.related_locations.push_back(&altars);
+        weapon_altar.player_pointer(&player);
 
     order_beer.point_player(&player);
     order_beer.related_locations.push_back(&innkeeper);

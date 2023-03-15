@@ -49,9 +49,35 @@ void Creature::increase_hp(int hp_val) {
     std::cout<<"hp +"<<hp_val<<"\n";
 }
 
+int Creature::return_gold() {
+    return equipment.return_gold();
+}
+
+void Creature::remove_gold(int val) {
+    equipment.remove_gold(val);
+    std::cout<<"[gold -"<<val<<"]\n";
+}
+
+void Creature::increase_strength(int val) {
+    strength+=val;
+}
+
+void Creature::decrease_strength(int val) {
+    strength-=val;
+}
+
+int Creature::return_strength() {
+    return strength;
+}
+
 void Creature::restore_hp() {
     hp=100;
     std::cout<<"[complete restoration of hp]\n";
+}
+
+void Creature::increase_gold(int val) {
+    equipment.gold+=val;
+  //  std::cout<<"[gold +"<<val<<"]";
 }
 
 std::string Creature::return_name() {
