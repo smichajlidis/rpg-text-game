@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../includes/location/tavern.h"
+#include "../../include/location/tavern.h"
 
 Location* Tavern::making_a_choice() {
     char choice {};

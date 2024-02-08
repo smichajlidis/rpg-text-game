@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../includes/location/altars.h"
+#include "../../include/location/altars.h"
 
 Location* Altars::making_a_choice() {
     char choice {};

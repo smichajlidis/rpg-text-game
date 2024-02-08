@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../../../includes/item/weapon/hunting_weapon/bow.h"
+#include "../../../../include/item/weapon/hunting_weapon/bow.h"
 
 void Bow::show_details() {
     std::cout<<"\nname: "<<name;

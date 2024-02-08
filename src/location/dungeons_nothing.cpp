@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../includes/location/dungeons_nothing.h"
+#include "../../include/location/dungeons_nothing.h"
 
 Location* DungeonsNothing::making_a_choice() {
     char choice {};

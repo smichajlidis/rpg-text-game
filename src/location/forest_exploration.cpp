@@ -1,6 +1,6 @@
 #include <iostream>
 #include <ctime>
-#include "../../includes/location/forest_exploration.h"
+#include "../../include/location/forest_exploration.h"
 
 Location* ForestExploration::making_a_choice() {
     char choice;

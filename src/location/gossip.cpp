@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../includes/location/gossip.h"
+#include "../../include/location/gossip.h"
 
 Location* Gossip::making_a_choice() {
     char choice {};

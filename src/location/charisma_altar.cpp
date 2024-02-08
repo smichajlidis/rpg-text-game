@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../includes/location/charisma_altar.h"
+#include "../../include/location/charisma_altar.h"
 
 Location* CharismaAltar::making_a_choice() {
     char choice;

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../includes/location/found_food.h"
+#include "../../include/location/found_food.h"
 
 Location* FoundFood::making_a_choice() {
     char choice {};

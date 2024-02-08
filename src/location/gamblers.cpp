@@ -1,7 +1,7 @@
 #include <iostream>
 #include <ctime>
 #include <vector>
-#include "../../includes/location/gamblers.h"
+#include "../../include/location/gamblers.h"
 
 Location* Gamblers::making_a_choice() {
     char choice {};

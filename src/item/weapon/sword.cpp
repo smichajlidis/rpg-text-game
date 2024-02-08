@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../../includes/item/weapon/sword.h"
+#include "../../../include/item/weapon/sword.h"
 
 void Sword::show_details() {
     std::cout<<"\nname: "<<name;

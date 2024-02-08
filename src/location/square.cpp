@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../includes/location/square.h"
+#include "../../include/location/square.h"
 
 Location* Square::making_a_choice() {
     char choice {};

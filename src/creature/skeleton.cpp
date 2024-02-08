@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../includes/creature/skeleton.h"
+#include "../../include/creature/skeleton.h"
 
 Creature* Skeleton::clone() {
     Creature* skeleton {nullptr};

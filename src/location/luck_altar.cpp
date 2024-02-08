@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../includes/location/luck_altar.h"
+#include "../../include/location/luck_altar.h"
 
 Location* LuckAltar::making_a_choice() {
     char choice;

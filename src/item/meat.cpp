@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../includes/item/meat.h"
+#include "../../include/item/meat.h"
 
 void Meat::show_details() {
     std::cout<<"\nname: "<<return_name();

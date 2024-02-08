@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../includes/location/innkeeper.h"
+#include "../../include/location/innkeeper.h"
 
 Location* Innkeeper::making_a_choice() {
     char choice {};

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../includes/location/strength_altar.h"
+#include "../../include/location/strength_altar.h"
 
 Location* StrengthAltar::making_a_choice() {
     char choice;

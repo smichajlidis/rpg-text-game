@@ -1,7 +1,7 @@
 #include <iostream>
 #include <ctime>
-#include "../includes/creature.h"
-#include "../includes/equipment.h"
+#include "../include/creature.h"
+#include "../include/equipment.h"
 
 void Creature::give_a_weapon(Item* weapon) {
     active_weapon = weapon;

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../includes/item/chapel_key.h"
+#include "../../include/item/chapel_key.h"
 
 void ChapelKey::show_details() {
     std::cout<<"\nname: "<<name;

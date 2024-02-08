@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../includes/location/found_nothing.h"
+#include "../../include/location/found_nothing.h"
 
 Location* FoundNothing::making_a_choice() {
     char choice {};

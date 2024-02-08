@@ -1,6 +1,6 @@
 #include <iostream>
 #include <ctime>
-#include "../../includes/location/priest.h"
+#include "../../include/location/priest.h"
 
 Creature* Priest::clone() {
     Creature* priest {nullptr};

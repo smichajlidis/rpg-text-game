@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../includes/item/weapon.h"
+#include "../../include/item/weapon.h"
 
 int Weapon::return_hitforce() {
     return hitForce;

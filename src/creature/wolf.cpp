@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../includes/creature/wolf.h"
+#include "../../include/creature/wolf.h"
 
 Creature* Wolf::clone() {
     Creature* wolf {nullptr};

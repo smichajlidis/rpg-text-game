@@ -1,3 +1,5 @@
+#include "../include/screen_stuff.h"
+
 #include <iostream>
 
 void ScreenStuff::clear() {

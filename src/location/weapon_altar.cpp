@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../includes/location/weapon_altar.h"
+#include "../../include/location/weapon_altar.h"
 
 Location* WeaponAltar::making_a_choice() {
     char choice;

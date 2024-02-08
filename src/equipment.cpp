@@ -1,12 +1,12 @@
 #include <iostream>
 #include <vector>
-#include "../includes/equipment.h"
-#include "../includes/item.h"
-#include "../includes/item/armor.h"
-#include "../includes/item/food.h"
-#include "../includes/item/clothes.h"
-#include "../includes/item/weapon.h"
-#include "../includes/item/weapon/hunting_weapon.h"
+#include "../include/equipment.h"
+#include "../include/item.h"
+#include "../include/item/armor.h"
+#include "../include/item/food.h"
+#include "../include/item/clothes.h"
+#include "../include/item/weapon.h"
+#include "../include/item/weapon/hunting_weapon.h"
 
 
 void Equipment::add_item(Item *item) {

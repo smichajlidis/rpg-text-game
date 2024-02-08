@@ -1,5 +1,5 @@
-#include "../../includes/location/selling.h"
-#include "../../includes/screen_stuff.h"
+#include "../../include/location/selling.h"
+#include "../../include/screen_stuff.h"
 #include <iostream>
 
 void Selling::point_equipment(Equipment *obj) {

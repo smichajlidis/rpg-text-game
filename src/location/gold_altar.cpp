@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../includes/location/gold_altar.h"
+#include "../../include/location/gold_altar.h"
 
 Location* GoldAltar::making_a_choice() {
     char choice;

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../includes/location/trade.h"
+#include "../../include/location/trade.h"
 
 Location* Trade::making_a_choice() {
     char choice {};

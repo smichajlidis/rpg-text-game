@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../includes/location/forest_attack.h"
+#include "../../include/location/forest_attack.h"
 
 Location* ForestAttack::making_a_choice() {
     char choice {};

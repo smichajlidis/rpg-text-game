@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../includes/location/chapels_door.h"
+#include "../../include/location/chapels_door.h"
 
 Location* ChapelsDoor::making_a_choice() {
     char choice;

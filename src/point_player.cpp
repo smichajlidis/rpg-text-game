@@ -1,4 +1,4 @@
-#include "../includes/point_player.h"
+#include "../include/point_player.h"
 #include <iostream>
 
 void PointPlayer::point_player(Player *player) {

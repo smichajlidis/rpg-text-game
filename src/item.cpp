@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../includes/item.h"
+#include "../include/item.h"
 
 void Item::decrease_amount(int val) {
     amount-=val;

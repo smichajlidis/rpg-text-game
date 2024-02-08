@@ -1,6 +1,6 @@
 #include <iostream>
 #include <ctime>
-#include "../../includes/location/dungeons.h"
+#include "../../include/location/dungeons.h"
 
 Location* Dungeons::making_a_choice() {
     char choice;

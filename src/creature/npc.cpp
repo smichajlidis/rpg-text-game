@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../includes/creature/npc.h"
+#include "../../include/creature/npc.h"
 
 void NPC::increase_favor() {
     if (favor > 90)

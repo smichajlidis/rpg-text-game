@@ -1,5 +1,6 @@
+#include "../include/location.h"
+
 #include <iostream>
-#include "../includes/location.h"
   
 void Location::equipment_menu() {
     std::string choice {};

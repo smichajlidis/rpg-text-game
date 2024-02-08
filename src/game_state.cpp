@@ -1,5 +1,11 @@
 #include <iostream>
-#include "../includes/game_state.h"
+
+#include "../include/game_state.h"
+#include "../include/item/food/forest_fruits.h"
+#include "../include/creature/skeleton.h"
+#include "../include/creature/wolf.h"
+#include "../include/item/weapon/hunting_weapon/bow.h"
+#include "../include/item/weapon/sword.h"
 
 void GameState::get_i_ptr(int* i) {
     i_ptr = i;

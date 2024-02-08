@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../includes/location/thugs.h"
+#include "../../include/location/thugs.h"
 
 Location* Thugs::making_a_choice() {
     char choice {};

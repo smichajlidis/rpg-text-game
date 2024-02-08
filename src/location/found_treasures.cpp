@@ -1,6 +1,6 @@
 #include <iostream>
 #include <ctime>
-#include "../../includes/location/found_treasures.h"
+#include "../../include/location/found_treasures.h"
 
 Location* FoundTreasures::making_a_choice() {
     char choice {};

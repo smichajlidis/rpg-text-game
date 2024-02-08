@@ -1,4 +1,4 @@
-#include "../../includes/location/chapel.h"
+#include "../../include/location/chapel.h"
 #include <iostream>
 
 Location* Chapel::making_a_choice() {
