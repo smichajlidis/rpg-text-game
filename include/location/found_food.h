@@ -3,10 +3,9 @@
 
 #include "../location.h"
 
-#include <iostream>
-#include <vector>
-
 class Item;
+
+#include <vector>
 
 class FoundFood: public Location {
 

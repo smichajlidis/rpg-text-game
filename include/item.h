@@ -1,8 +1,9 @@
 #ifndef _ITEM_H_
 #define _ITEM_H_
-#include <iostream>
 
 class Equipment;
+
+#include <string>
 
 class Item {
 

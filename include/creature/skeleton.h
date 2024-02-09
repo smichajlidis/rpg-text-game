@@ -4,8 +4,6 @@
 #include "../item/weapon/sword.h"
 #include "../creature.h"
 
-#include <iostream>
-
 class Skeleton: public Creature {
 
     Sword sword;

@@ -3,8 +3,6 @@
 
 #include "../item.h"
 
-#include <iostream>
-
 class ChapelKey: public Item {
 
 public:

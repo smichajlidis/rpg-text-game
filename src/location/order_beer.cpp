@@ -1,4 +1,6 @@
 #include "../../include/location/order_beer.h"
+#include "../../include/creature/player.h"
+
 #include <iostream>
 
 void OrderBeer::point_player(Player *obj) {

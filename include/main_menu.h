@@ -3,8 +3,6 @@
 
 #include "load.h"
 
-#include <iostream>
-
 class MainMenu {
 
     Load load;

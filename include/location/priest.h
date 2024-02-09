@@ -5,8 +5,6 @@
 #include "../creature/npc.h"
 #include "../point_player.h"
 
-#include <iostream>
-
 class Priest:
     public Location, public NPC, public PointPlayer {
 

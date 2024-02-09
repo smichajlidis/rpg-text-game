@@ -1,5 +1,7 @@
-#include <iostream>
 #include "../../include/location/gold_altar.h"
+#include "../../include/creature/player.h"
+
+#include <iostream>
 
 Location* GoldAltar::making_a_choice() {
     char choice;

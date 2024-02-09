@@ -3,8 +3,6 @@
 
 #include "../location.h"
 
-#include <iostream>
-
 class Chapel: public Location {
 
 public:

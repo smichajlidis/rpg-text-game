@@ -1,11 +1,11 @@
 #ifndef _DUNGEONSATTACK_H_
 #define _DUNGEONSATTACK_H_
-#include <iostream>
-#include <vector>
 
 #include "../location.h"
 
 class Creature;
+
+#include <vector>
 
 class DungeonsAttack: public Location {
 

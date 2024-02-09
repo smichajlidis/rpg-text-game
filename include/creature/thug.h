@@ -4,8 +4,6 @@
 #include "../creature.h"
 #include "../item/weapon/sword.h"
 
-#include <iostream>
-
 class Thug: public Creature {
 
     Sword sword;

@@ -3,8 +3,6 @@
 
 #include "../hunting_weapon.h"
 
-#include <iostream>
-
 class Bow: public HuntingWeapon {
 
     public:

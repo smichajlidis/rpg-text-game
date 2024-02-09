@@ -1,5 +1,7 @@
-#include <iostream>
 #include "../../include/location/strength_altar.h"
+#include "../../include/creature/player.h"
+
+#include <iostream>
 
 Location* StrengthAltar::making_a_choice() {
     char choice;

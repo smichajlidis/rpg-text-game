@@ -42,9 +42,6 @@
 #include "location/found_nothing.h"
 #include "location/luck_altar.h"
 
-
-#include <iostream>
-
 class Sword;
 class Bow;
 class ChapelKey;

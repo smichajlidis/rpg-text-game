@@ -3,10 +3,6 @@
 
 #include "../weapon.h"
 
-#include <iostream>
-
-class Equipment;
-
 class HuntingWeapon: public Weapon {
 
     bool hunting;

@@ -3,7 +3,7 @@
 
 #include "../creature.h"
 
-#include <iostream>
+#include <string>
 
 class Player: public Creature {
 

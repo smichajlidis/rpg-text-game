@@ -3,8 +3,6 @@
 
 #include "../location.h"
 
-#include <iostream>
-
 class ForestExploration: public Location {
 
 public:

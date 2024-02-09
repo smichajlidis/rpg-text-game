@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../../include/location/chapels_door.h"
+#include "../../include/creature/player.h"
 
 Location* ChapelsDoor::making_a_choice() {
     char choice;

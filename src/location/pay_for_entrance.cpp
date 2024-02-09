@@ -1,5 +1,7 @@
-#include <iostream>
 #include "../../include/location/pay_for_entrance.h"
+#include "../../include/creature/player.h"
+
+#include <iostream>
 
 Location* PayForEntrance::making_a_choice() {
     char choice {};

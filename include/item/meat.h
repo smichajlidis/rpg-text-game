@@ -3,8 +3,6 @@
 
 #include "../item.h"
 
-#include <iostream>
-
 class Meat: public Item {
 
 public:

@@ -3,8 +3,6 @@
 
 #include "../location.h"
 
-#include <iostream>
-
 class FoundNothing: public Location {
     public:
 

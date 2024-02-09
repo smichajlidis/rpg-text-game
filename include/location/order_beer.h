@@ -3,8 +3,6 @@
 
 #include "../location.h"
 
-#include <iostream>
-
 class Player;
 
 class OrderBeer: public Location {

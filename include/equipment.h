@@ -1,7 +1,5 @@
 #ifndef _EQUIPMENT_H_
 #define _EQUIPMENT_H_
-#include <iostream>
-#include <vector>
 
 class Armor;
 class Clothes;
@@ -9,6 +7,8 @@ class Weapon;
 class HuntingWeapon;
 class Item;
 class Food;
+
+#include <vector>
 
 class Equipment {
 

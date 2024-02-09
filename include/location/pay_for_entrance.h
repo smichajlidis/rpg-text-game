@@ -3,8 +3,6 @@
 
 #include "../location.h"
 
-#include <vector>
-
 class PayForEntrance: public Location {
 
     int* i_ptr;

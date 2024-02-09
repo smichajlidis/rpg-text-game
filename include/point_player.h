@@ -1,6 +1,5 @@
 #ifndef _POINT_PLAYER_H_
 #define _POINT_PLAYER_H_
-#include <iostream>
 
 class Player;
 class HotDish;

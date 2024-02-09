@@ -1,10 +1,10 @@
 #ifndef _LOCATION_H_
 #define _LOCATION_H_
 
-#include "../include/creature/player.h"
+class Player;
 
-#include <iostream>
 #include <vector>
+#include <string>
 
 class Location {
 

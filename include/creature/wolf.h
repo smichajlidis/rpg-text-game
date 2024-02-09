@@ -3,8 +3,6 @@
 
 #include "../creature.h"
 
-#include <iostream>
-
 class Wolf: public Creature {
 
 

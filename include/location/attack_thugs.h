@@ -3,6 +3,8 @@
 
 #include "../location.h"
 
+class Creature;
+
 #include <vector>
 
 class AttackThugs: public Location {

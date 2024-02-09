@@ -3,9 +3,9 @@
 
 #include "../item.h"
 
-#include <iostream>
-
 class Equipment;
+
+#include <string>
 
 class Weapon: public Item {
 

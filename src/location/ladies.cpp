@@ -1,6 +1,8 @@
+#include "../../include/location/ladies.h"
+#include "../../include/creature/player.h"
+
 #include <iostream>
 #include <ctime>
-#include "../../include/location/ladies.h"
 
 Creature* Ladies::clone() {
     Creature* ladies {nullptr};

@@ -1,5 +1,7 @@
 #include <iostream>
 #include "../../include/location/attack_thugs.h"
+#include "../../include/creature.h"
+#include "../../include/creature/player.h"
 
 Location* AttackThugs::making_a_choice() {
     char choice {};

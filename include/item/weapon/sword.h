@@ -1,6 +1,5 @@
 #ifndef _SWORD_H_
 #define _SWORD_H_
-#include <iostream>
 
 #include "../weapon.h"
 

@@ -3,7 +3,8 @@
 
 #include "../location.h"
 
-#include <iostream>
+class Item;
+
 #include <vector>
 
 class Creature;

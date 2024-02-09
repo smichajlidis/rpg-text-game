@@ -1,4 +1,6 @@
 #include "../../include/location/hot_dish.h"
+#include "../../include/creature/player.h"
+
 #include <iostream>
 
 Location* HotDish::making_a_choice() {

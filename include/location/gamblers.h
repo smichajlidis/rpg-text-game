@@ -4,8 +4,6 @@
 #include "../location.h"
 #include "../point_player.h"
 
-#include <iostream>
-
 class PointPlayer;
 
 class Gamblers: 

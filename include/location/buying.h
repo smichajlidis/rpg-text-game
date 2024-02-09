@@ -3,8 +3,7 @@
 
 #include "../location.h"
 
-#include <iostream>
-#include "../equipment.h"
+class Equipment;
 
 class Buying: public Location {
     

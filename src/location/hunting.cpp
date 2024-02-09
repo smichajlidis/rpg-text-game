@@ -1,6 +1,9 @@
+#include "../../include/location/hunting.h"
+#include "../../include/creature/player.h"
+#include "../../include/item.h"
+
 #include <iostream>
 #include <ctime>
-#include "../../include/location/hunting.h"
 
 Location* Hunting::making_a_choice() {
     srand(time(NULL));

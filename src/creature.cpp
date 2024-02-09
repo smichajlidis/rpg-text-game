@@ -2,6 +2,7 @@
 #include <ctime>
 #include "../include/creature.h"
 #include "../include/equipment.h"
+#include "../include/item.h"
 
 void Creature::give_a_weapon(Item* weapon) {
     active_weapon = weapon;

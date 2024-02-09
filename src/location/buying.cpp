@@ -1,5 +1,8 @@
 #include "../../include/location/buying.h"
 #include "../../include/screen_stuff.h"
+#include "../../include/equipment.h"
+#include "../../include/item.h"
+
 #include <iostream>
 
 void Buying::point_equipment(Equipment *obj) {

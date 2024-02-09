@@ -1,6 +1,9 @@
+#include "../../include/location/found_treasures.h"
+#include "../../include/creature/player.h"
+#include "../../include/item.h"
+
 #include <iostream>
 #include <ctime>
-#include "../../include/location/found_treasures.h"
 
 Location* FoundTreasures::making_a_choice() {
     char choice {};

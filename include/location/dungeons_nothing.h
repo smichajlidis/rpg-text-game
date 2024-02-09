@@ -1,6 +1,5 @@
 #ifndef _DUNGEONSNOTHING_H_
 #define _DUNGEONSNOTHING_H_
-#include <iostream>
 
 #include "../location.h"
 

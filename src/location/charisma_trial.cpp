@@ -1,5 +1,7 @@
-#include <iostream>
 #include "../../include/location/charisma_trial.h"
+#include "../../include/creature/player.h"
+
+#include <iostream>
 
 Location* CharismaTrial::making_a_choice() {
     display_npc_details();

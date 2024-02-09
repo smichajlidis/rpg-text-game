@@ -3,10 +3,6 @@
 
 #include "../item.h"
 
-#include <iostream>
-
-class Equipment;
-
 class Food: public Item {
 
     int hpRestoration;

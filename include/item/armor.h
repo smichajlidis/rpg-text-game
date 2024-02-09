@@ -3,10 +3,6 @@
 
 #include "../item.h"
 
-#include <iostream>
-
-class Equipment;
-
 class Armor: public Item {
 
     int armorStrength;
