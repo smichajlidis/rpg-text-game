@@ -45,9 +45,3 @@ void MainMenu::clear() {
         system("clear");
     #endif
 }
-
-MainMenu::MainMenu() {
-}
-
-MainMenu::~MainMenu() {
-}

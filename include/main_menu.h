@@ -4,11 +4,10 @@
 #include "load.h"
 
 class MainMenu {
-
-    Load load;
-    int* i_ptr;
-
 public:
+    MainMenu() = default;
+
+    ~MainMenu() = default;
 
     void display_logo();
     void display_menu();
@@ -16,8 +15,9 @@ public:
     void get_i_ptr(int* i);
     void change_i();
 
-    MainMenu();
-    ~MainMenu();
+private:
+    Load load;
+    int* i_ptr;
 
 };
 
