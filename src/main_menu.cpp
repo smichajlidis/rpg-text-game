@@ -1,38 +1,46 @@
-#include <iostream>
 #include "../include/main_menu.h"
 
-void MainMenu::display_logo() {
-    std::cout<<"_________________________\n";
-    std::cout<<"|..::SUPER LEGS 2000::..|\n";
-    std::cout<<" '^'''^'''^'''^'''^'''^'\n\n";
+#include <iostream>
+#include <limits>
+
+void MainMenu::displayHeader() const {
+    std::cout << std::endl;
+    std::cout << "\t..........................................\n";
+    std::cout << "\t------------ SUPER LEGS 2000 -------------\n";
+    std::cout << "\t``````````````````````````````````````````" << std::endl;
 }
 
-void MainMenu::display_menu() {
+void MainMenu::displayMainMenu() {
+    size_t choice = 0;
+
     do {
         screen_stuff.clear();
-        display_logo();
-        
-        std::cout<<"      1. New Game\n";
-        std::cout<<"        2. Load\n";
-        std::cout<<"      0. Quit Game\n\n";
-        std::cout<<"What do you want to do? ";
-        std::cin>>*i_ptr;
+        displayHeader();
 
-        switch(*i_ptr) {
+        std::cout<<"\t\t      1. New Game\n";
+        std::cout<<"\t\t        2. Load\n";
+        std::cout<<"\t\t      0. Quit Game\n\n";
+        std::cout<<"\t\tWhat do you want to do? ";
+
+        std::cin >> choice;
+
+        switch(choice) {
             case 1:
+                screen_stuff.clear();
+                game_state.display_location();
                 break;
             case 2:
                 screen_stuff.clear();
-                display_logo();
                 load.display_load();
                 break;
             case 0:
-                change_i();
+                //change_i();
                 break;
             default:
                 break;
         }
-    } while(*i_ptr == 2);
+
+    } while(choice);
 }
 
 void MainMenu::change_i() {

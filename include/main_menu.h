@@ -3,15 +3,17 @@
 
 #include "load.h"
 #include "screen_stuff.h"
+#include "game_state.h"
 
 class MainMenu {
 public:
-    MainMenu() = default;
+    MainMenu()
+        : game_state(i_ptr) {};
 
     ~MainMenu() = default;
 
-    void display_logo();
-    void display_menu();
+    void displayHeader() const;
+    void displayMainMenu();
     void get_i_ptr(int* i);
     void change_i();
 
@@ -19,6 +21,7 @@ private:
     Load load;
     ScreenStuff screen_stuff;
     int* i_ptr;
+    GameState game_state;
 
 };
 
