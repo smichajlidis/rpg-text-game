@@ -1,5 +1,5 @@
-#ifndef _MAINMENU_H_
-#define _MAINMENU_H_
+#ifndef _MAINMENU_HPP_
+#define _MAINMENU_HPP_
 
 #include "load.h"
 #include "screen_stuff.h"

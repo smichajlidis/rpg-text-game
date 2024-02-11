@@ -1,6 +1,4 @@
-#include "include/main_menu.h"
-
-#include <iostream>
+#include "include/MainMenu.hpp"
 
 int main() {
 

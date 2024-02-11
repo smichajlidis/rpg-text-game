@@ -1,4 +1,4 @@
-#include "../include/main_menu.h"
+#include "../include/MainMenu.hpp"
 
 #include <iostream>
 #include <limits>
