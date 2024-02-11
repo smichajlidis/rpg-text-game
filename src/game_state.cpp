@@ -7,16 +7,14 @@
 #include "../include/item/weapon/hunting_weapon/bow.h"
 #include "../include/item/weapon/sword.h"
 
-// void GameState::get_i_ptr(int* i) {
-//     i_ptr = i;
-// }
-
 void GameState::display_location() {
-    if (player.drunk > 0)
-        player.drunk--;
-    player.display_top_bar();
-    (*current_location).print_location();
-    current_location = current_location->making_a_choice();
+    do {
+        if (player.drunk > 0)
+            player.drunk--;
+        player.display_top_bar();
+        (*current_location).print_location();
+        current_location = current_location->making_a_choice();
+    } while (1);
 }
 
 GameState::GameState()
