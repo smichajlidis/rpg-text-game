@@ -7,9 +7,9 @@
 #include "../include/item/weapon/hunting_weapon/bow.h"
 #include "../include/item/weapon/sword.h"
 
-void GameState::get_i_ptr(int* i) {
-    i_ptr = i;
-}
+// void GameState::get_i_ptr(int* i) {
+//     i_ptr = i;
+// }
 
 void GameState::display_location() {
     if (player.drunk > 0)
@@ -19,8 +19,8 @@ void GameState::display_location() {
     current_location = current_location->making_a_choice();
 }
 
-GameState::GameState(int* i)
-    : i_ptr {i} {
+GameState::GameState()
+    : i_ptr(1) {
     current_location = &square;
     // LOCATION INITIALIZATION
     square.related_locations.push_back(&square);
@@ -87,18 +87,18 @@ GameState::GameState(int* i)
 
         pay_for_entrance.related_locations.push_back(&thugs);
         pay_for_entrance.player_pointer(&player);
-        pay_for_entrance.get_i_ptr(i_ptr);
+        pay_for_entrance.get_i_ptr(&i_ptr);
         
         charisma_trial.related_locations.push_back(&thugs);
         charisma_trial.player_pointer(&player);
-        charisma_trial.get_i_ptr(i_ptr);
+        charisma_trial.get_i_ptr(&i_ptr);
 
         attack_thugs.related_locations.push_back(&thugs);
         attack_thugs.player_pointer(&player);
         Creature* thug {nullptr};
         thug = new Thug;
         attack_thugs.related_creatures.push_back(thug);
-        attack_thugs.get_i_ptr(i_ptr);
+        attack_thugs.get_i_ptr(&i_ptr);
 
     altars.related_locations.push_back(&chapel);
     altars.related_locations.push_back(&strength_altar);
@@ -174,7 +174,7 @@ GameState::GameState(int* i)
     wolf = new Wolf;
     forest_attack.related_creatures.push_back(wolf);
     forest_attack.player_pointer(&player);
-    forest_attack.get_i_ptr(i_ptr);
+    forest_attack.get_i_ptr(&i_ptr);
 
     found_food.related_locations.push_back(&forest_exploration);
     Item* forest_fruits {nullptr};
@@ -195,7 +195,7 @@ GameState::GameState(int* i)
     Creature* skeleton {nullptr};
     skeleton = new Skeleton;
     dungeons_attack.related_creatures.push_back(skeleton);
-    dungeons_attack.get_i_ptr(i_ptr);
+    dungeons_attack.get_i_ptr(&i_ptr);
 
     found_treasures.related_locations.push_back(&dungeons);
     Item* bow2 {nullptr};

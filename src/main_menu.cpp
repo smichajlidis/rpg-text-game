@@ -33,20 +33,9 @@ void MainMenu::displayMainMenu() {
                 screen_stuff.clear();
                 load.display_load();
                 break;
-            case 0:
-                //change_i();
-                break;
             default:
                 break;
         }
 
     } while(choice);
-}
-
-void MainMenu::change_i() {
-    *i_ptr = 0;
-}
-
-void MainMenu::get_i_ptr(int* i) {
-    i_ptr = i;
 }
