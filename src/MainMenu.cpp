@@ -11,7 +11,7 @@ void MainMenu::displayHeader() const {
 }
 
 void MainMenu::displayMainMenu() {
-    size_t choice = 0;
+    std::uint32_t choice {};
 
     do {
         screen_stuff.clear();
@@ -23,14 +23,14 @@ void MainMenu::displayMainMenu() {
         std::cout<<"\t\tWhat do you want to do? ";
 
         std::cin >> choice;
+        screen_stuff.clear();
 
         switch(choice) {
             case 1:
-                screen_stuff.clear();
                 game_state.display_location();
                 break;
             case 2:
-                screen_stuff.clear();
+                displayHeader();
                 load.display_load();
                 break;
             default:
