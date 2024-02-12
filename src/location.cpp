@@ -125,9 +125,17 @@ void Location::player_pointer(Player* ptr) {
     player = ptr;
 }
 
-Location::Location(std::string name_val, std::string description_val, std::string choice_1_val, std::string choice_2_val, std::string choice_3_val, std::string choice_4_val, std::string choice_5_val)
-    : name {name_val}, description {description_val}, choice_1 {choice_1_val}, choice_2 {choice_2_val}, choice_3 {choice_3_val}, choice_4 {choice_4_val}, choice_5 {choice_5_val} {
+Location::Location(std::string name_val, std::string description_val, std::string choice_1_val, std::string choice_2_val, std::string choice_3_val, std::string choice_4_val, std::string choice_5_val,
+                    std::shared_ptr<Location> location_one, std::shared_ptr<Location> location_two, std::shared_ptr<Location> location_three, std::shared_ptr<Location> location_four, std::shared_ptr<Location> location_five)
+    : name {name_val}, description {description_val}, choice_1 {choice_1_val}, choice_2 {choice_2_val}, choice_3 {choice_3_val}, choice_4 {choice_4_val}, choice_5 {choice_5_val},
+    location_one {location_one}, location_two {location_two}, location_three {location_three}, location_four {location_four}, location_five {location_five} {
     }
 
 Location::~Location() {
 }
+
+std::shared_ptr<Location> Location::moveToLocationOne() { return location_one; }
+std::shared_ptr<Location> Location::moveToLocationTwo() { return location_two; }
+std::shared_ptr<Location> Location::moveToLocationThree() { return location_three; }
+std::shared_ptr<Location> Location::moveToLocationFour() { return location_four; }
+std::shared_ptr<Location> Location::moveToLocationFive() { return location_five; }

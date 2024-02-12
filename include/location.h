@@ -5,6 +5,7 @@ class Player;
 
 #include <vector>
 #include <string>
+#include <memory>
 
 class Location {
 
@@ -21,6 +22,12 @@ class Location {
 
 public:
 
+    std::shared_ptr<Location> moveToLocationOne();
+    std::shared_ptr<Location> moveToLocationTwo();
+    std::shared_ptr<Location> moveToLocationThree();
+    std::shared_ptr<Location> moveToLocationFour();
+    std::shared_ptr<Location> moveToLocationFive();
+
     void player_pointer(Player* ptr);
     void print_location();
     void clear();
@@ -31,8 +38,15 @@ public:
     void load_menu();
     void exit_menu();
 
-    Location(std::string name_val = "nowhere", std::string description_val = "none", std::string choice_1_val = "none", std::string choice_2_val = "none", std::string choice_3_val = "none", std::string choice_4_val = "none", std::string choice_5_val = "none");
+    Location(std::string name_val = "nowhere", std::string description_val = "none", std::string choice_1_val = "none", std::string choice_2_val = "none", std::string choice_3_val = "none", std::string choice_4_val = "none", std::string choice_5_val = "none",
+    std::shared_ptr<Location> location_one, std::shared_ptr<Location> location_two, std::shared_ptr<Location> location_three, std::shared_ptr<Location> location_four, std::shared_ptr<Location> location_five);
     ~Location();
+
+    std::shared_ptr<Location> location_one;
+    std::shared_ptr<Location> location_two;
+    std::shared_ptr<Location> location_three;
+    std::shared_ptr<Location> location_four;
+    std::shared_ptr<Location> location_five;
     
     friend class GameState;
     friend class Square;

@@ -42,6 +42,8 @@
 #include "location/found_nothing.h"
 #include "location/luck_altar.h"
 
+#include <memory>
+
 class Sword;
 class Bow;
 class ChapelKey;
@@ -104,7 +106,7 @@ class GameState {
     Leather leather;
     Meat meat;
 
-    Location *current_location;
+    std::shared_ptr<Location> current_location;
 
 public:
 
