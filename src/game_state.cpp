@@ -8,18 +8,40 @@
 #include "../include/item/weapon/sword.h"
 
 void GameState::display_location() {
+    std::uint32_t choice;
+
     do {
         if (player.drunk > 0)
             player.drunk--;
         player.display_top_bar();
         (*current_location).print_location();
-        current_location = current_location->making_a_choice();
-    } while (1);
+        //current_location = current_location->making_a_choice();
+
+        std::cin >> choice;
+
+        switch(choice) {
+            case 1:
+                current_location = current_location->moveToLocationOne();
+                break;
+            case 2:
+                current_location = current_location->moveToLocationTwo();
+                break;
+            case 3:
+                current_location = current_location->moveToLocationThree();
+                break;
+            case 4:
+                current_location = current_location->moveToLocationFour();
+                break;
+            default:
+                break;
+        }
+
+    } while(!9);
 }
 
 GameState::GameState()
     : i_ptr(1) {
-    current_location = &square;
+    current_location = std::make_shared<Square>(square);
     // LOCATION INITIALIZATION
     square.related_locations.push_back(&square);
     square.related_locations.push_back(&tavern);

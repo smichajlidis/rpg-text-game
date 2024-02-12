@@ -39,7 +39,7 @@ public:
     void exit_menu();
 
     Location(std::string name_val = "nowhere", std::string description_val = "none", std::string choice_1_val = "none", std::string choice_2_val = "none", std::string choice_3_val = "none", std::string choice_4_val = "none", std::string choice_5_val = "none",
-    std::shared_ptr<Location> location_one, std::shared_ptr<Location> location_two, std::shared_ptr<Location> location_three, std::shared_ptr<Location> location_four, std::shared_ptr<Location> location_five);
+    std::shared_ptr<Location> location_one = 0, std::shared_ptr<Location> location_two = 0, std::shared_ptr<Location> location_three = 0, std::shared_ptr<Location> location_four = 0, std::shared_ptr<Location> location_five = 0);
     ~Location();
 
     std::shared_ptr<Location> location_one;
