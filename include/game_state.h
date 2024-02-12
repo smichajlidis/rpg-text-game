@@ -65,8 +65,15 @@ class GameState {
 
     // Locations
 
-    Square square;
-        Tavern tavern;
+    std::shared_ptr<Tavern> tavern;
+    std::shared_ptr<Forest> forest;
+    std::shared_ptr<Chapel> chapel;
+
+    std::shared_ptr<Square> square;
+
+    std::shared_ptr<Location> current_location;
+
+        //Tavern tavern;
             Innkeeper innkeeper;
                 OrderBeer order_beer;
                 Trade trade;
@@ -77,7 +84,7 @@ class GameState {
             Gamblers gamblers;
         // Priest priest;
             Ladies ladies;
-    Forest forest;
+    //Forest forest;
         ForestExploration forest_exploration;
             ForestAttack forest_attack;
             FoundFood found_food;
@@ -88,7 +95,7 @@ class GameState {
             AttackThugs attack_thugs;
             CharismaTrial charisma_trial;
     ChapelsDoor chapels_door;
-        Chapel chapel;
+        //Chapel chapel;
             Altars altars;
                 StrengthAltar strength_altar;
                 CharismaAltar charisma_altar;
@@ -106,7 +113,7 @@ class GameState {
     Leather leather;
     Meat meat;
 
-    std::shared_ptr<Location> current_location;
+    
 
 public:
 
