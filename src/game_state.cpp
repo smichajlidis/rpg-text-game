@@ -14,7 +14,7 @@ void GameState::display_location() {
         if (player.drunk > 0)
             player.drunk--;
         player.display_top_bar();
-        (*current_location).print_location();
+        current_location->print_location();
         //current_location = current_location->making_a_choice();
 
         std::cin >> choice;
@@ -36,7 +36,7 @@ void GameState::display_location() {
                 break;
         }
 
-    } while(!9);
+    } while(choice != 9);
 }
 
 GameState::GameState()
@@ -47,6 +47,8 @@ GameState::GameState()
     forest = std::make_shared<Forest>(); 
     chapel = std::make_shared<Chapel>();     
     current_location = square;
+
+    square->getRelatedLocations(tavern, forest, chapel);
 
 
     // LOCATION INITIALIZATION

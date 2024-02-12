@@ -34,6 +34,9 @@ public:
     std::shared_ptr<Location> moveToLocationFour();
     std::shared_ptr<Location> moveToLocationFive();
 
+    void getRelatedLocations(std::shared_ptr<Location> location_one = 0, std::shared_ptr<Location> location_two = 0, 
+        std::shared_ptr<Location> location_three = 0, std::shared_ptr<Location> location_four = 0, std::shared_ptr<Location> location_five = 0);
+
     void player_pointer(Player* ptr);
     void print_location();
     void clear();
@@ -44,8 +47,9 @@ public:
     void load_menu();
     void exit_menu();
 
-    Location(std::string name_val = "nowhere", std::string description_val = "none", std::string choice_1_val = "none", std::string choice_2_val = "none", std::string choice_3_val = "none", std::string choice_4_val = "none", std::string choice_5_val = "none",
-    std::shared_ptr<Location> location_one = 0, std::shared_ptr<Location> location_two = 0, std::shared_ptr<Location> location_three = 0, std::shared_ptr<Location> location_four = 0, std::shared_ptr<Location> location_five = 0);
+    Location(std::shared_ptr<Location> location_one_arg = 0, std::shared_ptr<Location> location_two_arg = 0, std::shared_ptr<Location> location_three_arg = 0, std::shared_ptr<Location> location_four_arg = 0, std::shared_ptr<Location> location_five_arg = 0);
+    Location(std::string name_val = "nowhere", std::string description_val = "none", std::string choice_1_val = "none", std::string choice_2_val = "none", std::string choice_3_val = "none", std::string choice_4_val = "none", std::string choice_5_val = "none");
+    Location() = default;
     ~Location();
     
     friend class GameState;
