@@ -43,7 +43,7 @@
 #include "location/luck_altar.h"
 
 #include "SavingMenu.hpp"
-#include "load.h"
+#include "LoadingMenu.hpp"
 
 #include <memory>
 
@@ -61,7 +61,7 @@ class GameState {
     Equipment trade_goods;
     Equipment equipment;
     SavingMenu saving_menu;
-    Load load;
+    LoadingMenu loading_menu;
     PointPlayer point_player;
 
     // NPC's

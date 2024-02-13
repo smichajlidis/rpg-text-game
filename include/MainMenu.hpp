@@ -1,7 +1,7 @@
 #ifndef _MAINMENU_HPP_
 #define _MAINMENU_HPP_
 
-#include "load.h"
+#include "LoadingMenu.hpp"
 #include "screen_stuff.h"
 #include "game_state.h"
 #include "SavingMenu.hpp"
@@ -16,7 +16,7 @@ public:
     void displayMainMenu();
 
 private:
-    Load load;
+    LoadingMenu loading_menu;
     SavingMenu saving_menu;
     ScreenStuff screen_stuff;
     GameState game_state;

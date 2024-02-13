@@ -31,7 +31,7 @@ void MainMenu::displayMainMenu() {
                 break;
             case 2:
                 displayHeader();
-                load.display_load();
+                loading_menu.displayLoadingMenu();
                 break;
             default:
                 break;

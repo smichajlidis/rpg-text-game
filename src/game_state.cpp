@@ -38,7 +38,7 @@ void GameState::display_location() {
                 equipment.display_equipment();
                 break;
             case 7:
-                load.display_load();
+                loading_menu.displayLoadingMenu();
                 break;
             case 8:
                 saving_menu.displaySavingMenu();
