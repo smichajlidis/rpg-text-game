@@ -15,7 +15,6 @@ void GameState::display_location() {
             player.drunk--;
         player.display_top_bar();
         current_location->print_location();
-        //current_location = current_location->making_a_choice();
 
         std::cin >> choice;
 
@@ -31,6 +30,18 @@ void GameState::display_location() {
                 break;
             case 4:
                 current_location = current_location->moveToLocationFour();
+                break;
+            case 5:
+                current_location = current_location->moveToLocationFive();
+                break;
+            case 6:
+                equipment.display_equipment();
+                break;
+            case 7:
+                load.display_load();
+                break;
+            case 8:
+                saving_menu.displaySavingMenu();
                 break;
             default:
                 break;

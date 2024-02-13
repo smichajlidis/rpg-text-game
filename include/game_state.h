@@ -42,6 +42,9 @@
 #include "location/found_nothing.h"
 #include "location/luck_altar.h"
 
+#include "SavingMenu.hpp"
+#include "load.h"
+
 #include <memory>
 
 class Sword;
@@ -57,6 +60,8 @@ class GameState {
     Player player;
     Equipment trade_goods;
     Equipment equipment;
+    SavingMenu saving_menu;
+    Load load;
     PointPlayer point_player;
 
     // NPC's
@@ -65,13 +70,12 @@ class GameState {
 
     // Locations
 
-    std::shared_ptr<Tavern> tavern;
-    std::shared_ptr<Forest> forest;
-    std::shared_ptr<Chapel> chapel;
+    std::shared_ptr<Location> current_location;
 
     std::shared_ptr<Square> square;
-
-    std::shared_ptr<Location> current_location;
+        std::shared_ptr<Tavern> tavern;
+        std::shared_ptr<Forest> forest;
+        std::shared_ptr<Chapel> chapel;
 
         //Tavern tavern;
             Innkeeper innkeeper;

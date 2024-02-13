@@ -4,6 +4,7 @@
 #include "load.h"
 #include "screen_stuff.h"
 #include "game_state.h"
+#include "SavingMenu.hpp"
 
 class MainMenu {
 public:
@@ -16,6 +17,7 @@ public:
 
 private:
     Load load;
+    SavingMenu saving_menu;
     ScreenStuff screen_stuff;
     GameState game_state;
 };
