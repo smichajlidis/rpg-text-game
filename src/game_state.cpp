@@ -17,6 +17,8 @@ void GameState::display_location() {
         current_location->print_location();
 
         std::cin >> choice;
+        
+        screen_stuff.clear();
 
         switch(choice) {
             case 1:
@@ -46,6 +48,8 @@ void GameState::display_location() {
             default:
                 break;
         }
+
+        screen_stuff.clear();
 
     } while(choice != 9);
 }

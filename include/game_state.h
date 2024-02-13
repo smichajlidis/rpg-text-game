@@ -41,6 +41,7 @@
 #include "location/forest_attack.h"
 #include "location/found_nothing.h"
 #include "location/luck_altar.h"
+#include "screen_stuff.h"
 
 #include "SavingMenu.hpp"
 #include "LoadingMenu.hpp"
@@ -56,6 +57,8 @@ class Priest;
 class GameState {
 
     int i_ptr;
+
+    ScreenStuff screen_stuff;
 
     Player player;
     Equipment trade_goods;
