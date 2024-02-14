@@ -3,19 +3,12 @@
 #include <iostream>
 #include <limits>
 
-void MainMenu::displayHeader() const {
-    std::cout << std::endl;
-    std::cout << "\t..........................................\n";
-    std::cout << "\t------------ SUPER LEGS 2000 -------------\n";
-    std::cout << "\t``````````````````````````````````````````" << std::endl;
-}
-
 void MainMenu::displayMainMenu() {
     std::uint32_t choice {};
 
     do {
         screen_stuff.clear();
-        displayHeader();
+        header_displayer.displayHeader();
 
         std::cout<<"\t\t      1. New Game\n";
         std::cout<<"\t\t        2. Load\n";
@@ -30,7 +23,6 @@ void MainMenu::displayMainMenu() {
                 game_state.display_location();
                 break;
             case 2:
-                displayHeader();
                 loading_menu.displayLoadingMenu();
                 break;
             default:

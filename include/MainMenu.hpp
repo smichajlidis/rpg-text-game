@@ -5,6 +5,7 @@
 #include "screen_stuff.h"
 #include "game_state.h"
 #include "SavingMenu.hpp"
+#include "HeaderDisplayer.hpp"
 
 class MainMenu {
 public:
@@ -12,7 +13,6 @@ public:
 
     ~MainMenu() = default;
 
-    void displayHeader() const;
     void displayMainMenu();
 
 private:
@@ -20,6 +20,7 @@ private:
     SavingMenu saving_menu;
     ScreenStuff screen_stuff;
     GameState game_state;
+    HeaderDisplayer header_displayer;
 };
 
 #endif
