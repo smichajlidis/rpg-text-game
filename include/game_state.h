@@ -45,6 +45,7 @@
 
 #include "SavingMenu.hpp"
 #include "LoadingMenu.hpp"
+#include "ExitingMenu.hpp"
 
 #include <memory>
 
@@ -65,6 +66,7 @@ class GameState {
     Equipment equipment;
     SavingMenu saving_menu;
     LoadingMenu loading_menu;
+    ExitingMenu exiting_menu;
     PointPlayer point_player;
 
     // NPC's

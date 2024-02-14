@@ -45,6 +45,8 @@ void GameState::display_location() {
             case 8:
                 saving_menu.displaySavingMenu();
                 break;
+            case 9:
+                exiting_menu.displayExitingMenu();
             default:
                 break;
         }
