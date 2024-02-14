@@ -71,7 +71,7 @@ class GameState {
 
     // NPC's
 
-    Priest priest;
+    //Priest priest;
 
     // Locations
 
@@ -79,42 +79,50 @@ class GameState {
 
     std::shared_ptr<Square> square;
         std::shared_ptr<Tavern> tavern;
+            std::shared_ptr<Innkeeper> innkeeper;
+            std::shared_ptr<Gamblers> gamblers;
+            std::shared_ptr<Priest> priest;
+            std::shared_ptr<Ladies> ladies;
         std::shared_ptr<Forest> forest;
+            std::shared_ptr<ForestExploration> forest_exploration;
+            std::shared_ptr<Thugs> thugs;
         std::shared_ptr<Chapel> chapel;
+            std::shared_ptr<Altars> altars;
+            std::shared_ptr<Dungeons> dungeons;
 
-        //Tavern tavern;
-            Innkeeper innkeeper;
-                OrderBeer order_beer;
-                Trade trade;
-                    Buying buying;
-                    Selling selling;
-                Gossip gossip;
-                HotDish hot_dish;
-            Gamblers gamblers;
-        // Priest priest;
-            Ladies ladies;
-    //Forest forest;
-        ForestExploration forest_exploration;
-            ForestAttack forest_attack;
-            FoundFood found_food;
-            FoundNothing found_nothing;
-            Hunting hunting;
-        Thugs thugs;
-            PayForEntrance pay_for_entrance;
-            AttackThugs attack_thugs;
-            CharismaTrial charisma_trial;
-    ChapelsDoor chapels_door;
-        //Chapel chapel;
-            Altars altars;
-                StrengthAltar strength_altar;
-                CharismaAltar charisma_altar;
-                LuckAltar luck_altar;
-                GoldAltar gold_altar;
-                WeaponAltar weapon_altar;    
-            Dungeons dungeons;
-                DungeonsAttack dungeons_attack;
-                FoundTreasures found_treasures;
-                DungeonsNothing dungeons_nothing;
+    //     //Tavern tavern;
+    //         Innkeeper innkeeper;
+    //             OrderBeer order_beer;
+    //             Trade trade;
+    //                 Buying buying;
+    //                 Selling selling;
+    //             Gossip gossip;
+    //             HotDish hot_dish;
+    //         Gamblers gamblers;
+    //     // Priest priest;
+    //         Ladies ladies;
+    // //Forest forest;
+    //     ForestExploration forest_exploration;
+    //         ForestAttack forest_attack;
+    //         FoundFood found_food;
+    //         FoundNothing found_nothing;
+    //         Hunting hunting;
+    //     Thugs thugs;
+    //         PayForEntrance pay_for_entrance;
+    //         AttackThugs attack_thugs;
+    //         CharismaTrial charisma_trial;
+    // ChapelsDoor chapels_door;
+    //     //Chapel chapel;
+    //         Altars altars;
+    //             StrengthAltar strength_altar;
+    //             CharismaAltar charisma_altar;
+    //             LuckAltar luck_altar;
+    //             GoldAltar gold_altar;
+    //             WeaponAltar weapon_altar;    
+    //         Dungeons dungeons;
+    //             DungeonsAttack dungeons_attack;
+    //             FoundTreasures found_treasures;
+    //             DungeonsNothing dungeons_nothing;
 
     // Items
 

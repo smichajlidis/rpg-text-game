@@ -62,41 +62,28 @@ GameState::GameState()
     square = std::make_shared<Square>();
     tavern = std::make_shared<Tavern>(); 
     forest = std::make_shared<Forest>(); 
-    chapel = std::make_shared<Chapel>();     
-    current_location = square;
-
+    chapel = std::make_shared<Chapel>();
     square->getRelatedLocations(tavern, forest, chapel);
 
+    innkeeper = std::make_shared<Innkeeper>();
+    gamblers = std::make_shared<Gamblers>(); 
+    priest = std::make_shared<Priest>(); 
+    ladies = std::make_shared<Ladies>();
+    tavern->getRelatedLocations(innkeeper, gamblers, priest, ladies, square);
 
-    // LOCATION INITIALIZATION
-    // square.related_locations.push_back(&square);
-    // square.related_locations.push_back(&tavern);
-    // square.related_locations.push_back(&forest);
-    // square.related_locations.push_back(&chapels_door);
-    // square.player_pointer(&player);
+    forest_exploration = std::make_shared<ForestExploration>();
+    thugs = std::make_shared<Thugs>(); 
+    forest->getRelatedLocations(forest_exploration, thugs, square);
 
-    // tavern.related_locations.push_back(&square);
-    // tavern.related_locations.push_back(&innkeeper);
-    // tavern.related_locations.push_back(&gamblers);
-    // tavern.related_locations.push_back(&priest);
-    // tavern.related_locations.push_back(&ladies);
-    // tavern.related_locations.push_back(&tavern);
-    // tavern.player_pointer(&player);
+    altars = std::make_shared<Altars>();
+    dungeons = std::make_shared<Dungeons>(); 
+    chapel->getRelatedLocations(altars, dungeons, square);
 
-    // forest.related_locations.push_back(&square);
-    // forest.related_locations.push_back(&forest_exploration);
-    // forest.related_locations.push_back(&thugs);
-    // forest.related_locations.push_back(&forest);
-    // forest.player_pointer(&player);
+    current_location = square;
 
     // chapels_door.related_locations.push_back(&square);
     // chapels_door.related_locations.push_back(&chapel);
     // chapels_door.player_pointer(&player);
-
-    // chapel.related_locations.push_back(&square);
-    // chapel.related_locations.push_back(&altars);
-    // chapel.related_locations.push_back(&dungeons);
-    // chapel.player_pointer(&player);
 
     // innkeeper.related_locations.push_back(&tavern);
     // innkeeper.related_locations.push_back(&order_beer);
