@@ -68,27 +68,6 @@ void Location::equipment_menu() {
     }
 }
 
-void Location::save_menu() {
-    char choice {};
-    std::cout<<"[Here you will save your game]\n";
-    std::cout<<"\nPress any key to continue: ";
-    std::cin>>choice;
-}
-
-void Location::load_menu() {
-    char choice {};
-    std::cout<<"[Here you will load your game]\n";
-    std::cout<<"\nPress any key to continue: ";
-    std::cin>>choice;
-}
-    
-void Location::exit_menu() {
-    char choice {};
-    std::cout<<"[Here you will exit game]\n";
-    std::cout<<"\nPress any key to continue: ";
-    std::cin>>choice;
-}
-
 void Location::print_location() {
 
     std::cout << descriptions.at(0) << "\n\n";
