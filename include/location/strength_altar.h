@@ -7,7 +7,6 @@ class StrengthAltar: public Location {
 
 public:
 
-    virtual Location* making_a_choice();
 
     StrengthAltar(std::string name_val="strength_altar");
     ~StrengthAltar();

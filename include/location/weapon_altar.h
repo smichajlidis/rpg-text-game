@@ -7,7 +7,6 @@ class WeaponAltar: public Location {
 
 public:
 
-    virtual Location* making_a_choice();
 
     WeaponAltar(std::string name_val="weapon_altar");
     ~WeaponAltar();

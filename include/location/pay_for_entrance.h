@@ -9,7 +9,6 @@ class PayForEntrance: public Location {
 
 public:
 
-    virtual Location* making_a_choice();
     void change_i();
     void get_i_ptr(int* i);
 

@@ -10,8 +10,7 @@ class OrderBeer: public Location {
     Player* player;
 
 public:
-    
-    virtual Location* making_a_choice();
+
 
     void point_player(Player*);
     void display_event();

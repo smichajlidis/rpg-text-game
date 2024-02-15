@@ -6,7 +6,6 @@
 class FoundNothing: public Location {
     public:
 
-    virtual Location* making_a_choice();
 
     FoundNothing(std::string name_val="found_nothing");
     ~FoundNothing();

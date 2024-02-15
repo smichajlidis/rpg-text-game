@@ -12,7 +12,6 @@ class Selling: public Location {
 
 public:
 
-    virtual Location* making_a_choice();
     void point_equipment(Equipment*);
     void point_trade_goods(Equipment*);
 

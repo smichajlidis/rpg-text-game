@@ -12,7 +12,6 @@ class Gossip: public Location {
     void point_player(Player*);
     void display_event();
 
-    virtual Location* making_a_choice();
 
     Gossip(std::string name_val = "gossip");
     ~Gossip();

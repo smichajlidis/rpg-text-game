@@ -13,7 +13,6 @@ class FoundTreasures: public Location {
 
     public:
 
-    virtual Location* making_a_choice();
 
     FoundTreasures(std::string name_val="found_treasures");
     ~FoundTreasures();

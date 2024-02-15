@@ -10,7 +10,6 @@ class Ladies:
 
 public:
 
-    virtual Location* making_a_choice();
     virtual void greeting();
     virtual Creature* clone();
 

@@ -7,7 +7,6 @@ class Dungeons: public Location {
 
 public:
 
-    virtual Location* making_a_choice();
 
     Dungeons(std::string name_val="dungeons");
     ~Dungeons();

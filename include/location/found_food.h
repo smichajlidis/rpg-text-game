@@ -13,7 +13,6 @@ class FoundFood: public Location {
 
     public:
 
-    virtual Location* making_a_choice();
 
     FoundFood(std::string name_val="found_food");
     ~FoundFood();

@@ -34,73 +34,73 @@ void Priest::greeting() {
     std::cout<<greetings.at(std::rand() % greetings.size());
 }
 
-Location* Priest::making_a_choice() {
-    char choice {};
-    if ((*player_ptr).return_drunk()>0) {
-        display_npc_details();
-        std::cout<<"\n\n";
-        greeting();
-        std::cout<<"\n\n";
-        std::cout<<"1. Order two beers for you\n";
-        std::cout<<"2. Ask for a chapel\n";
-        std::cout<<"0. Return\n\n";
-        std::cout<<"What do you do? ";
-        std::cin>>choice;
-        switch (choice) {
-            case '1': {
-                std::cout<<"\n";
-                (*player_ptr).equipment.remove_gold(10);
-                (*player_ptr).drinking();
-                increase_favor();
-                std::cout<<"\nPress any key to continue: ";
-                std::cin>>choice;
-                return related_locations.at(1); break;
-            }
-            case '2': {
-                if ((equipment.is_chapel_key() == false)) {
-                    std::cout<<"I already gave you the key. Don't say you lost it! Gods, I don't have another...\n\n";
-                    std::cout<<"Press any key to continue: ";
-                    std::cin>>choice;
-                    return related_locations.at(1); break;
-                }
-                else if (favor >= 80) {
-                    std::cout<<"\nDidn't know that you are so pious! Ok, I have a gift for you.\n";
-                    std::cout<<"<he gives you a key>\n\n"; 
-                    std::cout<<"[+ chapel key]\n\n";
-                    std::cout<<"<when you walk away from him he screams after you:>\n";
+// Location* Priest::making_a_choice() {
+//     char choice {};
+//     if ((*player_ptr).return_drunk()>0) {
+//         display_npc_details();
+//         std::cout<<"\n\n";
+//         greeting();
+//         std::cout<<"\n\n";
+//         std::cout<<"1. Order two beers for you\n";
+//         std::cout<<"2. Ask for a chapel\n";
+//         std::cout<<"0. Return\n\n";
+//         std::cout<<"What do you do? ";
+//         std::cin>>choice;
+//         switch (choice) {
+//             case '1': {
+//                 std::cout<<"\n";
+//                 (*player_ptr).equipment.remove_gold(10);
+//                 (*player_ptr).drinking();
+//                 increase_favor();
+//                 std::cout<<"\nPress any key to continue: ";
+//                 std::cin>>choice;
+//                 return related_locations.at(1); break;
+//             }
+//             case '2': {
+//                 if ((equipment.is_chapel_key() == false)) {
+//                     std::cout<<"I already gave you the key. Don't say you lost it! Gods, I don't have another...\n\n";
+//                     std::cout<<"Press any key to continue: ";
+//                     std::cin>>choice;
+//                     return related_locations.at(1); break;
+//                 }
+//                 else if (favor >= 80) {
+//                     std::cout<<"\nDidn't know that you are so pious! Ok, I have a gift for you.\n";
+//                     std::cout<<"<he gives you a key>\n\n"; 
+//                     std::cout<<"[+ chapel key]\n\n";
+//                     std::cout<<"<when you walk away from him he screams after you:>\n";
                 
-                    Item *ptr = equipment.items.at(0);
-                    (*player_ptr).equipment.add_item(ptr);
-                    equipment.remove_item(ptr);
+//                     Item *ptr = equipment.items.at(0);
+//                     (*player_ptr).equipment.add_item(ptr);
+//                     equipment.remove_item(ptr);
                 
-                    std::cout<<"And pray for your friend too!\n";
-                    std::cout<<"\nPress any key to continue: ";
-                    std::cin>>choice;
-                    return related_locations.at(0); break;
-                }
-                else {
-                    std::cout<<"\n- Not your bussiness stranger.\n\n";
-                    decrease_favor();
-                    std::cout<<"\nPress any key to continue: ";
-                    std::cin>>choice;
-                    return related_locations.at(1); break;
-                }
-            }
-            case '6': clear(); equipment_menu(); return related_locations.at(1); break;
-            case '7': clear(); load_menu(); return related_locations.at(1); break;
-            case '8': clear(); save_menu(); return related_locations.at(1); break;
-            case '9': clear(); exit_menu(); return related_locations.at(1); break;
-            default: return related_locations.at(0); break;
-        }
-        return related_locations.at(0);
-    }
-    else {
-        std::cout<<"I don't trust sober people, leave me alone!\n\n";
-        std::cout<<"Press any key to continue: ";
-        std::cin>>choice;
-        return related_locations.at(0);
-    }
-}
+//                     std::cout<<"And pray for your friend too!\n";
+//                     std::cout<<"\nPress any key to continue: ";
+//                     std::cin>>choice;
+//                     return related_locations.at(0); break;
+//                 }
+//                 else {
+//                     std::cout<<"\n- Not your bussiness stranger.\n\n";
+//                     decrease_favor();
+//                     std::cout<<"\nPress any key to continue: ";
+//                     std::cin>>choice;
+//                     return related_locations.at(1); break;
+//                 }
+//             }
+//             case '6': clear(); equipment_menu(); return related_locations.at(1); break;
+//             case '7': clear(); load_menu(); return related_locations.at(1); break;
+//             case '8': clear(); save_menu(); return related_locations.at(1); break;
+//             case '9': clear(); exit_menu(); return related_locations.at(1); break;
+//             default: return related_locations.at(0); break;
+//         }
+//         return related_locations.at(0);
+//     }
+//     else {
+//         std::cout<<"I don't trust sober people, leave me alone!\n\n";
+//         std::cout<<"Press any key to continue: ";
+//         std::cin>>choice;
+//         return related_locations.at(0);
+//     }
+// }
 
 Priest::Priest(std::string name_val)
     : Location(name_val), NPC(name_val) {

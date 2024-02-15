@@ -43,7 +43,6 @@ public:
     void player_pointer(Player* ptr);
     void print_location();
     void clear();
-    virtual Location* making_a_choice()=0;
     
     void equipment_menu();
     void save_menu();

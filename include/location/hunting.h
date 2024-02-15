@@ -15,8 +15,6 @@ class Hunting: public Location {
 
     public:
 
-    virtual Location* making_a_choice();
-
     Hunting(std::string name_val="hunting");
     ~Hunting();
 
