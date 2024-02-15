@@ -10,6 +10,9 @@ class Player;
 class Location {
 
     std::string name;
+
+    std::vector<std::string> descriptions;
+
     std::string description;
     std::string choice_1;
     std::string choice_2;
@@ -48,7 +51,7 @@ public:
     void exit_menu();
 
     Location(std::shared_ptr<Location> location_one_arg = 0, std::shared_ptr<Location> location_two_arg = 0, std::shared_ptr<Location> location_three_arg = 0, std::shared_ptr<Location> location_four_arg = 0, std::shared_ptr<Location> location_five_arg = 0);
-    Location(std::string name_val = "nowhere", std::string description_val = "none", std::string choice_1_val = "none", std::string choice_2_val = "none", std::string choice_3_val = "none", std::string choice_4_val = "none", std::string choice_5_val = "none");
+    Location(const std::string& name_val = "nowhere", const std::string& description_val = "none", const std::string& choice_1_val = "", const std::string& choice_2_val = "", const std::string& choice_3_val = "", const std::string&choice_4_val = "", const std::string& choice_5_val = "");
     Location() = default;
     ~Location();
     

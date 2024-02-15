@@ -3,6 +3,7 @@
 #include "../include/item.h"
 
 #include <iostream>
+#include <algorithm>
   
 void Location::equipment_menu() {
     std::string choice {};
@@ -89,24 +90,20 @@ void Location::exit_menu() {
 }
 
 void Location::print_location() {
-    if (description != "none") {
-            std::cout<<description<<"\n\n";
-        if (choice_1!="none")
-            std::cout<<"1. "<<choice_1<<"\n";
-        if (choice_2!="none")
-            std::cout<<"2. "<<choice_2<<"\n";
-        if (choice_3!="none")
-            std::cout<<"3. "<<choice_3<<"\n";
-        if (choice_4!="none")
-            std::cout<< "4. "<<choice_4<<"\n";
-        if (choice_5!="none")
-            std::cout<< "5. "<<choice_5<<"\n";
-        if (name != "square")
-            std::cout<<"0. Return"<<"\n\n";
-        else
-            std::cout<<"\n";
-        std::cout<<"What do you do? ";
-    }
+
+    std::cout << description << "\n\n";
+
+    std::uint32_t count {1};
+
+    std::for_each(descriptions.begin() + 1, descriptions.end(), [&count](const std::string& choice) { 
+        if (!choice.empty()) {
+            std::cout << count << ". " << choice << std::endl;
+            ++count;
+        }
+    });
+
+    std::cout<<"\nWhat do you do? ";
+
 }
 
 void Location::clear() {
@@ -129,9 +126,16 @@ Location::Location(std::shared_ptr<Location> location_one, std::shared_ptr<Locat
     : location_one(location_one), location_two(location_two), location_three(location_three), location_four(location_four), location_five(location_five) {
 }
 
-Location::Location(std::string name_val, std::string description_val, std::string choice_1_val, std::string choice_2_val, std::string choice_3_val, std::string choice_4_val, std::string choice_5_val)
-    : name(name_val), description(description_val), choice_1(choice_1_val), choice_2(choice_2_val), choice_3(choice_3_val), choice_4(choice_4_val), choice_5(choice_5_val) {
-}
+Location::Location(const std::string& name_val, const std::string& description_val, const std::string& choice_1_val, const std::string& choice_2_val, const std::string& choice_3_val, const std::string& choice_4_val, const std::string& choice_5_val)
+    : name(name_val) {
+
+    descriptions.push_back(description_val);
+    descriptions.push_back(choice_1_val);
+    descriptions.push_back(choice_2_val);
+    descriptions.push_back(choice_3_val);
+    descriptions.push_back(choice_4_val);
+    descriptions.push_back(choice_5_val);
+}    
 
 Location::~Location() {
 }
