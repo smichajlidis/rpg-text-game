@@ -10,7 +10,7 @@ void Location::equipment_menu() {
   //  (*player).equipment.display_equipment();
     if (!(*player).equipment.is_empty()) {
         do {
-            clear();
+            //clear();
             std::cout<<"\n== YOUR EQUIPMENT ==\n\n";
             (*player).equipment.display_equipment();
             std::cout<<"\nPass the number of an item to show options or pass any other key to return: ";
@@ -104,18 +104,6 @@ void Location::print_location() {
 
     std::cout<<"\nWhat do you do? ";
 
-}
-
-void Location::clear() {
-    #if defined _WIN32
-        system("cls");
-        //clrscr(); // including header file : conio.h
-    #elif defined (__LINUX__) || defined(__gnu_linux__) || defined(__linux__)
-        system("clear");
-        //std::cout<< u8"\033[2J\033[1;1H"; //Using ANSI Escape Sequences 
-    #elif defined (__APPLE__)
-        system("clear");
-    #endif
 }
 
 void Location::player_pointer(Player* ptr) {

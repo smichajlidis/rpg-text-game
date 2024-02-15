@@ -42,7 +42,6 @@ public:
 
     void player_pointer(Player* ptr);
     void print_location();
-    void clear();
     
     void equipment_menu();
     void save_menu();
