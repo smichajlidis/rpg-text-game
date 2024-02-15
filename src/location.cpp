@@ -91,7 +91,7 @@ void Location::exit_menu() {
 
 void Location::print_location() {
 
-    std::cout << description << "\n\n";
+    std::cout << descriptions.at(0) << "\n\n";
 
     std::uint32_t count {1};
 
