@@ -95,23 +95,33 @@ Location::Location(std::shared_ptr<Location> location_one, std::shared_ptr<Locat
 
 Location::Location(const std::string& name_val, const std::string& description_val, const std::string& choice_1_val, const std::string& choice_2_val, const std::string& choice_3_val, const std::string& choice_4_val, const std::string& choice_5_val)
     : name(name_val) {
-
     descriptions.push_back(description_val);
     descriptions.push_back(choice_1_val);
     descriptions.push_back(choice_2_val);
     descriptions.push_back(choice_3_val);
     descriptions.push_back(choice_4_val);
     descriptions.push_back(choice_5_val);
-}    
+}   
 
-Location::~Location() {
+std::shared_ptr<Location> Location::moveToLocationOne() {
+    return location_one;
 }
 
-std::shared_ptr<Location> Location::moveToLocationOne() { return location_one; }
-std::shared_ptr<Location> Location::moveToLocationTwo() { return location_two; }
-std::shared_ptr<Location> Location::moveToLocationThree() { return location_three; }
-std::shared_ptr<Location> Location::moveToLocationFour() { return location_four; }
-std::shared_ptr<Location> Location::moveToLocationFive() { return location_five; }
+std::shared_ptr<Location> Location::moveToLocationTwo() { 
+    return location_two;
+}
+
+std::shared_ptr<Location> Location::moveToLocationThree() {
+    return location_three;
+}
+
+std::shared_ptr<Location> Location::moveToLocationFour() {
+    return location_four;
+}
+
+std::shared_ptr<Location> Location::moveToLocationFive() {
+    return location_five;
+}
 
 void Location::getRelatedLocations(std::shared_ptr<Location> location_one_arg, std::shared_ptr<Location> location_two_arg, 
 std::shared_ptr<Location> location_three_arg, std::shared_ptr<Location> location_four_arg, std::shared_ptr<Location> location_five_arg) {
