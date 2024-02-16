@@ -3,8 +3,6 @@
 
 #include "creature/player.h"
 #include "creature/thug.h"
-#include "location/chapel.h"
-#include "location/forest.h"
 #include "location/innkeeper.h"
 #include "location/gamblers.h"
 #include "location/ladies.h"
@@ -43,6 +41,8 @@
 
 #include "location/Square.hpp"
 #include "location/Tavern.hpp"
+#include "location/Chapel.hpp"
+#include "location/forest.h"
 
 #include "SavingMenu.hpp"
 #include "LoadingMenu.hpp"
