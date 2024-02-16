@@ -5,8 +5,6 @@
 #include "creature/thug.h"
 #include "location/chapel.h"
 #include "location/forest.h"
-#include "location/square.h"
-#include "location/tavern.h"
 #include "location/innkeeper.h"
 #include "location/gamblers.h"
 #include "location/ladies.h"
@@ -42,6 +40,9 @@
 #include "location/found_nothing.h"
 #include "location/luck_altar.h"
 #include "screen_stuff.h"
+
+#include "location/Square.hpp"
+#include "location/Tavern.hpp"
 
 #include "SavingMenu.hpp"
 #include "LoadingMenu.hpp"

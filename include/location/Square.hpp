@@ -1,5 +1,5 @@
-#ifndef _SQUARE_H_
-#define _SQUARE_H_
+#ifndef _SQUARE_HPP_
+#define _SQUARE_HPP_
 
 #include "../location.h"
 
