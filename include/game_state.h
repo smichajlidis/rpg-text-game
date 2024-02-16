@@ -42,7 +42,7 @@
 #include "location/Square.hpp"
 #include "location/Tavern.hpp"
 #include "location/Chapel.hpp"
-#include "location/forest.h"
+#include "location/Forest.hpp"
 
 #include "SavingMenu.hpp"
 #include "LoadingMenu.hpp"
