@@ -30,13 +30,7 @@ private:
     std::string name;
 
     std::vector<std::string> descriptions;
-
-    std::string description;
-    std::string choice_1;
-    std::string choice_2;
-    std::string choice_3;
-    std::string choice_4;
-    std::string choice_5;
+    
     Player* player;
 
     std::shared_ptr<Location> location_one;
