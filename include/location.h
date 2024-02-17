@@ -10,7 +10,7 @@ class Player;
 class Location {
 
 public:
-    Location() = default;
+    Location(const std::string& name_val = "nowhere", const std::string& description_val = "none", const std::string& choice_1_val = "", const std::string& choice_2_val = "", const std::string& choice_3_val = "", const std::string&choice_4_val = "", const std::string& choice_5_val = "");
 
     ~Location() = default;
 
@@ -25,9 +25,6 @@ public:
 
     void player_pointer(Player* ptr);
     void print_location();
-
-    Location(std::shared_ptr<Location> location_one_arg = 0, std::shared_ptr<Location> location_two_arg = 0, std::shared_ptr<Location> location_three_arg = 0, std::shared_ptr<Location> location_four_arg = 0, std::shared_ptr<Location> location_five_arg = 0);
-    Location(const std::string& name_val = "nowhere", const std::string& description_val = "none", const std::string& choice_1_val = "", const std::string& choice_2_val = "", const std::string& choice_3_val = "", const std::string&choice_4_val = "", const std::string& choice_5_val = "");
 
 private:
     std::string name;
