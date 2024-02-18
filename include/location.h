@@ -28,16 +28,12 @@ public:
 
 private:
     std::vector<std::string> descriptions;
-
-    Player* player;
-
     std::shared_ptr<Location> location_one;
     std::shared_ptr<Location> location_two;
     std::shared_ptr<Location> location_three;
     std::shared_ptr<Location> location_four;
     std::shared_ptr<Location> location_five;
-
-    std::vector <Location*> related_locations;
+    Player* player;
 };
 
 #endif
