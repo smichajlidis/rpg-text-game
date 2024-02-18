@@ -10,7 +10,7 @@ class Player;
 class Location {
 
 public:
-    Location(const std::string& name_val = "nowhere", const std::string& description_val = "none", const std::string& choice_1_val = "", const std::string& choice_2_val = "", const std::string& choice_3_val = "", const std::string&choice_4_val = "", const std::string& choice_5_val = "");
+    Location(const std::string& description = "", const std::string& choice_1 = "", const std::string& choice_2 = "", const std::string& choice_3 = "", const std::string&choice_4 = "", const std::string& choice_5 = "");
 
     ~Location() = default;
 
@@ -27,10 +27,8 @@ public:
     void print_location();
 
 private:
-    std::string name;
-
     std::vector<std::string> descriptions;
-    
+
     Player* player;
 
     std::shared_ptr<Location> location_one;

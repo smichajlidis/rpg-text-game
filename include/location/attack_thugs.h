@@ -17,7 +17,7 @@ public:
     void change_i();
     void get_i_ptr(int* i);
 
-    AttackThugs(std::string name_val = "attack_thugs");
+    AttackThugs();
     ~AttackThugs();
 
     friend class GameState;

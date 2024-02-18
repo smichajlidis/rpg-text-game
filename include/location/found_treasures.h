@@ -14,7 +14,7 @@ class FoundTreasures: public Location {
     public:
 
 
-    FoundTreasures(std::string name_val="found_treasures");
+    FoundTreasures();
     ~FoundTreasures();
 
     friend class GameState;

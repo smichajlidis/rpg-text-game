@@ -7,7 +7,7 @@ class CharismaAltar: public Location {
 
 public:
 
-    CharismaAltar(std::string name_val="charisma_altar");
+    CharismaAltar();
     ~CharismaAltar();
 
 };

@@ -16,9 +16,7 @@
 //     return related_locations.at(0);
 // }
 
-CharismaAltar::CharismaAltar(std::string name_val)
-    : Location(name_val) {
-}
+CharismaAltar::CharismaAltar() {}
 
 CharismaAltar::~CharismaAltar() {
 }

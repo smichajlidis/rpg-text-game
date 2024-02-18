@@ -102,8 +102,8 @@ void Priest::greeting() {
 //     }
 // }
 
-Priest::Priest(std::string name_val)
-    : Location(name_val), NPC(name_val) {
+Priest::Priest()
+    : NPC() {
     }
 
 Priest::~Priest() {

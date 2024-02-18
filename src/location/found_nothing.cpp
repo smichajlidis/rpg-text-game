@@ -9,9 +9,7 @@
 //     return related_locations.at(0);
 // }
 
-FoundNothing::FoundNothing(std::string name_val)
-    : Location(name_val) {
-}
+FoundNothing::FoundNothing() {}
 
 FoundNothing::~FoundNothing() {
 }

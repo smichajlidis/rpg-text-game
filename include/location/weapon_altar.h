@@ -8,7 +8,7 @@ class WeaponAltar: public Location {
 public:
 
 
-    WeaponAltar(std::string name_val="weapon_altar");
+    WeaponAltar();
     ~WeaponAltar();
 
 };

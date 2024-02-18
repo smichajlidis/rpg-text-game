@@ -30,9 +30,7 @@ void OrderBeer::point_player(Player *obj) {
 //     return related_locations.at(0);
 // }
 
-OrderBeer::OrderBeer(std::string name_val)
-    : Location(name_val) {
-    }
+OrderBeer::OrderBeer() {}
 
 OrderBeer::~OrderBeer() {
 }

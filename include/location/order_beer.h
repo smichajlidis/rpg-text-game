@@ -15,7 +15,7 @@ public:
     void point_player(Player*);
     void display_event();
 
-    OrderBeer(std::string name_val = "order_beer");
+    OrderBeer();
     ~OrderBeer();
 
 };

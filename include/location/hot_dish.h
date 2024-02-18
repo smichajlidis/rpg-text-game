@@ -8,7 +8,7 @@ class HotDish: public Location, public PointPlayer {
 
     public:
 
-    HotDish(std::string name_val = "hot_dish");
+    HotDish();
     ~HotDish();
 };
 

@@ -12,7 +12,7 @@ public:
     void change_i();
     void get_i_ptr(int* i);
 
-    PayForEntrance(std::string name_val = "pay_for_entrance");
+    PayForEntrance();
     ~PayForEntrance();
 
 };

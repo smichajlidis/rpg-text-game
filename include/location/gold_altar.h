@@ -8,7 +8,7 @@ class GoldAltar: public Location {
 public:
 
 
-    GoldAltar(std::string name_val="gold_altar");
+    GoldAltar();
     ~GoldAltar();
 
 };

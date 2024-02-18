@@ -16,9 +16,7 @@
 //     return related_locations.at(0);
 // }
 
-FoundFood::FoundFood(std::string name_val)
-    : Location(name_val) {
-}
+FoundFood::FoundFood() {}
 
 FoundFood::~FoundFood() {
 }

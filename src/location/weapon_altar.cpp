@@ -9,9 +9,7 @@
 //     return related_locations.at(0);
 // }
 
-WeaponAltar::WeaponAltar(std::string name_val)
-    : Location(name_val) {
-}
+WeaponAltar::WeaponAltar() {}
 
 WeaponAltar::~WeaponAltar() {
 }

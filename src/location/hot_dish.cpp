@@ -26,8 +26,8 @@
 //     return related_locations.at(0);
 // }
 
-HotDish::HotDish(std::string name_val)
-    : Location(name_val), PointPlayer()  {
+HotDish::HotDish()
+    : PointPlayer()  {
     }
 
 HotDish::~HotDish() {

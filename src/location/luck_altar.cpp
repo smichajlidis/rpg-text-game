@@ -17,9 +17,7 @@
 //     return related_locations.at(0);
 // }
 
-LuckAltar::LuckAltar(std::string name_val)
-    : Location(name_val) {
-}
+LuckAltar::LuckAltar() {}
 
 LuckAltar::~LuckAltar() {
 }

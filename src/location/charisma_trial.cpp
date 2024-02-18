@@ -44,10 +44,7 @@ Creature* CharismaTrial::clone() {
     return thugs;
 }
 
-CharismaTrial::CharismaTrial(std::string name_val)
-    : Location(name_val), NPC(name_val) {
-        favor=20;
-}
+CharismaTrial::CharismaTrial() {}
 
 CharismaTrial::~CharismaTrial() {
 }

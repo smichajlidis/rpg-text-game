@@ -17,9 +17,7 @@
 //     return related_locations.at(0);
 // }
 
-GoldAltar::GoldAltar(std::string name_val)
-    : Location(name_val) {
-}
+GoldAltar::GoldAltar() {}
 
 GoldAltar::~GoldAltar() {
 }

@@ -13,7 +13,7 @@ public:
     virtual void greeting();
     virtual Creature* clone();
 
-    Ladies(std::string name_val = "LADIES");
+    Ladies();
     ~Ladies();
 
 };

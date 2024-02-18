@@ -28,9 +28,7 @@
 //     return related_locations.at(0); 
 // }
 
-ForestExploration::ForestExploration(std::string name_val)
-    : Location(name_val) {
-}
+ForestExploration::ForestExploration() {}
 
 ForestExploration::~ForestExploration() {
 }

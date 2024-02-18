@@ -70,9 +70,7 @@ void AttackThugs::get_i_ptr(int* i) {
 }
 
 
-AttackThugs::AttackThugs(std::string name_val)
-    : Location(name_val) {
-}
+AttackThugs::AttackThugs() {}
 
 AttackThugs::~AttackThugs() {
 }

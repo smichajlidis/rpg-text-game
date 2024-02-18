@@ -16,9 +16,7 @@
 //     return related_locations.at(0);
 // }
 
-ChapelsDoor::ChapelsDoor(std::string name_val)
-    : Location(name_val) {
-}
+ChapelsDoor::ChapelsDoor() {}
 
 ChapelsDoor::~ChapelsDoor() {
 }

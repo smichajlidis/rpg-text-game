@@ -68,9 +68,7 @@ void ForestAttack::get_i_ptr(int* i) {
     i_ptr = i;
 }
 
-ForestAttack::ForestAttack(std::string name_val)
-    : Location(name_val) {
-}
+ForestAttack::ForestAttack() {}
 
 ForestAttack::~ForestAttack() {
 }

@@ -70,9 +70,6 @@ void DungeonsAttack::get_i_ptr(int* i) {
 }
 
 
-DungeonsAttack::DungeonsAttack(std::string name_val)
-    : Location(name_val) {
-}
-
+DungeonsAttack::DungeonsAttack() {}
 DungeonsAttack::~DungeonsAttack() {
 }

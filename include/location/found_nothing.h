@@ -7,7 +7,7 @@ class FoundNothing: public Location {
     public:
 
 
-    FoundNothing(std::string name_val="found_nothing");
+    FoundNothing();
     ~FoundNothing();
 };
 

@@ -13,7 +13,7 @@ class Gossip: public Location {
     void display_event();
 
 
-    Gossip(std::string name_val = "gossip");
+    Gossip();
     ~Gossip();
 };
 

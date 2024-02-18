@@ -8,7 +8,7 @@ class Dungeons: public Location {
 public:
 
 
-    Dungeons(std::string name_val="dungeons");
+    Dungeons();
     ~Dungeons();
 };
 

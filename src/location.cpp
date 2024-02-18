@@ -5,33 +5,7 @@
 #include <iostream>
 #include <algorithm>
 
-void Location::print_location() {
-
-    std::cout << descriptions.at(0) << "\n\n";
-
-    std::uint32_t count {1};
-
-    std::for_each(descriptions.begin() + 1, descriptions.end(), [&count](const std::string& choice) { 
-        if (!choice.empty()) {
-            std::cout << count << ". " << choice << std::endl;
-            ++count;
-        }
-    });
-
-    std::cout<<"\nWhat do you do? ";
-
-}
-
-void Location::player_pointer(Player* ptr) {
-    player = ptr;
-}
-
-// Location::Location(std::shared_ptr<Location> location_one, std::shared_ptr<Location> location_two, std::shared_ptr<Location> location_three, std::shared_ptr<Location> location_four, std::shared_ptr<Location> location_five)
-//     : location_one(location_one), location_two(location_two), location_three(location_three), location_four(location_four), location_five(location_five) {
-// }
-
-Location::Location(const std::string& name_val, const std::string& description_val, const std::string& choice_1_val, const std::string& choice_2_val, const std::string& choice_3_val, const std::string& choice_4_val, const std::string& choice_5_val)
-    : name(name_val) {
+Location::Location(const std::string& description_val, const std::string& choice_1_val, const std::string& choice_2_val, const std::string& choice_3_val, const std::string& choice_4_val, const std::string& choice_5_val) {
     descriptions.push_back(description_val);
     descriptions.push_back(choice_1_val);
     descriptions.push_back(choice_2_val);
@@ -39,6 +13,24 @@ Location::Location(const std::string& name_val, const std::string& description_v
     descriptions.push_back(choice_4_val);
     descriptions.push_back(choice_5_val);
 }   
+
+void Location::print_location() {
+    std::cout << descriptions.at(0) << "\n\n";
+
+    std::uint32_t count {1};
+    std::for_each(descriptions.begin() + 1, descriptions.end(), [&count](const std::string& choice) { 
+        if (!choice.empty()) {
+            std::cout << count << ". " << choice << std::endl;
+            ++count;
+        }
+    });
+    std::cout<<"\nWhat do you do? ";
+
+}
+
+void Location::player_pointer(Player* ptr) {
+    player = ptr;
+}
 
 std::shared_ptr<Location> Location::moveToLocationOne() {
     return location_one;

@@ -17,9 +17,7 @@
 //     return related_locations.at(0);
 // }
 
-StrengthAltar::StrengthAltar(std::string name_val)
-    : Location(name_val) {
-}
+StrengthAltar::StrengthAltar() {}
 
 StrengthAltar::~StrengthAltar() {
 }

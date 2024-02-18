@@ -7,7 +7,7 @@ class ChapelsDoor: public Location {
 
 public:
 
-    ChapelsDoor(std::string name_val = "chapel");
+    ChapelsDoor();
     ~ChapelsDoor();
 
 };

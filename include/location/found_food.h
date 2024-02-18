@@ -14,7 +14,7 @@ class FoundFood: public Location {
     public:
 
 
-    FoundFood(std::string name_val="found_food");
+    FoundFood();
     ~FoundFood();
 
     friend class GameState;

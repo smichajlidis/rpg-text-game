@@ -17,7 +17,7 @@ class DungeonsAttack: public Location {
     void change_i();
     void get_i_ptr(int* i);
 
-    DungeonsAttack(std::string name_val="dungeons_attack");
+    DungeonsAttack();
     ~DungeonsAttack();
 
     friend class GameState;

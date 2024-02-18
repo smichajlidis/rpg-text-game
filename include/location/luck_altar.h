@@ -8,7 +8,7 @@ class LuckAltar: public Location {
 public:
 
 
-    LuckAltar(std::string name_val="luck_altar");
+    LuckAltar();
     ~LuckAltar();
 
 };

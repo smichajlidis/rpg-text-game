@@ -56,9 +56,7 @@ void Buying::point_trade_goods(Equipment *obj) {
 //     return related_locations.at(0);
 // }
 
-Buying::Buying(std::string name_val)
-    : Location(name_val) {
-    }
+Buying::Buying() {}
 
 Buying::~Buying() {
 }

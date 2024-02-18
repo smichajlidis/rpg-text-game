@@ -27,9 +27,7 @@
 //     return related_locations.at(0);
 // }
 
-Dungeons::Dungeons(std::string name_val)
-    : Location(name_val) {
-}
+Dungeons::Dungeons() {}
 
 Dungeons::~Dungeons() {
 }

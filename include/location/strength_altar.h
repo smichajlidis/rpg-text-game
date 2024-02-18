@@ -8,7 +8,7 @@ class StrengthAltar: public Location {
 public:
 
 
-    StrengthAltar(std::string name_val="strength_altar");
+    StrengthAltar();
     ~StrengthAltar();
 
 };

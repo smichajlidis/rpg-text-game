@@ -30,9 +30,6 @@ void PayForEntrance::get_i_ptr(int* i) {
 
 
 
-PayForEntrance::PayForEntrance(std::string name_val)
-    : Location(name_val) {
-}
-
+PayForEntrance::PayForEntrance() {}
 PayForEntrance::~PayForEntrance() {
 }

@@ -15,7 +15,7 @@ public:
     void point_equipment(Equipment*);
     void point_trade_goods(Equipment*);
 
-    Selling(std::string name_val = "selling");
+    Selling();
     ~Selling();
 
     friend class GameState;

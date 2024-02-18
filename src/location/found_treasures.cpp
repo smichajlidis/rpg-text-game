@@ -17,9 +17,7 @@
 //     return related_locations.at(0);
 // }
 
-FoundTreasures::FoundTreasures(std::string name_val)
-    : Location(name_val) {
-}
+FoundTreasures::FoundTreasures() {}
 
 FoundTreasures::~FoundTreasures() {
 }

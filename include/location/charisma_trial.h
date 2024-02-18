@@ -15,7 +15,7 @@ public:
     void change_i();
     void get_i_ptr(int* i);
 
-    CharismaTrial(std::string name_val = "THUGS");
+    CharismaTrial();
     ~CharismaTrial();
 
 };

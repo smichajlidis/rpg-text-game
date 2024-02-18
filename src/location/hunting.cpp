@@ -56,9 +56,7 @@
 //     return related_locations.at(0);
 // }
 
-Hunting::Hunting(std::string name_val)
-    : Location(name_val) {
-}
+Hunting::Hunting() {}
 
 Hunting::~Hunting() {
 }

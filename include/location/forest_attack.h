@@ -18,7 +18,7 @@ class ForestAttack: public Location {
     void change_i();
     void get_i_ptr(int* i);
 
-    ForestAttack(std::string name_val="forest_attack");
+    ForestAttack();
     ~ForestAttack();
 
     friend class GameState;

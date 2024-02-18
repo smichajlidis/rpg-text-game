@@ -9,9 +9,7 @@
 //     return related_locations.at(0);
 // }
 
-DungeonsNothing::DungeonsNothing(std::string name_val)
-    : Location(name_val) {
-}
+DungeonsNothing::DungeonsNothing() {}
 
 DungeonsNothing::~DungeonsNothing() {
 }

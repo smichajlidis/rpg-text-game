@@ -15,7 +15,7 @@ class Hunting: public Location {
 
     public:
 
-    Hunting(std::string name_val="hunting");
+    Hunting();
     ~Hunting();
 
     friend class GameState;

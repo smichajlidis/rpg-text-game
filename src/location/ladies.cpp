@@ -80,8 +80,8 @@ void Ladies::greeting() {
 //     return related_locations.at(1);
 // }
 
-Ladies::Ladies(std::string name_val)
-    : Location(name_val), NPC(name_val) {
+Ladies::Ladies()
+    : NPC() {
     }
 
 Ladies::~Ladies() {

@@ -16,9 +16,7 @@
 //     return related_locations.at(0); 
 // } 
 
-Gossip::Gossip(std::string name_val)
-    : Location(name_val) {
-}
+Gossip::Gossip() {}
 
 Gossip::~Gossip() {
 }
