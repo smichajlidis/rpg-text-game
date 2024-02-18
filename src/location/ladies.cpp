@@ -4,6 +4,10 @@
 #include <iostream>
 #include <ctime>
 
+void Ladies::print_location() {
+    greeting();
+}
+
 Creature* Ladies::clone() {
     Creature* ladies {nullptr};
     ladies = new Ladies;

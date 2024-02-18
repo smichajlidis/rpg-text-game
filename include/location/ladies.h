@@ -9,7 +9,7 @@ class Ladies:
     public Location, public NPC, public PointPlayer {
 
 public:
-
+    void print_location() override;
     virtual void greeting();
     virtual Creature* clone();
 
