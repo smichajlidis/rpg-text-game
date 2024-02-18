@@ -25,38 +25,22 @@ void Location::print_location() {
         }
     });
     std::cout<<"\nWhat do you do? ";
-
 }
 
 void Location::player_pointer(Player* ptr) {
     player = ptr;
 }
 
-std::shared_ptr<Location> Location::moveToLocationOne() {
-    return location_one;
+std::shared_ptr<Location> Location::moveToLocation(std::uint32_t locationNumber) {
+    return locations.at(locationNumber);
 }
 
-std::shared_ptr<Location> Location::moveToLocationTwo() { 
-    return location_two;
-}
-
-std::shared_ptr<Location> Location::moveToLocationThree() {
-    return location_three;
-}
-
-std::shared_ptr<Location> Location::moveToLocationFour() {
-    return location_four;
-}
-
-std::shared_ptr<Location> Location::moveToLocationFive() {
-    return location_five;
-}
-
-void Location::getRelatedLocations(std::shared_ptr<Location> location_one_arg, std::shared_ptr<Location> location_two_arg, 
-std::shared_ptr<Location> location_three_arg, std::shared_ptr<Location> location_four_arg, std::shared_ptr<Location> location_five_arg) {
-    location_one = std::move(location_one_arg);
-    location_two = std::move(location_two_arg);
-    location_three = std::move(location_three_arg);
-    location_four = std::move(location_four_arg);
-    location_five = std::move(location_five_arg);
+void Location::getRelatedLocations(std::shared_ptr<Location> location_one, std::shared_ptr<Location> location_two, 
+std::shared_ptr<Location> location_three, std::shared_ptr<Location> location_four, std::shared_ptr<Location> location_five) {
+    locations.push_back(0);
+    locations.push_back(std::move(location_one));
+    locations.push_back(std::move(location_two));
+    locations.push_back(std::move(location_three));
+    locations.push_back(std::move(location_four));
+    locations.push_back(std::move(location_five));
 }

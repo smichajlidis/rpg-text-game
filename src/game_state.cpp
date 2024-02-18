@@ -22,19 +22,11 @@ void GameState::display_location() {
 
         switch(choice) {
             case 1:
-                current_location = current_location->moveToLocationOne();
-                break;
             case 2:
-                current_location = current_location->moveToLocationTwo();
-                break;
             case 3:
-                current_location = current_location->moveToLocationThree();
-                break;
             case 4:
-                current_location = current_location->moveToLocationFour();
-                break;
             case 5:
-                current_location = current_location->moveToLocationFive();
+                current_location = current_location->moveToLocation(choice);
                 break;
             case 6:
                 equipment.display_equipment();
