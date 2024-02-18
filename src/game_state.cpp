@@ -26,7 +26,9 @@ void GameState::display_location() {
             case 3:
             case 4:
             case 5:
-                current_location = current_location->moveToLocation(choice);
+                if (current_location->getNumberOfLocations() >= choice) {
+                    current_location = current_location->moveToLocation(choice);
+                }
                 break;
             case 6:
                 equipment.display_equipment();
@@ -61,7 +63,10 @@ GameState::GameState()
     gamblers = std::make_shared<Gamblers>(); 
     priest = std::make_shared<Priest>(); 
     ladies = std::make_shared<Ladies>();
+    ladies->getRelatedLocations(tavern);
     tavern->getRelatedLocations(innkeeper, gamblers, priest, ladies, square);
+    tavern->getRelatedLocations(tavern);
+    
 
     forest_exploration = std::make_shared<ForestExploration>();
     thugs = std::make_shared<Thugs>(); 

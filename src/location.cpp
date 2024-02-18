@@ -38,9 +38,23 @@ std::shared_ptr<Location> Location::moveToLocation(std::uint32_t locationNumber)
 void Location::getRelatedLocations(std::shared_ptr<Location> location_one, std::shared_ptr<Location> location_two, 
 std::shared_ptr<Location> location_three, std::shared_ptr<Location> location_four, std::shared_ptr<Location> location_five) {
     locations.push_back(0);
-    locations.push_back(std::move(location_one));
-    locations.push_back(std::move(location_two));
-    locations.push_back(std::move(location_three));
-    locations.push_back(std::move(location_four));
-    locations.push_back(std::move(location_five));
+    if (location_one) {
+        locations.push_back(std::move(location_one));
+    }
+    if (location_two) {
+        locations.push_back(std::move(location_two));
+    }
+    if (location_three) {
+        locations.push_back(std::move(location_three));
+    }
+    if (location_four) {
+        locations.push_back(std::move(location_four));
+    }
+    if (location_five) {
+        locations.push_back(std::move(location_five));
+    }
+}
+
+std::uint32_t Location::getNumberOfLocations() const {
+    return (locations.empty() ? 0 : locations.size() - 1);
 }

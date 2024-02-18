@@ -18,9 +18,10 @@ public:
         std::shared_ptr<Location> location_three = 0, std::shared_ptr<Location> location_four = 0, std::shared_ptr<Location> location_five = 0);
 
     std::shared_ptr<Location> moveToLocation(std::uint32_t);
+    std::uint32_t getNumberOfLocations() const;
 
     void player_pointer(Player* ptr);
-    void print_location();
+    virtual void print_location();
 
 private:
     std::vector<std::string> descriptions;
