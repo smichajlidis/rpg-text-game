@@ -1,7 +1,7 @@
 #ifndef _CHAPEL_HPP_
 #define _CHAPEL_HPP_
 
-#include "../location.h"
+#include "../Location.hpp"
 
 class Chapel: public Location {
 

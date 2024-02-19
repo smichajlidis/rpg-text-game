@@ -1,7 +1,7 @@
 #ifndef _CHARISMATRIAL_H_
 #define _CHARISMATRIAL_H_
 
-#include "../location.h"
+#include "../Location.hpp"
 #include "../creature/npc.h"
 
 class CharismaTrial: public Location, public NPC {

@@ -1,4 +1,4 @@
-#include "../include/location.h"
+#include "../include/Location.hpp"
 #include "../include/creature/player.h"
 #include "../include/item.h"
 

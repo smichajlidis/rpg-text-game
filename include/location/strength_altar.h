@@ -1,7 +1,7 @@
 #ifndef _STRENGTHALTAR_H_
 #define _STRENGTHALTAR_H_
 
-#include "../location.h"
+#include "../Location.hpp"
 
 class StrengthAltar: public Location {
 

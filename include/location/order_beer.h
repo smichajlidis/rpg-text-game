@@ -1,7 +1,7 @@
 #ifndef _ORDER_BEER_H_
 #define _ORDER_BEER_H_
 
-#include "../location.h"
+#include "../Location.hpp"
 
 class Player;
 

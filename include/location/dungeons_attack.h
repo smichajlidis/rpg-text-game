@@ -1,7 +1,7 @@
 #ifndef _DUNGEONSATTACK_H_
 #define _DUNGEONSATTACK_H_
 
-#include "../location.h"
+#include "../Location.hpp"
 
 class Creature;
 

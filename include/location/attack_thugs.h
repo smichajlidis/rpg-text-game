@@ -1,7 +1,7 @@
 #ifndef _ATTACKTHUGS_H_
 #define _ATTACKTHUGS_H_
 
-#include "../location.h"
+#include "../Location.hpp"
 
 class Creature;
 

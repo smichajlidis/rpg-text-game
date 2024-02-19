@@ -1,7 +1,7 @@
 #ifndef _TRADE_H_
 #define _TRADE_H_
 
-#include "../location.h"
+#include "../Location.hpp"
 
 #include <iostream>
 

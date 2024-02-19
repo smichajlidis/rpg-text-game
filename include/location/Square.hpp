@@ -1,7 +1,7 @@
 #ifndef _SQUARE_HPP_
 #define _SQUARE_HPP_
 
-#include "../location.h"
+#include "../Location.hpp"
 
 class Square: public Location {
 

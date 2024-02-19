@@ -1,7 +1,7 @@
 #ifndef _HUNTING_H_
 #define _HUNTING_H_
 
-#include "../location.h"
+#include "../Location.hpp"
 
 class Item;
 

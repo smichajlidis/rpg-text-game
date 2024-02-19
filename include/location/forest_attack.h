@@ -1,7 +1,7 @@
 #ifndef _FORESTATTACK_H_
 #define _FORESTATTACK_H_
 
-#include "../location.h"
+#include "../Location.hpp"
 
 #include <iostream>
 #include <vector>

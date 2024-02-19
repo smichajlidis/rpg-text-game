@@ -1,7 +1,7 @@
 #ifndef _THUGS_H_
 #define _THUGS_H_
 
-#include "../location.h"
+#include "../Location.hpp"
 
 class Thugs: public Location {
 

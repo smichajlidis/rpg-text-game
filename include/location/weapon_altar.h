@@ -1,7 +1,7 @@
 #ifndef _WEAPONALTAR_H_
 #define _WEAPONALTAR_H_
 
-#include "../location.h"
+#include "../Location.hpp"
 
 class WeaponAltar: public Location {
 

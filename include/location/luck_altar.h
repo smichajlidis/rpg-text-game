@@ -1,7 +1,7 @@
 #ifndef _LUCKALTAR_H_
 #define _LUCKALTAR_H_
 
-#include "../location.h"
+#include "../Location.hpp"
 
 class LuckAltar: public Location {
 

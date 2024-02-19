@@ -1,7 +1,7 @@
 #ifndef _INNKEEPER_H_
 #define _INNKEEPER_H_
 
-#include "../location.h"
+#include "../Location.hpp"
 
 class Innkeeper: public Location {
 

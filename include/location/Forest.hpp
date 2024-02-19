@@ -1,7 +1,7 @@
 #ifndef _FOREST_HPP_
 #define _FOREST_HPP_
 
-#include "../location.h"
+#include "../Location.hpp"
 
 class Forest: public Location {
 

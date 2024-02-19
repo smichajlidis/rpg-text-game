@@ -1,7 +1,7 @@
 #ifndef _DUNGEONS_H_
 #define _DUNGEONS_H_
 
-#include "../location.h"
+#include "../Location.hpp"
 
 class Dungeons: public Location {
 

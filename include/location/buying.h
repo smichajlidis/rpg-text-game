@@ -1,7 +1,7 @@
 #ifndef _BUYING_H_
 #define _BUYING_H_
 
-#include "../location.h"
+#include "../Location.hpp"
 
 class Equipment;
 

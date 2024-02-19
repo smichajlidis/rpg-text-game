@@ -1,7 +1,7 @@
 #ifndef _GAMBLERS_H_
 #define _GAMBLERS_H_
 
-#include "../location.h"
+#include "../Location.hpp"
 #include "../point_player.h"
 
 class PointPlayer;

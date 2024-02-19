@@ -1,7 +1,7 @@
 #ifndef _FOUNDFOOD_H_
 #define _FOUNDFOOD_H_
 
-#include "../location.h"
+#include "../Location.hpp"
 
 class Item;
 

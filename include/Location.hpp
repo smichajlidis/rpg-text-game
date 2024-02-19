@@ -1,5 +1,5 @@
-#ifndef _LOCATION_H_
-#define _LOCATION_H_
+#ifndef _LOCATION_HPP_
+#define _LOCATION_HPP_
 
 #include <vector>
 #include <string>

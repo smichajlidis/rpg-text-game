@@ -1,7 +1,7 @@
 #ifndef _CHARISMAALTAR_H_
 #define _CHARISMAALTAR_H_
 
-#include "../location.h"
+#include "../Location.hpp"
 
 class CharismaAltar: public Location {
 

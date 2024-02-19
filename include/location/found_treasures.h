@@ -1,7 +1,7 @@
 #ifndef _FOUNDTREASURES_H_
 #define _FOUNDTREASURES_H_
 
-#include "../location.h"
+#include "../Location.hpp"
 
 class Item;
 

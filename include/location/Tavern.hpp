@@ -1,7 +1,7 @@
 #ifndef _TAVERN_HPP_
 #define _TAVERN_HPP_
 
-#include "../location.h"
+#include "../Location.hpp"
 
 class Tavern: public Location {
 

@@ -1,7 +1,7 @@
 #ifndef _SELLING_H_
 #define _SELLING_H_
 
-#include "../location.h"
+#include "../Location.hpp"
 
 class Equipment;
 

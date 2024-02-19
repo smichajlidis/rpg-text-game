@@ -1,7 +1,7 @@
 #ifndef _ALTARS_H_
 #define _ALTARS_H_
 
-#include "../location.h"
+#include "../Location.hpp"
 
 class Altars: public Location {
 

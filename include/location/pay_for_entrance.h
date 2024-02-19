@@ -1,7 +1,7 @@
 #ifndef _PAYFORENTRANCE_H_
 #define _PAYFORENTRANCE_H_
 
-#include "../location.h"
+#include "../Location.hpp"
 
 class PayForEntrance: public Location {
 

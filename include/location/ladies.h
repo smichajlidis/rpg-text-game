@@ -1,7 +1,7 @@
 #ifndef _LADIES_H_
 #define _LADIES_H_
 
-#include "../location.h"
+#include "../Location.hpp"
 #include "../creature/npc.h"
 #include "../point_player.h"
 

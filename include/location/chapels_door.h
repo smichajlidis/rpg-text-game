@@ -1,7 +1,7 @@
 #ifndef _CHAPELS_DOOR_H_
 #define _CHAPELS_DOOR_H_
 
-#include "../location.h"
+#include "../Location.hpp"
 
 class ChapelsDoor: public Location {
 
