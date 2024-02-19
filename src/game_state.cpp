@@ -14,7 +14,7 @@ void GameState::display_location() {
         if (player.drunk > 0)
             player.drunk--;
         player.display_top_bar();
-        current_location->print_location();
+        current_location->printLocation();
 
         std::cin >> choice;
         
