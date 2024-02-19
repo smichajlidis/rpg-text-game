@@ -5,11 +5,8 @@
 
 class Gossip: public Location {
 
-    Player* player;
-
     public:
 
-    void point_player(Player*);
     void display_event();
 
 

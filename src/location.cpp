@@ -27,10 +27,6 @@ void Location::print_location() {
     std::cout<<"\nWhat do you do? ";
 }
 
-void Location::player_pointer(Player* ptr) {
-    player = ptr;
-}
-
 std::shared_ptr<Location> Location::moveToLocation(std::uint32_t locationNumber) {
     return locations.at(locationNumber);
 }
