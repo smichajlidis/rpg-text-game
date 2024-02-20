@@ -14,7 +14,7 @@
 #include "location/forest_exploration.h"
 #include "location/thugs.h"
 
-#include "screen_stuff.h"
+#include "ScreenStuff.hpp"
 #include "SavingMenu.hpp"
 #include "LoadingMenu.hpp"
 #include "ExitingMenu.hpp"

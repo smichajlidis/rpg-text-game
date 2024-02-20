@@ -2,7 +2,7 @@
 #define _MAINMENU_HPP_
 
 #include "LoadingMenu.hpp"
-#include "screen_stuff.h"
+#include "ScreenStuff.hpp"
 #include "GameState.hpp"
 #include "SavingMenu.hpp"
 #include "HeaderDisplayer.hpp"

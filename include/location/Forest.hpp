@@ -13,7 +13,6 @@ public:
     : Location(description, choice_1, choice_2, choice_3) {}
     
     ~Forest() = default;
-
 };
 
 #endif

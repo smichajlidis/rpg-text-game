@@ -1,4 +1,4 @@
-#include "../include/screen_stuff.h"
+#include "../include/ScreenStuff.hpp"
 
 #include <iostream>
 
@@ -12,11 +12,4 @@ void ScreenStuff::clear() {
     #elif defined (__APPLE__)
         system("clear");
     #endif
-}
-
-ScreenStuff::ScreenStuff() {
-}
-
-ScreenStuff::~ScreenStuff() {
-
 }
