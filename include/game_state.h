@@ -34,8 +34,6 @@ public:
 
 private:
 
-    int i_ptr;
-
     ScreenStuff screen_stuff;
 
     Player player;

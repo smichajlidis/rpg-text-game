@@ -2,9 +2,7 @@
 
 #include <iostream>
 
-GameState::GameState()
-    : i_ptr(1) {
-
+GameState::GameState() {
     square = std::make_shared<Square>();
     tavern = std::make_shared<Tavern>(); 
     forest = std::make_shared<Forest>(); 
