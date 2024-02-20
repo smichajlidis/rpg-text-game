@@ -4,7 +4,7 @@
 #include <iostream>
 #include <ctime>
 
-void Ladies::printLocation() {
+void Ladies::printDescriptions() {
     greeting();
 }
 

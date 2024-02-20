@@ -20,7 +20,7 @@ void MainMenu::displayMainMenu() {
 
         switch(choice) {
             case 1:
-                game_state.display_location();
+                game_state.displayLocation();
                 break;
             case 2:
                 loading_menu.displayLoadingMenu();

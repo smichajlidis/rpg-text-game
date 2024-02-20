@@ -14,7 +14,7 @@ Location::Location(const std::string& description_val, const std::string& choice
     descriptions.push_back(choice_5_val);
 }   
 
-void Location::printLocation() {
+void Location::printDescriptions() {
     std::cout << descriptions.at(0) << "\n\n";
 
     std::uint32_t count {1};

@@ -1,4 +1,4 @@
-#include "../include/game_state.h"
+#include "../include/GameState.hpp"
 
 #include <iostream>
 
@@ -28,14 +28,14 @@ GameState::GameState() {
     current_location = square;
 }
 
-void GameState::display_location() {
+void GameState::displayLocation() {
     std::uint32_t choice;
 
     do {
         if (player.drunk > 0)
             player.drunk--;
         player.display_top_bar();
-        current_location->printLocation();
+        current_location->printDescriptions();
 
         std::cin >> choice;
         

@@ -3,7 +3,7 @@
 
 #include "LoadingMenu.hpp"
 #include "screen_stuff.h"
-#include "game_state.h"
+#include "GameState.hpp"
 #include "SavingMenu.hpp"
 #include "HeaderDisplayer.hpp"
 

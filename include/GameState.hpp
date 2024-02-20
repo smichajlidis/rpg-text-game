@@ -1,5 +1,5 @@
-#ifndef _GAME_STATE_H_
-#define _GAME_STATE_H_
+#ifndef _GAME_STATE_HPP_
+#define _GAME_STATE_HPP_
 
 #include "location/Square.hpp"
 #include "location/Tavern.hpp"
@@ -30,7 +30,7 @@ public:
 
     ~GameState() = default;
 
-    void display_location();
+    void displayLocation();
 
 private:
 
