@@ -2,20 +2,17 @@
 #define _PRIEST_HPP_
 
 #include "../Location.hpp"
-#include "../creature/npc.h"
-#include "../point_player.h"
+#include "../NPC.hpp"
 
-class Priest:
-    public Location, public NPC, public PointPlayer {
+class Priest: public NPC {
 
 public:
-    Priest()
-        : NPC() {}
+    Priest() = default;
 
     ~Priest() = default;
 
-    virtual void greeting();
-    virtual Creature* clone();
+    void sayingHello() override;
+    void printDescriptions() override;
 };
 
 #endif

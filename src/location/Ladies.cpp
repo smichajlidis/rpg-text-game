@@ -5,16 +5,10 @@
 #include <ctime>
 
 void Ladies::printDescriptions() {
-    greeting();
+    sayingHello();
 }
 
-Creature* Ladies::clone() {
-    Creature* ladies {nullptr};
-    ladies = new Ladies;
-    return ladies;
-}
-
-void Ladies::greeting() {
+void Ladies::sayingHello() {
     std::vector <std::string> greetings {
         "- Guess what We are not wearing right now?",
         "- Olive juice. Say it fast.",

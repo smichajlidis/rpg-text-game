@@ -4,13 +4,11 @@
 #include <iostream>
 #include <ctime>
 
-Creature* Priest::clone() {
-    Creature* priest {nullptr};
-    priest = new Priest;
-    return priest;
+void Priest::printDescriptions() {
+    sayingHello();
 }
 
-void Priest::greeting() {
+void Priest::sayingHello() {
     std::vector <std::string> greetings {
         "- He is a wise man who invented beer.",
         "- Milk is for babies. When you grow up you have to drink beer.",
