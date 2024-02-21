@@ -1,4 +1,4 @@
-#include "../../include/location/priest.h"
+#include "../../include/location/Priest.hpp"
 #include "../../include/creature/player.h"
 
 #include <iostream>
@@ -101,11 +101,3 @@ void Priest::greeting() {
 //         return related_locations.at(0);
 //     }
 // }
-
-Priest::Priest()
-    : NPC() {
-    }
-
-Priest::~Priest() {
-}
-

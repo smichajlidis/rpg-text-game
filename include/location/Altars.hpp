@@ -1,5 +1,5 @@
-#ifndef _ALTARS_H_
-#define _ALTARS_H_
+#ifndef _ALTARS_HPP_
+#define _ALTARS_HPP_
 
 #include "../Location.hpp"
 
@@ -14,7 +14,7 @@ public:
     const std::string& choice_5 = "Special weapon")
     : Location(description, choice_1, choice_2, choice_3, choice_4, choice_5) {}
 
-    ~Altars();
+    ~Altars() = default;
 };
 
 #endif

@@ -1,4 +1,4 @@
-#include "../../include/location/ladies.h"
+#include "../../include/location/Ladies.hpp"
 #include "../../include/creature/player.h"
 
 #include <iostream>
@@ -83,11 +83,3 @@ void Ladies::greeting() {
 //     }
 //     return related_locations.at(1);
 // }
-
-Ladies::Ladies()
-    : NPC() {
-    }
-
-Ladies::~Ladies() {
-}
-

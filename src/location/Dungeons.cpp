@@ -1,6 +1,7 @@
+#include "../../include/location/Dungeons.hpp"
+
 #include <iostream>
 #include <ctime>
-#include "../../include/location/dungeons.h"
 
 // Location* Dungeons::making_a_choice() {
 //     char choice;
@@ -26,8 +27,3 @@
 //         }
 //     return related_locations.at(0);
 // }
-
-Dungeons::Dungeons() {}
-
-Dungeons::~Dungeons() {
-}

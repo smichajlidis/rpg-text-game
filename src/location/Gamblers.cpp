@@ -1,4 +1,4 @@
-#include "../../include/location/gamblers.h"
+#include "../../include/location/Gamblers.hpp"
 #include "../../include/creature/player.h"
 
 #include <iostream>
@@ -55,10 +55,4 @@
     
 // }
 
-Gamblers::Gamblers(std::string description_val, std::string choice_1_val, std::string choice_2_val, std::string choice_3_val, std::string choice_4_val, std::string choice_5_val)
-    : Location(description_val, choice_1_val, choice_2_val, choice_3_val, choice_4_val, choice_5_val), PointPlayer() {
-    }
-
-Gamblers::~Gamblers() {
-}
 

@@ -1,5 +1,6 @@
+#include "../../include/location/Gossip.hpp"
+
 #include <iostream>
-#include "../../include/location/gossip.h"
 
 // Location* Gossip::making_a_choice() {
 //     char choice {};
@@ -15,8 +16,3 @@
 //     }
 //     return related_locations.at(0); 
 // } 
-
-Gossip::Gossip() {}
-
-Gossip::~Gossip() {
-}

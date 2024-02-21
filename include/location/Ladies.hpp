@@ -1,5 +1,5 @@
-#ifndef _LADIES_H_
-#define _LADIES_H_
+#ifndef _LADIES_HPP_
+#define _LADIES_HPP_
 
 #include "../Location.hpp"
 #include "../creature/npc.h"
@@ -9,13 +9,14 @@ class Ladies:
     public Location, public NPC, public PointPlayer {
 
 public:
+    Ladies()
+    : NPC() {}
+
+    ~Ladies() = default;
+
     void printDescriptions() override;
     virtual void greeting();
     virtual Creature* clone();
-
-    Ladies();
-    ~Ladies();
-
 };
 
 #endif

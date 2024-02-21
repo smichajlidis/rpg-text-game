@@ -1,6 +1,7 @@
+#include "../../include/location/ForestExploration.hpp"
+
 #include <iostream>
 #include <ctime>
-#include "../../include/location/forest_exploration.h"
 
 // Location* ForestExploration::making_a_choice() {
 //     char choice;
@@ -27,8 +28,3 @@
 //         }
 //     return related_locations.at(0); 
 // }
-
-ForestExploration::ForestExploration() {}
-
-ForestExploration::~ForestExploration() {
-}
