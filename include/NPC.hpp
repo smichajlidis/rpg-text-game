@@ -4,6 +4,8 @@
 #include "LivingBeing.hpp"
 #include "Location.hpp"
 
+#include <vector>
+
 class NPC: public LivingBeing, public Location {
 
 public:
@@ -11,7 +13,10 @@ public:
 
     ~NPC() = default;
 
-    virtual void sayingHello() = 0;
+    void printDescriptions() override;
+    
+protected:
+    std::vector<std::string> greetings;
 };
 
 #endif
