@@ -16,6 +16,7 @@ public:
     std::shared_ptr<Location> moveToLocation(std::uint32_t);
     std::uint32_t getNumberOfLocations() const;
     virtual void printDescriptions();
+    virtual void printLocation();
 
 private:
     std::vector<std::string> descriptions;

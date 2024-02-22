@@ -2,7 +2,9 @@
 
 #include <iostream>
 
-void NPC::printDescriptions() {
+void NPC::printLocation() {
     srand(time(NULL));
     std::cout<<greetings.at(std::rand() % greetings.size());
+    
+    this->printDescriptions();
 }

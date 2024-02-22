@@ -12,7 +12,11 @@ Location::Location(const std::string& description_val, const std::string& choice
     descriptions.push_back(choice_3_val);
     descriptions.push_back(choice_4_val);
     descriptions.push_back(choice_5_val);
-}   
+}
+
+void Location::printLocation() {
+    printDescriptions();
+}
 
 void Location::printDescriptions() {
     std::cout << descriptions.at(0) << "\n\n";

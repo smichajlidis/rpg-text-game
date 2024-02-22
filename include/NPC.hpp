@@ -14,7 +14,7 @@ public:
 
     ~NPC() = default;
 
-    void printDescriptions() override;
+    void printLocation() override;
     
 protected:
     std::vector<std::string> greetings;
