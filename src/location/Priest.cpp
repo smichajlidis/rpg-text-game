@@ -2,7 +2,8 @@
 
 #include <iostream>
 
-Priest::Priest() {
+Priest::Priest(const std::string& description, const std::string& choice_1, const std::string& choice_2, const std::string& choice_3)
+        : NPC(description, choice_1, choice_2, choice_3) {
         greetings.push_back("He is a wise man who invented beer.");
         greetings.push_back("Milk is for babies. When you grow up you have to drink beer.");
         greetings.push_back("Life is too short to drink cheap beer.");

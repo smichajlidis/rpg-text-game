@@ -2,7 +2,8 @@
 
 #include <iostream>
 
-Ladies::Ladies() {
+Ladies::Ladies(const std::string& description, const std::string& choice_1, const std::string& choice_2, const std::string& choice_3)
+    : NPC(description, choice_1, choice_2, choice_3) {
     greetings.push_back("Guess what We are not wearing right now?");
     greetings.push_back("Olive juice. Say it fast.");
     greetings.push_back("When can we see you again? Pick a day that ends in <y>");
