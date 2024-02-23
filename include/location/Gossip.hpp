@@ -6,7 +6,9 @@
 class Gossip: public Location {
 
 public:
-    Gossip() = default;
+    Gossip(const std::string& description = "You know it's rude to gossip? shame on you!",
+        const std::string& choice_1 = "Ask of something else")
+        : Location(description, choice_1) {}
 
     ~Gossip() = default;
 };
