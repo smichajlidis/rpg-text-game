@@ -10,7 +10,9 @@ GameState::GameState() {
     square->getRelatedLocations(tavern, forest, chapel);
 
     innkeeper = std::make_shared<Innkeeper>();
-    innkeeper->getRelatedLocations(tavern);
+    order_beer = std::make_shared<OrderBeer>();
+    innkeeper->getRelatedLocations(order_beer, tavern);
+    order_beer->getRelatedLocations(order_beer, innkeeper);
     gamblers = std::make_shared<Gamblers>(); 
     priest = std::make_shared<Priest>();
     priest->getRelatedLocations(tavern); 
