@@ -11,8 +11,12 @@ GameState::GameState() {
     innkeeper = std::make_shared<Innkeeper>();
     order_beer = std::make_shared<OrderBeer>();
     order_beer->getRelatedLocations(order_beer, innkeeper);
+    buying = std::make_shared<Buying>();
+    selling = std::make_shared<Selling>();
+    buying->getRelatedLocations(selling, innkeeper);
+    selling->getRelatedLocations(buying, innkeeper);
     trade = std::make_shared<Trade>();
-    trade->getRelatedLocations(innkeeper);
+    trade->getRelatedLocations(buying, selling, innkeeper);
     gossip = std::make_shared<Gossip>();
     innkeeper->getRelatedLocations(order_beer, trade, gossip, tavern);
     gossip->getRelatedLocations(innkeeper);
