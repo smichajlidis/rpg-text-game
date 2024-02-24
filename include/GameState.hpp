@@ -10,6 +10,7 @@
 #include "location/Buying.hpp"
 #include "location/Selling.hpp"
 #include "location/Gossip.hpp"
+#include "location/HotMeal.hpp"
 #include "location/Gamblers.hpp"
 #include "location/Priest.hpp"
 #include "location/Altars.hpp"
@@ -59,6 +60,7 @@ private:
                     std::shared_ptr<Buying> buying;
                     std::shared_ptr<Selling> selling;
                 std::shared_ptr<Gossip> gossip;
+                std::shared_ptr<HotMeal> hot_meal;
             std::shared_ptr<Gamblers> gamblers;
             std::shared_ptr<Priest> priest;
             std::shared_ptr<Ladies> ladies;
