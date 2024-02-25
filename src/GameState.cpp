@@ -33,9 +33,11 @@ GameState::GameState() {
     bet_50->getRelatedLocations(bet_50, gamblers, tavern);
     bet_100->getRelatedLocations(bet_100, gamblers, tavern);
     priest = std::make_shared<Priest>();
+    asking_about_chapel = std::make_shared<AskingAboutChapel>();
+    asking_about_chapel->getRelatedLocations(priest);
     drinking_with_priest = std::make_shared<DrinkingWithPriest>();
-    drinking_with_priest->getRelatedLocations(drinking_with_priest, priest, tavern);
-    priest->getRelatedLocations(drinking_with_priest, tavern); 
+    drinking_with_priest->getRelatedLocations(drinking_with_priest, asking_about_chapel, tavern);
+    priest->getRelatedLocations(drinking_with_priest, asking_about_chapel, tavern); 
     ladies = std::make_shared<Ladies>();
     ladies->getRelatedLocations(tavern);   
     tavern->getRelatedLocations(innkeeper, gamblers, priest, ladies, square);
