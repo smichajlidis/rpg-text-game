@@ -12,6 +12,7 @@
 #include "location/Gossip.hpp"
 #include "location/HotMeal.hpp"
 #include "location/Gamblers.hpp"
+#include "location/Bet.hpp"
 #include "location/Priest.hpp"
 #include "location/Altars.hpp"
 #include "location/Dungeons.hpp"
@@ -62,6 +63,11 @@ private:
                 std::shared_ptr<Gossip> gossip;
                 std::shared_ptr<HotMeal> hot_meal;
             std::shared_ptr<Gamblers> gamblers;
+                std::shared_ptr<Bet> bet_5;
+                std::shared_ptr<Bet> bet_10;
+                std::shared_ptr<Bet> bet_20;
+                std::shared_ptr<Bet> bet_50;
+                std::shared_ptr<Bet> bet_100;
             std::shared_ptr<Priest> priest;
             std::shared_ptr<Ladies> ladies;
         std::shared_ptr<Forest> forest;
