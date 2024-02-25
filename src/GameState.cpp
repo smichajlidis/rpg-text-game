@@ -23,13 +23,11 @@ GameState::GameState() {
     innkeeper->getRelatedLocations(order_beer, trade, gossip, hot_meal, tavern);
     gossip->getRelatedLocations(innkeeper);
     gamblers = std::make_shared<Gamblers>();
-    bet_5 = std::make_shared<Bet>(5);
     bet_10 = std::make_shared<Bet>(10);
     bet_20 = std::make_shared<Bet>(20);
     bet_50 = std::make_shared<Bet>(50);
     bet_100 = std::make_shared<Bet>(100);
-    gamblers->getRelatedLocations(bet_5, bet_10, bet_20, bet_50, bet_100);
-    bet_5->getRelatedLocations(bet_5, gamblers, tavern);
+    gamblers->getRelatedLocations(bet_10, bet_20, bet_50, bet_100, tavern);
     bet_10->getRelatedLocations(bet_10, gamblers, tavern);
     bet_20->getRelatedLocations(bet_20, gamblers, tavern);
     bet_50->getRelatedLocations(bet_50, gamblers, tavern);

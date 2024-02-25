@@ -9,8 +9,9 @@ public:
     Bet(std::uint32_t amount,
         const std::string& description = "Have you won? Yes? No?",
         const std::string& choice_1 = "Bet again",
-        const std::string& choice_2 = "Leave the table")
-        : Location(description, choice_1, choice_2), amount(amount) {}
+        const std::string& choice_2 = "Bet a different amount",
+        const std::string& choice_3 = "Leave the table")
+        : Location(description, choice_1, choice_2, choice_3), amount(amount) {}
     
     ~Bet() = default;
 

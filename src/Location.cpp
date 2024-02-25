@@ -5,13 +5,13 @@
 #include <iostream>
 #include <algorithm>
 
-Location::Location(const std::string& description_val, const std::string& choice_1_val, const std::string& choice_2_val, const std::string& choice_3_val, const std::string& choice_4_val, const std::string& choice_5_val) {
-    descriptions.push_back(description_val);
-    descriptions.push_back(choice_1_val);
-    descriptions.push_back(choice_2_val);
-    descriptions.push_back(choice_3_val);
-    descriptions.push_back(choice_4_val);
-    descriptions.push_back(choice_5_val);
+Location::Location(const std::string& description, const std::string& choice_1, const std::string& choice_2, const std::string& choice_3, const std::string& choice_4, const std::string& choice_5) {
+    descriptions.push_back(description);
+    descriptions.push_back(choice_1);
+    descriptions.push_back(choice_2);
+    descriptions.push_back(choice_3);
+    descriptions.push_back(choice_4);
+    descriptions.push_back(choice_5);
 }
 
 void Location::printLocation() {

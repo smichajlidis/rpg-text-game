@@ -21,7 +21,6 @@ public:
 private:
     std::vector<std::string> descriptions;
     std::vector<std::shared_ptr<Location>> locations;
-
 };
 
 #endif
