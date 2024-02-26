@@ -4,6 +4,8 @@
 #include "location/Square.hpp"
 #include "location/Tavern.hpp"
 #include "location/Ladies.hpp"
+#include "location/Flirting.hpp"
+#include "location/GoUpstairs.hpp"
 #include "location/Innkeeper.hpp"
 #include "location/OrderBeer.hpp"
 #include "location/Trade.hpp"
@@ -74,6 +76,8 @@ private:
                 std::shared_ptr<DrinkingWithPriest> drinking_with_priest;
                 std::shared_ptr<AskingAboutChapel> asking_about_chapel;
             std::shared_ptr<Ladies> ladies;
+                std::shared_ptr<Flirting> flirting;
+                std::shared_ptr<GoUpstairs> go_upstairs;
         std::shared_ptr<Forest> forest;
             std::shared_ptr<ForestExploration> forest_exploration;
             std::shared_ptr<Thugs> thugs;

@@ -39,7 +39,11 @@ GameState::GameState() {
     drinking_with_priest->getRelatedLocations(drinking_with_priest, asking_about_chapel, tavern);
     priest->getRelatedLocations(drinking_with_priest, asking_about_chapel, tavern); 
     ladies = std::make_shared<Ladies>();
-    ladies->getRelatedLocations(tavern);   
+    go_upstairs = std::make_shared<GoUpstairs>();
+    go_upstairs->getRelatedLocations(tavern);
+    flirting = std::make_shared<Flirting>();
+    flirting->getRelatedLocations(flirting, go_upstairs, tavern);
+    ladies->getRelatedLocations(go_upstairs, flirting, tavern);   
     tavern->getRelatedLocations(innkeeper, gamblers, priest, ladies, square);
 
     forest_exploration = std::make_shared<ForestExploration>();
