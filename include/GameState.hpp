@@ -21,6 +21,7 @@
 #include "location/Altars.hpp"
 #include "location/Dungeons.hpp"
 #include "location/Chapel.hpp"
+#include "location/ClosedChapel.hpp"
 #include "location/Forest.hpp"
 #include "location/ForestExploration.hpp"
 #include "location/Thugs.hpp"
@@ -88,6 +89,7 @@ private:
                 std::shared_ptr<ConvinceThugs> convince_thugs;
                 std::shared_ptr<AttackThugs> attack_thugs;
         std::shared_ptr<Chapel> chapel;
+        std::shared_ptr<ClosedChapel> closed_chapel;
             std::shared_ptr<Altars> altars;
             std::shared_ptr<Dungeons> dungeons;
 };

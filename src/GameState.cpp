@@ -17,8 +17,10 @@ GameState::GameState() {
         forest_exploration = std::make_shared<ForestExploration>();
         forest_exploration->getRelatedLocations(forest_exploration, forest); 
         forest->getRelatedLocations(forest_exploration, thugs, square);
+    closed_chapel = std::make_shared<ClosedChapel>();
+    closed_chapel->getRelatedLocations(square);
     chapel = std::make_shared<Chapel>();
-    square->getRelatedLocations(tavern, forest, chapel);
+    square->getRelatedLocations(tavern, forest, closed_chapel);
     innkeeper = std::make_shared<Innkeeper>();
     order_beer = std::make_shared<OrderBeer>();
     order_beer->getRelatedLocations(order_beer, innkeeper);
@@ -56,8 +58,6 @@ GameState::GameState() {
     flirting->getRelatedLocations(flirting, go_upstairs, tavern);
     ladies->getRelatedLocations(go_upstairs, flirting, tavern);   
     tavern->getRelatedLocations(innkeeper, gamblers, priest, ladies, square);
-
-    
 
     altars = std::make_shared<Altars>();
     dungeons = std::make_shared<Dungeons>(); 
