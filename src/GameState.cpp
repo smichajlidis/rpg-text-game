@@ -7,7 +7,13 @@ GameState::GameState() {
     tavern = std::make_shared<Tavern>(); 
     forest = std::make_shared<Forest>();
         thugs = std::make_shared<Thugs>();
-        thugs->getRelatedLocations(forest);
+            paying_thugs = std::make_shared<PayingThugs>();
+            paying_thugs->getRelatedLocations(thugs, forest);
+            convince_thugs = std::make_shared<ConvinceThugs>();
+            convince_thugs->getRelatedLocations(convince_thugs, thugs, forest);
+            attack_thugs = std::make_shared<AttackThugs>();
+            attack_thugs->getRelatedLocations(attack_thugs, forest);
+        thugs->getRelatedLocations(paying_thugs, convince_thugs, attack_thugs, forest);
         forest_exploration = std::make_shared<ForestExploration>();
         forest_exploration->getRelatedLocations(forest_exploration, forest); 
         forest->getRelatedLocations(forest_exploration, thugs, square);

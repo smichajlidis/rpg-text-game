@@ -24,6 +24,9 @@
 #include "location/Forest.hpp"
 #include "location/ForestExploration.hpp"
 #include "location/Thugs.hpp"
+#include "location/PayingThugs.hpp"
+#include "location/ConvinceThugs.hpp"
+#include "location/AttackThugs.hpp"
 
 #include "ScreenStuff.hpp"
 #include "SavingMenu.hpp"
@@ -81,6 +84,9 @@ private:
         std::shared_ptr<Forest> forest;
             std::shared_ptr<ForestExploration> forest_exploration;
             std::shared_ptr<Thugs> thugs;
+                std::shared_ptr<PayingThugs> paying_thugs;
+                std::shared_ptr<ConvinceThugs> convince_thugs;
+                std::shared_ptr<AttackThugs> attack_thugs;
         std::shared_ptr<Chapel> chapel;
             std::shared_ptr<Altars> altars;
             std::shared_ptr<Dungeons> dungeons;
