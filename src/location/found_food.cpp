@@ -1,6 +1,4 @@
 #include "../../include/location/found_food.h"
-#include "../../include/creature/player.h"
-#include "../../include/item/food.h"
 
 #include <iostream>
 

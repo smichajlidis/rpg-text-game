@@ -33,9 +33,8 @@
 #include "SavingMenu.hpp"
 #include "LoadingMenu.hpp"
 #include "ExitingMenu.hpp"
-#include "equipment.h"
 
-#include "creature/player.h"
+#include "Player.hpp"
 
 #include <memory>
 
@@ -50,10 +49,8 @@ public:
 private:
 
     ScreenStuff screen_stuff;
-
     Player player;
-    Equipment trade_goods;
-    Equipment equipment;
+
     SavingMenu saving_menu;
     LoadingMenu loading_menu;
     ExitingMenu exiting_menu;

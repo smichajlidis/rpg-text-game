@@ -1,6 +1,4 @@
 #include "../../include/location/forest_attack.h"
-#include "../../include/creature/player.h"
-#include "../../include/creature.h"
 
 #include <iostream>
 

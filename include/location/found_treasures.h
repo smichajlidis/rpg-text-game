@@ -9,7 +9,7 @@ class Item;
 
 class FoundTreasures: public Location {
 
-    std::vector <Item*> related_items;
+
 
     public:
 

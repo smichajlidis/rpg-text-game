@@ -11,7 +11,6 @@ class Creature;
 class ForestAttack: public Location {
 
     int* i_ptr;
-    std::vector <Creature*> related_creatures;
 
     public:
 

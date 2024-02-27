@@ -1,6 +1,4 @@
 #include "../../include/location/hunting.h"
-#include "../../include/creature/player.h"
-#include "../../include/item.h"
 
 #include <iostream>
 #include <ctime>

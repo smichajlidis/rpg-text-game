@@ -1,5 +1,4 @@
 #include "../../include/location/luck_altar.h"
-#include "../../include/creature/player.h"
 
 #include <iostream>
 

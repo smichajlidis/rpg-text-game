@@ -9,8 +9,6 @@ class Item;
 
 class FoundFood: public Location {
 
-    std::vector <Item*> related_items;
-
     public:
 
 

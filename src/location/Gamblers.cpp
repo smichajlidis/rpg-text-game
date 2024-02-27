@@ -1,5 +1,4 @@
 #include "../../include/location/Gamblers.hpp"
-#include "../../include/creature/player.h"
 
 #include <iostream>
 #include <ctime>

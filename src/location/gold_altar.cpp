@@ -1,5 +1,4 @@
 #include "../../include/location/gold_altar.h"
-#include "../../include/creature/player.h"
 
 #include <iostream>
 

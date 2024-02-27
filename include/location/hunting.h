@@ -7,8 +7,6 @@ class Item;
 
 #include <vector>
 
-class Creature;
-
 class Hunting: public Location {
 
     std::vector <Item*> related_items;

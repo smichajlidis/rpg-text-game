@@ -1,5 +1,4 @@
 #include "../../include/location/charisma_trial.h"
-#include "../../include/creature/player.h"
 
 #include <iostream>
 
@@ -36,12 +35,6 @@ void CharismaTrial::get_i_ptr(int* i) {
 
 
 void CharismaTrial::greeting() {
-}
-
-Creature* CharismaTrial::clone() {
-    Creature* thugs {nullptr};
-    thugs = new CharismaTrial;
-    return thugs;
 }
 
 CharismaTrial::CharismaTrial() {}
