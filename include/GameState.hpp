@@ -30,6 +30,7 @@
 #include "location/AttackThugs.hpp"
 
 #include "ScreenStuff.hpp"
+#include "TopBar.hpp"
 #include "SavingMenu.hpp"
 #include "LoadingMenu.hpp"
 #include "ExitingMenu.hpp"
@@ -49,11 +50,12 @@ public:
 private:
 
     ScreenStuff screen_stuff;
-    Player player;
+    std::shared_ptr<Player> player;
 
     SavingMenu saving_menu;
     LoadingMenu loading_menu;
     ExitingMenu exiting_menu;
+    TopBar top_bar;
     std::shared_ptr<Location> current_location;
  
     // Locations

@@ -64,18 +64,18 @@ GameState::GameState() {
     chapel->getRelatedLocations(altars, dungeons, square);
 
     current_location = square;
+    player = std::make_shared<Player>();
+    top_bar.pointToPlayer(player);
 }
 
 void GameState::displayLocation() {
     std::uint32_t choice;
 
     do {
-        //displayTopBar();
+        top_bar.displayTopBar();
         current_location->printLocation();
 
         std::cin >> choice;
-        
-        screen_stuff.clear();
 
         switch(choice) {
             case 1:
@@ -107,21 +107,3 @@ void GameState::displayLocation() {
     } while(choice != 9);
 }
 
-// void GameState::displayTopBar() {
-//     std::cout<<"________________________________________________________________________\n";
-//     std::cout<<"\n      Equipment <6> | Load <7> | Save <8> | Quit Game <9>\n";
-//     std::cout<<"________________________________________________________________________\n\n";
-//   //  std::cout<<"------------------------------------------------------------------------\n\n";
-//     std::cout<<" Hp: "<<hp; if(drunk>0) std::cout<<" -"<<drunk*2;
-//     std::cout<<" | Gold: "<<equipment.return_gold();
-//     std::cout<<" | Strength: "<<strength; if(drunk>0) std::cout<<" +"<<drunk; if (active_weapon) std::cout<<" +"<<(*active_weapon).return_value();
-//     std::cout<<" | Charisma: "<<charisma; if(drunk>0) std::cout<<" +"<<drunk;
-//     std::cout<<" | Luck: "<<luck; if(drunk>0) std::cout<<" +"<<drunk/2;
-//     std::cout<<"\n Active weapon: ";
-//     if (active_weapon)
-//         std::cout<<(*active_weapon).return_name();
-//     else
-//         std::cout<<"none";
-//     std::cout<<"\n\n\n";
-
-// }
