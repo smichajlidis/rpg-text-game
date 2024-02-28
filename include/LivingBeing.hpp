@@ -9,14 +9,17 @@
 class LivingBeing {
 
 public:
-    LivingBeing(std::uint32_t hp = 100, std::uint32_t strength = 5)
+    LivingBeing(std::uint16_t hp = 100, std::uint16_t strength = 5)
         : hp(hp), strength(strength) {}
 
     ~LivingBeing() = default;
 
+    virtual std::uint16_t getStrength() const;
+    virtual std::uint16_t getHP() const;
+
 private:
-    std::uint32_t hp;
-    std::uint32_t strength;
+    std::uint16_t hp;
+    std::uint16_t strength;
     std::vector<Item> equipment;
     Item active_weapon;
 };
