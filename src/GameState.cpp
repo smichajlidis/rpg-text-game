@@ -77,6 +77,8 @@ void GameState::displayLocation() {
 
         std::cin >> choice;
 
+        screen_stuff.clear();
+
         switch(choice) {
             case 1:
             case 2:
