@@ -34,6 +34,7 @@
 #include "SavingMenu.hpp"
 #include "LoadingMenu.hpp"
 #include "ExitingMenu.hpp"
+#include "EquipmentMenu.hpp"
 
 #include "Player.hpp"
 
@@ -55,6 +56,7 @@ private:
     SavingMenu saving_menu;
     LoadingMenu loading_menu;
     ExitingMenu exiting_menu;
+    EquipmentMenu equipment_menu;
     TopBar top_bar;
     std::shared_ptr<Location> current_location;
  

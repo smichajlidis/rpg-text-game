@@ -88,7 +88,7 @@ void GameState::displayLocation() {
                 }
                 break;
             case 6:
-                //equipment.display_equipment();
+                equipment_menu.displayEquipmentMenu();
                 break;
             case 7:
                 loading_menu.displayLoadingMenu();
