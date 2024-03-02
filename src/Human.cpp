@@ -7,3 +7,7 @@ std::uint32_t Human::getGold() const {
 void Human::decreaseGold(std::uint32_t val) {
     gold -= val;
 }
+
+void Human::increaseGold(std::uint32_t val) {
+    gold+= val;
+}
