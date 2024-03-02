@@ -56,3 +56,7 @@ std::shared_ptr<Location> location_three, std::shared_ptr<Location> location_fou
 std::uint32_t Location::getNumberOfLocations() const {
     return (locations.empty() ? 0 : locations.size() - 1);
 }
+
+std::string Location::getDescription() const {
+    return descriptions.at(0);
+}

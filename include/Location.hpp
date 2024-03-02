@@ -13,12 +13,13 @@ public:
     ~Location() = default;
 
     void getRelatedLocations(std::shared_ptr<Location> location_one = 0, std::shared_ptr<Location> location_two = 0, std::shared_ptr<Location> location_three = 0, std::shared_ptr<Location> location_four = 0, std::shared_ptr<Location> location_five = 0);
-    std::shared_ptr<Location> moveToLocation(std::uint32_t);
+    virtual std::shared_ptr<Location> moveToLocation(std::uint32_t);
     std::uint32_t getNumberOfLocations() const;
     virtual void printDescriptions();
     virtual void printLocation();
+    std::string getDescription() const;
 
-private:
+protected:
     std::vector<std::string> descriptions;
     std::vector<std::shared_ptr<Location>> locations;
 };
