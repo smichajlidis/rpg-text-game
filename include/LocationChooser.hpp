@@ -9,10 +9,13 @@
 class LocationChooser: public Location {
 
 public:
-    LocationChooser() = default;
+    LocationChooser(std::shared_ptr<Player> player)
+        : player(std::move(player)) {}
 
     ~LocationChooser() = default;
 
+protected:
+    std::shared_ptr<Player> player;
 };
 
 #endif
