@@ -10,7 +10,8 @@ public:
 
     ~Human() = default;
 
-    virtual std::uint32_t getGold() const;
+    std::uint32_t getGold() const;
+    void decreaseGold(std::uint32_t);
 
 protected:
     std::uint32_t gold;

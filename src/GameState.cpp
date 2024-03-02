@@ -24,11 +24,11 @@ GameState::GameState() {
     square->getRelatedLocations(tavern, forest, closed_chapel);
     innkeeper = std::make_shared<Innkeeper>();
         order_beer_success = std::make_shared<OrderBeerSuccess>();
-        order_beer_success->getRelatedLocations(order_beer_success, innkeeper);
         order_beer_fail = std::make_shared<OrderBeerFail>();
         order_beer_fail->getRelatedLocations(innkeeper);
             order_beer = std::make_shared<OrderBeer>(player);
             order_beer->getRelatedLocations(order_beer_success, order_beer_fail);
+        order_beer_success->getRelatedLocations(order_beer, innkeeper);
     buying = std::make_shared<Buying>();
     selling = std::make_shared<Selling>();
     buying->getRelatedLocations(selling, innkeeper);

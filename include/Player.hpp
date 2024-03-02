@@ -6,7 +6,7 @@
 class Player: public Human {
 
 public:
-    Player() = default;
+    Player() { gold = 30;}
 
     ~Player() = default;
 
