@@ -3,6 +3,7 @@
 #include <iostream>
 
 GameState::GameState() {
+    player = std::make_shared<Player>();
     square = std::make_shared<Square>();
     tavern = std::make_shared<Tavern>(); 
     forest = std::make_shared<Forest>();
@@ -22,8 +23,10 @@ GameState::GameState() {
     chapel = std::make_shared<Chapel>();
     square->getRelatedLocations(tavern, forest, closed_chapel);
     innkeeper = std::make_shared<Innkeeper>();
-    order_beer = std::make_shared<OrderBeer>();
-    order_beer->getRelatedLocations(order_beer, innkeeper);
+        order_beer_success = std::make_shared<OrderBeerSuccess>();
+        order_beer_fail = std::make_shared<OrderBeerFail>();
+            order_beer = std::make_shared<OrderBeer>(player);
+            order_beer->getRelatedLocations(order_beer_success, order_beer_fail);
     buying = std::make_shared<Buying>();
     selling = std::make_shared<Selling>();
     buying->getRelatedLocations(selling, innkeeper);
@@ -64,7 +67,6 @@ GameState::GameState() {
     chapel->getRelatedLocations(altars, dungeons, square);
 
     current_location = square;
-    player = std::make_shared<Player>();
     top_bar.pointToPlayer(player);
 }
 
@@ -87,6 +89,9 @@ void GameState::displayLocation() {
             case 5:
                 if (current_location->getNumberOfLocations() >= choice) {
                     current_location = current_location->moveToLocation(choice);
+                    if (current_location->getDescription().empty()) {
+                        current_location = current_location->moveToLocation(choice);
+                    }
                 }
                 break;
             case 6:

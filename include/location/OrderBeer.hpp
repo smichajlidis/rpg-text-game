@@ -1,17 +1,19 @@
 #ifndef _ORDERBEER_HPP_
 #define _ORDERBEER_HPP_
 
-#include "../Location.hpp"
+#include "../LocationChooser.hpp"
 
-class OrderBeer: public Location {
+class Player;
+
+class OrderBeer: public LocationChooser {
 
 public:
-    OrderBeer(const std::string& description = "You are drinking a beer and have fun.",
-        const std::string& choice_1 = "Drink another one",
-        const std::string& choice_2 = "Ask of something else")
-        : Location(description, choice_1, choice_2) {}
+    OrderBeer(std::shared_ptr<Player> player)
+        : LocationChooser(player) {}
     
     ~OrderBeer() = default;
+
+    std::shared_ptr<Location> moveToLocation(std::uint32_t) override;
 };
 
 #endif

@@ -12,7 +12,7 @@ public:
 
     virtual std::uint32_t getGold() const;
 
-private:
+protected:
     std::uint32_t gold;
 };
 

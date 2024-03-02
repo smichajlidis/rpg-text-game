@@ -1,10 +1,10 @@
 #include "../../include/location/OrderBeer.hpp"
 
-void OrderBeer::printLocation() {
-    if (player.getGold() > 10) {
-        current_location = locations.at(0);
+std::shared_ptr<Location> OrderBeer::moveToLocation(std::uint32_t val) {
+    if (player->getGold() > 10) {
+        return locations.at(1);
     }
     else {
-        current_location = locations.at(1);
+        return locations.at(2);
     }
 }

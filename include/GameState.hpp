@@ -7,7 +7,9 @@
 #include "location/Flirting.hpp"
 #include "location/GoUpstairs.hpp"
 #include "location/Innkeeper.hpp"
-#include "location/OrderBeer.hpp"
+    #include "location/OrderBeer.hpp"
+        #include "location/OrderBeerSuccess.hpp"
+        #include "location/OrderBeerFail.hpp"
 #include "location/Trade.hpp"
 #include "location/Buying.hpp"
 #include "location/Selling.hpp"
@@ -66,6 +68,8 @@ private:
         std::shared_ptr<Tavern> tavern;
             std::shared_ptr<Innkeeper> innkeeper;
                 std::shared_ptr<OrderBeer> order_beer;
+                    std::shared_ptr<OrderBeerSuccess> order_beer_success;
+                    std::shared_ptr<OrderBeerFail> order_beer_fail;
                 std::shared_ptr<Trade> trade;
                     std::shared_ptr<Buying> buying;
                     std::shared_ptr<Selling> selling;
