@@ -1,5 +1,8 @@
 #include "../include/LivingBeing.hpp"
 
+#include <algorithm>
+#include <iostream>
+
 std::uint16_t LivingBeing::getHP() const {
     return hp;
 }
@@ -14,5 +17,18 @@ void LivingBeing::increaseHP(std::uint16_t val) {
     }
     else {
         hp += val;
+    }
+}
+
+void LivingBeing::printEquipment() const {
+    std::uint32_t count {1};
+    if (!equipment.empty()) {
+        std::for_each(equipment.begin(), equipment.end(), [&count](const Item& item) { 
+            std::cout << count << ". " << item.getName() << std::endl;
+            ++count;
+        });
+    }
+    else {
+        std::cout << "There is nothing here." << std::endl;
     }
 }

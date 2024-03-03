@@ -10,6 +10,8 @@ public:
 
     ~Item() = default;
 
+    std::string getName() const;
+
 private:
     std::string name;
     std::uint32_t value;
