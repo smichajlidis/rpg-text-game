@@ -14,10 +14,11 @@ public:
 
     ~LivingBeing() = default;
 
-    virtual std::uint16_t getStrength() const;
-    virtual std::uint16_t getHP() const;
+    std::uint16_t getStrength() const;
+    std::uint16_t getHP() const;
+    void increaseHP(std::uint16_t);
 
-private:
+protected:
     std::uint16_t hp;
     std::uint16_t strength;
     std::vector<Item> equipment;
