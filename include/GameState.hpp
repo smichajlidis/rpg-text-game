@@ -14,7 +14,9 @@
 #include "location/Buying.hpp"
 #include "location/Selling.hpp"
 #include "location/Gossip.hpp"
-#include "location/HotMeal.hpp"
+    #include "location/HotMeal.hpp"
+        #include "location/HotMealSuccess.hpp"
+        #include "location/HotMealFail.hpp"
 #include "location/Gamblers.hpp"
 #include "location/Bet.hpp"
 #include "location/Priest.hpp"
@@ -75,6 +77,8 @@ private:
                     std::shared_ptr<Selling> selling;
                 std::shared_ptr<Gossip> gossip;
                 std::shared_ptr<HotMeal> hot_meal;
+                    std::shared_ptr<HotMealSuccess> hot_meal_success;
+                    std::shared_ptr<HotMealFail> hot_meal_fail;
             std::shared_ptr<Gamblers> gamblers;
                 std::shared_ptr<Bet> bet_5;
                 std::shared_ptr<Bet> bet_10;

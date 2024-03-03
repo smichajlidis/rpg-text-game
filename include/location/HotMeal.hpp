@@ -1,17 +1,19 @@
 #ifndef _HOTMEAL_HPP_
 #define _HOTMEAL_HPP_
 
-#include "../Location.hpp"
+#include "../LocationChooser.hpp"
 
-class HotMeal: public Location {
+class Player;
+
+class HotMeal: public LocationChooser {
 
 public:
-    HotMeal(const std::string& description = "There's nothing like a hot meal!",
-        const std::string& choice_1 = "Order another one",
-        const std::string& choice_2 = "Return")
-        : Location(description, choice_1, choice_2) {}
-
+    HotMeal(std::shared_ptr<Player> player)
+        : LocationChooser(player) {}
+    
     ~HotMeal() = default;
+
+    std::shared_ptr<Location> moveToLocation(std::uint32_t) override;
 };
 
 #endif
