@@ -6,10 +6,9 @@
 class Buying: public NPC {
 
 public:
-    Buying(const std::string& description = "Innkeepers contents",
-        const std::string& choice_1 = "I want to sell you something now",
-        const std::string& choice_2 = "Return")
-        : NPC(description, choice_1, choice_2) {}
+    Buying(const std::string& description = "This is all I have:",
+        const std::string& choice_1 = "Return")
+        : NPC(description, choice_1) {}
 
     ~Buying() = default;
 

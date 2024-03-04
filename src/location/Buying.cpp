@@ -3,8 +3,8 @@
 #include <iostream>
 
 void Buying::printLocation() {
-    std::uint16_t choice;
+    std::cout << descriptions.at(0) << "\n\n";
     printEquipment();
-    std::cout << "\nWhat would you like to buy? ";
-    std::cin >> choice;
-}
+    std::cout << "\n0. " << descriptions.at(1) << "\n\n";
+    std::cout << "What do you want?";
+} 
