@@ -5,6 +5,8 @@
 
 class Player;
 
+#include <memory>
+
 class OrderBeer: public LocationChooser {
 
 public:
@@ -13,7 +15,7 @@ public:
     
     ~OrderBeer() = default;
 
-    std::shared_ptr<Location> moveToLocation(std::uint32_t) override;
+    std::shared_ptr<Location> checkingCondition(std::uint32_t) override;
 };
 
 #endif

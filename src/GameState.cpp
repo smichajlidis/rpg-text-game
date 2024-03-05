@@ -96,9 +96,9 @@ void GameState::displayLocation() {
 
         if (iss >> choice) {
             if (current_location->getNumberOfLocations() >= choice) {
-                current_location = current_location->moveToLocation(choice);
+                current_location = current_location->action(choice);
                 if (current_location->getDescription().empty()) {
-                    current_location = current_location->moveToLocation(choice);
+                    current_location = current_location->action(choice);
                 }
             }
         }
