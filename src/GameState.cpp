@@ -1,6 +1,9 @@
 #include "../include/GameState.hpp"
 
 #include <iostream>
+#include <sstream>
+#include <string>
+#include <cctype>
 
 GameState::GameState() {
     player = std::make_shared<Player>();
@@ -77,46 +80,50 @@ GameState::GameState() {
 }
 
 void GameState::displayLocation() {
-    std::uint32_t choice;
+    std::string input;
+    char c {};
 
     do {
         top_bar.displayTopBar();
         current_location->printLocation();
 
-        std::cin >> choice;
+        std::cin >> input;
+
+        std::istringstream iss(input);
+        std::uint32_t choice;
 
         screen_stuff.clear();
 
-        switch(choice) {
-            case 1:
-            case 2:
-            case 3:
-            case 4:
-            case 5:
-                if (current_location->getNumberOfLocations() >= choice) {
+        if (iss >> choice) {
+            if (current_location->getNumberOfLocations() >= choice) {
+                current_location = current_location->moveToLocation(choice);
+                if (current_location->getDescription().empty()) {
                     current_location = current_location->moveToLocation(choice);
-                    if (current_location->getDescription().empty()) {
-                        current_location = current_location->moveToLocation(choice);
-                    }
                 }
-                break;
-            case 6:
-                equipment_menu.displayEquipmentMenu();
-                break;
-            case 7:
-                loading_menu.displayLoadingMenu();
-                break;
-            case 8:
-                saving_menu.displaySavingMenu();
-                break;
-            case 9:
-                exiting_menu.displayExitingMenu();
-            default:
-                break;
+            }
+        }
+        else {
+            c = std::toupper(input.at(0));
+            switch(c) {
+                case 'E':
+                    equipment_menu.displayEquipmentMenu();
+                    break;
+                case 'L':
+                    loading_menu.displayLoadingMenu();
+                    break;
+                case 'S':
+                    saving_menu.displaySavingMenu();
+                    break;
+                case 'Q':
+                    exiting_menu.displayExitingMenu();
+                    break;
+                default:
+                    break;
+            }
         }
 
         screen_stuff.clear();
 
-    } while(choice != 9);
+    } while(c != 'Q');
 }
 

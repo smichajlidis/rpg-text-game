@@ -5,7 +5,7 @@
 
 void TopBar::displayTopBar() const {
     std::cout << "________________________________________________________________________\n";
-    std::cout << "\n      Equipment <6> | Load <7> | Save <8> | Quit Game <9>\n";
+    std::cout << "\n      Equipment <E> | Load <L> | Save <S> | Quit Game <Q>\n";
     std::cout << "________________________________________________________________________\n";
 
     std::cout << "    Hp: " << player->getHP(); 
