@@ -95,7 +95,7 @@ void GameState::displayLocation() {
         screen_stuff.clear();
 
         if (iss >> choice) {
-            if (current_location->getNumberOfLocations() >= choice) {
+            if (current_location->inputValidation(choice)) {
                 current_location = current_location->action(choice);
                 if (current_location->getDescription().empty()) {
                     current_location = current_location->action(choice);
