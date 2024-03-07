@@ -1,10 +1,10 @@
 #include "../include/NPCTrade.hpp"
 
+// + 2 because there is also two related location options
 bool NPCTrade::inputValidation(std::uint32_t val) const {
-    if (!equipment.empty()) {
-        return (equipment.size() - 1 >= val);
-    }
-    else {
-        return 0;
-    }
+    return ((equipment.size() + 2) ? true : false);
+}
+
+std::shared_ptr<Location> NPCTrade::moveToLocation(std::uint32_t locationNumber) const {
+    return locations.at(locationNumber - equipment.size());
 }

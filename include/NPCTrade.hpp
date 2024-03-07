@@ -12,6 +12,7 @@ public:
     ~NPCTrade() = default;
 
     bool inputValidation(std::uint32_t) const override;
+    std::shared_ptr<Location> moveToLocation(std::uint32_t) const override;
 };
 
 #endif

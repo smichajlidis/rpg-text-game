@@ -5,6 +5,7 @@
 void Buying::printLocation() {
     std::cout << descriptions.at(0) << "\n\n";
     printEquipment();
-    std::cout << "\n0. " << descriptions.at(1) << "\n\n";
-    std::cout << "What do you want?";
+    std::cout << equipment.size() + 1 << ". " << descriptions.at(1) << std::endl;
+    std::cout << equipment.size() + 2 << ". " << descriptions.at(2) << std::endl;
+    std::cout << "\nWhat do you want?";
 } 
