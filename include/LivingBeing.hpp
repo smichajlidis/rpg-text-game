@@ -17,7 +17,8 @@ public:
     std::uint16_t getStrength() const;
     std::uint16_t getHP() const;
     void increaseHP(std::uint16_t);
-    void printEquipment() const;
+    virtual void printEquipment() const;
+    std::uint16_t getEquipmentSize() const;
 
 protected:
     std::uint16_t hp;

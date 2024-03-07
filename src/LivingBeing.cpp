@@ -32,3 +32,7 @@ void LivingBeing::printEquipment() const {
         std::cout << "There is nothing here." << std::endl;
     }
 }
+
+std::uint16_t LivingBeing::getEquipmentSize() const {
+    return equipment.size();
+}
