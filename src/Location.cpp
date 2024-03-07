@@ -58,13 +58,7 @@ std::shared_ptr<Location> location_three, std::shared_ptr<Location> location_fou
 }
 
 bool Location::inputValidation(std::uint32_t val) const {
-    if (!locations.empty()) {
-        return (locations.size() - 1 >= val);
-    }
-    else {
-        return 0;
-    }
-    
+    return (!locations.empty() ? (locations.size() - 1 >= val) : 0);
 }
 
 std::string Location::getDescription() const {
