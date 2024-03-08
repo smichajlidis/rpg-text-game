@@ -5,8 +5,6 @@
 
 class Player;
 
-#include <memory>
-
 class OrderBeer: public LocationChooser {
 
 public:
