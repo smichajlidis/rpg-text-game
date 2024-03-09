@@ -9,16 +9,16 @@
 #include "location/Innkeeper.hpp"
     #include "location/OrderBeer.hpp"
         #include "location/OrderBeerSuccess.hpp"
-        #include "location/OrderBeerFail.hpp"
 #include "location/Trade.hpp"
 #include "location/Buying.hpp"
 #include "location/Selling.hpp"
 #include "location/Gossip.hpp"
     #include "location/HotMeal.hpp"
         #include "location/HotMealSuccess.hpp"
-        #include "location/HotMealFail.hpp"
 #include "location/Gamblers.hpp"
 #include "location/Bet.hpp"
+    #include "location/BetSuccess.hpp"
+    #include "location/BetFail.hpp"
 #include "location/Priest.hpp"
 #include "location/DrinkingWithPriest.hpp"
 #include "location/AskingAboutChapel.hpp"
@@ -32,6 +32,7 @@
 #include "location/PayingThugs.hpp"
 #include "location/ConvinceThugs.hpp"
 #include "location/AttackThugs.hpp"
+#include "location/NotEnoughMoney.hpp"
 
 #include "ScreenStuff.hpp"
 #include "TopBar.hpp"
@@ -71,20 +72,19 @@ private:
             std::shared_ptr<Innkeeper> innkeeper;
                 std::shared_ptr<OrderBeer> order_beer;
                     std::shared_ptr<OrderBeerSuccess> order_beer_success;
-                    std::shared_ptr<OrderBeerFail> order_beer_fail;
+                    std::shared_ptr<NotEnoughMoney> order_beer_fail;
                 std::shared_ptr<Trade> trade;
                     std::shared_ptr<Buying> buying;
                     std::shared_ptr<Selling> selling;
                 std::shared_ptr<Gossip> gossip;
                 std::shared_ptr<HotMeal> hot_meal;
                     std::shared_ptr<HotMealSuccess> hot_meal_success;
-                    std::shared_ptr<HotMealFail> hot_meal_fail;
+                    std::shared_ptr<NotEnoughMoney> hot_meal_fail;
             std::shared_ptr<Gamblers> gamblers;
-                std::shared_ptr<Bet> bet_5;
-                std::shared_ptr<Bet> bet_10;
-                std::shared_ptr<Bet> bet_20;
-                std::shared_ptr<Bet> bet_50;
-                std::shared_ptr<Bet> bet_100;
+                std::shared_ptr<Bet> bet;
+                    std::shared_ptr<BetSuccess> bet_success;
+                    std::shared_ptr<BetFail> bet_fail;
+                    std::shared_ptr<NotEnoughMoney> bet_no_money;
             std::shared_ptr<Priest> priest;
                 std::shared_ptr<DrinkingWithPriest> drinking_with_priest;
                 std::shared_ptr<AskingAboutChapel> asking_about_chapel;

@@ -1,24 +1,19 @@
 #ifndef _BET_HPP_
 #define _BET_HPP_
 
-#include "../Location.hpp"
+#include "../LocationChooser.hpp"
 
-class Bet: public Location {
+class Player;
+
+class Bet: public LocationChooser {
 
 public:
-    Bet(std::uint32_t amount,
-        const std::string& description = "Have you won? Yes? No?",
-        const std::string& choice_1 = "Bet again",
-        const std::string& choice_2 = "Bet a different amount",
-        const std::string& choice_3 = "Leave the table")
-        : Location(description, choice_1, choice_2, choice_3), amount(amount) {}
+    Bet(std::shared_ptr<Player> player)
+        : LocationChooser(player) {}
     
     ~Bet() = default;
 
-    void printLocation() override;
-
-private:
-    std::uint32_t amount;
+    std::shared_ptr<Location> checkingCondition(std::uint32_t) override;
 };
 
 #endif
