@@ -12,12 +12,7 @@ std::uint16_t LivingBeing::getStrength() const {
 }
 
 void LivingBeing::increaseHP(std::uint16_t val) {
-    if (hp >= 80) {
-        hp = 100;
-    }
-    else {
-        hp += val;
-    }
+    hp = ((hp + val >= 100) ? 100 : hp + val);
 }
 
 void LivingBeing::printEquipment() const {
