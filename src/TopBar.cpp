@@ -11,7 +11,8 @@ void TopBar::displayTopBar() const {
     std::cout << "    Hp: " << player->getHP(); 
     std::cout << " | Gold: " << player->getGold();
     std::cout << " | Strength: " << player->getStrength();
-    std::cout << " | Charisma: " << player->getCharisma(); 
+    std::cout << " | Charisma: " << player->getCharisma();
+    std::cout << " | Luck: " << player->getLuck(); 
     std::cout<<"\n\n\n";
 }
 
