@@ -6,7 +6,7 @@
 class Ladies: public NPC {
 
 public:
-    Ladies(const std::string& description = "",
+    Ladies(const std::string& description = " - said ladies.",
         const std::string& choice_1 = "Go upstairs",
         const std::string& choice_2 = "Just flirt with them",
         const std::string& choice_3 = "Return");
