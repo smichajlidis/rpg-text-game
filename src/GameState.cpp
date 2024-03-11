@@ -88,6 +88,7 @@ void GameState::displayLocation() {
     char c {};
 
     do {
+        player->updateAfterEachRound();
         top_bar.displayTopBar();
         current_location->printLocation();
 

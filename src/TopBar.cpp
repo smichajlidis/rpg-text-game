@@ -12,7 +12,10 @@ void TopBar::displayTopBar() const {
     std::cout << " | Gold: " << player->getGold();
     std::cout << " | Strength: " << player->getStrength();
     std::cout << " | Charisma: " << player->getCharisma();
-    std::cout << " | Luck: " << player->getLuck(); 
+    std::cout << " | Luck: " << player->getLuck();
+    if (player->getBeingDrunk()) {
+    std::cout << " | Drunk: " << player->getBeingDrunk();
+    }
     std::cout<<"\n\n\n";
 }
 
