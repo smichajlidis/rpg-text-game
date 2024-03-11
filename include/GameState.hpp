@@ -19,11 +19,13 @@
 #include "location/Bet.hpp"
     #include "location/BetSuccess.hpp"
     #include "location/BetFail.hpp"
-#include "location/Priest.hpp"
-    #include "location/DrinkingWithPriest.hpp"
-        #include "location/DrinkingWithPriestSuccess.hpp"
-        #include "location/DrinkingWithPriestFail.hpp"
-    #include "location/AskingAboutChapel.hpp"
+#include "location/ApproachingPriest.hpp"
+    #include "location/Priest.hpp"
+    #include "location/PriestFail.hpp"
+        #include "location/DrinkingWithPriest.hpp"
+            #include "location/DrinkingWithPriestSuccess.hpp"
+            #include "location/DrinkingWithPriestFail.hpp"
+        #include "location/AskingAboutChapel.hpp"
 #include "location/Altars.hpp"
 #include "location/Dungeons.hpp"
 #include "location/Chapel.hpp"
@@ -87,11 +89,13 @@ private:
                     std::shared_ptr<BetSuccess> bet_success;
                     std::shared_ptr<BetFail> bet_fail;
                     std::shared_ptr<NotEnoughMoney> bet_no_money;
-            std::shared_ptr<Priest> priest;
-                std::shared_ptr<DrinkingWithPriest> drinking_with_priest;
-                    std::shared_ptr<DrinkingWithPriestSuccess> drinking_with_priest_success;
-                    std::shared_ptr<DrinkingWithPriestFail> drinking_with_priest_fail;
-                std::shared_ptr<AskingAboutChapel> asking_about_chapel;
+            std::shared_ptr<ApproachingPriest> approaching_priest;
+                std::shared_ptr<Priest> priest;
+                std::shared_ptr<PriestFail> priest_fail;
+                    std::shared_ptr<DrinkingWithPriest> drinking_with_priest;
+                        std::shared_ptr<DrinkingWithPriestSuccess> drinking_with_priest_success;
+                        std::shared_ptr<DrinkingWithPriestFail> drinking_with_priest_fail;
+                    std::shared_ptr<AskingAboutChapel> asking_about_chapel;
             std::shared_ptr<Ladies> ladies;
                 std::shared_ptr<Flirting> flirting;
                 std::shared_ptr<GoUpstairs> go_upstairs;
