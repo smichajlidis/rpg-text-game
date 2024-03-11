@@ -20,8 +20,10 @@
     #include "location/BetSuccess.hpp"
     #include "location/BetFail.hpp"
 #include "location/Priest.hpp"
-#include "location/DrinkingWithPriest.hpp"
-#include "location/AskingAboutChapel.hpp"
+    #include "location/DrinkingWithPriest.hpp"
+        #include "location/DrinkingWithPriestSuccess.hpp"
+        #include "location/DrinkingWithPriestFail.hpp"
+    #include "location/AskingAboutChapel.hpp"
 #include "location/Altars.hpp"
 #include "location/Dungeons.hpp"
 #include "location/Chapel.hpp"
@@ -87,6 +89,8 @@ private:
                     std::shared_ptr<NotEnoughMoney> bet_no_money;
             std::shared_ptr<Priest> priest;
                 std::shared_ptr<DrinkingWithPriest> drinking_with_priest;
+                    std::shared_ptr<DrinkingWithPriestSuccess> drinking_with_priest_success;
+                    std::shared_ptr<DrinkingWithPriestFail> drinking_with_priest_fail;
                 std::shared_ptr<AskingAboutChapel> asking_about_chapel;
             std::shared_ptr<Ladies> ladies;
                 std::shared_ptr<Flirting> flirting;
