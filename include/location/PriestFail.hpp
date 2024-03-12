@@ -1,14 +1,14 @@
 #ifndef _PRIESTFAIL_HPP_
 #define _PRIESTFAIL_HPP_
 
-#include "../Location.hpp"
+#include "../NPC.hpp"
 
-class PriestFail: public Location {
+class PriestFail: public NPC {
 
 public:
-    PriestFail(const std::string& description = "Live me alone stranger!",
+    PriestFail(const std::string& description = "- Live me alone stranger!",
         const std::string& choice_1 = "Return")
-        : Location(description, choice_1) {}
+        : NPC(description, choice_1) {}
 
     ~PriestFail() = default;
 };

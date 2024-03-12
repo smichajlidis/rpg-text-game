@@ -17,7 +17,7 @@ public:
     void printLocation() override;
     
 protected:
-    std::vector<std::string> greetings;
+    std::vector<std::string> sentences;
     std::uint16_t attitude_to_player;
 };
 
