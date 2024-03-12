@@ -16,7 +16,7 @@ bool Selling::inputValidation(std::uint32_t) const {
     return ((player->getEquipmentSize() + 2) ? true : false);
 }
 
-std::shared_ptr<Location> Selling::moveToLocation(std::uint32_t location_number) const {
+std::shared_ptr<Location> Selling::moveToLocation(std::uint32_t location_number) {
     return locations.at(location_number - player->getEquipmentSize());
 }
 

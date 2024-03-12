@@ -6,7 +6,7 @@
 class Priest: public NPC {
 
 public:
-    Priest(const std::string& description = " - said priest.",
+    Priest(std::shared_ptr<Player> player, const std::string& description = " - said priest.",
         const std::string& choice_1 = "Order two beers for you",
         const std::string& choice_2 = "Ask for a chapel",
         const std::string& choice_3 = "Return");

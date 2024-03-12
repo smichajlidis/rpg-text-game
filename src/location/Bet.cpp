@@ -3,7 +3,7 @@
 #include <ctime>
 #include <cstdlib>
 
-std::shared_ptr<Location> Bet::checkingCondition(std::uint32_t val) {
+std::shared_ptr<Location> Bet::moveToLocation(std::uint32_t val) {
     switch (val) {
         case 1: val = 10; break;
         case 2: val = 20; break;

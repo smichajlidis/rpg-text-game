@@ -1,19 +1,19 @@
 #ifndef _DRINKINGWITHPRIEST_HPP_
 #define _DRINKINGWITHPRIEST_HPP_
 
-#include "../LocationChooser.hpp"
+#include "../NPC.hpp"
 
 class Player;
 
-class DrinkingWithPriest: public LocationChooser {
+class DrinkingWithPriest: public NPC {
 
 public:
     DrinkingWithPriest(std::shared_ptr<Player> player)
-        : LocationChooser(player) {}
+        : NPC(player) {}
     
     ~DrinkingWithPriest() = default;
 
-    std::shared_ptr<Location> checkingCondition(std::uint32_t) override;
+    std::shared_ptr<Location> moveToLocation(std::uint32_t) override;
 };
 
 #endif

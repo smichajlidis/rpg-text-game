@@ -1,14 +1,14 @@
 #ifndef _GOSSIP_HPP_
 #define _GOSSIP_HPP_
 
-#include "../Location.hpp"
+#include "../NPC.hpp"
 
-class Gossip: public Location {
+class Gossip: public NPC {
 
 public:
-    Gossip(const std::string& description = "You know it's rude to gossip? shame on you!",
+    Gossip(std::shared_ptr<Player> player, const std::string& description = "You know it's rude to gossip? shame on you!",
         const std::string& choice_1 = "Ask of something else")
-        : Location(description, choice_1) {}
+        : NPC(player, description, choice_1) {}
 
     ~Gossip() = default;
 };

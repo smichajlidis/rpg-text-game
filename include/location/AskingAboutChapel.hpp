@@ -6,9 +6,9 @@
 class AskingAboutChapel: public NPC {
 
 public:
-    AskingAboutChapel(const std::string& description = "Not your business young man",
+    AskingAboutChapel(std::shared_ptr<Player> player, const std::string& description = "- Not your business young man",
         const std::string& choice_1 = "Return")
-        : NPC(description, choice_1) {}
+        : NPC(player, description, choice_1) {}
 
     ~AskingAboutChapel() = default;
 };

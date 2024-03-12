@@ -6,9 +6,9 @@
 class PriestFail: public NPC {
 
 public:
-    PriestFail(const std::string& description = "- Live me alone stranger!",
+    PriestFail(std::shared_ptr<Player> player, const std::string& description = "- Live me alone stranger!",
         const std::string& choice_1 = "Return")
-        : NPC(description, choice_1) {}
+        : NPC(player, description, choice_1) {}
 
     ~PriestFail() = default;
 };

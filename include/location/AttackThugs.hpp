@@ -1,15 +1,15 @@
 #ifndef _ATTACKTHUGS_HPP_
 #define _ATTACKTHUGS_HPP_
 
-#include "../Location.hpp"
+#include "../NPC.hpp"
 
-class AttackThugs: public Location {
+class AttackThugs: public NPC {
 
 public:
-    AttackThugs(const std::string& description = "Attaaaaaaack!",
+    AttackThugs(std::shared_ptr<Player> player, const std::string& description = "Attaaaaaaack!",
         const std::string& choice_1 = "Fight more!",
         const std::string& choice_2 = "Run away")
-        : Location(description, choice_1, choice_2) {}
+        : NPC(player, description, choice_1, choice_2) {}
 
     ~AttackThugs() = default;
 };

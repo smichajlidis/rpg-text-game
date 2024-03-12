@@ -1,14 +1,14 @@
 #ifndef _CLOSEDCHAPEL_HPP_
 #define _CLOSEDCHAPEL_HPP_
 
-#include "../Location.hpp"
+#include "../NPC.hpp"
 
-class ClosedChapel: public Location {
+class ClosedChapel: public NPC {
 
 public:
-    ClosedChapel(const std::string& description = "Ups, the door is closed.",
+    ClosedChapel(std::shared_ptr<Player> player, const std::string& description = "Ups, the door is closed.",
         const std::string& choice_1 = "Return")
-        : Location(description, choice_1) {} 
+        : NPC(player, description, choice_1) {} 
 
     ~ClosedChapel() = default;
 };

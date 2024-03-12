@@ -1,14 +1,14 @@
 #ifndef _GOUPSTAIRS_HPP_
 #define _GOUPSTAIRS_HPP_
 
-#include "../Location.hpp"
+#include "../NPC.hpp"
 
-class GoUpstairs: public Location {
+class GoUpstairs: public NPC {
 
 public:
-    GoUpstairs(const std::string& description = "You are going upstairs and... having a good time.",
+    GoUpstairs(std::shared_ptr<Player> player, const std::string& description = "You are going upstairs and... having a good time.",
         const std::string& choice_1 = "Go downstairs")
-        : Location(description, choice_1) {}
+        : NPC(player, description, choice_1) {}
 
     ~GoUpstairs() = default;
 };

@@ -29,11 +29,7 @@ void Location::printDescriptions() const {
     std::cout<<"\nWhat do you do? ";
 }
 
-std::shared_ptr<Location> Location::action(std::uint32_t value) {
-    return moveToLocation(value);
-}
-
-std::shared_ptr<Location> Location::moveToLocation(std::uint32_t locationNumber) const {
+std::shared_ptr<Location> Location::moveToLocation(std::uint32_t locationNumber) {
     return locations.at(locationNumber);
 }
 

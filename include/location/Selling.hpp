@@ -15,7 +15,7 @@ public:
 
     void printLocation() override;
     bool inputValidation(std::uint32_t) const override;
-    std::shared_ptr<Location> moveToLocation(std::uint32_t) const override;
+    std::shared_ptr<Location> moveToLocation(std::uint32_t) override;
     void printEquipment() const override;
 };
 
