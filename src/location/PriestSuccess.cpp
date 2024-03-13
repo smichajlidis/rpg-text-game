@@ -1,6 +1,6 @@
-#include "../../include/location/Priest.hpp"
+#include "../../include/location/PriestSuccess.hpp"
 
-Priest::Priest(std::shared_ptr<Player> player, const std::string& description, const std::string& choice_1, const std::string& choice_2, const std::string& choice_3)
+PriestSuccess::PriestSuccess(std::shared_ptr<Player> player, const std::string& description, const std::string& choice_1, const std::string& choice_2, const std::string& choice_3)
         : InteractionWithNPC(player, description, choice_1, choice_2, choice_3) {
         sentences.push_back("- He is a wise man who invented beer");
         sentences.push_back("- Milk is for babies. When you grow up you have to drink beer");
