@@ -20,7 +20,7 @@
     #include "location/BetSuccess.hpp"
     #include "location/BetFail.hpp"
 #include "location/ApproachingPriest.hpp"
-    #include "location/Priest.hpp"
+    #include "location/PriestSuccess.hpp"
     #include "location/PriestFail.hpp"
         #include "location/DrinkingWithPriest.hpp"
             #include "location/DrinkingWithPriestSuccess.hpp"
@@ -46,6 +46,7 @@
 #include "EquipmentMenu.hpp"
 
 #include "Player.hpp"
+#include "NPC.hpp"
 
 #include <memory>
 
@@ -60,7 +61,9 @@ public:
 private:
 
     ScreenStuff screen_stuff;
+
     std::shared_ptr<Player> player;
+    std::shared_ptr<NPC> priest;
 
     SavingMenu saving_menu;
     LoadingMenu loading_menu;
@@ -90,7 +93,7 @@ private:
                     std::shared_ptr<BetFail> bet_fail;
                     std::shared_ptr<NotEnoughMoney> bet_no_money;
             std::shared_ptr<ApproachingPriest> approaching_priest;
-                std::shared_ptr<Priest> priest;
+                std::shared_ptr<PriestSuccess> priest_success;
                 std::shared_ptr<PriestFail> priest_fail;
                     std::shared_ptr<DrinkingWithPriest> drinking_with_priest;
                         std::shared_ptr<DrinkingWithPriestSuccess> drinking_with_priest_success;

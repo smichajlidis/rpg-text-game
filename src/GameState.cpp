@@ -7,6 +7,8 @@
 
 GameState::GameState() {
     player = std::make_shared<Player>();
+    priest = std::make_shared<NPC>();
+
     square = std::make_shared<Square>();
     tavern = std::make_shared<Tavern>(); 
     forest = std::make_shared<Forest>();
@@ -58,19 +60,19 @@ GameState::GameState() {
         bet_no_money->getRelatedLocations(gamblers);
     bet->getRelatedLocations(bet_success, bet_fail, bet_no_money);
     approaching_priest = std::make_shared<ApproachingPriest>(player);
-        priest = std::make_shared<Priest>(player);
+        priest_success = std::make_shared<PriestSuccess>(player);
         priest_fail = std::make_shared<PriestFail>(player);
         asking_about_chapel = std::make_shared<AskingAboutChapel>(player);
-        asking_about_chapel->getRelatedLocations(priest);
+        asking_about_chapel->getRelatedLocations(approaching_priest);
         drinking_with_priest = std::make_shared<DrinkingWithPriest>(player);
             drinking_with_priest_success = std::make_shared<DrinkingWithPriestSuccess>(player);
             drinking_with_priest_success->getRelatedLocations(drinking_with_priest, asking_about_chapel, tavern);
             drinking_with_priest_fail = std::make_shared<DrinkingWithPriestFail>(player);
-            drinking_with_priest_fail->getRelatedLocations(priest);
+            drinking_with_priest_fail->getRelatedLocations(priest_success);
         drinking_with_priest->getRelatedLocations(drinking_with_priest_success, drinking_with_priest_fail);
-        priest->getRelatedLocations(drinking_with_priest, asking_about_chapel, tavern);
+        priest_success->getRelatedLocations(drinking_with_priest, asking_about_chapel, tavern);
         priest_fail->getRelatedLocations(tavern);
-    approaching_priest->getRelatedLocations(priest, priest_fail); 
+    approaching_priest->getRelatedLocations(priest_success, priest_fail); 
     ladies = std::make_shared<Ladies>(player);
     go_upstairs = std::make_shared<GoUpstairs>(player);
     go_upstairs->getRelatedLocations(tavern);
