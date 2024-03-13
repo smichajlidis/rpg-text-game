@@ -1,7 +1,7 @@
 #include "../../include/location/Ladies.hpp"
 
 Ladies::Ladies(std::shared_ptr<Player> player, const std::string& description, const std::string& choice_1, const std::string& choice_2, const std::string& choice_3)
-    : NPC(player, description, choice_1, choice_2, choice_3) {
+    : InteractionWithNPC(player, description, choice_1, choice_2, choice_3) {
     sentences.push_back("- Guess what We are not wearing right now?");
     sentences.push_back("- Olive juice. Say it fast");
     sentences.push_back("- Hey, stranger! Wait, why are we still strangers? Let's fix that...");

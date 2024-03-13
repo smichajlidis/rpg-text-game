@@ -1,15 +1,15 @@
 #ifndef _ORDERBEER_HPP_
 #define _ORDERBEER_HPP_
 
-#include "../NPC.hpp"
+#include "../InteractionWithNPC.hpp"
 
 class Player;
 
-class OrderBeer: public NPC {
+class OrderBeer: public InteractionWithNPC {
 
 public:
     OrderBeer(std::shared_ptr<Player> player)
-        : NPC(player) {}
+        : InteractionWithNPC(player) {}
     
     ~OrderBeer() = default;
 

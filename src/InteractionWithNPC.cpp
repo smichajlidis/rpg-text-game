@@ -1,8 +1,8 @@
-#include "../include/NPC.hpp"
+#include "../include/InteractionWithNPC.hpp"
 
 #include <iostream>
 
-void NPC::printLocation() {
+void InteractionWithNPC::printLocation() {
     srand(time(NULL));
     std::cout << "[ATTITUDE: " << attitude_to_player << "/100]\n\n";
     if (sentences.size()) {
@@ -12,10 +12,10 @@ void NPC::printLocation() {
     this->printDescriptions();
 }
 
-void NPC::increaseAttitudeToPlayer(std::uint16_t val) {
+void InteractionWithNPC::increaseAttitudeToPlayer(std::uint16_t val) {
     attitude_to_player = ((attitude_to_player + val <= 100) ? attitude_to_player + val : 100);
 }
 
-void NPC::decreaseAttitudeToPlayer(std::uint16_t val) {
+void InteractionWithNPC::decreaseAttitudeToPlayer(std::uint16_t val) {
     attitude_to_player = ((attitude_to_player - val >= 0) ? attitude_to_player - val : 0);
 }

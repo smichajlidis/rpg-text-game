@@ -1,9 +1,9 @@
 #ifndef _LADIES_HPP_
 #define _LADIES_HPP_
 
-#include "../NPC.hpp"
+#include "../InteractionWithNPC.hpp"
 
-class Ladies: public NPC {
+class Ladies: public InteractionWithNPC {
 
 public:
     Ladies(std::shared_ptr<Player> player, const std::string& description = " - said ladies.",

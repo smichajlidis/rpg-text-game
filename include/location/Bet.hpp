@@ -1,15 +1,15 @@
 #ifndef _BET_HPP_
 #define _BET_HPP_
 
-#include "../NPC.hpp"
+#include "../InteractionWithNPC.hpp"
 
 class Player;
 
-class Bet: public NPC {
+class Bet: public InteractionWithNPC {
 
 public:
     Bet(std::shared_ptr<Player> player)
-        : NPC(player) {}
+        : InteractionWithNPC(player) {}
     
     ~Bet() = default;
 

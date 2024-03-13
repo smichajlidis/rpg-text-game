@@ -1,15 +1,15 @@
 #ifndef _HOTMEAL_HPP_
 #define _HOTMEAL_HPP_
 
-#include "../NPC.hpp"
+#include "../InteractionWithNPC.hpp"
 
 class Player;
 
-class HotMeal: public NPC {
+class HotMeal: public InteractionWithNPC {
 
 public:
     HotMeal(std::shared_ptr<Player> player)
-        : NPC(player) {}
+        : InteractionWithNPC(player) {}
     
     ~HotMeal() = default;
 

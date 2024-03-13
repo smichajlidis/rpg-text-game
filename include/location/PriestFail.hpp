@@ -1,14 +1,14 @@
 #ifndef _PRIESTFAIL_HPP_
 #define _PRIESTFAIL_HPP_
 
-#include "../NPC.hpp"
+#include "../InteractionWithNPC.hpp"
 
-class PriestFail: public NPC {
+class PriestFail: public InteractionWithNPC {
 
 public:
     PriestFail(std::shared_ptr<Player> player, const std::string& description = "- Live me alone stranger!",
         const std::string& choice_1 = "Return")
-        : NPC(player, description, choice_1) {}
+        : InteractionWithNPC(player, description, choice_1) {}
 
     ~PriestFail() = default;
 };

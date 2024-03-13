@@ -1,15 +1,15 @@
 #ifndef _APPROACHINGPRIEST_HPP_
 #define _APPROACHINGPRIEST_HPP_
 
-#include "../NPC.hpp"
+#include "../InteractionWithNPC.hpp"
 
 class Player;
 
-class ApproachingPriest: public NPC {
+class ApproachingPriest: public InteractionWithNPC {
 
 public:
     ApproachingPriest(std::shared_ptr<Player> player)
-        : NPC(player) {}
+        : InteractionWithNPC(player) {}
     
     ~ApproachingPriest() = default;
 

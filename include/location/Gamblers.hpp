@@ -1,9 +1,9 @@
 #ifndef _GAMBLERS_HPP_
 #define _GAMBLERS_HPP_
 
-#include "../NPC.hpp"
+#include "../InteractionWithNPC.hpp"
 
-class Gamblers: public NPC {
+class Gamblers: public InteractionWithNPC {
 
 public:
     Gamblers(std::shared_ptr<Player> player, const std::string& description = "How much do you want to bet?",
@@ -12,7 +12,7 @@ public:
     const std::string& choice_3 = "50",
     const std::string& choice_4 = "100",
     const std::string& choice_5 = "Leave the table")
-    : NPC(player, description, choice_1, choice_2, choice_3, choice_4, choice_5) {}
+    : InteractionWithNPC(player, description, choice_1, choice_2, choice_3, choice_4, choice_5) {}
 
     ~Gamblers() = default;
 };

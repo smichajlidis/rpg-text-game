@@ -1,15 +1,15 @@
 #ifndef _DRINKINGWITHPRIEST_HPP_
 #define _DRINKINGWITHPRIEST_HPP_
 
-#include "../NPC.hpp"
+#include "../InteractionWithNPC.hpp"
 
 class Player;
 
-class DrinkingWithPriest: public NPC {
+class DrinkingWithPriest: public InteractionWithNPC {
 
 public:
     DrinkingWithPriest(std::shared_ptr<Player> player)
-        : NPC(player) {}
+        : InteractionWithNPC(player) {}
     
     ~DrinkingWithPriest() = default;
 

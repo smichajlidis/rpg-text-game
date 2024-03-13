@@ -1,9 +1,9 @@
 #ifndef _PRIEST_HPP_
 #define _PRIEST_HPP_
 
-#include "../NPC.hpp"
+#include "../InteractionWithNPC.hpp"
 
-class Priest: public NPC {
+class Priest: public InteractionWithNPC {
 
 public:
     Priest(std::shared_ptr<Player> player, const std::string& description = " - said priest.",
