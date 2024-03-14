@@ -68,6 +68,7 @@ GameState::GameState() {
         asking_about_chapel->getRelatedLocations(approaching_priest);
         asking_about_chapel->addNPC(priest);
         drinking_with_priest = std::make_shared<DrinkingWithPriest>(player);
+        drinking_with_priest->addNPC(priest);
             drinking_with_priest_success = std::make_shared<DrinkingWithPriestSuccess>(player);
             drinking_with_priest_success->getRelatedLocations(drinking_with_priest, asking_about_chapel, tavern);
             drinking_with_priest_success->addNPC(priest);
