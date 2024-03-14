@@ -11,3 +11,7 @@ void InteractionWithNPC::printLocation() {
     
     this->printDescriptions();
 }
+
+void InteractionWithNPC::addNPC(std::shared_ptr<NPC> val) {
+    npc = std::move(val);
+}
