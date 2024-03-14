@@ -12,6 +12,7 @@ public:
 
     void increaseAttitudeToPlayer(std::uint16_t);
     void decreaseAttitudeToPlayer(std::uint16_t);
+    std::uint16_t getAttitudeToPlayer() const;
 
 private:
     std::uint16_t attitude_to_player;
