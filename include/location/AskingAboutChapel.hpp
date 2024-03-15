@@ -3,14 +3,17 @@
 
 #include "../InteractionWithNPC.hpp"
 
+class Player;
+
 class AskingAboutChapel: public InteractionWithNPC {
 
 public:
-    AskingAboutChapel(std::shared_ptr<Player> player, const std::string& description = "- Not your business young man",
-        const std::string& choice_1 = "Return")
-        : InteractionWithNPC(player, description, choice_1) {}
-
+    AskingAboutChapel(std::shared_ptr<Player> player)
+        : InteractionWithNPC(player) {}
+    
     ~AskingAboutChapel() = default;
+
+    std::shared_ptr<Location> moveToLocation(std::uint32_t) override;
 };
 
 #endif

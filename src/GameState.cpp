@@ -7,6 +7,7 @@
 
 GameState::GameState() {
     player = std::make_shared<Player>();
+    
     priest = std::make_shared<NPC>();
     Item chapel_key;
     priest->addItem(std::move(chapel_key));
@@ -67,7 +68,13 @@ GameState::GameState() {
         priest_fail = std::make_shared<PriestFail>(player);
         priest_fail->addNPC(priest);
         asking_about_chapel = std::make_shared<AskingAboutChapel>(player);
-        asking_about_chapel->getRelatedLocations(approaching_priest);
+            asking_about_chapel_fail = std::make_shared<AskingAboutChapelFail>(player);
+            asking_about_chapel_success = std::make_shared<AskingAboutChapelSuccess>(player);
+            asking_about_chapel_fail->getRelatedLocations(approaching_priest);
+            asking_about_chapel_success->getRelatedLocations(tavern);
+            asking_about_chapel_success->addNPC(priest);
+            asking_about_chapel_fail->addNPC(priest);
+        asking_about_chapel->getRelatedLocations(asking_about_chapel_success, asking_about_chapel_fail);
         asking_about_chapel->addNPC(priest);
         drinking_with_priest = std::make_shared<DrinkingWithPriest>(player);
         drinking_with_priest->addNPC(priest);

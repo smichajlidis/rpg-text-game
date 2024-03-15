@@ -26,6 +26,8 @@
             #include "location/DrinkingWithPriestSuccess.hpp"
             #include "location/DrinkingWithPriestFail.hpp"
         #include "location/AskingAboutChapel.hpp"
+            #include "location/AskingAboutChapelFail.hpp"
+            #include "location/AskingAboutChapelSuccess.hpp"
 #include "location/Altars.hpp"
 #include "location/Dungeons.hpp"
 #include "location/Chapel.hpp"
@@ -99,6 +101,8 @@ private:
                         std::shared_ptr<DrinkingWithPriestSuccess> drinking_with_priest_success;
                         std::shared_ptr<DrinkingWithPriestFail> drinking_with_priest_fail;
                     std::shared_ptr<AskingAboutChapel> asking_about_chapel;
+                        std::shared_ptr<AskingAboutChapelSuccess> asking_about_chapel_success;
+                        std::shared_ptr<AskingAboutChapelFail> asking_about_chapel_fail;
             std::shared_ptr<Ladies> ladies;
                 std::shared_ptr<Flirting> flirting;
                 std::shared_ptr<GoUpstairs> go_upstairs;
