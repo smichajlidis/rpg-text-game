@@ -1,18 +1,15 @@
 #ifndef _EXITINGMENU_HPP_
 #define _EXITINGMENU_HPP_
 
-#include "../include/HeaderDisplayer.hpp"
+#include "Menu.hpp"
 
-class ExitingMenu {
+class ExitingMenu: public Menu {
 public:
     ExitingMenu() = default;
     
     ~ExitingMenu() = default;
 
-    void displayExitingMenu();
-
-private:
-    HeaderDisplayer header_displayer;
+    void displayMenu();
 };
 
 #endif

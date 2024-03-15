@@ -102,6 +102,7 @@ GameState::GameState() {
 
     current_location = square;
     top_bar.pointToPlayer(player);
+
 }
 
 void GameState::displayLocation() {
@@ -132,16 +133,16 @@ void GameState::displayLocation() {
             c = std::toupper(input.at(0));
             switch(c) {
                 case 'E':
-                    equipment_menu.displayEquipmentMenu();
+                    equipment_menu.displayMenu();
                     break;
                 case 'L':
-                    loading_menu.displayLoadingMenu();
+                    loading_menu.displayMenu();
                     break;
                 case 'S':
-                    saving_menu.displaySavingMenu();
+                    saving_menu.displayMenu();
                     break;
                 case 'Q':
-                    exiting_menu.displayExitingMenu();
+                    exiting_menu.displayMenu();
                     break;
                 default:
                     break;

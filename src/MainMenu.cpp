@@ -3,7 +3,7 @@
 #include <iostream>
 #include <limits>
 
-void MainMenu::displayMainMenu() {
+void MainMenu::displayMenu() {
     std::uint32_t choice {};
 
     do {
@@ -23,7 +23,7 @@ void MainMenu::displayMainMenu() {
                 game_state.displayLocation();
                 break;
             case 2:
-                loading_menu.displayLoadingMenu();
+                loading_menu.displayMenu();
                 break;
             default:
                 break;

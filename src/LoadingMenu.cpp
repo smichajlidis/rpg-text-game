@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-void LoadingMenu::displayLoadingMenu() {
+void LoadingMenu::displayMenu() {
     char choice {};
     header_displayer.displayHeader();
     std::cout<<"Here you will can load your saves\n\n";

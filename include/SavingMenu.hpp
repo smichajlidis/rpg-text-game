@@ -1,18 +1,15 @@
 #ifndef _SAVINGMENU_HPP_
 #define _SAVINGMENU_HPP_
 
-#include "../include/HeaderDisplayer.hpp"
+#include "../include/Menu.hpp"
 
-class SavingMenu {
+class SavingMenu: public Menu {
 public:
     SavingMenu() = default;
 
     ~SavingMenu() = default;
 
-    void displaySavingMenu();
-
-private:
-    HeaderDisplayer header_displayer;
+    void displayMenu() override;
 };
 
 #endif

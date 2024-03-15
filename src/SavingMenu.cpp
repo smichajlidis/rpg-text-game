@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-void SavingMenu::displaySavingMenu() {
+void SavingMenu::displayMenu() {
     char choice {};
     header_displayer.displayHeader();
     std::cout<<"Here you will can save your saves\n\n";

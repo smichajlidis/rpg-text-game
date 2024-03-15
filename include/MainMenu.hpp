@@ -5,22 +5,21 @@
 #include "ScreenStuff.hpp"
 #include "GameState.hpp"
 #include "SavingMenu.hpp"
-#include "HeaderDisplayer.hpp"
+#include "Menu.hpp"
 
-class MainMenu {
+class MainMenu: public Menu {
 public:
     MainMenu() = default;
 
     ~MainMenu() = default;
 
-    void displayMainMenu();
+    void displayMenu() override;
 
 private:
     LoadingMenu loading_menu;
     SavingMenu saving_menu;
     ScreenStuff screen_stuff;
     GameState game_state;
-    HeaderDisplayer header_displayer;
 };
 
 #endif

@@ -1,18 +1,15 @@
 #ifndef _LOADINGMENU_HPP_
 #define _LOADINGMENU_HPP_
 
-#include "../include/HeaderDisplayer.hpp"
+#include "Menu.hpp"
 
-class LoadingMenu {
+class LoadingMenu: public Menu {
 public:
     LoadingMenu() = default;
     
     ~LoadingMenu() = default;
 
-    void displayLoadingMenu();
-
-private:
-    HeaderDisplayer header_displayer;
+    void displayMenu() override;
 };
 
 #endif

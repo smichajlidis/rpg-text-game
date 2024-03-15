@@ -1,18 +1,15 @@
 #ifndef _EQUIPMENTMENU_HPP_
 #define _EQUIPMENTMENU_HPP_
 
-#include "../include/HeaderDisplayer.hpp"
+#include "Menu.hpp"
 
-class EquipmentMenu {
+class EquipmentMenu: public Menu {
 public:
     EquipmentMenu() = default;
 
     ~EquipmentMenu() = default;
 
-    void displayEquipmentMenu();
-
-private:
-    HeaderDisplayer header_displayer;
+    void displayMenu() override;
 };
 
 #endif

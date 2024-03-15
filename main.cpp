@@ -3,5 +3,5 @@
 int main() {
 
     MainMenu main_menu;
-    main_menu.displayMainMenu();
+    main_menu.displayMenu();
 }

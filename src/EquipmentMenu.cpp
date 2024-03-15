@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-void EquipmentMenu::displayEquipmentMenu() {
+void EquipmentMenu::displayMenu() {
     char choice {};
     header_displayer.displayHeader();
     std::cout<<"Here you will be a list for your items\n\n";
