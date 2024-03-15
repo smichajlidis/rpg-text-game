@@ -1,5 +1,5 @@
 #include "../include/Menu.hpp"
 
-void Menu::addPlayer(std::shared_ptr<Player> player) {
-    player = std::move(player);
+void Menu::addPlayer(std::shared_ptr<Player> val) {
+    player = std::move(val);
 }

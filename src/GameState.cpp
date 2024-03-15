@@ -103,6 +103,10 @@ GameState::GameState() {
     current_location = square;
     top_bar.pointToPlayer(player);
 
+    equipment_menu.addPlayer(player);
+    loading_menu.addPlayer(player);
+    saving_menu.addPlayer(player);
+
 }
 
 void GameState::displayLocation() {

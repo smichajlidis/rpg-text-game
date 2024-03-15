@@ -1,11 +1,12 @@
 #include "../include/EquipmentMenu.hpp"
+#include "../include/Player.hpp"
 
 #include <iostream>
 
 void EquipmentMenu::displayMenu() {
     char choice {};
     header_displayer.displayHeader();
-    std::cout<<"Here you will be a list for your items\n\n";
-    std::cout<<"Press any key to continue: ";
+    player->printEquipment();   
+    std::cout<<"\nPress any key to continue: ";
     std::cin>>choice;
 }
