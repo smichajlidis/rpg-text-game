@@ -19,6 +19,7 @@ public:
     void increaseHP(std::uint16_t);
     virtual void printEquipment() const;
     std::uint16_t getEquipmentSize() const;
+    void addItem(const Item& item);
 
 protected:
     std::uint16_t hp;

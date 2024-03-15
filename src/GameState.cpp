@@ -8,6 +8,8 @@
 GameState::GameState() {
     player = std::make_shared<Player>();
     priest = std::make_shared<NPC>();
+    Item chapel_key;
+    priest->addItem(std::move(chapel_key));
 
     square = std::make_shared<Square>();
     tavern = std::make_shared<Tavern>(); 

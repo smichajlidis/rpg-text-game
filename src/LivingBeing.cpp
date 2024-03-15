@@ -31,3 +31,7 @@ void LivingBeing::printEquipment() const {
 std::uint16_t LivingBeing::getEquipmentSize() const {
     return equipment.size();
 }
+
+void LivingBeing::addItem(const Item& item) {
+    equipment.push_back(item);
+}
