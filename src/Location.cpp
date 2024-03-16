@@ -33,7 +33,7 @@ std::shared_ptr<Location> Location::moveToLocation(std::uint32_t locationNumber)
     return locations.at(locationNumber);
 }
 
-void Location::getRelatedLocations(std::shared_ptr<Location> location_one, std::shared_ptr<Location> location_two, 
+void Location::setRelatedLocations(std::shared_ptr<Location> location_one, std::shared_ptr<Location> location_two, 
 std::shared_ptr<Location> location_three, std::shared_ptr<Location> location_four, std::shared_ptr<Location> location_five) {
     locations.push_back(0);
     if (location_one) {
