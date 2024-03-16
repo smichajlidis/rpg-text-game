@@ -6,11 +6,13 @@
 class Item {
 
 public:
-    Item() = default;
+    Item(const std::string& name = "", std::uint32_t value = 0)
+        : name(name), value(value) {}
 
     ~Item() = default;
 
     std::string getName() const;
+    bool empty() const;
 
 private:
     std::string name;
