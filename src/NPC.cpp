@@ -11,14 +11,3 @@ void NPC::decreaseAttitudeToPlayer(std::uint16_t val) {
 std::uint16_t NPC::getAttitudeToPlayer() const {
     return attitude_to_player;
 }
-
-Item NPC::moveItem(const std::string& val) {
-    for(auto& item: this->equipment) {
-        if (item.getName() == val) {
-            Item temp = item;
-            this->deleteItem(val);
-            return temp;
-        }
-    }
-    return {};
-}

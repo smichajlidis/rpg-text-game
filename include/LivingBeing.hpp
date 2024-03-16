@@ -21,6 +21,7 @@ public:
     std::uint16_t getEquipmentSize() const;
     void addItem(const Item& item);
     void deleteItem(const std::string& val);
+    Item moveItem(const std::string& val);
 
 protected:
     std::uint16_t hp;

@@ -44,3 +44,14 @@ void LivingBeing::deleteItem(const std::string& val) {
         }
     }
 }
+
+Item LivingBeing::moveItem(const std::string& val) {
+    for(auto& item: this->equipment) {
+        if (item.getName() == val) {
+            Item temp = item;
+            this->deleteItem(val);
+            return temp;
+        }
+    }
+    return {};
+}
