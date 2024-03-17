@@ -12,6 +12,7 @@ public:
         const std::string& choice_3 = "Go to the chapel");
 
     ~Square() = default;
+
 };
 
 #endif

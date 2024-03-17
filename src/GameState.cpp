@@ -202,6 +202,7 @@ void GameState::addLocation(const std::string& name, std::shared_ptr<Location> p
 
 void GameState::passItsPointerToSquare() {
     square = std::make_shared<Square>(std::shared_ptr<GameState>(shared_from_this()));
+    addLocation("square", square);
     square->setRelatedLocations(tavern, forest, closed_chapel);
     current_location = square;
 }
