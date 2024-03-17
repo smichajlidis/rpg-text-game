@@ -103,6 +103,8 @@ public:
     void addLocation(const std::string& name, std::shared_ptr<Location> ptr);
     void passItsPointerToSquare();
 
+    std::shared_ptr<Location> getLocation(const std::string& name) const;
+
 private:
 
     std::unordered_map<std::string, std::shared_ptr<Location>> locations;

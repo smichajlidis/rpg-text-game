@@ -163,9 +163,11 @@ void GameState::displayLocation() {
 
         if (iss >> choice) {
             if (current_location->inputValidation(choice)) {
-                current_location = current_location->moveToLocation(choice);
+                //current_location = current_location->moveToLocation(choice);
+                current_location = getLocation(current_location->getNextLocationName(choice));
                 if (current_location->getDescription().empty()) {
-                    current_location = current_location->moveToLocation(choice);
+                    //current_location = current_location->moveToLocation(choice);
+                    current_location = getLocation(current_location->getNextLocationName(choice));
                 }
             }
         }
@@ -202,4 +204,13 @@ void GameState::passItsPointerToSquare() {
     square = std::make_shared<Square>(std::shared_ptr<GameState>(shared_from_this()));
     square->setRelatedLocations(tavern, forest, closed_chapel);
     current_location = square;
+}
+
+std::shared_ptr<Location> GameState::getLocation(const std::string& name) const {
+    auto it = locations.find(name);
+    if (it != locations.end()) {
+        return it->second;
+    } else {
+        return current_location;
+    }
 }

@@ -22,10 +22,14 @@ public:
     std::string getDescription() const;
     void setGameState(std::shared_ptr<GameState>);
 
+    std::string getNextLocationName(std::uint32_t);
+
 protected:
     std::vector<std::string> descriptions;
     std::vector<std::shared_ptr<Location>> locations;
     std::shared_ptr<GameState> game_state;
+
+    std::vector<std::string> related_locations;
 };
 
 #endif

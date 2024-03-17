@@ -65,3 +65,7 @@ std::string Location::getDescription() const {
 void Location::setGameState(std::shared_ptr<GameState> val) {
     game_state = std::move(val);
 }
+
+std::string Location::getNextLocationName(std::uint32_t val) {
+    return related_locations.at(val-1);
+}

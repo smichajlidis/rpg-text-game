@@ -11,5 +11,8 @@ Square::Square(std::shared_ptr<GameState> game_state, const std::string& descrip
     game_state->addLocation("tavern", tavern);
     game_state->addLocation("forest", forest);
 
+    related_locations.push_back("tavern");
+    related_locations.push_back("forest");
+
     //closed_chapel = std::make_shared<ClosedChapel>(player);
 }
