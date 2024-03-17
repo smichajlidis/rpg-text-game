@@ -12,7 +12,7 @@ class InteractionWithNPC: public LivingBeing, public Location {
 
 public:
     InteractionWithNPC(std::shared_ptr<Player> player = nullptr, std::shared_ptr<GameState> game_state = nullptr, const std::string& description = "", const std::string& choice_1 = "", const std::string& choice_2 = "", const std::string& choice_3 = "", const std::string&choice_4 = "", const std::string& choice_5 = "")
-        : player(std::move(player)), npc(std::move(npc)), Location(game_state, description, choice_1, choice_2, choice_3, choice_4, choice_5) {}
+        : player(std::move(player)), Location(game_state, description, choice_1, choice_2, choice_3, choice_4, choice_5) {}
 
     ~InteractionWithNPC() = default;
 

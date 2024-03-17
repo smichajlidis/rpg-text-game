@@ -51,8 +51,6 @@ GameState::GameState() {
     Item chapel_key {"chapel_key"};
     priest->addItem(std::move(chapel_key));
 
-    tavern = std::make_shared<Tavern>(); 
-    forest = std::make_shared<Forest>();
         thugs = std::make_shared<Thugs>(player);
             paying_thugs = std::make_shared<PayingThugs>(player);
             paying_thugs->setRelatedLocations(thugs, forest);
@@ -63,7 +61,6 @@ GameState::GameState() {
         thugs->setRelatedLocations(paying_thugs, convince_thugs, attack_thugs, forest);
         forest_exploration = std::make_shared<ForestExploration>();
         forest_exploration->setRelatedLocations(forest_exploration, forest); 
-        forest->setRelatedLocations(forest_exploration, thugs, square);
     closed_chapel = std::make_shared<ClosedChapel>(player);
     closed_chapel->setRelatedLocations(square);
     chapel = std::make_shared<Chapel>();
@@ -131,7 +128,6 @@ GameState::GameState() {
     flirting = std::make_shared<Flirting>(player);
     flirting->setRelatedLocations(flirting, go_upstairs, tavern);
     ladies->setRelatedLocations(go_upstairs, flirting, tavern);   
-    tavern->setRelatedLocations(innkeeper, gamblers, approaching_priest, ladies, square);
 
     altars = std::make_shared<Altars>();
     dungeons = std::make_shared<Dungeons>(); 

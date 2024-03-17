@@ -6,7 +6,7 @@
 class Gamblers: public InteractionWithNPC {
 
 public:
-    Gamblers(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr, const std::string& description = "How much do you want to bet?",
+    Gamblers(std::shared_ptr<Player> player = nullptr, std::shared_ptr<GameState> game_state = nullptr, const std::string& description = "How much do you want to bet?",
     const std::string& choice_1 = "10",
     const std::string& choice_2 = "20",
     const std::string& choice_3 = "50",
