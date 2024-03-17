@@ -52,6 +52,8 @@ GameState::GameState() {
     priest->addItem(std::move(chapel_key));
 
     square = std::make_shared<Square>();
+    square->setGameState(std::shared_ptr<GameState>(this));
+
     tavern = std::make_shared<Tavern>(); 
     forest = std::make_shared<Forest>();
         thugs = std::make_shared<Thugs>(player);
