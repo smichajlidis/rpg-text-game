@@ -91,6 +91,7 @@ class NotEnoughMoney;
 #include "NPC.hpp"
 
 #include <memory>
+#include <unordered_map>
 
 class GameState {
 public:
@@ -99,8 +100,11 @@ public:
     ~GameState() = default;
 
     void displayLocation();
+    void addLocation(const std::string& name, std::shared_ptr<Location> ptr);
 
 private:
+
+    std::unordered_map<std::string, std::shared_ptr<Location>> locations;
 
     ScreenStuff screen_stuff;
 

@@ -199,3 +199,6 @@ void GameState::displayLocation() {
     } while(c != 'Q');
 }
 
+void GameState::addLocation(const std::string& name, std::shared_ptr<Location> ptr) {
+    locations.insert({name, std::move(ptr)});
+}
