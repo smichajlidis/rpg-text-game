@@ -51,9 +51,6 @@ GameState::GameState() {
     Item chapel_key {"chapel_key"};
     priest->addItem(std::move(chapel_key));
 
-    square = std::make_shared<Square>();
-    square->setGameState(std::shared_ptr<GameState>(this));
-
     tavern = std::make_shared<Tavern>(); 
     forest = std::make_shared<Forest>();
         thugs = std::make_shared<Thugs>(player);
@@ -70,7 +67,6 @@ GameState::GameState() {
     closed_chapel = std::make_shared<ClosedChapel>(player);
     closed_chapel->setRelatedLocations(square);
     chapel = std::make_shared<Chapel>();
-    square->setRelatedLocations(tavern, forest, closed_chapel);
     innkeeper = std::make_shared<Innkeeper>(player);
         order_beer_success = std::make_shared<OrderBeerSuccess>(player);
         order_beer_fail = std::make_shared<NotEnoughMoney>();
@@ -141,7 +137,6 @@ GameState::GameState() {
     dungeons = std::make_shared<Dungeons>(); 
     chapel->setRelatedLocations(altars, dungeons, square);
 
-    current_location = square;
     top_bar.pointToPlayer(player);
 
     equipment_menu.addPlayer(player);
@@ -201,4 +196,10 @@ void GameState::displayLocation() {
 
 void GameState::addLocation(const std::string& name, std::shared_ptr<Location> ptr) {
     locations.insert({name, std::move(ptr)});
+}
+
+void GameState::passItsPointerToSquare() {
+    square = std::make_shared<Square>(std::shared_ptr<GameState>(shared_from_this()));
+    square->setRelatedLocations(tavern, forest, closed_chapel);
+    current_location = square;
 }

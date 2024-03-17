@@ -93,7 +93,7 @@ class NotEnoughMoney;
 #include <memory>
 #include <unordered_map>
 
-class GameState {
+class GameState: public std::enable_shared_from_this<GameState>  {
 public:
     GameState();
 
@@ -101,6 +101,7 @@ public:
 
     void displayLocation();
     void addLocation(const std::string& name, std::shared_ptr<Location> ptr);
+    void passItsPointerToSquare();
 
 private:
 
