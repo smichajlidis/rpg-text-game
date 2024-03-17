@@ -6,10 +6,10 @@
 class AttackThugs: public InteractionWithNPC {
 
 public:
-    AttackThugs(std::shared_ptr<Player> player, const std::string& description = "Attaaaaaaack!",
+    AttackThugs(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr, const std::string& description = "Attaaaaaaack!",
         const std::string& choice_1 = "Fight more!",
         const std::string& choice_2 = "Run away")
-        : InteractionWithNPC(player, description, choice_1, choice_2) {}
+        : InteractionWithNPC(player, game_state, description, choice_1, choice_2) {}
 
     ~AttackThugs() = default;
 };

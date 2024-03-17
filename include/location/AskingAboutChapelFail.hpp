@@ -6,9 +6,9 @@
 class AskingAboutChapelFail: public InteractionWithNPC {
 
 public:
-    AskingAboutChapelFail(std::shared_ptr<Player> player, const std::string& description = "- Not your business young man.",
+    AskingAboutChapelFail(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr, const std::string& description = "- Not your business young man.",
         const std::string& choice_1 = "Return")
-        : InteractionWithNPC(player, description, choice_1) {}
+        : InteractionWithNPC(player, game_state, description, choice_1) {}
 
     ~AskingAboutChapelFail() = default;
 };

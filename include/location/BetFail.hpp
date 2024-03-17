@@ -6,10 +6,10 @@
 class BetFail: public InteractionWithNPC {
 
 public:
-    BetFail(std::shared_ptr<Player> player, const std::string& description = "Oh, you loose! Maybe you'll be lucky next time?",
+    BetFail(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr, const std::string& description = "Oh, you loose! Maybe you'll be lucky next time?",
         const std::string& choice_1 = "Try your luck again",
         const std::string& choice_2 = "Say goodbye")
-        : InteractionWithNPC(player, description, choice_1, choice_2) {}
+        : InteractionWithNPC(player, game_state, description, choice_1, choice_2) {}
     
     ~BetFail() = default;
 };

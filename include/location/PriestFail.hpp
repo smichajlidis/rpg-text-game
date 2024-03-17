@@ -6,9 +6,9 @@
 class PriestFail: public InteractionWithNPC {
 
 public:
-    PriestFail(std::shared_ptr<Player> player, const std::string& description = "- Live me alone stranger!",
+    PriestFail(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr, const std::string& description = "- Live me alone stranger!",
         const std::string& choice_1 = "Return")
-        : InteractionWithNPC(player, description, choice_1) {}
+        : InteractionWithNPC(player, game_state, description, choice_1) {}
 
     ~PriestFail() = default;
 };

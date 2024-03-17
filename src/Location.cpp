@@ -3,7 +3,8 @@
 #include <iostream>
 #include <algorithm>
 
-Location::Location(const std::string& description, const std::string& choice_1, const std::string& choice_2, const std::string& choice_3, const std::string& choice_4, const std::string& choice_5) {
+Location::Location(std::shared_ptr<GameState> game_state, const std::string& description, const std::string& choice_1, const std::string& choice_2, const std::string& choice_3, const std::string& choice_4, const std::string& choice_5)
+    : game_state(std::move(game_state)) {
     descriptions.push_back(description);
     descriptions.push_back(choice_1);
     descriptions.push_back(choice_2);

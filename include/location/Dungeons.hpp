@@ -6,7 +6,8 @@
 class Dungeons: public Location {
 
 public:
-    Dungeons() = default;
+    Dungeons(std::shared_ptr<GameState> game_state = nullptr)
+        : Location(game_state) {}
     
     ~Dungeons() = default;
 };

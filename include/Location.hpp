@@ -10,7 +10,7 @@
 class Location {
 
 public:
-    Location(const std::string& description = "", const std::string& choice_1 = "", const std::string& choice_2 = "", const std::string& choice_3 = "", const std::string&choice_4 = "", const std::string& choice_5 = "");
+    Location(std::shared_ptr<GameState> game_state = nullptr, const std::string& description = "", const std::string& choice_1 = "", const std::string& choice_2 = "", const std::string& choice_3 = "", const std::string&choice_4 = "", const std::string& choice_5 = "");
 
     ~Location() = default;
 

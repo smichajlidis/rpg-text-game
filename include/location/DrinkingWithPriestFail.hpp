@@ -6,9 +6,9 @@
 class DrinkingWithPriestFail: public InteractionWithNPC {
 
 public:
-    DrinkingWithPriestFail(std::shared_ptr<Player> player, const std::string& description = "Oh, you don't have money? You raised my hopes and dashed them quite expertly, sir. Bravo!",
+    DrinkingWithPriestFail(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr, const std::string& description = "Oh, you don't have money? You raised my hopes and dashed them quite expertly, sir. Bravo!",
         const std::string& choice_1 = "Return")
-        : InteractionWithNPC(player, description, choice_1) {}
+        : InteractionWithNPC(player, game_state, description, choice_1) {}
 
     ~DrinkingWithPriestFail() = default;
 };

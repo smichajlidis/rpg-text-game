@@ -8,8 +8,8 @@ class Player;
 class DrinkingWithPriest: public InteractionWithNPC {
 
 public:
-    DrinkingWithPriest(std::shared_ptr<Player> player)
-        : InteractionWithNPC(player) {}
+    DrinkingWithPriest(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr)
+        : InteractionWithNPC(player, game_state) {}
     
     ~DrinkingWithPriest() = default;
 

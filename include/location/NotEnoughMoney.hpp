@@ -6,9 +6,9 @@
 class NotEnoughMoney: public Location {
 
 public:
-    NotEnoughMoney(const std::string& description = "Sorry, you don't have enough money.",
+    NotEnoughMoney(std::shared_ptr<GameState> game_state = nullptr, const std::string& description = "Sorry, you don't have enough money.",
         const std::string& choice_1 = "Return")
-        : Location(description, choice_1) {}
+        : Location(game_state, description, choice_1) {}
 
     ~NotEnoughMoney() = default;
 };
