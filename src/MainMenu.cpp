@@ -4,6 +4,8 @@
 #include <limits>
 
 void MainMenu::displayMenu() {
+    game_state = std::make_shared<GameState>();
+    
     std::uint32_t choice {};
 
     do {
@@ -20,7 +22,7 @@ void MainMenu::displayMenu() {
 
         switch(choice) {
             case 1:
-                game_state.displayLocation();
+                game_state->displayLocation();
                 break;
             case 2:
                 loading_menu.displayMenu();

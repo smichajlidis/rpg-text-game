@@ -1,44 +1,84 @@
 #ifndef _GAME_STATE_HPP_
 #define _GAME_STATE_HPP_
 
-#include "location/Square.hpp"
-#include "location/Tavern.hpp"
-#include "location/Ladies.hpp"
-#include "location/Flirting.hpp"
-#include "location/GoUpstairs.hpp"
-#include "location/Innkeeper.hpp"
-    #include "location/OrderBeer.hpp"
-        #include "location/OrderBeerSuccess.hpp"
-#include "location/Trade.hpp"
-#include "location/Buying.hpp"
-#include "location/Selling.hpp"
-#include "location/Gossip.hpp"
-    #include "location/HotMeal.hpp"
-        #include "location/HotMealSuccess.hpp"
-#include "location/Gamblers.hpp"
-#include "location/Bet.hpp"
-    #include "location/BetSuccess.hpp"
-    #include "location/BetFail.hpp"
-#include "location/ApproachingPriest.hpp"
-    #include "location/PriestSuccess.hpp"
-    #include "location/PriestFail.hpp"
-        #include "location/DrinkingWithPriest.hpp"
-            #include "location/DrinkingWithPriestSuccess.hpp"
-            #include "location/DrinkingWithPriestFail.hpp"
-        #include "location/AskingAboutChapel.hpp"
-            #include "location/AskingAboutChapelFail.hpp"
-            #include "location/AskingAboutChapelSuccess.hpp"
-#include "location/Altars.hpp"
-#include "location/Dungeons.hpp"
-#include "location/Chapel.hpp"
-#include "location/ClosedChapel.hpp"
-#include "location/Forest.hpp"
-#include "location/ForestExploration.hpp"
-#include "location/Thugs.hpp"
-#include "location/PayingThugs.hpp"
-#include "location/ConvinceThugs.hpp"
-#include "location/AttackThugs.hpp"
-#include "location/NotEnoughMoney.hpp"
+class Location;
+
+class Square;
+class Tavern;
+class Ladies;
+    class Flirting;
+    class GoUpstairs;
+class Innkeeper;
+    class OrderBeer;
+    class OrderBeerSuccess;
+    class Trade;
+        class Buying;
+        class Selling;
+    class Gossip;
+    class HotMeal;
+        class HotMealSuccess;
+class Gamblers;
+class Bet;
+    class BetSuccess;
+    class BetFail;
+class ApproachingPriest;
+    class PriestSuccess;
+    class PriestFail;
+        class DrinkingWithPriest;
+            class DrinkingWithPriestSuccess;
+            class DrinkingWithPriestFail;
+        class AskingAboutChapel;
+            class AskingAboutChapelFail;
+            class AskingAboutChapelSuccess;
+class Altars;
+class Dungeons;
+class Chapel;
+class ClosedChapel;
+class Forest;
+class ForestExploration;
+class Thugs;
+class PayingThugs;
+class ConvinceThugs;
+class AttackThugs;
+class NotEnoughMoney;
+// #include "location/Square.hpp"
+// #include "location/Tavern.hpp"
+// #include "location/Ladies.hpp"
+// #include "location/Flirting.hpp"
+// #include "location/GoUpstairs.hpp"
+// #include "location/Innkeeper.hpp"
+//     #include "location/OrderBeer.hpp"
+//         #include "location/OrderBeerSuccess.hpp"
+// #include "location/Trade.hpp"
+// #include "location/Buying.hpp"
+// #include "location/Selling.hpp"
+// #include "location/Gossip.hpp"
+//     #include "location/HotMeal.hpp"
+//         #include "location/HotMealSuccess.hpp"
+// #include "location/Gamblers.hpp"
+// #include "location/Bet.hpp"
+//     #include "location/BetSuccess.hpp"
+//     #include "location/BetFail.hpp"
+// #include "location/ApproachingPriest.hpp"
+//     #include "location/PriestSuccess.hpp"
+//     #include "location/PriestFail.hpp"
+//         #include "location/DrinkingWithPriest.hpp"
+//             #include "location/DrinkingWithPriestSuccess.hpp"
+//             #include "location/DrinkingWithPriestFail.hpp"
+//         #include "location/AskingAboutChapel.hpp"
+//             #include "location/AskingAboutChapelFail.hpp"
+//             #include "location/AskingAboutChapelSuccess.hpp"
+// #include "location/Altars.hpp"
+// #include "location/Dungeons.hpp"
+// #include "location/Chapel.hpp"
+// #include "location/ClosedChapel.hpp"
+// #include "location/Forest.hpp"
+// #include "location/ForestExploration.hpp"
+// #include "location/Thugs.hpp"
+// #include "location/PayingThugs.hpp"
+// #include "location/ConvinceThugs.hpp"
+// #include "location/AttackThugs.hpp"
+// #include "location/NotEnoughMoney.hpp"
 
 #include "ScreenStuff.hpp"
 #include "TopBar.hpp"

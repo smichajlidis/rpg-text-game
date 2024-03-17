@@ -60,3 +60,7 @@ bool Location::inputValidation(std::uint32_t val) const {
 std::string Location::getDescription() const {
     return descriptions.at(0);
 }
+
+void Location::setGameState(std::shared_ptr<GameState> val) {
+    game_state = std::move(val);
+}

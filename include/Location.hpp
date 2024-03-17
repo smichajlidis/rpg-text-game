@@ -1,6 +1,8 @@
 #ifndef _LOCATION_HPP_
 #define _LOCATION_HPP_
 
+#include "GameState.hpp"
+
 #include <vector>
 #include <string>
 #include <memory>
@@ -18,10 +20,12 @@ public:
     void printDescriptions() const;
     virtual void printLocation();
     std::string getDescription() const;
+    void setGameState(std::shared_ptr<GameState>);
 
 protected:
     std::vector<std::string> descriptions;
     std::vector<std::shared_ptr<Location>> locations;
+    std::shared_ptr<GameState> game_state;
 };
 
 #endif

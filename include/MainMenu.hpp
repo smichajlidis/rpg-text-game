@@ -19,7 +19,7 @@ private:
     LoadingMenu loading_menu;
     SavingMenu saving_menu;
     ScreenStuff screen_stuff;
-    GameState game_state;
+    std::shared_ptr<GameState> game_state;
 };
 
 #endif
