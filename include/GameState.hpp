@@ -102,6 +102,7 @@ public:
     void displayLocation();
     void addLocation(const std::string& name, std::shared_ptr<Location> ptr);
     void passItsPointerToSquare();
+    std::shared_ptr<Player> getPlayer() const;
 
     std::shared_ptr<Location> getLocation(const std::string& name) const;
 

@@ -211,3 +211,7 @@ std::shared_ptr<Location> GameState::getLocation(const std::string& name) const 
         return current_location;
     }
 }
+
+std::shared_ptr<Player> GameState::getPlayer() const {
+    return player;
+}
