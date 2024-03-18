@@ -2,10 +2,10 @@
 
 #include "location/Square.hpp"
 #include "location/Tavern.hpp"
-#include "location/Ladies.hpp"
+//#include "location/Ladies.hpp"
 #include "location/Flirting.hpp"
 #include "location/GoUpstairs.hpp"
-#include "location/Innkeeper.hpp"
+//#include "location/Innkeeper.hpp"
     #include "location/OrderBeer.hpp"
         #include "location/OrderBeerSuccess.hpp"
 #include "location/Trade.hpp"
@@ -14,7 +14,7 @@
 #include "location/Gossip.hpp"
     #include "location/HotMeal.hpp"
         #include "location/HotMealSuccess.hpp"
-#include "location/Gamblers.hpp"
+//#include "location/Gamblers.hpp"
 #include "location/Bet.hpp"
     #include "location/BetSuccess.hpp"
     #include "location/BetFail.hpp"
@@ -64,37 +64,37 @@ GameState::GameState() {
     closed_chapel = std::make_shared<ClosedChapel>(player);
     closed_chapel->setRelatedLocations(square);
     chapel = std::make_shared<Chapel>();
-    innkeeper = std::make_shared<Innkeeper>(player);
+    //innkeeper = std::make_shared<Innkeeper>(player);
         order_beer_success = std::make_shared<OrderBeerSuccess>(player);
         order_beer_fail = std::make_shared<NotEnoughMoney>();
-        order_beer_fail->setRelatedLocations(innkeeper);
+        //order_beer_fail->setRelatedLocations(innkeeper);
             order_beer = std::make_shared<OrderBeer>(player);
             order_beer->setRelatedLocations(order_beer_success, order_beer_fail);
-        order_beer_success->setRelatedLocations(order_beer, innkeeper, tavern);
+        //order_beer_success->setRelatedLocations(order_beer, innkeeper, tavern);
     buying = std::make_shared<Buying>(player);
     selling = std::make_shared<Selling>(player);
-    buying->setRelatedLocations(selling, innkeeper);
-    selling->setRelatedLocations(buying, innkeeper);
+    //buying->setRelatedLocations(selling, innkeeper);
+    //selling->setRelatedLocations(buying, innkeeper);
     trade = std::make_shared<Trade>(player);
-    trade->setRelatedLocations(buying, selling, innkeeper);
+    //trade->setRelatedLocations(buying, selling, innkeeper);
     gossip = std::make_shared<Gossip>(player);
         hot_meal_success = std::make_shared<HotMealSuccess>(player);
         hot_meal_fail = std::make_shared<NotEnoughMoney>();
-        hot_meal_fail->setRelatedLocations(innkeeper);
+        //hot_meal_fail->setRelatedLocations(innkeeper);
             hot_meal = std::make_shared<HotMeal>(player);
             hot_meal->setRelatedLocations(hot_meal_success, hot_meal_fail);
-        hot_meal_success->setRelatedLocations(hot_meal, innkeeper);
-    innkeeper->setRelatedLocations(order_beer, trade, gossip, hot_meal, tavern);
-    gossip->setRelatedLocations(innkeeper);
-    gamblers = std::make_shared<Gamblers>(player);
+        //hot_meal_success->setRelatedLocations(hot_meal, innkeeper);
+    //innkeeper->setRelatedLocations(order_beer, trade, gossip, hot_meal, tavern);
+    //gossip->setRelatedLocations(innkeeper);
+    //gamblers = std::make_shared<Gamblers>(player);
         bet = std::make_shared<Bet>(player);
-    gamblers->setRelatedLocations(bet, bet, bet, bet, tavern);
+    //gamblers->setRelatedLocations(bet, bet, bet, bet, tavern);
         bet_success = std::make_shared<BetSuccess>(player);
         bet_fail = std::make_shared<BetFail>(player);
-        bet_success->setRelatedLocations(gamblers, tavern);
-        bet_fail->setRelatedLocations(gamblers, tavern);
+        //bet_success->setRelatedLocations(gamblers, tavern);
+        //bet_fail->setRelatedLocations(gamblers, tavern);
         bet_no_money = std::make_shared<NotEnoughMoney>();
-        bet_no_money->setRelatedLocations(gamblers);
+        //bet_no_money->setRelatedLocations(gamblers);
     bet->setRelatedLocations(bet_success, bet_fail, bet_no_money);
     approaching_priest = std::make_shared<ApproachingPriest>(player);
         priest_success = std::make_shared<PriestSuccess>(player);
@@ -122,12 +122,12 @@ GameState::GameState() {
         priest_success->setRelatedLocations(drinking_with_priest, asking_about_chapel, tavern);
         priest_fail->setRelatedLocations(tavern);
     approaching_priest->setRelatedLocations(priest_success, priest_fail); 
-    ladies = std::make_shared<Ladies>(player);
+    //ladies = std::make_shared<Ladies>(player);
     go_upstairs = std::make_shared<GoUpstairs>(player);
     go_upstairs->setRelatedLocations(tavern);
     flirting = std::make_shared<Flirting>(player);
     flirting->setRelatedLocations(flirting, go_upstairs, tavern);
-    ladies->setRelatedLocations(go_upstairs, flirting, tavern);   
+    //ladies->setRelatedLocations(go_upstairs, flirting, tavern);   
 
     altars = std::make_shared<Altars>();
     dungeons = std::make_shared<Dungeons>(); 

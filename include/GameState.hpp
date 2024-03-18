@@ -103,7 +103,6 @@ public:
     void addLocation(const std::string& name, std::shared_ptr<Location> ptr);
     void passItsPointerToSquare();
     std::shared_ptr<Player> getPlayer() const;
-
     std::shared_ptr<Location> getLocation(const std::string& name) const;
 
 private:
@@ -126,7 +125,7 @@ private:
 
     std::shared_ptr<Square> square;
         std::shared_ptr<Tavern> tavern;
-            std::shared_ptr<Innkeeper> innkeeper;
+            //std::shared_ptr<Innkeeper> innkeeper;
                 std::shared_ptr<OrderBeer> order_beer;
                     std::shared_ptr<OrderBeerSuccess> order_beer_success;
                     std::shared_ptr<NotEnoughMoney> order_beer_fail;
@@ -137,7 +136,7 @@ private:
                 std::shared_ptr<HotMeal> hot_meal;
                     std::shared_ptr<HotMealSuccess> hot_meal_success;
                     std::shared_ptr<NotEnoughMoney> hot_meal_fail;
-            std::shared_ptr<Gamblers> gamblers;
+            //std::shared_ptr<Gamblers> gamblers;
                 std::shared_ptr<Bet> bet;
                     std::shared_ptr<BetSuccess> bet_success;
                     std::shared_ptr<BetFail> bet_fail;
@@ -151,7 +150,7 @@ private:
                     std::shared_ptr<AskingAboutChapel> asking_about_chapel;
                         std::shared_ptr<AskingAboutChapelSuccess> asking_about_chapel_success;
                         std::shared_ptr<AskingAboutChapelFail> asking_about_chapel_fail;
-            std::shared_ptr<Ladies> ladies;
+            //std::shared_ptr<Ladies> ladies;
                 std::shared_ptr<Flirting> flirting;
                 std::shared_ptr<GoUpstairs> go_upstairs;
         std::shared_ptr<Forest> forest;

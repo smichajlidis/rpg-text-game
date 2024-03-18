@@ -1,6 +1,6 @@
-#include "../../include/location/Ladies.hpp"
+#include "../../include/location/ApproachingLadies.hpp"
 
-Ladies::Ladies(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state, const std::string& description, const std::string& choice_1, const std::string& choice_2, const std::string& choice_3)
+ApproachingLadies::ApproachingLadies(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state, const std::string& description, const std::string& choice_1, const std::string& choice_2, const std::string& choice_3)
     : InteractionWithNPC(player, game_state, description, choice_1, choice_2, choice_3) {
     sentences.push_back("- Guess what We are not wearing right now?");
     sentences.push_back("- Olive juice. Say it fast");
