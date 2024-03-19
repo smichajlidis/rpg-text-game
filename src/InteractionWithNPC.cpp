@@ -10,10 +10,5 @@ void InteractionWithNPC::printLocation() {
     if (sentences.size()) {
         std::cout<<sentences.at(std::rand() % sentences.size());
     }
-    
     this->printDescriptions();
-}
-
-void InteractionWithNPC::addNPC(std::shared_ptr<NPC> val) {
-    npc = std::move(val);
 }
