@@ -1,11 +1,15 @@
 #include "../../include/location/ApproachingPriest.hpp"
 #include "../../include/location/PriestSuccess.hpp"
 #include "../../include/location/PriestFail.hpp"
+#include "../../include/Item.hpp"
 
 ApproachingPriest::ApproachingPriest(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state)
     :InteractionWithNPC(player, game_state) {
 
-    game_state->addNPC("priest", std::make_shared<NPC>());
+    std::shared_ptr<NPC> priest = std::make_shared<NPC>();
+    Item chapel_key {"chapel_key"};
+    priest->addItem(chapel_key);
+    game_state->addNPC("priest", priest);
     npc = game_state->getNPC("priest");
 
     game_state->addLocation("priest_success", std::make_shared<PriestSuccess>(game_state->getPlayer(), game_state));
@@ -13,6 +17,7 @@ ApproachingPriest::ApproachingPriest(std::shared_ptr<Player> player, std::shared
 
     related_locations.push_back("priest_success");
     related_locations.push_back("priest_fail");
+
 }
 
 std::string ApproachingPriest::getNextLocationName(std::uint32_t val) {
