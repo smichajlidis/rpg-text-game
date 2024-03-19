@@ -8,12 +8,11 @@ class Player;
 class ApproachingPriest: public InteractionWithNPC {
 
 public:
-    ApproachingPriest(std::shared_ptr<Player> player = nullptr, std::shared_ptr<GameState> game_state = nullptr)
-        : InteractionWithNPC(player, game_state) {}
+    ApproachingPriest(std::shared_ptr<Player> player = nullptr, std::shared_ptr<GameState> game_state = nullptr);
     
     ~ApproachingPriest() = default;
 
-    std::shared_ptr<Location> moveToLocation(std::uint32_t) override;
+    std::string getNextLocationName(std::uint32_t) override;
 };
 
 #endif
