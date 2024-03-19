@@ -17,7 +17,6 @@ public:
     ~InteractionWithNPC() = default;
 
     void printLocation() override;
-    void addNPC(std::shared_ptr<NPC>);
     
 protected:
     std::vector<std::string> sentences;
