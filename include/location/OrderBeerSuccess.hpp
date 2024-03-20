@@ -6,11 +6,11 @@
 class OrderBeerSuccess: public InteractionWithNPC {
 
 public:
-    OrderBeerSuccess(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr, const std::string& description = "- You are drinking a beer and have fun.",
+    OrderBeerSuccess(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr,
+        const std::string& description = "- You are drinking a beer and have fun.",
         const std::string& choice_1 = "Drink another one",
         const std::string& choice_2 = "Ask of something else",
-        const std::string& choice_3 = "Say goodbye")
-        : InteractionWithNPC(player, game_state, description, choice_1, choice_2, choice_3) {}
+        const std::string& choice_3 = "Say goodbye");
     
     ~OrderBeerSuccess() = default;
 };
