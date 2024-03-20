@@ -8,12 +8,11 @@ class Player;
 class OrderBeer: public InteractionWithNPC {
 
 public:
-    OrderBeer(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr)
-        : InteractionWithNPC(player, game_state) {}
+    OrderBeer(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr);
     
     ~OrderBeer() = default;
 
-    std::shared_ptr<Location> moveToLocation(std::uint32_t) override;
+    std::string getNextLocationName(std::uint32_t) override;
 };
 
 #endif
