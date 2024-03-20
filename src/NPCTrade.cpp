@@ -5,6 +5,6 @@ bool NPCTrade::inputValidation(std::uint32_t val) const {
     return ((equipment.size() + 2) ? true : false);
 }
 
-std::shared_ptr<Location> NPCTrade::moveToLocation(std::uint32_t locationNumber) {
-    return locations.at(locationNumber - equipment.size());
+std::string NPCTrade::getNextLocationName(std::uint32_t val) {
+    return related_locations.at(val - 1 - npc->getEquipmentSize());
 }
