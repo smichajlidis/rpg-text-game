@@ -1,43 +1,5 @@
 #include "../include/GameState.hpp"
-
-#include "location/Square.hpp"
-#include "location/Tavern.hpp"
-//#include "location/Ladies.hpp"
-#include "location/Flirting.hpp"
-#include "location/GoUpstairs.hpp"
-//#include "location/Innkeeper.hpp"
-    #include "location/OrderBeer.hpp"
-        #include "location/OrderBeerSuccess.hpp"
-#include "location/Trade.hpp"
-#include "location/Buying.hpp"
-#include "location/Selling.hpp"
-#include "location/Gossip.hpp"
-    #include "location/HotMeal.hpp"
-        #include "location/HotMealSuccess.hpp"
-//#include "location/Gamblers.hpp"
-#include "location/Bet.hpp"
-    #include "location/BetSuccess.hpp"
-    #include "location/BetFail.hpp"
-#include "location/ApproachingPriest.hpp"
-    #include "location/PriestSuccess.hpp"
-    #include "location/PriestFail.hpp"
-        #include "location/DrinkingWithPriest.hpp"
-            #include "location/DrinkingWithPriestSuccess.hpp"
-            #include "location/DrinkingWithPriestFail.hpp"
-        #include "location/AskingAboutChapel.hpp"
-            #include "location/AskingAboutChapelFail.hpp"
-            #include "location/AskingAboutChapelSuccess.hpp"
-#include "location/Altars.hpp"
-#include "location/Dungeons.hpp"
-#include "location/Chapel.hpp"
-#include "location/ClosedChapel.hpp"
-#include "location/Forest.hpp"
-#include "location/ForestExploration.hpp"
-#include "location/Thugs.hpp"
-#include "location/PayingThugs.hpp"
-#include "location/ConvinceThugs.hpp"
-#include "location/AttackThugs.hpp"
-#include "location/NotEnoughMoney.hpp"
+#include "../include/location/Square.hpp"
 
 #include <iostream>
 #include <sstream>
@@ -52,7 +14,6 @@ GameState::GameState() {
     equipment_menu.addPlayer(player);
     loading_menu.addPlayer(player);
     saving_menu.addPlayer(player);
-
 }
 
 void GameState::displayLocation() {
@@ -113,10 +74,8 @@ void GameState::addNPC(const std::string& name, std::shared_ptr<NPC> ptr) {
 }
 
 void GameState::passItsPointerToSquare() {
-    square = std::make_shared<Square>(std::shared_ptr<GameState>(shared_from_this()));
-    addLocation("square", square);
-    square->setRelatedLocations(tavern, forest, closed_chapel);
-    current_location = square;
+    current_location = std::make_shared<Square>(std::shared_ptr<GameState>(shared_from_this()));
+    addLocation("square", current_location);
 }
 
 std::shared_ptr<Location> GameState::getLocation(const std::string& name) const {
