@@ -16,6 +16,6 @@ Tavern::Tavern(std::shared_ptr<GameState> game_state, const std::string& descrip
     related_locations.push_back("approaching_gamblers");
     related_locations.push_back("approaching_priest");
     related_locations.push_back("approaching_ladies");
-    related_locations.push_back("approaching_square");
+    related_locations.push_back("square");
 
 }
