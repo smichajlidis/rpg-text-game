@@ -6,9 +6,9 @@
 class Gossip: public InteractionWithNPC {
 
 public:
-    Gossip(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr, const std::string& description = "You know it's rude to gossip? shame on you!",
-        const std::string& choice_1 = "Ask of something else")
-        : InteractionWithNPC(player, game_state, description, choice_1) {}
+    Gossip(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr,
+        const std::string& description = "You know it's rude to gossip? shame on you!",
+        const std::string& choice_1 = "Ask of something else");
 
     ~Gossip() = default;
 };
