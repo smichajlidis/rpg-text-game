@@ -12,8 +12,6 @@ public:
         : InteractionWithNPC(player, game_state) {}
     
     ~AskingAboutChapel() = default;
-
-    std::shared_ptr<Location> moveToLocation(std::uint32_t) override;
 };
 
 #endif

@@ -30,30 +30,6 @@ void Location::printDescriptions() const {
     std::cout<<"\nWhat do you do? ";
 }
 
-std::shared_ptr<Location> Location::moveToLocation(std::uint32_t locationNumber) {
-    return locations.at(locationNumber);
-}
-
-void Location::setRelatedLocations(std::shared_ptr<Location> location_one, std::shared_ptr<Location> location_two, 
-std::shared_ptr<Location> location_three, std::shared_ptr<Location> location_four, std::shared_ptr<Location> location_five) {
-    locations.push_back(0);
-    if (location_one) {
-        locations.push_back(std::move(location_one));
-    }
-    if (location_two) {
-        locations.push_back(std::move(location_two));
-    }
-    if (location_three) {
-        locations.push_back(std::move(location_three));
-    }
-    if (location_four) {
-        locations.push_back(std::move(location_four));
-    }
-    if (location_five) {
-        locations.push_back(std::move(location_five));
-    }
-}
-
 bool Location::inputValidation(std::uint32_t val) const {
     return (!related_locations.empty() ? (related_locations.size() >= val) : 0);
 }

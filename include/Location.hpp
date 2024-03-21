@@ -14,8 +14,6 @@ public:
 
     ~Location() = default;
 
-    void setRelatedLocations(std::shared_ptr<Location> location_one = 0, std::shared_ptr<Location> location_two = 0, std::shared_ptr<Location> location_three = 0, std::shared_ptr<Location> location_four = 0, std::shared_ptr<Location> location_five = 0);
-    virtual std::shared_ptr<Location> moveToLocation(std::uint32_t);
     virtual bool inputValidation(std::uint32_t) const;
     void printDescriptions() const;
     virtual void printLocation();
