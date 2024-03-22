@@ -8,10 +8,11 @@ class Player;
 class Bet: public InteractionWithNPC {
 
 public:
-    Bet(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr)
-        : InteractionWithNPC(player, game_state) {}
+    Bet(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr);
     
     ~Bet() = default;
+
+    std::string getNextLocationName(std::uint32_t) override;
 };
 
 #endif
