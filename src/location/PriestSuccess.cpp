@@ -1,7 +1,19 @@
 #include "../../include/location/PriestSuccess.hpp"
+#include "../../include/location/DrinkingWithPriest.hpp"
+#include "../../include/location/AskingAboutChapel.hpp"
 
 PriestSuccess::PriestSuccess(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state, const std::string& description, const std::string& choice_1, const std::string& choice_2, const std::string& choice_3)
-        : InteractionWithNPC(player, game_state, description, choice_1, choice_2, choice_3) {
+    : InteractionWithNPC(player, game_state, description, choice_1, choice_2, choice_3) {
+
+    npc = game_state->getNPC("priest");
+
+    game_state->addLocation("drinking_with_priest", std::make_shared<DrinkingWithPriest>(game_state->getPlayer(), game_state));
+    game_state->addLocation("asking_about_chapel", std::make_shared<AskingAboutChapel>(game_state->getPlayer(), game_state));
+
+    related_locations.push_back("drinking_with_priest");
+    related_locations.push_back("asking_about_chapel");
+    related_locations.push_back("tavern");
+
         sentences.push_back("- He is a wise man who invented beer");
         sentences.push_back("- Milk is for babies. When you grow up you have to drink beer");
         sentences.push_back("- Life is too short to drink cheap beer");
