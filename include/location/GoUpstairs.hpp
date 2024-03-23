@@ -6,11 +6,11 @@
 class GoUpstairs: public InteractionWithNPC {
 
 public:
-    GoUpstairs(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr, const std::string& description = "You are going upstairs and... having a good time.",
-        const std::string& choice_1 = "Go downstairs")
-        : InteractionWithNPC(player, game_state, description, choice_1) {}
+    GoUpstairs(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr);
 
     ~GoUpstairs() = default;
+    
+    std::string getNextLocationName(std::uint32_t) override;
 };
 
 #endif
