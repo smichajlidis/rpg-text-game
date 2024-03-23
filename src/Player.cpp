@@ -25,3 +25,7 @@ void Player::increaseBeingDrunk(std::uint16_t val) {
 void Player::increaseLuck(std::uint16_t val) {
     luck+=val;
 }
+
+void Player::increaseCharisma(std::uint16_t val) {
+    charisma+=val;
+}
