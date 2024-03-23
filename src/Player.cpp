@@ -21,3 +21,7 @@ void Player::updateAfterEachRound() {
 void Player::increaseBeingDrunk(std::uint16_t val) {
     being_drunk+=val;
 }
+
+void Player::increaseLuck(std::uint16_t val) {
+    luck+=val;
+}

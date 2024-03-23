@@ -15,6 +15,7 @@ public:
     std::uint16_t getBeingDrunk() const;
     void updateAfterEachRound();
     void increaseBeingDrunk(std::uint16_t);
+    void increaseLuck(std::uint16_t);
 
 private:
     std::uint16_t charisma;
