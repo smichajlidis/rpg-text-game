@@ -1,0 +1,18 @@
+{
+    "name": {
+        "square": {
+            "type": "random",
+            "description": "You are standing on a square. You see a tavern on the right. On the left - a chapel. Behind you is an entrance to forest.",
+            "choices": [
+                "Go to the tavern",
+                "Go to the forest",
+                "Go to the chapel"
+            ],
+            "related_locations": [
+                "tavern",
+                "forest",
+                "approaching_chapel"
+            ]
+        }
+    } 
+}
