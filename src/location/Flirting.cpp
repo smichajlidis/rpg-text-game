@@ -10,11 +10,11 @@ Flirting::Flirting(std::shared_ptr<Player> player, std::shared_ptr<GameState> ga
 
     npc = game_state->getNPC("ladies");
 
-    game_state->addLocation("Flirting_success", std::make_shared<FlirtingSuccess>(game_state->getPlayer(), game_state));
-    game_state->addLocation("Flirting_fail", std::make_shared<FlirtingFail>(game_state->getPlayer(), game_state));
+    game_state->addLocation("flirting_success", std::make_shared<FlirtingSuccess>(game_state->getPlayer(), game_state));
+    game_state->addLocation("flirting_fail", std::make_shared<FlirtingFail>(game_state->getPlayer(), game_state));
 
-    related_locations.push_back("Flirting_success");
-    related_locations.push_back("Flirting_fail");
+    related_locations.push_back("flirting_success");
+    related_locations.push_back("flirting_fail");
 }
 
 std::string Flirting::getNextLocationName(std::uint32_t val) {
