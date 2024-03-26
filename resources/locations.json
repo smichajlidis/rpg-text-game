@@ -48,6 +48,101 @@
                     ],
                     "npc": "innkeeper"
                 },
+                    "order_beer": {
+                        "if": "gold",
+                        "amount": 10,
+                        "related_locations": [
+                            "order_beer_success",
+                            "order_beer_fail"
+                        ],
+                        "if_success": {
+                            "action": [
+                                "increase_drunk",
+                                "decrease_gold"
+                            ],
+                            "value": [
+                                10,
+                                10
+                            ]
+                        }
+                    },
+                        "order_beer_success": {
+                            "desription": "You are drinking a beer and have fun.",
+                            "choices": [
+                                "Drink another one",
+                                "Ask about something else",
+                                "Say goodbye"
+                            ],
+                            "related_locations": [
+                                "order_beer",
+                                "approaching_innkeeper",
+                                "tavern"
+                            ]
+                        },
+                        "order_beer_fail": {
+                            "description": "You know this isn't charity, right? No money, no beer!",
+                            "choices": [
+                                "Ask about something else",
+                                "Say goodbye"
+                            ],
+                            "related_locations": [
+                                "approaching_innkeeper",
+                                "tavern"
+                            ]
+                        },
+                    "trade": {
+                        "description": "Would you like to buy or sell something?",
+                        "choices": [
+                            "Buy",
+                            "Sell",
+                            "Return"
+                        ],
+                        "related_locations": [
+                            "buying",
+                            "selling",
+                            "approaching_innkeeper"
+                        ],
+                        "npc": "innkeeper"
+                    },
+                    "gossip": {
+                        "if": "attitude",
+                        "how_many": 70, 
+                        "related_locations": [
+                            "gossip_success",
+                            "gossip_fail"
+                        ],
+                        "npc": "innkeeper"
+                    },
+                        "gossip_success": {
+                            "description": [
+                                "- You know, I've heard rumors about the chapel nearby. They say there are dungeons filled with all sorts of monsters lurking around, but also hidden treasures waiting to be discovered.",
+                                "- Those darn bandits are blocking the bridge in the forest, the only way out of this godforsaken village. And guess what? They're demanding outrageous sums of money!"
+                            ],
+                            "choices": [
+                                "Ask about something else",
+                                "Say goodbye"
+                            ],
+                            "related_locations": [
+                                "approaching_innkeeper",
+                                "tavern"
+                            ]
+                        },
+                        "gossip_fail": {
+                            "description": "You know it's rude to gossip? shame on you!",
+                            "choices": [
+                                "Ask about something else",
+                                "Say goodbye"
+                            ],
+                            "related_locations": [
+                                "approaching_innkeeper",
+                                "tavern"
+                            ]
+                        },
+                    "hot_meal": {
+                        "if": "gold",
+                        "how_many": 25, 
+                        "npc": "innkeeper"
+                    },
                 "approaching_ladies": {
                     "description": [
                         "- Guess what We are not wearing right now?",
