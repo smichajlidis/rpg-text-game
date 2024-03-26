@@ -1,6 +1,5 @@
 {
     "name": {
-
         "square": {
             "description": "You are standing on a square. You see a tavern on the right. On the left - a chapel. Behind you is an entrance to forest.",
             "choices": [
@@ -14,7 +13,6 @@
                 "approaching_chapel"
             ]
         },
-
             "tavern": {
                 "description": "You are standing inside a dark tavern.",
                 "choices": [
@@ -32,7 +30,6 @@
                     "square"
                 ]
             },
-
                 "approaching_innkeeper": {
                     "description": "- Hello stranger, what do you wish?",
                     "choices": [
@@ -51,7 +48,6 @@
                     ],
                     "npc": "innkeeper"
                 },
-        
                 "approaching_ladies": {
                     "description": [
                         "- Guess what We are not wearing right now?",
@@ -80,7 +76,6 @@
                     ],
                     "npc": "ladies"
                 },
-        
                 "approaching_gamblers": {
                     "description": "How much do you want to bet?",
                     "choices": [
@@ -98,8 +93,7 @@
                         "tavern"
                     ],
                     "npc": "gamblers"
-                },
-        
+                },   
                 "approaching_priest": {
                     "related_locations": [
                         "priest_success",
@@ -107,7 +101,6 @@
                     ],
                     "condition": "being_drunk"
                 },
-
             "forest": {
                 "description": "Walking between trees.",
                 "choices": [
@@ -121,7 +114,6 @@
                     "square"
                 ]
             },
-
             "approaching_chapel": {
                 "related_locations": [
                     "approaching_chapel_success",
