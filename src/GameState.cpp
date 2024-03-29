@@ -73,6 +73,10 @@ void GameState::addNPC(const std::string& name, std::shared_ptr<NPC> ptr) {
     npcs.insert({name, std::move(ptr)});
 }
 
+void GameState::addEnemy(const std::string& name, std::shared_ptr<LivingBeing> ptr) {
+    enemies.insert({name, std::move(ptr)});
+}
+
 void GameState::passItsPointerToSquare() {
     current_location = std::make_shared<Square>(std::shared_ptr<GameState>(shared_from_this()));
     addLocation("square", current_location);
@@ -90,6 +94,15 @@ std::shared_ptr<Location> GameState::getLocation(const std::string& name) const 
 std::shared_ptr<NPC> GameState::getNPC(const std::string& name) const {
     auto it = npcs.find(name);
     if (it != npcs.end()) {
+        return it->second;
+    } else {
+        return nullptr;
+    }
+}
+
+std::shared_ptr<LivingBeing> GameState::getEnemy(const std::string& name) const {
+    auto it = enemies.find(name);
+    if (it != enemies.end()) {
         return it->second;
     } else {
         return nullptr;

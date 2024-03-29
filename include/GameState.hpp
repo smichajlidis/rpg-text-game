@@ -25,15 +25,18 @@ public:
     void displayLocation();
     void addLocation(const std::string& name, std::shared_ptr<Location> ptr);
     void addNPC(const std::string& name, std::shared_ptr<NPC> ptr);
+    void addEnemy(const std::string& name, std::shared_ptr<LivingBeing> ptr);
     void passItsPointerToSquare();
     std::shared_ptr<Player> getPlayer() const;
     std::shared_ptr<Location> getLocation(const std::string& name) const;
     std::shared_ptr<NPC> getNPC(const std::string& name) const;
+    std::shared_ptr<LivingBeing> getEnemy(const std::string& name) const;
 
 private:
     std::unordered_map<std::string, std::shared_ptr<Location>> locations;
     std::shared_ptr<Location> current_location;
     std::unordered_map<std::string, std::shared_ptr<NPC>> npcs;
+    std::unordered_map<std::string, std::shared_ptr<LivingBeing>> enemies;
     std::shared_ptr<Player> player;
 
     ScreenStuff screen_stuff;
