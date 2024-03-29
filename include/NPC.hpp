@@ -1,9 +1,9 @@
 #ifndef _NPC_HPP_
 #define _NPC_HPP_
 
-#include "Human.hpp"
+#include "LivingBeing.hpp"
 
-class NPC: public Human {
+class NPC: public LivingBeing {
 
 public:
     NPC() { gold = 300; attitude_to_player = 40; }

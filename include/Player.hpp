@@ -1,9 +1,9 @@
 #ifndef _PLAYER_HPP_
 #define _PLAYER_HPP_
 
-#include "Human.hpp"
+#include "LivingBeing.hpp"
 
-class Player: public Human {
+class Player: public LivingBeing {
 
 public:
     Player() { gold = 300; hp = 100; luck = 1; charisma = 1; being_drunk = 0; }
@@ -17,11 +17,14 @@ public:
     void increaseBeingDrunk(std::uint16_t);
     void increaseLuck(std::uint16_t);
     void increaseCharisma(std::uint16_t);
+    void setCurrentEnemy(std::shared_ptr<LivingBeing>);
+    std::string getCurrentEnemyName() const;
 
 private:
     std::uint16_t charisma;
     std::uint16_t luck;
     std::uint16_t being_drunk;
+    std::shared_ptr<LivingBeing> current_enemy;
 };
 
 #endif
