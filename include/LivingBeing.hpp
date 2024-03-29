@@ -9,8 +9,8 @@
 class LivingBeing {
 
 public:
-    LivingBeing(std::uint16_t hp = 100, std::uint16_t strength = 5)
-        : hp(hp), strength(strength) {}
+    LivingBeing(std::uint16_t strength = 5, const std::string& name = "", std::uint16_t hp = 100)
+        : name(name), hp(hp), strength(strength) {}
 
     ~LivingBeing() = default;
 
@@ -22,12 +22,18 @@ public:
     void addItem(const Item& item);
     void deleteItem(const std::string& val);
     Item moveItem(const std::string& val);
+    std::uint32_t getGold() const;
+    void decreaseGold(std::uint32_t);
+    void increaseGold(std::uint32_t);
+    std::string getName() const;
 
 protected:
+    std::string name;
     std::uint16_t hp;
     std::uint16_t strength;
     std::vector<Item> equipment;
     Item active_weapon;
+    std::uint32_t gold;
 };
 
 #endif

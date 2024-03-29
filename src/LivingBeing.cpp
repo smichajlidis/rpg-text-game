@@ -55,3 +55,19 @@ Item LivingBeing::moveItem(const std::string& val) {
     }
     return {};
 }
+
+std::uint32_t LivingBeing::getGold() const {
+    return gold;
+}
+
+void LivingBeing::decreaseGold(std::uint32_t val) {
+    gold -= val;
+}
+
+void LivingBeing::increaseGold(std::uint32_t val) {
+    gold+= val;
+}
+
+std::string LivingBeing::getName() const {
+    return name;
+}
