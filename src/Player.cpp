@@ -29,3 +29,11 @@ void Player::increaseLuck(std::uint16_t val) {
 void Player::increaseCharisma(std::uint16_t val) {
     charisma+=val;
 }
+
+void Player::setCurrentEnemy(std::shared_ptr<LivingBeing> enemy) {
+    current_enemy = enemy;
+}
+
+std::string Player::getCurrentEnemyName() const {
+    return current_enemy->getName();
+}
