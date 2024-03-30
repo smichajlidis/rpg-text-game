@@ -1,5 +1,7 @@
 #include "../include/Player.hpp"
 
+#include <algorithm>
+
 std::uint16_t Player::getCharisma() const {
     return charisma;
 }
@@ -36,4 +38,12 @@ void Player::setCurrentEnemy(std::shared_ptr<LivingBeing> enemy) {
 
 std::string Player::getCurrentEnemyName() const {
     return current_enemy->getName();
+}
+
+std::string Player::getCurrentEnemyNameUppercase() const {
+    std::string temp {current_enemy->getName()};
+    std::transform(temp.begin(), temp.end(), temp.begin(), [](unsigned char c) {
+        return std::toupper(c);
+    });
+    return temp;
 }

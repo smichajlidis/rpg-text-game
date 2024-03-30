@@ -19,6 +19,7 @@ public:
     void increaseCharisma(std::uint16_t);
     void setCurrentEnemy(std::shared_ptr<LivingBeing>);
     std::string getCurrentEnemyName() const;
+    std::string getCurrentEnemyNameUppercase() const;
 
 private:
     std::uint16_t charisma;

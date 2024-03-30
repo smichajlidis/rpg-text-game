@@ -2,6 +2,8 @@
 
 #include <ctime>
 #include <iostream>
+#include <cctype>
+#include <algorithm>
 
 ForestMeetEnemy::ForestMeetEnemy(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state, const std::string& description, const std::string& choice_1)
     : InteractionWithNPC(player, game_state, description, choice_1) {
@@ -24,7 +26,7 @@ ForestMeetEnemy::ForestMeetEnemy(std::shared_ptr<Player> player, std::shared_ptr
 void ForestMeetEnemy::printLocation() {
     srand(time(NULL));
     player->setCurrentEnemy(game_state->getEnemy(related_enemies.at(std::rand() % related_enemies.size())));
-    std::cout << player->getCurrentEnemyName();
+    std::cout << player->getCurrentEnemyNameUppercase();
     printDescriptions();
 } 
         
