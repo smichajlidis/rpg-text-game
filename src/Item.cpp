@@ -7,3 +7,7 @@ std::string Item::getName() const {
 bool Item::empty() const {
     return ((getName() == "") ? true : false);
 }
+
+std::uint16_t Item::getStrength() const {
+    return strength;
+}
