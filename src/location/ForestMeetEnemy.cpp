@@ -5,8 +5,8 @@
 #include <cctype>
 #include <algorithm>
 
-ForestMeetEnemy::ForestMeetEnemy(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state, const std::string& description, const std::string& choice_1)
-    : InteractionWithNPC(player, game_state, description, choice_1) {
+ForestMeetEnemy::ForestMeetEnemy(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state, const std::string& description, const std::string& choice_1, const std::string& choice_2)
+    : InteractionWithNPC(player, game_state, description, choice_1, choice_2) {
 
     std::shared_ptr<LivingBeing> wolf = std::make_shared<LivingBeing>(10, "wolf");
     game_state->addEnemy("wolf", wolf);
@@ -19,6 +19,7 @@ ForestMeetEnemy::ForestMeetEnemy(std::shared_ptr<Player> player, std::shared_ptr
     related_enemies.push_back("bear");
     related_enemies.push_back("bandit");
 
+    related_locations.push_back("attack");
     related_locations.push_back("forest");
 
 }

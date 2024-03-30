@@ -8,7 +8,8 @@ class ForestMeetEnemy: public InteractionWithNPC {
 public:
     ForestMeetEnemy(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr,
         const std::string& description = " is your enemy!",
-        const std::string& choice_1 = "Return");
+        const std::string& choice_1 = "Attack",
+        const std::string& choice_2 = "Try to escape");
         
     ~ForestMeetEnemy() = default;
 
