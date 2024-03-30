@@ -47,3 +47,15 @@ std::string Player::getCurrentEnemyNameUppercase() const {
     });
     return temp;
 }
+
+void Player::decreaseCurrentEnemyHP(std::uint16_t val) {
+    current_enemy->decreaseHP(val);
+}
+
+std::uint16_t Player::getCurrentEnemyHP() const {
+    return current_enemy->getHP();
+}
+
+uint16_t Player::getCurrentEnemyStrength() const {
+    return current_enemy->getStrength();
+}

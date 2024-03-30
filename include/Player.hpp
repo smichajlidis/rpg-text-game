@@ -20,6 +20,9 @@ public:
     void setCurrentEnemy(std::shared_ptr<LivingBeing>);
     std::string getCurrentEnemyName() const;
     std::string getCurrentEnemyNameUppercase() const;
+    std::uint16_t getCurrentEnemyHP() const;
+    std::uint16_t getCurrentEnemyStrength() const;
+    void decreaseCurrentEnemyHP(std::uint16_t);
 
 private:
     std::uint16_t charisma;
