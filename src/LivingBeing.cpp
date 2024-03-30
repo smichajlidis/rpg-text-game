@@ -8,7 +8,7 @@ std::uint16_t LivingBeing::getHP() const {
 }
 
 std::uint16_t LivingBeing::getStrength() const {
-    return strength;
+    return strength + active_weapon.getStrength();
 }
 
 void LivingBeing::increaseHP(std::uint16_t val) {
@@ -70,4 +70,8 @@ void LivingBeing::increaseGold(std::uint32_t val) {
 
 std::string LivingBeing::getName() const {
     return name;
+}
+
+void LivingBeing::decreaseHP(std::uint16_t val) {
+    hp = ( (hp - val >= 0) ? hp - val : 0);
 }
