@@ -9,6 +9,7 @@ Attack::Attack(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_s
 
     related_locations.push_back("attack");
     related_locations.push_back("forest");
+    related_locations.push_back("forest");
 }
 
 void Attack::printLocation() {
@@ -25,7 +26,10 @@ void Attack::printLocation() {
 }
 
 std::string Attack::getNextLocationName(std::uint32_t val) {
-    if (val == 1) {
+    if (player->getCurrentEnemyName() == "") {
+        return related_locations.at(2);
+    }
+    else if (val == 1) {
         srand(time(NULL));
         player->decreaseHP(rand() % player->getCurrentEnemyStrength());
         player->decreaseCurrentEnemyHP(rand() % player->getStrength());
