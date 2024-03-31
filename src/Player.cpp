@@ -33,7 +33,7 @@ void Player::increaseCharisma(std::uint16_t val) {
 }
 
 void Player::setCurrentEnemy(std::shared_ptr<LivingBeing> enemy) {
-    current_enemy = enemy;
+    current_enemy = std::make_shared<LivingBeing>(*enemy);
 }
 
 std::string Player::getCurrentEnemyName() const {
