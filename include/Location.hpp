@@ -19,7 +19,7 @@ public:
     virtual void printLocation();
     std::string getDescription() const;
     void setGameState(std::shared_ptr<GameState>);
-
+    std::uint32_t getRelatedLocationsSize() const;
     virtual std::string getNextLocationName(std::uint32_t);
 
 protected:

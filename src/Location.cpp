@@ -45,3 +45,7 @@ void Location::setGameState(std::shared_ptr<GameState> val) {
 std::string Location::getNextLocationName(std::uint32_t val) {
     return related_locations.at(val-1);
 }
+
+std::uint32_t Location::getRelatedLocationsSize() const {
+    return related_locations.size();
+}
