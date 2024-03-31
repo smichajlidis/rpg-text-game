@@ -37,7 +37,7 @@ void Player::setCurrentEnemy(std::shared_ptr<LivingBeing> enemy) {
 }
 
 std::string Player::getCurrentEnemyName() const {
-    return current_enemy->getName();
+    return ((current_enemy) ? current_enemy->getName() : "");
 }
 
 std::string Player::getCurrentEnemyNameUppercase() const {
