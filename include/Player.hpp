@@ -6,7 +6,7 @@
 class Player: public LivingBeing {
 
 public:
-    Player() { gold = 300; hp = 100; luck = 1; strength = 70, charisma = 1; being_drunk = 0; }
+    Player() { gold = 300; hp = 100; luck = 1; strength = 25, charisma = 1; being_drunk = 0; }
 
     ~Player() = default;
 
