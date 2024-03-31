@@ -22,17 +22,25 @@ void Attack::printLocation() {
         std::cout << "The " << player->getCurrentEnemyName() << " is dead. You won!" << std::endl;
         player->deleteCurrentEnemy();
     }
-    printDescriptions();
+    if (player->getCurrentEnemyName() != "") {
+        printDescriptions();
+    } else {
+        std::string temp;
+        std::cout << "\nPress any to continue: ";
+    }
+
 }
 
 std::string Attack::getNextLocationName(std::uint32_t val) {
-    if (player->getCurrentEnemyName() == "") {
+    if (player->getCurrentEnemyName() != "") {
+        if (val == 1) {
+            srand(time(NULL));
+            player->decreaseHP(rand() % player->getCurrentEnemyStrength());
+            player->decreaseCurrentEnemyHP(rand() % player->getStrength());
+        }
+        return related_locations.at(val-1);
+    }
+    else {
         return related_locations.at(2);
     }
-    else if (val == 1) {
-        srand(time(NULL));
-        player->decreaseHP(rand() % player->getCurrentEnemyStrength());
-        player->decreaseCurrentEnemyHP(rand() % player->getStrength());
-    }
-    return related_locations.at(val-1);
 }
