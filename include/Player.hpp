@@ -6,7 +6,7 @@
 class Player: public LivingBeing {
 
 public:
-    Player() { gold = 300; hp = 100; luck = 1; charisma = 1; being_drunk = 0; }
+    Player() { gold = 300; hp = 100; luck = 1; strength = 70, charisma = 1; being_drunk = 0; }
 
     ~Player() = default;
 
@@ -23,6 +23,7 @@ public:
     std::uint16_t getCurrentEnemyHP() const;
     std::uint16_t getCurrentEnemyStrength() const;
     void decreaseCurrentEnemyHP(std::uint16_t);
+    void deleteCurrentEnemy();
 
 private:
     std::uint16_t charisma;

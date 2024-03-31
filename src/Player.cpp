@@ -59,3 +59,7 @@ std::uint16_t Player::getCurrentEnemyHP() const {
 uint16_t Player::getCurrentEnemyStrength() const {
     return current_enemy->getStrength();
 }
+
+void Player::deleteCurrentEnemy() {
+    current_enemy = nullptr;
+}
