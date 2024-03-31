@@ -17,6 +17,10 @@ void Attack::printLocation() {
     if (player->getCurrentEnemyHP() > 0) {
         std::cout << "The " << player->getCurrentEnemyName() << " attacked you and you have " << player->getHP() << " left." << std::endl;
     }
+    else {
+        std::cout << "The " << player->getCurrentEnemyName() << " is dead. You won!" << std::endl;
+        player->deleteCurrentEnemy();
+    }
     printDescriptions();
 }
 
