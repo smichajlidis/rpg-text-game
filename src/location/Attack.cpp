@@ -25,7 +25,6 @@ void Attack::printLocation() {
     if (player->getCurrentEnemyName() != "") {
         printDescriptions();
     } else {
-        std::string temp;
         std::cout << "\nPress any to continue: ";
     }
 
