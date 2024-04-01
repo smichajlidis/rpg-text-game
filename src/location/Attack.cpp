@@ -20,6 +20,7 @@ void Attack::printLocation() {
     }
     else {
         std::cout << "The " << player->getCurrentEnemyName() << " is dead. You won!" << std::endl;
+        player->getItemsFromCurrentEnemy();
         player->deleteCurrentEnemy();
     }
     if (player->getCurrentEnemyName() != "") {
