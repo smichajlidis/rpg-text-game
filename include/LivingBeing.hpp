@@ -27,6 +27,7 @@ public:
     void decreaseGold(std::uint32_t);
     void increaseGold(std::uint32_t);
     std::string getName() const;
+    Item getItemFromEquipment(std::uint32_t);
 
 protected:
     std::string name;

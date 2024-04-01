@@ -75,3 +75,7 @@ std::string LivingBeing::getName() const {
 void LivingBeing::decreaseHP(std::uint16_t val) {
     hp = ( (hp - val >= 0) ? hp - val : 0);
 }
+
+Item LivingBeing::getItemFromEquipment(std::uint32_t val) {
+    return equipment.at(val);
+}
