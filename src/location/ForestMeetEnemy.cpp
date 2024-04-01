@@ -11,10 +11,17 @@ ForestMeetEnemy::ForestMeetEnemy(std::shared_ptr<Player> player, std::shared_ptr
     : InteractionWithNPC(player, game_state, description, choice_1, choice_2) {
 
     std::shared_ptr<LivingBeing> wolf = std::make_shared<LivingBeing>(10, "wolf");
+    Item fur ("fur");
+    wolf->addItem(fur);
     game_state->addEnemy("wolf", wolf);
     std::shared_ptr<LivingBeing> bear = std::make_shared<LivingBeing>(30, "bear");
+    bear->addItem(fur);
+    Item tusk ("tusk");
+    bear->addItem(tusk);
     game_state->addEnemy("bear", bear);
     std::shared_ptr<LivingBeing> bandit = std::make_shared<LivingBeing>(12, "bandit");
+    Item rusty_dagger ("rusty_dagger", 10);
+    bandit->addItem(rusty_dagger);
     game_state->addEnemy("bandit", bandit);
 
     related_enemies.push_back("wolf");
