@@ -24,6 +24,7 @@ public:
     std::uint16_t getCurrentEnemyStrength() const;
     void decreaseCurrentEnemyHP(std::uint16_t);
     void deleteCurrentEnemy();
+    void getItemsFromCurrentEnemy();
 
 private:
     std::uint16_t charisma;

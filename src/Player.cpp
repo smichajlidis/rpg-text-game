@@ -63,3 +63,9 @@ uint16_t Player::getCurrentEnemyStrength() const {
 void Player::deleteCurrentEnemy() {
     current_enemy = nullptr;
 }
+
+void Player::getItemsFromCurrentEnemy() {
+    for (int i = 0; i < current_enemy->getEquipmentSize(); i++) {
+        equipment.push_back(current_enemy->getItemFromEquipment(i));
+    }
+}
