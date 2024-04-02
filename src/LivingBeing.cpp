@@ -19,7 +19,8 @@ void LivingBeing::printEquipment() const {
     std::uint32_t count {1};
     if (!equipment.empty()) {
         std::for_each(equipment.begin(), equipment.end(), [&count](const Item& item) { 
-            std::cout << count << ". " << item.getName() << std::endl;
+            //std::cout << count << ". " << item.getName() << std::endl;
+            std::cout << count << ". " << item << std::endl;
             ++count;
         });
     }
