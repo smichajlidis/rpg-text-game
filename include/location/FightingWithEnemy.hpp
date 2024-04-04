@@ -1,17 +1,17 @@
-#ifndef _ATTACK_HPP_
-#define _ATTACK_HPP_
+#ifndef _FIGHTINGWITHENEMY_HPP_
+#define _FIGHTINGWITHENEMY_HPP_
 
 #include "../InteractionWithNPC.hpp"
 
-class Attack: public InteractionWithNPC {
+class FightingWithEnemy: public InteractionWithNPC {
 
 public:
-    Attack(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr,
+    FightingWithEnemy(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr,
         const std::string& description = "What a fight!",
         const std::string& choice_1 = "Attack again",
         const std::string& choice_2 = "Try to escape");
 
-    ~Attack() = default;
+    ~FightingWithEnemy() = default;
 
     std::string getNextLocationName(std::uint32_t) override;
     void printLocation() override;
