@@ -69,3 +69,7 @@ void Player::getItemsFromCurrentEnemy() {
         equipment.push_back(current_enemy->getItemFromEquipment(i));
     }
 }
+
+void Player::printCurrentEnemyEquipment() const {
+    current_enemy->printEquipment();
+}
