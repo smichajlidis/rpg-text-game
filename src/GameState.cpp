@@ -1,5 +1,6 @@
 #include "../include/GameState.hpp"
 #include "../include/location/Square.hpp"
+#include "../include/location/YouAreDead.hpp"
 
 #include <iostream>
 #include <sstream>
@@ -10,10 +11,12 @@ GameState::GameState() {
     player = std::make_shared<Player>();
 
     top_bar.pointToPlayer(player);
-
     equipment_menu.addPlayer(player);
     loading_menu.addPlayer(player);
     saving_menu.addPlayer(player);
+
+    std::shared_ptr<Location> you_are_dead = std::make_shared<YouAreDead>();
+    addLocation("you_are_dead", you_are_dead);
 }
 
 void GameState::displayLocation() {
@@ -59,7 +62,11 @@ void GameState::displayLocation() {
                     break;
             }
         }
-
+        if (!player->getHP()) {
+            top_bar.displayTopBar();
+            getLocation("you_are_dead")->printLocation();
+            c = 'Q';
+        }
         screen_stuff.clear();
 
     } while(c != 'Q');
