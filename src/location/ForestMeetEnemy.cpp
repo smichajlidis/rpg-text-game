@@ -31,6 +31,10 @@ ForestMeetEnemy::ForestMeetEnemy(std::shared_ptr<Player> player, std::shared_ptr
 
     game_state->addLocation("fighting_with_enemy", std::make_shared<FightingWithEnemy>(game_state->getPlayer(), game_state));
     game_state->addLocation("enemy_defeated", std::make_shared<EnemyDefeated>(game_state->getPlayer(), game_state));
+
+    related_locations.push_back("fighting_with_enemy");
+    related_locations.push_back("enemy_defeated");
+    related_locations.push_back("forest");
 }
 
 void ForestMeetEnemy::printLocation() {
