@@ -4,12 +4,12 @@
 #include <limits>
 
 void MainMenu::displayMenu() {
-    game_state = std::make_shared<GameState>();
-    game_state->passItsPointerToSquare();
-    
     std::uint32_t choice {};
 
     do {
+        game_state = std::make_shared<GameState>();
+        game_state->passItsPointerToSquare();
+
         screen_stuff.clear();
         header_displayer.displayHeader();
 
