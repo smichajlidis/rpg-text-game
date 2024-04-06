@@ -9,7 +9,7 @@ FightingWithEnemy::FightingWithEnemy(std::shared_ptr<Player> player, std::shared
 
     related_locations.push_back("fighting_with_enemy");
     related_locations.push_back("enemy_defeated");
-    related_locations.push_back("forest");
+    related_locations.push_back("try_to_escape");
 }
 
 void FightingWithEnemy::printLocation() {
@@ -25,5 +25,5 @@ std::string FightingWithEnemy::getNextLocationName(std::uint32_t val) {
             player->decreaseCurrentEnemyHP(rand() % player->getStrength());
             return ((player->getCurrentEnemyHP() > 0) ? "fighting_with_enemy" : "enemy_defeated");
         }
-        return "forest";
+        return "try_to_escape";
 }

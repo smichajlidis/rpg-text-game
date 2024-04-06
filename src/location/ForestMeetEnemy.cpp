@@ -1,6 +1,7 @@
 #include "../../include/location/ForestMeetEnemy.hpp"
 #include "../../include/location/FightingWithEnemy.hpp"
 #include "../../include/location/EnemyDefeated.hpp"
+#include "../../include/location/TryToEscape.hpp"
 
 #include <ctime>
 #include <iostream>
@@ -31,10 +32,11 @@ ForestMeetEnemy::ForestMeetEnemy(std::shared_ptr<Player> player, std::shared_ptr
 
     game_state->addLocation("fighting_with_enemy", std::make_shared<FightingWithEnemy>(game_state->getPlayer(), game_state));
     game_state->addLocation("enemy_defeated", std::make_shared<EnemyDefeated>(game_state->getPlayer(), game_state));
+    game_state->addLocation("try_to_escape", std::make_shared<TryToEscape>(game_state->getPlayer(), game_state));
 
     related_locations.push_back("fighting_with_enemy");
     related_locations.push_back("enemy_defeated");
-    related_locations.push_back("forest");
+    related_locations.push_back("try_to_escape");
 }
 
 void ForestMeetEnemy::printLocation() {
@@ -51,5 +53,5 @@ std::string ForestMeetEnemy::getNextLocationName(std::uint32_t val) {
         player->decreaseCurrentEnemyHP(rand() % player->getStrength());
         return ((player->getCurrentEnemyHP() > 0) ? "fighting_with_enemy" : "enemy_defeated");
     }
-    return "forest";
+    return "try_to_escape";
 }
