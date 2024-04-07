@@ -84,6 +84,10 @@ void GameState::addEnemy(const std::string& name, std::shared_ptr<LivingBeing> p
     enemies.insert({name, std::move(ptr)});
 }
 
+void GameState::addItem(const std::string& name, const Item& ptr) {
+    items.insert({name, std::move(ptr)});
+}
+
 void GameState::passItsPointerToSquare() {
     current_location = std::make_shared<Square>(std::shared_ptr<GameState>(shared_from_this()));
     addLocation("square", current_location);
