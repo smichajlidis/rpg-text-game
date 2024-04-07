@@ -3,14 +3,22 @@
 
 #include "../InteractionWithNPC.hpp"
 
+#include <unordered_map>
+
 class ForestFindItem: public InteractionWithNPC {
 
 public:
     ForestFindItem(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr,
         const std::string& description = "Find item",
-        const std::string& choice_1 = "Return");
+        const std::string& choice_1 = "Move forward",
+        const std::string& choice_2 = "Stop exploring");
         
     ~ForestFindItem() = default;
+
+    //void printLocation() override;
+
+private:
+    std::unordered_map<std::string, Item> related_items;
 };
 
 #endif
