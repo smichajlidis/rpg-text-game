@@ -15,7 +15,8 @@ TryToEscapeFail::TryToEscapeFail(std::shared_ptr<Player> player, std::shared_ptr
 void TryToEscapeFail::printLocation() {
     std::cout << "You failed to escape!" << std::endl;
     std::cout << "The " << player->getCurrentEnemyName() << " attacked you and you have " << player->getHP() << " left." << std::endl;
-    printDescriptions();
+    std::cout << "\n";
+    printChoices();
 }
 
 std::string TryToEscapeFail::getNextLocationName(std::uint32_t val) {

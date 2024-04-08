@@ -15,5 +15,5 @@ void EnemyDefeated::printLocation() {
     player->getItemsFromCurrentEnemy();
     player->deleteCurrentEnemy();
     std::cout << "\n";
-    printDescriptions();
+    printChoices();
 }

@@ -15,7 +15,8 @@ FightingWithEnemy::FightingWithEnemy(std::shared_ptr<Player> player, std::shared
 void FightingWithEnemy::printLocation() {
     std::cout << "You attacked the " << player->getCurrentEnemyName() << " and it has " << player->getCurrentEnemyHP() << " left." << std::endl;
     std::cout << "The " << player->getCurrentEnemyName() << " attacked you and you have " << player->getHP() << " left." << std::endl;
-    printDescriptions();
+    std::cout << "\n";
+    printChoices();
 }
 
 std::string FightingWithEnemy::getNextLocationName(std::uint32_t val) {

@@ -10,5 +10,7 @@ void InteractionWithNPC::printLocation() {
     if (sentences.size()) {
         std::cout<<sentences.at(std::rand() % sentences.size());
     }
-    this->printDescriptions();
+    printDescription();
+    std::cout << "\n\n";
+    printChoices();
 }

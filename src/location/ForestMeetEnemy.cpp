@@ -46,7 +46,9 @@ void ForestMeetEnemy::printLocation() {
     srand(time(NULL));
     player->setCurrentEnemy(game_state->getEnemy(related_enemies.at(std::rand() % related_enemies.size())));
     std::cout << player->getCurrentEnemyNameUppercase();
-    printDescriptions();
+    printDescription();
+    std::cout << "\n\n";
+    printChoices();
 } 
     
 std::string ForestMeetEnemy::getNextLocationName(std::uint32_t val) {
