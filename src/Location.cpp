@@ -14,12 +14,16 @@ Location::Location(std::shared_ptr<GameState> game_state, const std::string& des
 }
 
 void Location::printLocation() {
-    printDescriptions();
+    printDescription();
+    std::cout << "\n\n";
+    printChoices();
 }
 
-void Location::printDescriptions() const {
-    std::cout << descriptions.at(0) << "\n\n";
+void Location::printDescription() const {
+    std::cout << descriptions.at(0);
+}
 
+void Location::printChoices() const {
     std::uint32_t count {1};
     std::for_each(descriptions.begin() + 1, descriptions.end(), [&count](const std::string& choice) { 
         if (!choice.empty()) {

@@ -15,7 +15,8 @@ public:
     ~Location() = default;
 
     virtual bool inputValidation(std::uint32_t) const;
-    void printDescriptions() const;
+    void printDescription() const;
+    void printChoices() const;
     virtual void printLocation();
     std::string getDescription() const;
     void setGameState(std::shared_ptr<GameState>);
