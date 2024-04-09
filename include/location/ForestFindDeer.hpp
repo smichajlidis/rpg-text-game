@@ -6,11 +6,11 @@
 class ForestFindDeer: public InteractionWithNPC {
 
 public:
-    ForestFindDeer(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr,
-        const std::string& description = "Forest find deer",
-        const std::string& choice_1 = "Return");
+    ForestFindDeer(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr);
         
     ~ForestFindDeer() = default;
+
+    std::string getNextLocationName(std::uint32_t val) override;
 };
 
 #endif
