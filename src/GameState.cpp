@@ -38,7 +38,7 @@ void GameState::displayLocation() {
         if (iss >> choice) {
             if (current_location->inputValidation(choice)) {
                 current_location = getLocation(current_location->getNextLocationName(choice));
-                if (current_location->getDescription().empty()) {
+                while (current_location->getDescription().empty()) {
                     current_location = getLocation(current_location->getNextLocationName(choice));
                 }
             }
