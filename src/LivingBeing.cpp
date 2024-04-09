@@ -79,3 +79,12 @@ void LivingBeing::decreaseHP(std::uint16_t val) {
 Item LivingBeing::getItemFromEquipment(std::uint32_t val) {
     return equipment.at(val);
 }
+
+bool LivingBeing::findItemInEquipment(const std::string& name) const {
+    for (auto& item: equipment) {
+        if (item.getName() == name) {
+            return true;
+        }
+    }
+    return false;
+}
