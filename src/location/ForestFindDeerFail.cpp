@@ -5,4 +5,5 @@ ForestFindDeerFail::ForestFindDeerFail(std::shared_ptr<Player> player, std::shar
 
     related_locations.push_back("forest_exploration");
     related_locations.push_back("forest");
+
 }
