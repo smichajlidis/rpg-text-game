@@ -13,5 +13,5 @@ ForestFindDeer::ForestFindDeer(std::shared_ptr<Player> player, std::shared_ptr<G
 }
 
 std::string ForestFindDeer::getNextLocationName(std::uint32_t val) {
-    return ((player->findItemInEquipment("bow")) ? related_locations.at(0) : related_locations.at(1));
+    return ((player->findItemInEquipment("bow")) ? related_locations.at(0) : related_locations.at(0));
 }
