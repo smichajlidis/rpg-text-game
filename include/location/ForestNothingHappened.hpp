@@ -8,7 +8,8 @@ class ForestNothingHappened: public InteractionWithNPC {
 public:
     ForestNothingHappened(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr,
         const std::string& description = "Nothing happened",
-        const std::string& choice_1 = "Return");
+        const std::string& choice_1 = "Continue",
+        const std::string& choice_2 = "Return");
         
     ~ForestNothingHappened() = default;
 };
