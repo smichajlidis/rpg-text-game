@@ -10,9 +10,8 @@ public:
     const std::string& choice_1 = "Pay",
     const std::string& choice_2 = "Try to convince them",
     const std::string& choice_3 = "Attack them",
-    const std::string& choice_4 = "Say goodbye")
-    : InteractionWithNPC(player, game_state, description, choice_1, choice_2, choice_3, choice_4) {}
-
+    const std::string& choice_4 = "Say goodbye");
+    
     ~ApproachingThugs() = default;
 };
 
