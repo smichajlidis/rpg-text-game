@@ -67,6 +67,11 @@ void GameState::displayLocation() {
             getLocation("you_are_dead")->printLocation();
             c = 'Q';
         }
+        else if (player->getWin()) {
+            top_bar.displayTopBar();
+            getLocation("thugs_paying_success")->printLocation();
+            c = 'Q';
+        }
         screen_stuff.clear();
 
     } while(c != 'Q');
