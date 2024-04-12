@@ -73,3 +73,11 @@ void Player::getItemsFromCurrentEnemy() {
 void Player::printCurrentEnemyEquipment() const {
     current_enemy->printEquipment();
 }
+
+void Player::setWin() {
+    win = true;
+}
+
+bool Player::getWin() const {
+    return win;
+}
