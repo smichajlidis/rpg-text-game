@@ -1,6 +1,6 @@
 #include "../../include/location/ApproachingThugs.hpp"
 #include "../../include/location/ThugsPaying.hpp"
-//#include "../../include/location/ThugsConvincing.hpp"
+#include "../../include/location/ThugsConvincing.hpp"
 //#include "../../include/location/ThugsAttack.hpp"
 
 #include <iostream>
@@ -13,7 +13,7 @@ ApproachingThugs::ApproachingThugs(std::shared_ptr<Player> player, std::shared_p
     npc = game_state->getNPC("thugs");
 
     game_state->addLocation("thugs_paying", std::make_shared<ThugsPaying>(game_state->getPlayer(), game_state));
-    //game_state->addLocation("thugs_convincing", std::make_shared<ThugsConvincing>(game_state->getPlayer(), game_state));
+    game_state->addLocation("thugs_convincing", std::make_shared<ThugsConvincing>(game_state->getPlayer(), game_state));
     //game_state->addLocation("thugs_attack", std::make_shared<ThugsAttack>(game_state->getPlayer(), game_state));
 
     related_locations.push_back("thugs_paying");
