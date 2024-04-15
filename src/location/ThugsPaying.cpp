@@ -1,5 +1,5 @@
 #include "../../include/location/ThugsPaying.hpp"
-#include "../../include/location/ThugsPayingSuccess.hpp"
+#include "../../include/location/Bridge.hpp"
 #include "../../include/location/ThugsPayingFail.hpp"
 
 ThugsPaying::ThugsPaying(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state)
@@ -7,10 +7,9 @@ ThugsPaying::ThugsPaying(std::shared_ptr<Player> player, std::shared_ptr<GameSta
 
     npc = game_state->getNPC("thugs");
 
-    game_state->addLocation("thugs_paying_success", std::make_shared<ThugsPayingSuccess>(game_state->getPlayer(), game_state));
     game_state->addLocation("thugs_paying_fail", std::make_shared<ThugsPayingFail>(game_state->getPlayer(), game_state));
 
-    related_locations.push_back("thugs_paying_success");
+    related_locations.push_back("bridge");
     related_locations.push_back("thugs_paying_fail");
 }
 
