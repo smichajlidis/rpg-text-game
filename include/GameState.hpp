@@ -32,6 +32,7 @@ public:
     std::shared_ptr<Location> getLocation(const std::string& name) const;
     std::shared_ptr<NPC> getNPC(const std::string& name) const;
     std::shared_ptr<LivingBeing> getEnemy(const std::string& name) const;
+    void deleteNPC(const std::string&);
 
 private:
     std::unordered_map<std::string, std::shared_ptr<Location>> locations;

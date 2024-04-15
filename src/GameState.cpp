@@ -69,7 +69,7 @@ void GameState::displayLocation() {
         }
         else if (player->getWin()) {
             top_bar.displayTopBar();
-            getLocation("thugs_paying_success")->printLocation();
+            getLocation("bridge")->printLocation();
             c = 'Q';
         }
         screen_stuff.clear();
@@ -127,4 +127,11 @@ std::shared_ptr<LivingBeing> GameState::getEnemy(const std::string& name) const 
 
 std::shared_ptr<Player> GameState::getPlayer() const {
     return player;
+}
+
+void GameState::deleteNPC(const std::string& name) {
+    auto it = npcs.find(name);
+    if (it != npcs.end()) {
+        npcs.erase(name);
+    }
 }
