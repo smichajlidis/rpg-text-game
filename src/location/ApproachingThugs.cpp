@@ -1,24 +1,31 @@
 #include "../../include/location/ApproachingThugs.hpp"
 #include "../../include/location/ThugsPaying.hpp"
 #include "../../include/location/ThugsConvincing.hpp"
-//#include "../../include/location/ThugsAttack.hpp"
+#include "../../include/location/FightingWithNPC.hpp"
 
 #include <iostream>
 
 ApproachingThugs::ApproachingThugs(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state, const std::string& description, const std::string& choice_1, const std::string& choice_2, const std::string& choice_3, const std::string& choice_4)
     : InteractionWithNPC(player, game_state, description, choice_1, choice_2, choice_3, choice_4) {
 
-    std::shared_ptr<NPC> thugs = std::make_shared<NPC>();
+    std::shared_ptr<NPC> thugs = std::make_shared<NPC>(3, "thugs");
+
+    thugs->addFightingSentence("- Slay the interloper!");
+    thugs->addFightingSentence("- Let his blood paint the ground!");
+    thugs->addFightingSentence("- Witness the end of your days!");
+    thugs->addFightingSentence("- Shred him to ribbons!");
+    thugs->addFightingSentence("- In the name of our sovereign!");
+
     game_state->addNPC("thugs", thugs);
     npc = game_state->getNPC("thugs");
 
     game_state->addLocation("thugs_paying", std::make_shared<ThugsPaying>(game_state->getPlayer(), game_state));
     game_state->addLocation("thugs_convincing", std::make_shared<ThugsConvincing>(game_state->getPlayer(), game_state));
-    //game_state->addLocation("thugs_attack", std::make_shared<ThugsAttack>(game_state->getPlayer(), game_state));
+    game_state->addLocation("fighting_with_thugs", std::make_shared<FightingWithNPC>(std::move(thugs), game_state->getPlayer(), game_state));
 
     related_locations.push_back("thugs_paying");
     related_locations.push_back("thugs_convincing");
-    related_locations.push_back("thugs_attack");
+    related_locations.push_back("fighting_with_thugs");
     related_locations.push_back("forest");
 
     sentences.push_back("- Stop right there! Crossing this bridge will cost you dearly. Hand over 10000 pieces of gold or turn back!");
