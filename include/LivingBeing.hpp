@@ -15,6 +15,7 @@ public:
     ~LivingBeing() = default;
 
     std::uint16_t getStrength() const;
+    void increaseStrength(std::uint32_t);
     std::uint16_t getHP() const;
     void increaseHP(std::uint16_t);
     void decreaseHP(std::uint16_t);

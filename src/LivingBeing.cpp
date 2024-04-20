@@ -68,6 +68,10 @@ void LivingBeing::increaseGold(std::uint32_t val) {
     gold+= val;
 }
 
+void LivingBeing::increaseStrength(std::uint32_t val) {
+    strength += val;
+}
+
 std::string LivingBeing::getName() const {
     return name;
 }
