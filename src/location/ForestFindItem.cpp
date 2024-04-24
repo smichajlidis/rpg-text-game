@@ -21,8 +21,8 @@ ForestFindItem::ForestFindItem(std::shared_ptr<Player> player, std::shared_ptr<G
     related_locations.push_back("forest");
 }
 
-void ForestFindItem::addNewItem(std::string description, std::string name, std::uint32_t strength, std::uint32_t value) {
-    Item item (name, strength, value);
+void ForestFindItem::addNewItem(std::string description, std::string name, std::uint32_t value, std::uint32_t strength) {
+    Item item (name, value, strength);
     game_state->addItem(name, item);
     related_items.insert({description, item});
     sentences.push_back(description);
