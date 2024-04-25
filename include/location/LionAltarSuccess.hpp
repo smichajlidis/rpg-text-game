@@ -7,7 +7,7 @@ class LionAltarSuccess: public InteractionWithNPC {
 
 public:
     LionAltarSuccess(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr,
-        const std::string& description = "description of lion altar",
+        const std::string& description = ".",
         const std::string& choice_1 = "Keep praying (100 gold)",
         const std::string& choice_2 = "Return");
 

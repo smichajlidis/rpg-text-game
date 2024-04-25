@@ -7,7 +7,7 @@ class MysteriousAltarSuccess: public InteractionWithNPC {
 
 public:
     MysteriousAltarSuccess(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state = nullptr,
-        const std::string& description = "description of mysterious altar",
+        const std::string& description = ".",
         const std::string& choice_1 = "Keep praying (100 gold)",
         const std::string& choice_2 = "Return");
 
