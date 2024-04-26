@@ -21,12 +21,6 @@ ForestExploration::ForestExploration(std::shared_ptr<Player> player, std::shared
 }
 
 std::string ForestExploration::getNextLocationName(std::uint32_t val) {
-    
     srand(time(NULL));
-    switch(std::rand() % 4 + 1) {
-        case 1: return related_locations.at(0); break;
-        case 2: return related_locations.at(1); break;
-        case 3: return related_locations.at(2); break;
-        default: return related_locations.at(3); break;
-    }
+    return related_locations.at(std::rand() - related_locations.size());
 }
