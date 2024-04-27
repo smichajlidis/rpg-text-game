@@ -12,6 +12,8 @@ public:
         const std::string& choice_2 = "Enough for today");
 
     ~TryToEscapeSuccess() = default;
+
+    std::string getNextLocationName(std::uint32_t) override;
 };
 
 #endif

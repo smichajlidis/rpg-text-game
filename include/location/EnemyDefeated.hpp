@@ -14,6 +14,7 @@ public:
     ~EnemyDefeated() = default;
 
     void printLocation() override;
+    std::string getNextLocationName(std::uint32_t) override;
 };
 
 #endif

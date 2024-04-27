@@ -17,3 +17,18 @@ void EnemyDefeated::printLocation() {
     std::cout << "\n";
     printChoices();
 }
+
+std::string EnemyDefeated::getNextLocationName(std::uint32_t val) {
+    
+    switch (val) {
+        case 1:
+            return ((player->getWhereIsPlayer() == "forest") ? "forest_exploration" : "dungeons");
+            break;
+        case 2:
+            return ((player->getWhereIsPlayer() == "forest") ? "forest_exploration" : "approaching_chapel_success");
+            break;
+        default:
+            break;
+    }
+    return "enemy_defeated";
+}
