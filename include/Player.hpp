@@ -28,6 +28,8 @@ public:
     void printCurrentEnemyEquipment() const;
     void setWin();
     bool getWin() const;
+    void setWhereIsPlayer(const std::string&);
+    std::string getWhereIsPlayer() const;
 
 private:
     std::uint16_t charisma;
@@ -35,6 +37,7 @@ private:
     std::uint16_t being_drunk;
     std::shared_ptr<LivingBeing> current_enemy;
     bool win;
+    std::string where_is_player;
 };
 
 #endif

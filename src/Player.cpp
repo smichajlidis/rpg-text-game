@@ -81,3 +81,11 @@ void Player::setWin() {
 bool Player::getWin() const {
     return win;
 }
+
+void Player::setWhereIsPlayer(const std::string& val) {
+    where_is_player = val;
+}
+
+std::string Player::getWhereIsPlayer() const {
+    return where_is_player;
+}
