@@ -5,7 +5,7 @@
 ApproachingChapel::ApproachingChapel(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state)
     :InteractionWithNPC(player, game_state) {
 
-    game_state->addLocation("approaching_chapel_success", std::make_shared<ApproachingChapelSuccess>(game_state));
+    game_state->addLocation("approaching_chapel_success", std::make_shared<ApproachingChapelSuccess>(game_state->getPlayer(), game_state));
     game_state->addLocation("closed_chapel", std::make_shared<ClosedChapel>(game_state));
 
     related_locations.push_back("approaching_chapel_success");

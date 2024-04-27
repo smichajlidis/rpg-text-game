@@ -4,8 +4,8 @@
 #include "../../include/location/ApproachingPriest.hpp"
 #include "../../include/location/ApproachingLadies.hpp"
 
-Tavern::Tavern(std::shared_ptr<GameState> game_state, const std::string& description, const std::string& choice_1, const std::string& choice_2, const std::string& choice_3, const std::string& choice_4, const std::string& choice_5)
-    : Location(game_state, description, choice_1, choice_2, choice_3, choice_4, choice_5) {
+Tavern::Tavern(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state, const std::string& description, const std::string& choice_1, const std::string& choice_2, const std::string& choice_3, const std::string& choice_4, const std::string& choice_5)
+    : InteractionWithNPC(player, game_state, description, choice_1, choice_2, choice_3, choice_4, choice_5) {
 
     game_state->addLocation("approaching_innkeeper", std::make_shared<ApproachingInnkeeper>(game_state->getPlayer(), game_state));
     game_state->addLocation("approaching_gamblers", std::make_shared<ApproachingGamblers>(game_state->getPlayer(), game_state));
@@ -18,4 +18,5 @@ Tavern::Tavern(std::shared_ptr<GameState> game_state, const std::string& descrip
     related_locations.push_back("approaching_ladies");
     related_locations.push_back("square");
 
+    player->setWhereIsPlayer("tavern");
 }
