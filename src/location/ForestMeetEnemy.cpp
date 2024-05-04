@@ -24,7 +24,7 @@ ForestMeetEnemy::ForestMeetEnemy(std::shared_ptr<Player> player, std::shared_ptr
     bear->addItem(tusk);
     game_state->addEnemy("bear", bear);
     std::shared_ptr<LivingBeing> bandit = std::make_shared<LivingBeing>(12, "bandit");
-    Item rusty_dagger ("rusty_dagger", 35, 10);
+    Item rusty_dagger ("rusty_dagger", 35, "weapon", 10);
     bandit->addItem(rusty_dagger);
     game_state->addItem("rusty_dagger", rusty_dagger);
     game_state->addEnemy("bandit", bandit);

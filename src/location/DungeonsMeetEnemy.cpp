@@ -10,7 +10,7 @@ DungeonsMeetEnemy::DungeonsMeetEnemy(std::shared_ptr<Player> player, std::shared
     : InteractionWithNPC(player, game_state, description, choice_1, choice_2) {
 
     std::shared_ptr<LivingBeing> skeleton = std::make_shared<LivingBeing>(25, "skeleton");
-    Item rusty_dagger ("rusty_dagger", 35, 10);
+    Item rusty_dagger ("rusty_dagger", 35, "weapon", 10);
     skeleton->addItem(rusty_dagger);
     game_state->addEnemy("skeleton", skeleton);
 
