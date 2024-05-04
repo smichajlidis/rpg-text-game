@@ -16,7 +16,7 @@ public:
     ~AltarOfLastResortSuccess() = default;
 
     void printLocation() override;
-    void addNewItem(std::string, std::string, std::uint32_t, std::uint32_t strength = 0);
+    void addNewItem(std::string, std::string, std::uint32_t, const std::string&, std::uint32_t strength = 0);
 
 private:
     std::unordered_map<std::string, Item> related_items;
