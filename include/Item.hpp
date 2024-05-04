@@ -6,8 +6,8 @@
 class Item {
 
 public:
-    Item(const std::string& name = "", std::uint32_t value = 5, std::uint32_t strength = 0)
-        : name(name), value(value), strength(strength) {}
+    Item(const std::string& name = "", std::uint32_t value = 5, const std::string& type = "", std::uint32_t strength = 0)
+        : name(name), value(value), type(type), strength(strength) {}
 
     ~Item() = default;
 
@@ -15,11 +15,13 @@ public:
 
     std::string getName() const;
     bool empty() const;
+    std::string getType() const;
     std::uint16_t getStrength() const;
 
 private:
     std::string name;
     std::uint32_t value;
+    std::string type;
     std::uint32_t strength;
 };
 
