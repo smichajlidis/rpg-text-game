@@ -2,6 +2,7 @@
 #define _ITEM_HPP_
 
 #include <string>
+#include <cstdint>
 
 class Item {
 
