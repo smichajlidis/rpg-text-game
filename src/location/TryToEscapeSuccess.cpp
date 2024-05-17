@@ -14,7 +14,7 @@ std::string TryToEscapeSuccess::getNextLocationName(std::uint32_t val) {
             return ((player->getWhereIsPlayer() == "forest") ? "forest_exploration" : "dungeons");
             break;
         case 2:
-            return ((player->getWhereIsPlayer() == "forest") ? "forest_exploration" : "approaching_chapel_success");
+            return ((player->getWhereIsPlayer() == "forest") ? "forest" : "approaching_chapel_success");
             break;
         default:
             break;
