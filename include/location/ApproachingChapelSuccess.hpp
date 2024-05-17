@@ -13,6 +13,8 @@ public:
         const std::string& choice_3 = "Go out");
     
     ~ApproachingChapelSuccess() = default;
+
+    void printLocation() override;
 };
 
 #endif
