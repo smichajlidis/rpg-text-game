@@ -3,22 +3,30 @@
 
 #include "../include/HeaderDisplayer.hpp"
 
+
 class Player;
 
 #include <memory>
+#include <vector>
+#include <string>
+#include <cstdint>
 
 class Menu {
 
 public:
-    Menu() = default;
+    Menu(const std::string& title = "", const std::string& choice_1 = "", const std::string& choice_2 = "", const std::string& choice_3 = "", const std::string&choice_4 = "", const std::string& choice_5 = "");
 
     ~Menu() = default;
 
     void addPlayer(std::shared_ptr<Player> player);
     HeaderDisplayer header_displayer;
-    virtual void displayMenu() = 0;
+    virtual void printMenu();
+    virtual void printChoices() const;
+    virtual void printTitle() const;
+    virtual void action(std::uint32_t) const = 0;
 
 protected:
+    std::vector<std::string> descriptions;
     std::shared_ptr<Player> player;
 };
 

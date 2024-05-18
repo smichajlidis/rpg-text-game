@@ -9,11 +9,15 @@
 
 GameState::GameState() {
     player = std::make_shared<Player>();
+    loading_menu = std::make_shared<LoadingMenu>();
+    saving_menu = std::make_shared<SavingMenu>();
+    equipment_menu = std::make_shared<EquipmentMenu>();
+    exiting_menu = std::make_shared<ExitingMenu>();
 
     top_bar.pointToPlayer(player);
-    equipment_menu.addPlayer(player);
-    loading_menu.addPlayer(player);
-    saving_menu.addPlayer(player);
+    equipment_menu->addPlayer(player);
+    loading_menu->addPlayer(player);
+    saving_menu->addPlayer(player);
 
     std::shared_ptr<Location> you_are_dead = std::make_shared<YouAreDead>();
     addLocation("you_are_dead", you_are_dead);
@@ -47,16 +51,16 @@ void GameState::displayLocation() {
             c = std::toupper(input.at(0));
             switch(c) {
                 case 'E':
-                    equipment_menu.displayMenu();
+                    equipment_menu->printMenu();
                     break;
                 case 'L':
-                    loading_menu.displayMenu();
+                    loading_menu->printMenu();
                     break;
                 case 'S':
-                    saving_menu.displayMenu();
+                    saving_menu->printMenu();
                     break;
                 case 'Q':
-                    exiting_menu.displayMenu();
+                    exiting_menu->printMenu();
                     break;
                 default:
                     break;

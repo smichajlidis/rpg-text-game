@@ -9,7 +9,8 @@ public:
 
     ~SavingMenu() = default;
 
-    void displayMenu() override;
+    void printMenu() override;
+    void action(std::uint32_t) const override;
 };
 
 #endif

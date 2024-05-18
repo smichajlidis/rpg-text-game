@@ -1,7 +1,9 @@
 #include "include/MainMenu.hpp"
 
-int main() {
+#include <memory>
+#include <iostream>
 
-    MainMenu main_menu;
-    main_menu.displayMenu();
+int main() {
+    std::shared_ptr<MainMenu> main_menu = std::make_shared<MainMenu>();
+    main_menu->printMenu();
 }

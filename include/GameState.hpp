@@ -43,10 +43,10 @@ private:
     std::shared_ptr<Player> player;
 
     ScreenStuff screen_stuff;
-    SavingMenu saving_menu;
-    LoadingMenu loading_menu;
-    ExitingMenu exiting_menu;
-    EquipmentMenu equipment_menu;
+    std::shared_ptr<SavingMenu> saving_menu;
+    std::shared_ptr<LoadingMenu> loading_menu;
+    std::shared_ptr<ExitingMenu> exiting_menu;
+    std::shared_ptr<EquipmentMenu> equipment_menu;
     TopBar top_bar;
 };
 
