@@ -10,6 +10,6 @@ void SavingMenu::printMenu() {
     std::cin>>choice;
 }
 
-void SavingMenu::action(std::uint32_t) const {
+void SavingMenu::action(const std::string& subject, std::uint32_t value) const {
     
 }

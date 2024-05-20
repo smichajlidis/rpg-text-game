@@ -3,7 +3,6 @@
 
 #include "../include/HeaderDisplayer.hpp"
 
-
 class Player;
 
 #include <memory>
@@ -23,7 +22,7 @@ public:
     virtual void printMenu();
     virtual void printChoices() const;
     virtual void printTitle() const;
-    virtual void action(std::uint32_t) const = 0;
+    virtual void action(const std::string&, std::uint32_t) const = 0;
 
 protected:
     std::vector<std::string> descriptions;

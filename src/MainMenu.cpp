@@ -25,12 +25,12 @@ void MainMenu::printMenu() {
         std::cin >> choice;
         screen_stuff.clear();
 
-        action(choice);
+        action("",choice);
 
     } while(choice!=3);
 }
 
-void MainMenu::action(std::uint32_t val) const {
+void MainMenu::action(const std::string& subject, std::uint32_t val) const {
     switch(val) {
         case 1:
             game_state->displayLocation();

@@ -10,6 +10,6 @@ void ExitingMenu::printMenu() {
     std::cin>>choice;
 }
 
-void ExitingMenu::action(std::uint32_t) const {
+void ExitingMenu::action(const std::string& subject, std::uint32_t val) const {
     
 }

@@ -15,7 +15,7 @@ public:
     ~MainMenu() = default;
 
     virtual void printMenu() override;
-    virtual void action(std::uint32_t) const override;
+    virtual void action(const std::string&, std::uint32_t) const override;
 
 private:
     std::shared_ptr<LoadingMenu> loading_menu;

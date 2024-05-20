@@ -10,6 +10,6 @@ void LoadingMenu::printMenu() {
     std::cin>>choice;
 }
 
-void LoadingMenu::action(std::uint32_t) const {
+void LoadingMenu::action(const std::string& subject, std::uint32_t val) const {
     
 }

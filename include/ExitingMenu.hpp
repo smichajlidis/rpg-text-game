@@ -10,7 +10,7 @@ public:
     ~ExitingMenu() = default;
 
     void printMenu() override;
-    void action(std::uint32_t) const override;
+    void action(const std::string&, std::uint32_t) const override;
 };
 
 #endif
