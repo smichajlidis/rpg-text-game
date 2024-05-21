@@ -89,3 +89,37 @@ void Player::setWhereIsPlayer(const std::string& val) {
 std::string Player::getWhereIsPlayer() const {
     return where_is_player;
 }
+
+void Player::useItem(const std::string& item) {
+
+    std::string type;
+    std::uint32_t strength;
+
+    for (auto& it: equipment) {
+        if (it.getName() == item) {
+            type = it.getType();
+            if (type != "") {
+                strength = it.getStrength();
+            }
+            this->deleteItem(item);
+            break;
+        }
+    }
+
+    if (type == "food") {
+        this->increaseHP(strength);
+    } else if (type == "weapon") {
+        //os << " | Increase strength by " << strength;
+    } else if (type == "armor") {
+        //os << " | Increase HP by " << strength;
+    } else if (type == "charisma_amulet") {
+       //os << " | Increase charisma by " << strength;
+    } else if (type == "hp_amulet") {
+        //os << " | Restore " << strength << " HP";
+    } else if (type == "strength_amulet") {
+        //os << " | Increase strength by " << strength;
+    } else if (type == "luck_amulet") {
+        //os << " | Increase luck by " << strength;
+    }
+
+}
