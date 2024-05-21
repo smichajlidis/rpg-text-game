@@ -30,6 +30,7 @@ public:
     std::string getName() const;
     Item getItemFromEquipment(std::uint32_t);
     bool findItemInEquipment(const std::string&) const;
+    void useItem(const std::string&);
 
 protected:
     std::string name;

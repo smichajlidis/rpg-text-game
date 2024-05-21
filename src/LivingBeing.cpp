@@ -92,3 +92,33 @@ bool LivingBeing::findItemInEquipment(const std::string& name) const {
     }
     return false;
 }
+
+void LivingBeing::useItem(const std::string& val) {
+
+    Item item;
+
+    for (auto& it: equipment) {
+        if (it.getName() == val) {
+            item = it;
+            this->deleteItem(val);
+            break;
+        }
+    }
+
+    if (item.getType() == "food") {
+        increaseHP(item.getStrength());
+    } else if (item.getType() == "weapon") {
+        active_weapon = item;
+    } else if (item.getType() == "armor") {
+        //os << " | Increase HP by " << strength;
+    } else if (item.getType() == "charisma_amulet") {
+       //os << " | Increase charisma by " << strength;
+    } else if (item.getType() == "hp_amulet") {
+        //os << " | Restore " << strength << " HP";
+    } else if (item.getType() == "strength_amulet") {
+        //os << " | Increase strength by " << strength;
+    } else if (item.getType() == "luck_amulet") {
+        //os << " | Increase luck by " << strength;
+    }
+
+}

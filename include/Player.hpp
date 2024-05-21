@@ -31,8 +31,6 @@ public:
     bool getWin() const;
     void setWhereIsPlayer(const std::string&);
     std::string getWhereIsPlayer() const;
-    void useItem(const std::string&);
-    void useWeapon(const std::string&);
 
 private:
     std::uint16_t charisma;
