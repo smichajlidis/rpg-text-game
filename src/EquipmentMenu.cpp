@@ -37,7 +37,7 @@ void EquipmentMenu::printMenu() {
 void EquipmentMenu::action(const std::string& item, std::uint32_t val) const {
     switch (val) {
         case 1: 
-            std::cout << "Using" << std::endl;
+            player->useItem(item);
             break;
         case 2:
             player->deleteItem(item);
