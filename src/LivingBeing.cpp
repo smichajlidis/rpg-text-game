@@ -55,6 +55,9 @@ void LivingBeing::addItem(const Item& item) {
 void LivingBeing::deleteItem(const std::string& val) {
     for (auto it = equipment.begin(); it != equipment.end(); ++it) {
         if (it->getName() == val) {
+            if (it->getName() == active_weapon) {
+                active_weapon = "";
+            }
             equipment.erase(it);
             break;
         }
