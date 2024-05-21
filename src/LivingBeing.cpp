@@ -8,7 +8,14 @@ std::uint16_t LivingBeing::getHP() const {
 }
 
 std::uint16_t LivingBeing::getStrength() const {
-    return strength + active_weapon.getStrength();
+    if (active_weapon != "") {
+        for (const auto& item: equipment) {
+            if (item.getName() == active_weapon) {
+                return strength + item.getStrength();
+            }
+        }
+    }
+    return strength;
 }
 
 void LivingBeing::increaseHP(std::uint16_t val) {
@@ -17,6 +24,15 @@ void LivingBeing::increaseHP(std::uint16_t val) {
 
 void LivingBeing::printEquipment() const {
     std::uint32_t count {1};
+    if (active_weapon != "") {
+        std::cout << "Currently use:\n";
+        for (const auto& item: equipment) {
+            if (active_weapon == item.getName()) {
+                std::cout << item << std::endl;
+            }
+        }
+    }
+    std::cout << "\n";
     if (!equipment.empty()) {
         std::for_each(equipment.begin(), equipment.end(), [&count](const Item& item) { 
             std::cout << count << ". " << item << std::endl;
@@ -100,15 +116,16 @@ void LivingBeing::useItem(const std::string& val) {
     for (auto& it: equipment) {
         if (it.getName() == val) {
             item = it;
-            this->deleteItem(val);
+            
             break;
         }
     }
 
     if (item.getType() == "food") {
         increaseHP(item.getStrength());
+        this->deleteItem(val);
     } else if (item.getType() == "weapon") {
-        active_weapon = item;
+        active_weapon = item.getName();
     } else if (item.getType() == "armor") {
         //os << " | Increase HP by " << strength;
     } else if (item.getType() == "charisma_amulet") {

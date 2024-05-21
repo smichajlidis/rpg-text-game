@@ -37,7 +37,7 @@ protected:
     std::uint16_t hp;
     std::uint16_t strength;
     std::vector<Item> equipment;
-    Item active_weapon;
+    std::string active_weapon;
     std::uint32_t gold;
 };
 
