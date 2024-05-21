@@ -101,15 +101,15 @@ void Player::useItem(const std::string& item) {
             if (type != "") {
                 strength = it.getStrength();
             }
-            this->deleteItem(item);
             break;
         }
     }
 
     if (type == "food") {
         this->increaseHP(strength);
+        this->deleteItem(item);
     } else if (type == "weapon") {
-        //os << " | Increase strength by " << strength;
+        this->useWeapon(item);
     } else if (type == "armor") {
         //os << " | Increase HP by " << strength;
     } else if (type == "charisma_amulet") {
@@ -122,4 +122,13 @@ void Player::useItem(const std::string& item) {
         //os << " | Increase luck by " << strength;
     }
 
+}
+
+void Player::useWeapon(const std::string& val) {
+    for (auto& it: equipment) {
+        if (it.getName() == val) {
+            active_weapon = it;
+            this->deleteItem(val);
+        }
+    }
 }
