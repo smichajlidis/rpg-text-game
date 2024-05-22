@@ -54,7 +54,19 @@ std::uint16_t LivingBeing::getEquipmentSize() const {
 }
 
 void LivingBeing::addItem(const Item& item) {
-    equipment.push_back(item);
+
+    bool done = false;
+
+    for (auto& it: equipment) {
+        if (it.getName() == item.getName()) {
+            it.increaseAmount(item.getAmount());
+            done = true;
+            break;
+        }
+    }
+    if (!done) {
+        equipment.push_back(item);
+    }
 }
 
 void LivingBeing::deleteItem(const std::string& val) {
