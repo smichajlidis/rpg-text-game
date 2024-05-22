@@ -18,6 +18,9 @@ public:
     bool empty() const;
     std::string getType() const;
     std::uint16_t getStrength() const;
+    std::uint32_t getAmount() const;
+    void increaseAmount(std::uint32_t);
+    void decreaseAmount(std::uint32_t);
 
 private:
     std::string name;

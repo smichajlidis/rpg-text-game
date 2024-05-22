@@ -38,3 +38,15 @@ std::string Item::getType() const {
 std::uint16_t Item::getStrength() const {
     return strength;
 }
+
+std::uint32_t Item::getAmount() const {
+    return amount;
+}
+
+void Item::increaseAmount(std::uint32_t val) {
+    amount += val;
+}
+
+void Item::decreaseAmount(std::uint32_t val) {
+    amount -= val;
+}
