@@ -3,7 +3,7 @@
 #include <iostream>
 
 std::ostream& operator<<(std::ostream& os, const Item& rhs) {
-    os << rhs.name << " | value: " << rhs.value;
+    os << rhs.name << " | amount: " << rhs.amount << " | value: " << rhs.value;
     if (rhs.type == "food") {
         os << " | Restore " << rhs.strength << " HP";
     } else if (rhs.type == "weapon") {

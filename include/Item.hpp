@@ -21,6 +21,7 @@ public:
 
 private:
     std::string name;
+    std::uint32_t amount = 1;
     std::uint32_t value;
     std::string type;
     std::uint32_t strength;
