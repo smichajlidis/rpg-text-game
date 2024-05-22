@@ -7,15 +7,20 @@ std::uint16_t LivingBeing::getHP() const {
     return hp;
 }
 
-std::uint16_t LivingBeing::getStrength() const {
-    if (active_weapon != "") {
+std::uint16_t LivingBeing::getStrength() {
+     
+    std::uint16_t final_value = strength;
+    std::string searched_item = active_items["weapon"]; 
+
+    if (searched_item != "") {
         for (const auto& item: equipment) {
-            if (item.getName() == active_weapon) {
-                return strength + item.getStrength();
+            if (searched_item == item.getName()) {
+                final_value += item.getStrength();
+                break;
             }
         }
     }
-    return strength;
+    return final_value;
 }
 
 void LivingBeing::increaseHP(std::uint16_t val) {
@@ -119,7 +124,6 @@ void LivingBeing::useItem(const std::string& val) {
     for (auto& it: equipment) {
         if (it.getName() == val) {
             item = it;
-            
             break;
         }
     }
@@ -127,18 +131,7 @@ void LivingBeing::useItem(const std::string& val) {
     if (item.getType() == "food") {
         increaseHP(item.getStrength());
         this->deleteItem(val);
-    } else if (item.getType() == "weapon") {
-        active_weapon = item.getName();
-    } else if (item.getType() == "armor") {
-        //os << " | Increase HP by " << strength;
-    } else if (item.getType() == "charisma_amulet") {
-       //os << " | Increase charisma by " << strength;
-    } else if (item.getType() == "hp_amulet") {
-        //os << " | Restore " << strength << " HP";
-    } else if (item.getType() == "strength_amulet") {
-        //os << " | Increase strength by " << strength;
-    } else if (item.getType() == "luck_amulet") {
-        //os << " | Increase luck by " << strength;
+    } else if (item.getType() != "") {
+        active_items.insert_or_assign(item.getType(), item.getName());
     }
-
 }

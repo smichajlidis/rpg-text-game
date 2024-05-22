@@ -1,10 +1,11 @@
 #ifndef _LIVINGBEING_HPP_
 #define _LIVINGBEING_HPP_
 
+#include "Item.hpp"
+
 #include <vector>
 #include <memory>
-
-#include "Item.hpp"
+#include <unordered_map>
 
 class LivingBeing {
 
@@ -14,7 +15,7 @@ public:
 
     ~LivingBeing() = default;
 
-    std::uint16_t getStrength() const;
+    std::uint16_t getStrength();
     void increaseStrength(std::uint32_t);
     std::uint16_t getHP() const;
     void increaseHP(std::uint16_t);
@@ -38,6 +39,7 @@ protected:
     std::uint16_t strength;
     std::vector<Item> equipment;
     std::string active_weapon;
+    std::unordered_map<std::string, std::string> active_items;
     std::uint32_t gold;
 };
 
