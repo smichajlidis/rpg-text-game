@@ -10,16 +10,7 @@ std::uint16_t LivingBeing::getHP() const {
 std::uint16_t LivingBeing::getStrength() {
      
     std::uint16_t final_value = strength;
-    std::string searched_item = active_items["weapon"]; 
-
-    if (searched_item != "") {
-        for (const auto& item: equipment) {
-            if (searched_item == item.getName()) {
-                final_value += item.getStrength();
-                break;
-            }
-        }
-    }
+    final_value += active_items["weapon"].getStrength();
     return final_value;
 }
 
@@ -137,8 +128,17 @@ void LivingBeing::useItem(const std::string& val) {
 
     for (auto& it: equipment) {
         if (it.getName() == val) {
-            item = it;
-            break;
+            if (it.getAmount() > 1) {
+                std::uint32_t amount_temp = it.getAmount();
+                deleteItem(val);
+                item = it;
+                item.decreaseAmount(item.getAmount() - item.getAmount() + 1);
+                break;
+            } else {
+                item = it;
+                deleteItem(val);
+                break;
+            }
         }
     }
 
@@ -146,6 +146,6 @@ void LivingBeing::useItem(const std::string& val) {
         increaseHP(item.getStrength());
         this->deleteItem(val);
     } else if (item.getType() != "") {
-        active_items.insert_or_assign(item.getType(), item.getName());
+        active_items.insert_or_assign(item.getType(), item);
     }
 }

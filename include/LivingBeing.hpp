@@ -39,7 +39,7 @@ protected:
     std::uint16_t strength;
     std::vector<Item> equipment;
     std::string active_weapon;
-    std::unordered_map<std::string, std::string> active_items;
+    std::unordered_map<std::string, Item> active_items;
     std::uint32_t gold;
 };
 
