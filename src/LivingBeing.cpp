@@ -72,11 +72,13 @@ void LivingBeing::addItem(const Item& item) {
 void LivingBeing::deleteItem(const std::string& val) {
     for (auto it = equipment.begin(); it != equipment.end(); ++it) {
         if (it->getName() == val) {
-            if (it->getName() == active_weapon) {
-                active_weapon = "";
+            if (it->getAmount() > 1) {
+                it->decreaseAmount(1);
+                break;
+            } else {
+                equipment.erase(it);
+                break;
             }
-            equipment.erase(it);
-            break;
         }
     }
 }
