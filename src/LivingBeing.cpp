@@ -20,23 +20,23 @@ void LivingBeing::increaseHP(std::uint16_t val) {
 
 void LivingBeing::printEquipment() const {
     std::uint32_t count {1};
-    if (active_weapon != "") {
-        std::cout << "Currently use:\n";
-        for (const auto& item: equipment) {
-            if (active_weapon == item.getName()) {
-                std::cout << item << std::endl;
+
+    if (!active_items.empty()) {
+        std::cout << "Currently use:\n\n";
+        std::for_each(active_items.begin(), active_items.end(), [&count](const std::pair<const std::string&, Item>& pair) {
+            if (pair.second.getName() != "") {
+                std::cout << pair.second << std::endl;
             }
-        }
+        });
     }
+
     std::cout << "\n";
     if (!equipment.empty()) {
+        std::cout << "In your backpack:\n\n";
         std::for_each(equipment.begin(), equipment.end(), [&count](const Item& item) { 
             std::cout << count << ". " << item << std::endl;
             ++count;
         });
-    }
-    else {
-        std::cout << "There is nothing here." << std::endl;
     }
 }
 
