@@ -50,3 +50,7 @@ void Item::increaseAmount(std::uint32_t val) {
 void Item::decreaseAmount(std::uint32_t val) {
     amount -= val;
 }
+
+void Item::setAmountAsOne() {
+    amount = 1;
+}

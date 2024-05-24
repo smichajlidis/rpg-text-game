@@ -21,6 +21,7 @@ public:
     std::uint32_t getAmount() const;
     void increaseAmount(std::uint32_t);
     void decreaseAmount(std::uint32_t);
+    void setAmountAsOne();
 
 private:
     std::string name;
