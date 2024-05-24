@@ -128,17 +128,9 @@ void LivingBeing::useItem(const std::string& val) {
 
     for (auto& it: equipment) {
         if (it.getName() == val) {
-            if (it.getAmount() > 1) {
-                std::uint32_t amount_temp = it.getAmount();
-                deleteItem(val);
-                item = it;
-                item.decreaseAmount(item.getAmount() - item.getAmount() + 1);
-                break;
-            } else {
-                item = it;
-                deleteItem(val);
-                break;
-            }
+            item = it;
+            item.setAmountAsOne();
+            break;
         }
     }
 
@@ -146,6 +138,10 @@ void LivingBeing::useItem(const std::string& val) {
         increaseHP(item.getStrength());
         this->deleteItem(val);
     } else if (item.getType() != "") {
+        if (active_items[item.getType()].getName() != "") {
+            addItem(active_items[item.getType()]);
+        }
+        deleteItem(item.getName());
         active_items.insert_or_assign(item.getType(), item);
     }
 }
