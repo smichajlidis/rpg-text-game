@@ -10,7 +10,7 @@ void EquipmentMenu::printMenu() {
         screen_stuff.clear();
         header_displayer.displayHeader();
         player->printEquipment();
-        std::cout << player->getEquipmentSize() + 1 << ". Return\n";   
+        std::cout << "\n" << player->getEquipmentSize() + 1 << ". Return\n";   
         std::cout << "\nYour choice: ";
 
         std::string input;
