@@ -145,3 +145,15 @@ void LivingBeing::useItem(const std::string& val) {
         active_items.insert_or_assign(item.getType(), item);
     }
 }
+
+const std::unordered_map<std::string, Item>& LivingBeing::getActiveItems() const {
+    return active_items;
+}
+
+void LivingBeing::takeOffItem(const std::string& val) {
+
+    Item item = active_items[val];
+    addItem(item);
+    active_items.erase(val);
+
+}

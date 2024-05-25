@@ -32,6 +32,8 @@ public:
     Item getItemFromEquipment(std::uint32_t);
     bool findItemInEquipment(const std::string&) const;
     void useItem(const std::string&);
+    const std::unordered_map<std::string, Item>& getActiveItems() const;
+    void takeOffItem(const std::string&);
 
 protected:
     std::string name;
