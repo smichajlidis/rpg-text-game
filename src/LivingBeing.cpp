@@ -30,9 +30,8 @@ void LivingBeing::printEquipment() const {
         });
     }
 
-    std::cout << "\n";
     if (!equipment.empty()) {
-        std::cout << "In your backpack:\n\n";
+        std::cout << "\nIn your backpack:\n\n";
         std::for_each(equipment.begin(), equipment.end(), [&count](const Item& item) { 
             std::cout << count << ". " << item << std::endl;
             ++count;
@@ -156,4 +155,10 @@ void LivingBeing::takeOffItem(const std::string& val) {
     addItem(item);
     active_items.erase(val);
 
+}
+
+bool LivingBeing::isThereSomethingInActiveItems() const {
+    return std::any_of(active_items.begin(), active_items.end(), [](const std::pair<const std::string, Item>& pair) {
+        return !pair.second.getName().empty();
+    });
 }

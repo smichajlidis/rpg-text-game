@@ -34,6 +34,7 @@ public:
     void useItem(const std::string&);
     const std::unordered_map<std::string, Item>& getActiveItems() const;
     void takeOffItem(const std::string&);
+    bool isThereSomethingInActiveItems() const;
 
 protected:
     std::string name;

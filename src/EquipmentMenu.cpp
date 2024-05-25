@@ -8,13 +8,21 @@
 
 void EquipmentMenu::printMenu() {
     std::uint32_t choice;
+    std::uint32_t count;
     do {
         screen_stuff.clear();
         header_displayer.displayHeader();
         player->printEquipment();
 
-        std::cout << "\n" << player->getEquipmentSize() + 1 << ". Take off an item\n";
-        std::cout << player->getEquipmentSize() + 2 << ". Return\n";   
+        count = player->getEquipmentSize() + 1;
+
+        if (player->isThereSomethingInActiveItems()) {
+            std::cout << "\n" << count << ". Take off an item\n";
+            ++count;
+        } else {
+            std::cout << "\n";
+        }
+        std::cout << count << ". Return\n";   
         std::cout << "\nYour choice: ";
 
         std::string input;
@@ -32,10 +40,10 @@ void EquipmentMenu::printMenu() {
                 action(item_name, choice);
                 choice = {};
             }
-        } else if (choice == player->getEquipmentSize() + 1) {
+        } else if (choice == count - 1) {
             takeOffAnItemMenu();
         }
-    } while (choice != player->getEquipmentSize() + 2);
+    } while (choice != count);
 }
 
 void EquipmentMenu::action(const std::string& item, std::uint32_t val) const {
@@ -60,6 +68,7 @@ void EquipmentMenu::takeOffAnItemMenu() {
     std::vector<std::string> items;
     items.push_back("");
 
+    std::cout << "\n";
     if (!active_items.empty()) {
         std::for_each(active_items.begin(), active_items.end(), [&count, &items](const std::pair<const std::string&, Item>& pair) {
             if (pair.second.getName() != "") {
@@ -69,8 +78,7 @@ void EquipmentMenu::takeOffAnItemMenu() {
             }
         });
     }
-    std::cout << "\n";
-    std::cout << count << ". Return" << std::endl;
+    std::cout << count << ". Return\n" << std::endl;
     std::cout << "Your choice: ";
     std::cin >> input;
 
