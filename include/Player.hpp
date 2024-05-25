@@ -7,7 +7,8 @@
 class Player: public LivingBeing {
 
 public:
-    Player() { gold = 10000; hp = 100; luck = 1; strength = 25, charisma = 1; being_drunk = 0; win = false; }
+    Player() { gold = 10000; hp = 100; luck = 1; strength = 25, charisma = 1; being_drunk = 0; win = false; 
+        active_items["weapon"] = Item("sword", 15, "weapon", 40);}
 
     ~Player() = default;
 
