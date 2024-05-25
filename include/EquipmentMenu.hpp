@@ -13,6 +13,7 @@ public:
 
     void printMenu() override;
     void action(const std::string&, std::uint32_t) const override;
+    void takeOffAnItemMenu();
 
 private:
     ScreenStuff screen_stuff;
