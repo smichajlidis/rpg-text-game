@@ -54,3 +54,7 @@ void Item::decreaseAmount(std::uint32_t val) {
 void Item::setAmountAsOne() {
     amount = 1;
 }
+
+std::uint32_t Item::getValue() const {
+    return value;
+}
