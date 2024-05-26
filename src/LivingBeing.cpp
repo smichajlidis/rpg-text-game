@@ -21,7 +21,7 @@ void LivingBeing::increaseHP(std::uint16_t val) {
 void LivingBeing::printEquipment() const {
     std::uint32_t count {1};
 
-    if (!active_items.empty()) {
+    if (isThereSomethingInActiveItems()) {
         std::cout << "Currently use:\n\n";
         std::for_each(active_items.begin(), active_items.end(), [&count](const std::pair<const std::string&, Item>& pair) {
             if (pair.second.getName() != "") {
