@@ -13,7 +13,7 @@ Selling::Selling(std::shared_ptr<Player> player, std::shared_ptr<GameState> game
 }
 
 void Selling::printLocation() {
-    std::cout << descriptions.at(0) << "\n\n";
+    std::cout << descriptions.at(0) << "\n";
     player->printEquipment();
     std::cout << std::endl;
     std::cout << player->getEquipmentSize() + 1 << ". " << descriptions.at(1) << std::endl;
