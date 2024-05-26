@@ -18,7 +18,7 @@ void Selling::printLocation() {
     std::cout << std::endl;
     std::cout << player->getEquipmentSize() + 1 << ". " << descriptions.at(1) << std::endl;
     std::cout << player->getEquipmentSize() + 2 << ". " << descriptions.at(2) << std::endl;
-    std::cout << "\nWhat do you want?";
+    std::cout << "\nWhat do you want? ";
 }
 
 bool Selling::inputValidation(std::uint32_t) const {
@@ -26,5 +26,18 @@ bool Selling::inputValidation(std::uint32_t) const {
 }
 
 std::string Selling::getNextLocationName(std::uint32_t val) {
-    return related_locations.at(val - 1 - player->getEquipmentSize());
+    if (val <= player->getEquipmentSize()) {
+
+        Item item = player->getItemFromEquipment(val-1);
+        player->deleteItem(item.getName());
+        player->increaseGold(item.getValue());
+        item.setAmountAsOne();
+        npc->addItem(std::move(item));
+
+        return "selling";
+    } else if (val == player->getEquipmentSize() + 2) {
+        return "approaching_innkeeper";
+    } else {
+        return "buying";
+    }
 }
