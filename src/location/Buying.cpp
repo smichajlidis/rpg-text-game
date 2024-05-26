@@ -13,9 +13,9 @@ Buying::Buying(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_s
 
 void Buying::printLocation() {
     std::cout << descriptions.at(0) << "\n\n";
-    printEquipment();
+    npc->printEquipment();
     std::cout << std::endl;
     std::cout << equipment.size() + 1 << ". " << descriptions.at(1) << std::endl;
     std::cout << equipment.size() + 2 << ". " << descriptions.at(2) << std::endl;
-    std::cout << "\nWhat do you want?";
+    std::cout << "\nWhat do you want? ";
 } 
