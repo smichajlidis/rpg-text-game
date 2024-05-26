@@ -14,6 +14,8 @@ public:
     ~Buying() = default;
 
     void printLocation() override;
+    bool inputValidation(std::uint32_t) const override;
+    std::string getNextLocationName(std::uint32_t) override;
 };
 
 #endif

@@ -12,10 +12,31 @@ Buying::Buying(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_s
 }
 
 void Buying::printLocation() {
-    std::cout << descriptions.at(0) << "\n\n";
+    std::cout << descriptions.at(0) << "\n";
     npc->printEquipment();
     std::cout << std::endl;
-    std::cout << equipment.size() + 1 << ". " << descriptions.at(1) << std::endl;
-    std::cout << equipment.size() + 2 << ". " << descriptions.at(2) << std::endl;
+    std::cout << npc->getEquipmentSize() + 1 << ". " << descriptions.at(1) << std::endl;
+    std::cout << npc->getEquipmentSize() + 2 << ". " << descriptions.at(2) << std::endl;
     std::cout << "\nWhat do you want? ";
-} 
+}
+
+bool Buying::inputValidation(std::uint32_t) const {
+    return ((npc->getEquipmentSize() + 2) ? true : false);
+}
+
+std::string Buying::getNextLocationName(std::uint32_t val) {
+    if (val <= npc->getEquipmentSize()) {
+
+        Item item = npc->getItemFromEquipment(val-1);
+        npc->deleteItem(item.getName());
+        player->decreaseGold(item.getValue());
+        item.setAmountAsOne();
+        player->addItem(std::move(item));
+
+        return "buying";
+    } else if (val == npc->getEquipmentSize() + 2) {
+        return "approaching_innkeeper";
+    } else {
+        return "selling";
+    }
+}
