@@ -2,12 +2,16 @@
 
 #include <algorithm>
 
-std::uint16_t Player::getCharisma() const {
-    return charisma;
+std::uint16_t Player::getCharisma() {
+    std::uint16_t final_value = charisma;
+    final_value += active_items["charisma_amulet"].getStrength();
+    return final_value;
 }
 
-std::uint16_t Player::getLuck() const {
-    return luck;
+std::uint16_t Player::getLuck() {
+    std::uint16_t final_value = charisma;
+    final_value += active_items["luck_amulet"].getStrength();
+    return final_value;
 }
 
 std::uint16_t Player::getBeingDrunk() const {

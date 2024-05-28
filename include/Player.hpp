@@ -12,8 +12,8 @@ public:
 
     ~Player() = default;
 
-    std::uint16_t getCharisma() const;
-    std::uint16_t getLuck() const;
+    std::uint16_t getCharisma();
+    std::uint16_t getLuck();
     std::uint16_t getBeingDrunk() const;
     void updateAfterEachRound();
     void increaseBeingDrunk(std::uint16_t);
