@@ -8,7 +8,7 @@ DungeonsFindItem::DungeonsFindItem(std::shared_ptr<Player> player, std::shared_p
     : InteractionWithNPC(player, game_state, description, choice_1, choice_2) {
 
     addNewItem("While exploring the dark dungeon, you come across a finely crafted, enchanted dagger hidden within a dusty alcove. Its blade gleams with an otherworldly aura, hinting at its potent magical abilities.", "enchanted_dagger", 200, "weapon", 25);
-    addNewItem("Deep within the labyrinthine corridors, you stumble upon an ornate chest, adorned with intricate carvings. Within rests a set of ancient armor, rumored to have been worn by a legendary warrior in battles long past.", "ancient_armor", 500, "armor", 30);
+    addNewItem("Deep within the labyrinthine corridors, you stumble upon an ornate chest, adorned with intricate carvings. Within rests a set of ancient armor, rumored to have been worn by a legendary warrior in battles long past.", "ancient_armor", 500, "armor", 15);
     addNewItem("Concealed within a hidden chamber lies a mystical artifact, enhancing the charisma of its bearer. Its delicate patterns pulse with a faint, ethereal light, promising great power to those who wear it.", "charisma_amulet", 750, "charisma_amulet", 35);
     addNewItem("Nestled among piles of forgotten treasures, you discover a sturdy amulet, said to provide its wearer with resilience against incoming blows and strikes. Its protective aura emanates a sense of strength and fortitude.", "resilient_amulet", 400, "hp_amulet", 20);
     addNewItem("Within the depths of a forgotten crypt, you unearth an ancient relic—an obsidian pendant adorned with cryptic runes. Its dark energy resonates with ancient power, imbuing its bearer with strength and vigor.", "obsidian_relic", 700, "strength_amulet", 20);
