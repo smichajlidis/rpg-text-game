@@ -4,10 +4,7 @@
 #include <iostream>
 
 std::uint16_t LivingBeing::getHP() {
-    std::uint16_t final_value = hp;
-    final_value += active_items["armor"].getStrength();
-    final_value += active_items["hp_amulet"].getStrength();
-    return final_value;
+    return hp;
 }
 
 std::uint16_t LivingBeing::getStrength() {
@@ -109,7 +106,13 @@ std::string LivingBeing::getName() const {
 }
 
 void LivingBeing::decreaseHP(std::uint16_t val) {
-    hp = ( (hp - val >= 0) ? hp - val : 0);
+
+    val -= active_items["armor"].getStrength();
+    val -= active_items["hp_amulet"].getStrength();
+
+    if (val > 0 && hp - val >= 0) {
+        hp -= val;
+    }
 }
 
 Item LivingBeing::getItemFromEquipment(std::uint32_t val) {
