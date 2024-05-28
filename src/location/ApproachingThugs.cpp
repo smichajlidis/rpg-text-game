@@ -8,7 +8,7 @@
 ApproachingThugs::ApproachingThugs(std::shared_ptr<Player> player, std::shared_ptr<GameState> game_state, const std::string& description, const std::string& choice_1, const std::string& choice_2, const std::string& choice_3, const std::string& choice_4)
     : InteractionWithNPC(player, game_state, description, choice_1, choice_2, choice_3, choice_4) {
 
-    std::shared_ptr<NPC> thugs = std::make_shared<NPC>(3, "thugs");
+    std::shared_ptr<NPC> thugs = std::make_shared<NPC>(60, "thugs");
 
     thugs->addFightingSentence("- Slay the interloper!");
     thugs->addFightingSentence("- Let his blood paint the ground!");
