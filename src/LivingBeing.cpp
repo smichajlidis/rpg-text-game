@@ -3,14 +3,18 @@
 #include <algorithm>
 #include <iostream>
 
-std::uint16_t LivingBeing::getHP() const {
-    return hp;
+std::uint16_t LivingBeing::getHP() {
+    std::uint16_t final_value = hp;
+    final_value += active_items["armor"].getStrength();
+    final_value += active_items["hp_amulet"].getStrength();
+    return final_value;
 }
 
 std::uint16_t LivingBeing::getStrength() {
      
     std::uint16_t final_value = strength;
     final_value += active_items["weapon"].getStrength();
+    final_value += active_items["strength_amulet"].getStrength();
     return final_value;
 }
 
