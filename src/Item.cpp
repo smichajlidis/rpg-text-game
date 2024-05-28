@@ -9,11 +9,11 @@ std::ostream& operator<<(std::ostream& os, const Item& rhs) {
     } else if (rhs.type == "weapon") {
         os << " | Increase strength by " << rhs.strength;
     } else if (rhs.type == "armor") {
-        os << " | Increase HP by " << rhs.strength;
+        os << " | Decrease damages by " << rhs.strength;
     } else if (rhs.type == "charisma_amulet") {
         os << " | Increase charisma by " << rhs.strength;
     } else if (rhs.type == "hp_amulet") {
-        os << " | Restore " << rhs.strength << " HP";
+        os << " | Decrease damages by " << rhs.strength;
     } else if (rhs.type == "strength_amulet") {
         os << " | Increase strength by " << rhs.strength;
     } else if (rhs.type == "luck_amulet") {
